@@ -4,7 +4,7 @@ const { notifySlack } = require('./_notify');
 
 const ALLOWED = ['become-a-member', '100-club-apply', '100-club-contact', 'callback-lead', 'bootcamps', 'gigs', 'gigs-apply', 'gigs-hire', 'contact', 'newsletter', 'prep-plus-lead', 'exam-lead', 'diagnostic', 'placement-plan'];
 
-const NOTIFY_FORMS = new Set(['callback-lead', 'become-a-member', '100-club-apply', 'gigs-apply', 'exam-lead', 'contact', 'diagnostic']);
+const NOTIFY_FORMS = new Set(['callback-lead', 'become-a-member', '100-club-apply', 'gigs-apply', 'exam-lead', 'contact', 'diagnostic', 'placement-plan', 'prep-plus-lead']);
 
 /* Hidden inputs a human never fills. Any value in one of these is a bot. */
 const HONEYPOTS = ['_hp', 'website', 'company_url'];

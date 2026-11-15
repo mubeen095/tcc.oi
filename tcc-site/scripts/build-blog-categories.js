@@ -160,7 +160,7 @@ function render(c) {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${c.name} — TCC Blog | AI Courses, Certifications, Internships &amp; Placement</title>
+<title>${c.name} — TCC Blog</title>
     <meta name="description" content="${c.sub.replace(/"/g, '&quot;')}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="author" content="The Coding Company (TCC)" />
