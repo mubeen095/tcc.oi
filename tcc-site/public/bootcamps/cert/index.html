@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+    <title>TCC CERT+ Certification | The Coding Company</title>
+    <meta name="keywords" content="placement in india, internships in india, internship certificate, job placement, campus placement, placement preparation, technical interview, coding interview, fresher jobs, placement training">
+    <meta name="description" content="A TCC CERT+ role-based AI certification — what the role does, who hires for it, salary benchmarks and the skills the exam checks." id="metaDesc" />
+    <link rel="canonical" href="https://thecodingcompany.io/bootcamps/cert/" />
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/tcc-favicon-32.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" id="ogTitle" content="TCC CERT+ Certification" />
+    <meta property="og:description" id="ogDesc" content="Role-based, framework-aligned, verifiable AI certification." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <style>
+      :root { --bg: #050505; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.62); --muted2: rgba(255,255,255,0.56); --accent: #4d8dff; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { background: var(--bg); color: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+      ::selection { background: rgba(0,100,255,0.35); }
+      a { color: inherit; text-decoration: none; }
+      .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+      .mono { font-family: 'DM Mono', monospace; }
+      .eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted2); }
+
+      /* topbar */
+      .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); background: rgba(5,5,5,0.78); border-bottom: 1px solid var(--line); }
+      .topbar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 62px; }
+      .brand { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: 20px; letter-spacing: -0.01em; }
+      .brand .plus { color: var(--accent); }
+      .top-links { display: flex; align-items: center; gap: 22px; }
+      .top-links a { font-size: 13px; color: var(--muted); transition: color 0.25s; }
+      .top-links a:hover { color: #fff; }
+      @media (max-width: 620px) {
+        .topbar-in { height: auto; min-height: 58px; flex-wrap: wrap; padding: 9px 0; }
+        .top-links { gap: 16px; flex-wrap: wrap; }
+        .top-links a { font-size: 12.5px; }
+      }
+      @media (max-width: 1024px) {
+        .top-links a, .brand, .back, .foot-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+      }
+      .back { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--muted); }
+      .back:hover { color: #fff; }
+      .back svg { width: 15px; height: 15px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+      /* breadcrumb */
+      .crumbs { padding: 26px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted2); }
+      .crumbs a:hover { color: #fff; }
+      .crumbs .sep { opacity: 0.4; }
+
+      /* hero */
+      .cert-hero { padding: 30px 0 8px; }
+      .hero-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+      @media (min-width: 940px) { .hero-grid { grid-template-columns: 1fr 320px; gap: 48px; align-items: start; } }
+      .hero-main { min-width: 0; }
+      .tier-line { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+      .tier-pill { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid; }
+      h1 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(32px, 4.6vw, 52px); line-height: 1.08; letter-spacing: -0.01em; }
+      .role-line { margin-top: 14px; font-size: 17px; color: rgba(255,255,255,0.72); }
+      .role-line strong { color: #fff; font-weight: 600; }
+      .validates { margin-top: 18px; font-size: 16px; color: var(--muted); max-width: 60ch; }
+      .alias-line { margin-top: 14px; font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,0.62); max-width: 62ch; }
+      .alias-line:empty { display: none; }
+      .alias-line strong { color: rgba(255,255,255,0.74); font-weight: 600; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+      .meta-chip { display: flex; flex-direction: column; gap: 3px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.03); min-width: 108px; }
+      .meta-chip .k { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted2); }
+      .meta-chip .v { font-size: 14px; font-weight: 600; }
+
+      /* badge */
+      .cert-badge { position: relative; display: inline-flex; width: 60px; height: 72px; flex-shrink: 0; }
+      .cert-badge svg { width: 100%; height: 100%; display: block; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35)); }
+      .cert-badge .init { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 18px; font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; color: #fff; }
+
+      /* side card */
+      .side { border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,0.035); padding: 24px; position: sticky; top: 84px; }
+      .side .price-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted2); }
+      .side .price { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: 30px; margin: 4px 0 2px; }
+      .side .price-note { font-size: 12.5px; color: var(--muted2); }
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 18px; padding: 14px 20px; border-radius: 999px; background: #fff; color: #000; font-weight: 700; font-size: 14px; border: 0; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+      .btn:hover { transform: scale(1.02); box-shadow: 0 8px 24px rgba(255,255,255,0.2); }
+      .btn.ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+      .btn.ghost:hover { box-shadow: none; border-color: rgba(255,255,255,0.4); }
+      .side ul { list-style: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+      .side li { display: flex; gap: 10px; font-size: 13px; color: var(--muted); }
+      .side li svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 3px; stroke: var(--accent); stroke-width: 2.4; fill: none; }
+
+      /* sections */
+      section.block { padding: 44px 0 0; }
+      .h2 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(24px, 3vw, 34px); line-height: 1.14; margin-bottom: 14px; }
+      .prose { font-size: 15.5px; color: rgba(255,255,255,0.66); max-width: 72ch; }
+      .prose + .p { margin-top: 14px; }
+      .rule { height: 1px; background: var(--line); margin: 46px 0 0; }
+      .two-col { display: grid; grid-template-columns: 1fr; gap: 22px; margin-top: 24px; }
+      @media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; gap: 28px; } }
+      .panel { border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,0.028); padding: 24px; }
+      .list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+      .list li { display: flex; gap: 11px; font-size: 14.5px; color: rgba(255,255,255,0.78); }
+      .tick { flex-shrink: 0; width: 18px; height: 18px; margin-top: 3px; border-radius: 50%; border: 1px solid rgba(120,170,255,0.5); background: rgba(0,100,255,0.12); display: flex; align-items: center; justify-content: center; }
+      .tick svg { width: 10px; height: 10px; stroke: #8fbcff; stroke-width: 3; fill: none; }
+      .num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); margin-right: 10px; }
+
+      .cards-2 { display: grid; grid-template-columns: 1fr; gap: 14px; }
+      @media (min-width: 700px) { .cards-2 { grid-template-columns: repeat(2, 1fr); } }
+      .job { display: flex; align-items: center; gap: 12px; padding: 15px 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.03); font-size: 14.5px; font-weight: 500; transition: border-color 0.25s, background 0.25s; }
+      .job:hover { border-color: rgba(120,170,255,0.4); background: rgba(255,255,255,0.05); }
+      .job svg { width: 16px; height: 16px; stroke: var(--accent); stroke-width: 2; fill: none; flex-shrink: 0; }
+
+      .company-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      @media (min-width: 640px) { .company-grid { grid-template-columns: repeat(4, 1fr); } }
+      .company { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 74px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,0.03); font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.82); }
+      .hiring-flag { display: inline-flex; align-items: center; gap: 7px; font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #6ee7a8; }
+      .hiring-flag .dot { width: 7px; height: 7px; border-radius: 50%; background: #6ee7a8; box-shadow: 0 0 0 4px rgba(110,231,168,0.16); }
+
+      .pay-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+      @media (min-width: 720px) { .pay-grid { grid-template-columns: 1fr 1fr; } }
+      .pay-card { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); }
+      .pay-card .region { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted2); }
+      .pay-card .amount { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(28px, 3.4vw, 40px); margin: 8px 0 4px; }
+      .pay-card .per { font-size: 12.5px; color: var(--muted2); }
+
+      .note { display: flex; gap: 12px; align-items: flex-start; margin-top: 22px; padding: 16px 18px; border: 1px dashed rgba(255,255,255,0.16); border-radius: 14px; background: rgba(255,255,255,0.02); font-size: 13px; color: var(--muted2); }
+      .note svg { width: 16px; height: 16px; stroke: var(--muted2); stroke-width: 2; fill: none; flex-shrink: 0; margin-top: 2px; }
+
+      /* tiers */
+      .tier-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+      @media (min-width: 720px) { .tier-grid { grid-template-columns: repeat(4, 1fr); } }
+      .tier-card { display: block; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,0.03); transition: transform 0.25s, border-color 0.25s; }
+      .tier-card:hover { transform: translateY(-3px); border-color: rgba(120,170,255,0.45); }
+      .tier-card.on { border-color: rgba(120,170,255,0.6); background: rgba(0,100,255,0.08); }
+      .tier-card .t { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted2); }
+      .tier-card .n { font-size: 15px; font-weight: 600; margin-top: 8px; }
+      .tier-card .s { font-size: 12px; color: var(--muted2); margin-top: 6px; }
+      .tier-card .here { display: inline-block; margin-top: 12px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+
+      .h3 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(24px, 3vw, 32px); margin: 12px 0 6px; }
+      .sub { color: var(--muted2); font-size: 14px; margin-bottom: 20px; }
+      .cards-2col { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+      @media (min-width: 760px) { .cards-2col { grid-template-columns: 1fr 1fr; } }
+      .list-col { list-style: none; display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+      .cta-band { margin: 56px 0; padding: 44px 32px; border-radius: 26px; border: 1px solid var(--line); background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.16), rgba(5,5,5,0) 60%), rgba(255,255,255,0.03); text-align: center; }
+      .cta-band h2 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 12px; }
+      .cta-band p { color: var(--muted); max-width: 52ch; margin: 0 auto 24px; }
+      .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+      .cta-actions .btn { width: auto; margin-top: 0; padding: 14px 28px; }
+
+      footer { border-top: 1px solid var(--line); padding: 34px 0; margin-top: 40px; }
+      .foot-in { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; font-size: 12.5px; color: var(--muted2); }
+      .foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
+      .foot-links a { min-width: 44px; }
+      .foot-links a:hover { color: #fff; }
+
+      .notfound { padding: 100px 0; text-align: center; }
+      .notfound h1 { margin-bottom: 14px; }
+      .notfound p { color: var(--muted); margin-bottom: 26px; }
+      .hidden { display: none !important; }
+    
+      /* ── skip link (accessibility) ── */
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 99999; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+      .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; overflow: visible; outline: 2px solid #fff; outline-offset: 2px; }
+</style>
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thecodingcompany.io/"},
+        {"@type": "ListItem", "position": 2, "name": "Bootcamps", "item": "https://thecodingcompany.io/bootcamps/"},
+        {"@type": "ListItem", "position": 3, "name": "TCC CERT+", "item": "https://thecodingcompany.io/bootcamps/cert/"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOccupationalCredential",
+      "name": "TCC CERT+",
+      "credentialCategory": "certification",
+      "issuer": {"@type": "Organization", "name": "The Coding Company", "url": "https://thecodingcompany.io"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is TCC CERT+?", "acceptedAnswer": {"@type": "Answer", "text": "TCC CERT+ is role-based AI certification from Foundation to Executive levels for professionals across industries."}},
+        {"@type": "Question", "name": "Does TCC help with placement?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, TCC Placement Partner supports learners with resume, portfolio, interview prep & job matching."}},
+        {"@type": "Question", "name": "Who is TCC CERT+ for?", "acceptedAnswer": {"@type": "Answer", "text": "TCC CERT+ is built for every profession looking to prove practical AI skills relevant to their role."}}
+      ]
+    }
+    </script>
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899');
+    </script>
+</head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="brand" href="../">thecodingcompany<span class="plus">+</span></a>
+        <div class="top-links">
+          <a class="back" href="../" id="backTop">All certifications</a>
+          <a href="/contact">Contact</a>
+          <a href="/become-a-member">Become a member</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap" id="main-content" tabindex="-1">
+      <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
+
+      <article id="cert" class="hidden">
+        <section class="cert-hero">
+          <div class="hero-grid">
+            <div class="hero-main">
+              <div class="tier-line">
+                <span class="cert-badge" id="badge"></span>
+                <span class="tier-pill" id="tierPill"></span>
+                <span class="eyebrow" id="industryTag"></span>
+              </div>
+              <h1 id="certTitle"></h1>
+              <p class="role-line" id="roleLine"></p>
+              <p class="validates" id="validates"></p>
+              <p class="alias-line" id="aliasLine"></p>
+              <div class="meta-row" id="metaRow"></div>
+            </div>
+
+            <aside class="side">
+              <div class="price-label">Indicative pay band</div>
+              <div class="price" id="sidePrice"></div>
+              <div class="price-note" id="sidePriceNote"></div>
+              <a class="btn" href="/become-a-member">Apply for this certification</a>
+              <a class="btn ghost" href="/contact">Talk to an advisor</a>
+              <div class="eyebrow" style="margin-top:22px">At a glance</div>
+              <div id="sideFacts" style="margin-top:12px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:var(--muted)"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="tier-section" style="margin-top:56px">
+          <div class="eyebrow">The CERT+ ladder for this role</div>
+          <p style="color:var(--muted);margin:12px 0 22px;max-width:62ch">Every role has four certifications — one per tier. Start at Foundation and climb, or jump in at the tier that matches your experience.</p>
+          <div class="tier-grid" id="tierGrid"></div>
+        </section>
+
+        <section class="about" style="margin-top:56px">
+          <div class="eyebrow">About this certification</div>
+          <h2 style="font-family: 'Gilroy', 'Inter', system-ui, sans-serif;font-weight:400;font-size:clamp(26px,3.2vw,36px);margin:14px 0 18px;line-height:1.15">What this credential actually proves</h2>
+          <div id="about" style="display:flex;flex-direction:column;gap:14px;max-width:72ch;color:var(--muted);font-size:16px"></div>
+        </section>
+
+        <section style="margin-top:52px">
+          <div class="eyebrow">What you'll be able to do</div>
+          <div class="cards-2col" id="outcomes"></div>
+        </section>
+
+        <section style="margin-top:52px">
+          <div class="eyebrow">Curriculum</div>
+          <h3 class="h3">What you'll cover</h3>
+          <p class="sub" id="curriculumMeta"></p>
+          <ol id="modules" class="list-col"></ol>
+        </section>
+
+        <section style="margin-top:52px">
+          <div class="eyebrow">Careers</div>
+          <h3 class="h3">Jobs you can apply for after this certification</h3>
+          <p class="sub">Roles that consistently list these AI capabilities in <span id="jobsIndustry" style="color:var(--muted)"></span>.</p>
+          <div class="cards-2col" id="jobs"></div>
+        </section>
+
+        <section style="margin-top:52px">
+          <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:20px">
+            <div>
+              <div class="eyebrow">Where this credential maps</div>
+              <h3 style="font-family: 'Gilroy', 'Inter', system-ui, sans-serif;font-weight:400;font-size:clamp(24px,3vw,32px);margin:12px 0 0">Employers that hire for this role</h3>
+            </div>
+            <span class="hiring-flag"><span class="dot"></span>Illustrative &mdash; not a live feed</span>
+          </div>
+          <div class="company-grid" id="companies"></div>
+          <div class="note">
+            <span><strong style="color:var(--muted)">Illustrative sample data.</strong> Employer lists, role demand and packages on this page are representative examples for the <span id="noteIndustry"></span> market, not a live job feed. Always verify current openings and compensation with the employer.</span>
+          </div>
+        </section>
+
+        <section style="margin-top:52px">
+          <div class="eyebrow">Compensation</div>
+          <h3 style="font-family: 'Gilroy', 'Inter', system-ui, sans-serif;font-weight:400;font-size:clamp(24px,3vw,32px);margin:12px 0 6px">Indicative salary band in India</h3>
+          <p style="color:var(--muted2);font-size:14px;margin-bottom:20px">Representative total-compensation band for a <strong style="color:var(--muted)"><span id="payRole"></span></strong> at the <span id="payTier" style="color:var(--muted)"></span> tier. Illustrative, not a promise of pay.</p>
+          <div class="pay-grid">
+            <div class="pay-card">
+              <div class="region">India</div>
+              <div class="amount" id="payINR"></div>
+              <div class="per">per year (LPA) · base + variable</div>
+            </div>
+          </div>
+          <div class="note">
+            <span>Ranges are indicative and vary with city, company size, industry and experience. They are not a job guarantee or a salary promise.</span>
+          </div>
+        </section>
+
+        <div class="cta-band">
+          <div class="eyebrow" style="margin-bottom:12px">TCC CERT+</div>
+          <h2 id="ctaTitle"></h2>
+          <p>Learn through TCC bootcamps and live build tracks, then prove it with a verifiable credential employers can trust.</p>
+          <div class="cta-actions">
+            <a class="btn" href="/become-a-member">Enrol now</a>
+            <a class="btn ghost" href="../" id="backBottom">See all 1,048 certifications</a>
+          </div>
+        </div>
+      </article>
+
+      <section class="notfound hidden" id="notfound">
+        <div class="eyebrow" style="margin-bottom:14px">404</div>
+        <h2>Certification not found</h2>
+        <p>We couldn't find that credential. Browse the full CERT+ catalogue instead.</p>
+        <a class="btn" style="width:auto;margin:0 auto;padding:14px 28px" href="../" id="back404">Back to all certifications</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot-in">
+        <span>&copy; <span id="yr"></span> The Coding Company — TCC CERT+</span>
+        <nav class="foot-links">
+          <a href="../">CERT+ catalogue</a>
+          <a href="/learn">Learn</a>
+          <a href="/100-club">100 Club</a>
+          <a href="/privacy-policy">Privacy</a>
+          <a href="/terms-of-service">Terms</a>
+        <a href="/worksim/">WorkSim (pilot)</a></nav>
+      </div>
+    </footer>
+
+    <script src="../../certs-data.js"></script>
+    <script src="../../assets/js/cert-badge.js"></script>
+    <script>
+      (function () {
+        var LEVEL_COLORS = window.CERT_LEVEL_COLORS;
+        var LEVEL_BG = { Foundation: 'rgba(201,201,201,0.12)', Practitioner: 'rgba(77,141,255,0.14)', Strategist: 'rgba(155,134,255,0.14)', Executive: 'rgba(232,184,75,0.14)' };
+
+        function esc(s) {
+          return String(s).replace(/[&<>"]/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+          });
+        }
+
+        /* Badge mark + monogram are shared with the catalogue — see /assets/js/cert-badge.js */
+        var badgeSvg = window.certBadgeSvg;
+        var initials = window.certInitials;
+
+        /* relative URLs that work both served and from file:// */
+        function isFile() { return location.protocol === 'file:'; }
+        function backUrl() {
+          if (isFile()) return '../index.html';
+          return location.pathname.replace(/\/cert\/?(index\.html)?$/, '/') || '/bootcamps/';
+        }
+        function siblingUrl(slug) {
+          var q = '?id=' + encodeURIComponent(slug);
+          if (isFile()) return 'index.html' + q;
+          var p = location.pathname.replace(/index\.html$/, '');
+          if (p.charAt(p.length - 1) !== '/') p += '/';
+          return p + q;
+        }
+
+        var params = new URLSearchParams(location.search);
+        var id = params.get('id') || '';
+        var cert = window.CERT ? CERT.find(id) : null;
+
+        document.getElementById('yr').textContent = new Date().getFullYear();
+        document.getElementById('backTop').setAttribute('href', backUrl());
+        document.getElementById('backBottom').setAttribute('href', backUrl());
+        document.getElementById('back404').setAttribute('href', backUrl());
+
+        if (!cert) {
+          document.getElementById('notfound').classList.remove('hidden');
+          document.title = 'Certification not found | TCC CERT+';
+          return;
+        }
+
+        var d = CERT.detail(cert);
+        var color = LEVEL_COLORS[cert.level];
+        var el = document.getElementById('cert');
+        el.classList.remove('hidden');
+
+        /* head */
+        document.title = cert.cert + ' | TCC CERT+';
+        var selfUrl = location.origin + location.pathname + '?id=' + encodeURIComponent(cert.id);
+        var canon = document.querySelector('link[rel="canonical"]');
+        if (!canon) { canon = document.createElement('link'); canon.rel = 'canonical'; document.head.appendChild(canon); }
+        canon.href = selfUrl;
+        var ogUrl = document.querySelector('meta[property="og:url"]');
+        if (!ogUrl) { ogUrl = document.createElement('meta'); ogUrl.setAttribute('property', 'og:url'); document.head.appendChild(ogUrl); }
+        ogUrl.setAttribute('content', selfUrl);
+        document.getElementById('metaDesc').setAttribute('content',
+          cert.cert + ' — a ' + cert.level + ' tier TCC CERT+ credential for ' + cert.role + 's in ' + cert.industry + '. Description, jobs, hiring companies and salary benchmarks.');
+        document.getElementById('ogTitle').setAttribute('content', cert.cert);
+        document.getElementById('ogDesc').setAttribute('content', 'Build ' + d.tierLabel + ' skills for ' + cert.role + 's — jobs, hiring companies and packages.');
+
+        /* breadcrumb */
+        document.getElementById('crumbs').innerHTML =
+          '<a href="' + backUrl() + '">CERT+</a><span class="sep">/</span>' +
+          '<a href="' + backUrl() + '?industry=' + encodeURIComponent(cert.industryId) + '">' + esc(cert.industry) + '</a><span class="sep">/</span>' +
+          '<span style="color:rgba(255,255,255,0.7)">' + esc(cert.role) + '</span><span class="sep">/</span>' +
+          '<span style="color:' + color + '">' + cert.level + '</span>';
+
+        /* hero */
+        document.getElementById('badge').innerHTML = badgeSvg(cert.level) + '<span class="init">' + initials(cert.role) + '</span>';
+        var pill = document.getElementById('tierPill');
+        pill.textContent = cert.level + ' — ' + d.tierLabel;
+        pill.style.color = color;
+        pill.style.borderColor = color;
+        pill.style.background = LEVEL_BG[cert.level];
+        document.getElementById('certTitle').textContent = cert.cert;
+        document.getElementById('industryTag').textContent = cert.industry;
+        document.getElementById('roleLine').innerHTML = 'Designed for <strong>' + esc(cert.role) + '</strong> roles in <strong>' + esc(cert.industry) + '</strong>.';
+        document.getElementById('validates').textContent = 'Validates ' + d.validates + '.';
+
+        /* "Also matches" — the real-world job titles that resolve to this role. */
+        (function () {
+          var box = document.getElementById('aliasLine');
+          if (!box || !CERT.aliases) return;
+          var key = cert.role.toLowerCase();
+          var titles = Object.keys(CERT.aliases).filter(function (k) {
+            return String(CERT.aliases[k]).toLowerCase() === key;
+          });
+          if (titles.length < 2) { box.remove(); return; }
+          var shown = titles.slice(0, 10);
+          box.innerHTML = 'Also the closest CERT+ fit for ' +
+            shown.map(function (t) { return '<strong>' + esc(t) + '</strong>'; }).join(', ') +
+            (titles.length > shown.length ? ' and ' + (titles.length - shown.length) + ' more job titles' : '') + '.';
+        })();
+
+        document.getElementById('metaRow').innerHTML = [
+          ['Tier', cert.level],
+          ['Duration', d.hours],
+          ['Format', 'Online + proctored'],
+          ['Validity', '3 years'],
+          ['Credential', 'Verifiable badge'],
+          ['Framework', 'CERT+ v2']
+        ].map(function (x) {
+          return '<div class="meta-chip"><span class="k">' + x[0] + '</span><span class="v">' + esc(x[1]) + '</span></div>';
+        }).join('');
+
+        /* side */
+        document.getElementById('sidePrice').textContent = '\u20b9' + d.pay.inr[0] + '\u2013' + d.pay.inr[1] + ' LPA';
+        document.getElementById('sidePriceNote').textContent = 'India market \u00b7 ' + cert.level + ' tier for ' + cert.role + 's';
+        document.getElementById('sideFacts').innerHTML = [
+          ['Role', cert.role],
+          ['Industry', cert.industry],
+          ['Tier', cert.level + ' (' + d.tierLabel + ')'],
+          ['Time to complete', d.hours],
+          ['Assessed by', 'Hands-on tasks + exam']
+        ].map(function (x) {
+          return '<div style="display:flex;justify-content:space-between;gap:14px"><span style="color:var(--muted2)">' + x[0] + '</span><span style="color:#fff;font-weight:500;text-align:right">' + esc(x[1]) + '</span></div>';
+        }).join('');
+
+        /* tier ladder — the 4 certifications for this role */
+        var byTier = {};
+        CERT.siblings(cert).forEach(function (c) { byTier[c.level] = c; });
+        document.getElementById('tierGrid').innerHTML = CERT.tiers.map(function (t) {
+          var c = byTier[t];
+          if (!c) return '';
+          var isOn = c.id === cert.id;
+          var dd = CERT.detail(c);
+          return '<a class="tier-card' + (isOn ? ' on' : '') + '" href="' + siblingUrl(c.id) + '">' +
+            '<div class="t" style="color:' + LEVEL_COLORS[t] + '">' + t + '</div>' +
+            '<div class="n">' + esc(dd.tierLabel) + '</div>' +
+            '<div class="s">' + esc(dd.hours) + '</div>' +
+            (isOn ? '<span class="here">You are here</span>' : '<span class="here" style="color:var(--muted2)">View \u2192</span>') +
+          '</a>';
+        }).join('');
+
+        /* about */
+        var p1 = '<p><strong style="color:#fff">' + esc(cert.cert) + '</strong> is a ' + cert.level + '-tier TCC CERT+ certification built for <strong style="color:#fff">' + esc(cert.role) + '</strong> professionals in <strong style="color:#fff">' + esc(cert.industry) + '</strong>. ' + esc(d.blurb) + ' It validates ' + esc(d.validates) + '.</p>';
+        var p2 = '<p>It sits at the <strong style="color:#fff">' + cert.level + '</strong> tier of the four-step CERT+ ladder (Foundation \u2192 Practitioner \u2192 Strategist \u2192 Executive). Typical completion takes ' + esc(d.hours) + ', combining guided lessons with hands-on, role-specific build tasks and a final assessment. The credential is verifiable, shareable and valid for three years.</p>';
+        document.getElementById('about').innerHTML = p1 + p2;
+
+        /* outcomes */
+        document.getElementById('outcomes').innerHTML = d.outcomes.map(function (o) {
+          return '<div style="display:flex;gap:13px;align-items:flex-start;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,0.03)">' +
+            '' +
+            '<span style="font-size:14.5px;color:rgba(255,255,255,0.82)">' + esc(o) + '</span></div>';
+        }).join('');
+
+        /* curriculum */
+        document.getElementById('curriculumMeta').textContent = d.modules.length + ' modules \u00b7 ' + d.hours + ' \u00b7 self-paced with live sessions';
+        document.getElementById('modules').innerHTML = d.modules.map(function (m, i) {
+          return '<li style="display:flex;gap:16px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,0.03)">' +
+            '<span class="mono" style="color:' + color + ';font-size:12px;letter-spacing:0.1em">' + String(i + 1).padStart(2, '0') + '</span>' +
+            '<span style="font-size:14.5px;font-weight:500">' + esc(m) + '</span></li>';
+        }).join('');
+
+        /* jobs */
+        document.getElementById('jobsIndustry').textContent = cert.industry;
+        document.getElementById('jobs').innerHTML = d.jobs.map(function (j) {
+          return '<div class="job">' + esc(j) + '</div>';
+        }).join('');
+
+        /* companies */
+        document.getElementById('noteIndustry').textContent = cert.industry;
+        document.getElementById('companies').innerHTML = d.companies.map(function (c) {
+          return '<div class="company">' + esc(c) + '</div>';
+        }).join('');
+
+        /* pay */
+        document.getElementById('payRole').textContent = cert.role;
+        document.getElementById('payTier').textContent = cert.level;
+        document.getElementById('payINR').textContent = '\u20b9' + d.pay.inr[0] + '\u2013' + d.pay.inr[1] + ' LPA';
+        document.getElementById('ctaTitle').textContent = cert.cert;
+
+        /* ── AI-search layer ──────────────────────────────────────────────
+           Replace the static credential markup with a full
+           EducationalOccupationalCredential for THIS credential, then add
+           Course + mentions + FAQ so assistants can answer "which TCC
+           certification fits <job title>?" and cite this exact page.
+           Runs after window.CERT_ID is set by the loader, so mentions can
+           reference the specific credential URL. */
+        (function () {
+          var SITE = 'https://thecodingcompany.io';
+          var pageUrl = SITE + '/bootcamps/cert/?id=' + encodeURIComponent(cert.id);
+
+          /* 1. Static blocks we can safely replace (JSON-LD is inert). */
+          var scripts = Array.prototype.slice.call(
+            document.querySelectorAll('script[type="application/ld+json"]')
+          );
+
+          /* BreadcrumbList → full trail including this credential. */
+          var crumb = {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
+              { '@type': 'ListItem', position: 2, name: 'TCC CERT+', item: SITE + '/bootcamps/' },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: cert.industry,
+                item: SITE + '/ai-courses-for/' + cert.industryId + '/'
+              },
+              { '@type': 'ListItem', position: 4, name: cert.cert, item: pageUrl }
+            ]
+          };
+
+          /* EducationalOccupationalCredential for this specific cert. */
+          var credential = {
+            '@context': 'https://schema.org',
+            '@type': 'EducationalOccupationalCredential',
+            '@id': pageUrl + '#credential',
+            name: cert.cert,
+            description: d.blurb || '',
+            credentialCategory: 'certification',
+            educationalLevel: cert.level,
+            competencyRequired: (d.outcomes || []).slice(0, 8),
+            about: { '@type': 'Thing', name: cert.role + ' (' + cert.industry + ')' },
+            url: pageUrl,
+            validFor: 'P3Y',
+            teaches: (d.modules || []).slice(0, 8),
+            inLanguage: 'en',
+            occupationalCategory: cert.role,
+            industry: cert.industry,
+            recognizedBy: { '@id': SITE + '/#organization' },
+            issuer: {
+              '@type': 'Organization',
+              name: 'The Coding Company',
+              url: SITE,
+              '@id': SITE + '/#organization'
+            }
+          };
+
+          /* mentions → the industry hub and role pages assistants should cite. */
+          var mentions = [
+            { '@type': 'WebPage', name: 'TCC CERT+ catalogue', url: SITE + '/bootcamps/' },
+            {
+              '@type': 'WebPage',
+              name: 'AI courses for ' + cert.industry,
+              url: SITE + '/ai-courses-for/' + cert.industryId + '/'
+            },
+            { '@type': 'WebPage', name: 'TCC Placement Partner', url: SITE + '/placement/' }
+          ];
+          if (cert.level === 'Foundation') {
+            mentions.push({
+              '@type': 'WebPage',
+              name: 'AI courses for beginners',
+              url: SITE + '/ai-courses-for/foundation/'
+            });
+          }
+
+          /* FAQ → answers the question an assistant is most likely to see. */
+          var faqPage = {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is ' + cert.cert + '?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    cert.cert +
+                    ' is a ' +
+                    cert.level +
+                    '-tier TCC CERT+ certification for ' +
+                    cert.role +
+                    ' roles in ' +
+                    cert.industry +
+                    '. ' +
+                    (d.blurb || '') +
+                    ' It validates ' +
+                    (d.validates || '') +
+                    ' and is verifiable, shareable and valid for three years.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'How long does ' + cert.cert + ' take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'Typical completion is ' +
+                    (d.hours || 'a few weeks') +
+                    ', combining guided lessons, hands-on role-specific build tasks and a final assessment.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Who should take ' + cert.cert + '?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'Professionals and students targeting ' +
+                    cert.role +
+                    ' work in ' +
+                    cert.industry +
+                    ' who need to prove practical AI skills for that role.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Does TCC help with AI placements?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'Yes. TCC Placement Partner provides portfolio building, resume and interview support and employer connections, with a published goal of 10,000 offer letters per year. It is not a job guarantee.'
+                }
+              }
+            ]
+          };
+
+          /* 2. Swap the first two static blocks (BreadcrumbList, credential). */
+          var replaced = 0;
+          scripts.forEach(function (s, i) {
+            if (replaced >= 2) return;
+            try {
+              var j = JSON.parse(s.textContent);
+              var t = j['@type'];
+              if (t === 'BreadcrumbList' && replaced === 0) {
+                s.textContent = JSON.stringify(crumb);
+                replaced = 1;
+              } else if (t === 'EducationalOccupationalCredential' && replaced <= 1) {
+                s.textContent = JSON.stringify(credential);
+                replaced = 2;
+              } else if (t === 'FAQPage' && replaced === 2) {
+                s.textContent = JSON.stringify(faqPage);
+                replaced = 3;
+              }
+            } catch (e) { /* leave untouched */ }
+          });
+
+          /* 3. Append a WebPage node with mentions + the credential @graph. */
+          var graph = document.createElement('script');
+          graph.type = 'application/ld+json';
+          graph.textContent = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'WebPage',
+                '@id': pageUrl,
+                url: pageUrl,
+                name: cert.cert,
+                description:
+                  cert.cert +
+                  ' — a ' +
+                  cert.level +
+                  ' tier TCC CERT+ certification for ' +
+                  cert.role +
+                  ' roles in ' +
+                  cert.industry +
+                  '.',
+                isPartOf: { '@id': SITE + '/#website' },
+                inLanguage: 'en',
+                primaryImageOfPage: {
+                  '@type': 'ImageObject',
+                  url: SITE + '/tcc-og.png'
+                },
+                mentions: mentions,
+                mainEntity: { '@id': pageUrl + '#credential' }
+              }
+            ]
+          });
+          document.head.appendChild(graph);
+        })();
+      })();
+    </script>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+</body>
+</html>

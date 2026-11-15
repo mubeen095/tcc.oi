@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+    <title>AI Tools in an Interview: What Is Allowed, What Gets You</title>
+    <meta name="description" content="The three AI policies you will actually meet in interviews, the one behaviour that ends a process early." />
+    <meta name="keywords" content="AI in interviews, using AI in interview, AI tools interview policy, disclose AI use interview, technical interview AI, AI assisted coding interview" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="The Coding Company (TCC)" />
+    <meta name="theme-color" content="#050505" />
+    <link rel="canonical" href="https://thecodingcompany.io/blog/ai-tools-in-interviews.html" />
+    <meta property="og:title" content="AI Tools in an Interview: What Is Allowed, What Gets You Rejected | TCC" />
+    <meta property="og:description" content="The three AI policies you will actually meet in interviews, the one behaviour that ends a process early, and how to disclose tool use in a way that earns marks instead of losing them." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://thecodingcompany.io/blog/ai-tools-in-interviews.html" />
+    <meta property="og:site_name" content="The Coding Company (TCC)" />
+    <meta property="og:image" content="https://thecodingcompany.io/assets/img/blog/hero-ai-abstract.jpg" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="900" />
+    <meta property="article:published_time" content="2026-11-11" />
+    <meta property="article:modified_time" content="2026-11-11" />
+    <meta property="article:section" content="Interview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Tools in an Interview: What Is Allowed, What Gets You Rejected | TCC" />
+    <meta name="twitter:description" content="The three AI policies you will actually meet in interviews, the one behaviour that ends a process early, and how to disclose tool use in a way that earns marks instead of losing them." />
+    <meta name="twitter:image" content="https://thecodingcompany.io/assets/img/blog/hero-ai-abstract.jpg" />
+    <link rel="alternate" type="application/rss+xml" title="TCC Blog — AI Courses, Certifications & Placement" href="/feed.xml" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/tcc-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/tcc-favicon-96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/tcc-apple-touch.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://thecodingcompany.io/blog/ai-tools-in-interviews.html#article",
+      "headline": "AI Tools in an Interview: What Is Allowed, and What Gets You Rejected",
+      "description": "The three AI policies you will actually meet in interviews, the one behaviour that ends a process early, and how to disclose tool use in a way that earns marks instead of losing them.",
+      "url": "https://thecodingcompany.io/blog/ai-tools-in-interviews.html",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://thecodingcompany.io/blog/ai-tools-in-interviews.html"
+      },
+      "image": [
+        "https://thecodingcompany.io/assets/img/blog/hero-ai-abstract.jpg"
+      ],
+      "datePublished": "2026-11-11",
+      "dateModified": "2026-11-11",
+      "inLanguage": "en",
+      "wordCount": 1900,
+      "articleSection": "Interview",
+      "keywords": "AI in interviews, using AI in interview, AI tools interview policy, disclose AI use interview, technical interview AI, AI assisted coding interview",
+      "author": {
+        "@id": "https://thecodingcompany.io/#organization"
+      },
+      "publisher": {
+        "@id": "https://thecodingcompany.io/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://thecodingcompany.io/blog/#blog"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Job interviews"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI tools"
+        },
+        {
+          "@type": "Thing",
+          "name": "Hiring"
+        },
+        {
+          "@type": "Thing",
+          "name": "Employment"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "CreativeWork",
+          "name": "TCC assessment rubric",
+          "url": "https://thecodingcompany.io/verify/rubric/"
+        },
+        {
+          "@type": "Service",
+          "name": "TCC placement diagnostic",
+          "url": "https://thecodingcompany.io/diagnostic/"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "TCC CERT+ role-based AI certifications",
+          "url": "https://thecodingcompany.io/bootcamps/"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://thecodingcompany.io/blog/ai-tools-in-interviews.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it cheating to use AI in a technical interview?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if the company has said not to. Under a disclosed-use policy it is permitted and expected; under a closed-book policy it is cheating. The policy is usually discoverable by asking before the interview, and asking is itself a positive signal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I tell the interviewer I used AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the policy requires disclosure, yes, and precisely: name the tool, the scope, what you changed, and how you tested. If the policy is silent, disclose anyway — undisclosed use that is later detected ends the process, while disclosed use is a demonstration of judgement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I cannot explain the AI-generated code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Delete it and write your own. Unexplainable code is worse than slower code, because the interviewer is assessing whether your output can be trusted, not how fast you typed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do companies ban AI in interviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some do, particularly in proctored assessments and regulated industries. Detection is usually behavioural rather than technical, and the penalty is typically disqualification rather than a lower score — which is why asking first is worth the email."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get better at verifying AI output?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Practise the four-step check until it is automatic: run the smallest case, test an edge case, read the code rather than the comments, and delete anything you cannot defend line by line. It takes about sixty seconds once rehearsed."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thecodingcompany.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://thecodingcompany.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI tools in interviews",
+          "item": "https://thecodingcompany.io/blog/ai-tools-in-interviews.html"
+        }
+      ]
+    }
+    </script>
+<style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+      body { background: #050505; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button { font-family: inherit; cursor: pointer; }
+
+      h1, h2 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+      .serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.02em; }
+      .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
+      .mono { font-family: 'DM Mono', 'Roboto Mono', monospace; }
+
+      /* ── SHELL ── */
+      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #050505; }
+      .sidebar { display: none; position: sticky; top: 0; width: 200px; min-height: 100%; padding: 24px 16px; flex-direction: column; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.05); background: #050505; overflow-y: auto; overflow-x: hidden; }
+      @media (min-width: 768px) { .sidebar { display: flex; } }
+      .sidebar-nav { margin-top: 25vh; }
+      .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: rgba(255,255,255,0.58); transition: all 0.3s; position: relative; }
+      .sidebar-link svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 1.5; }
+      .sidebar-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+      .sidebar-link.active { color: #fff; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12), transparent 70%); -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%); mask-image: linear-gradient(to right, black 40%, transparent 100%); }
+      .sidebar-link.active svg { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
+      .sidebar-link .label { font-weight: 500; letter-spacing: 0.01em; }
+      .sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+      .sidebar-webinars { display: flex; align-items: center; gap: 12px; padding: 12px 4px; color: rgba(255,255,255,0.58); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; transition: color 0.3s; }
+      .sidebar-webinars:hover { color: #fff; }
+      .sidebar-webinars svg { width: 16px; height: 16px; stroke-width: 1.5; }
+      .btn-login { display: block; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 20px; font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s; }
+      .btn-login:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+      .brand-serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+      .sidebar-brand { font-size: 21px; padding: 0 8px; margin-bottom: 24px; transition: all 0.3s; }
+      .sidebar-brand:hover { text-shadow: 0 0 16px rgba(255,255,255,0.4); }
+
+      .main-scroll { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; }
+      .content-wrap { padding-bottom: 90px; }
+      @media (min-width: 768px) { .content-wrap { padding-bottom: 0; } }
+
+      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(6,6,6,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+      @media (min-width: 768px) { .mobile-header { display: none; } }
+      @media (max-width: 767px) { .main-scroll > .content-wrap { padding-top: 52px; } }
+      .mobile-brand { font-size: 19px; }
+      .mobile-actions { display: flex; align-items: center; gap: 10px; }
+      .mobile-login { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); transition: all 0.3s; }
+      .mobile-login svg { width: 20px; height: 20px; stroke-width: 1.5; }
+      .mobile-cta { font-size: 12px; font-weight: 600; background: #0064FF; color: #fff; border: 0; border-radius: 999px; padding: 9px 16px; white-space: nowrap; transition: background 0.2s; cursor: pointer; }
+      .mobile-cta:hover { background: #0A63EA; }
+      @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 17px; } .mobile-cta { font-size: 11px; padding: 8px 12px; } }
+
+      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #060606; align-items: stretch; }
+      @media (max-width: 767px) { .bottom-nav { display: flex; height: 52px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; } }
+      .bottom-nav-inner { display: flex; justify-content: space-around; align-items: stretch; width: 100%; height: 100%; }
+      .bottom-link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; min-width: 0; color: #999; transition: all 0.2s; }
+      .bottom-link svg { width: 26px; height: 26px; stroke-width: 1.5; }
+      @media (max-width: 767px) { .bottom-link svg { display: none; } }
+      .bottom-link.active { color: #fff; }
+      .bottom-link span { font-size: 12px; font-weight: 400; line-height: 1; }
+
+      @media (max-width: 384px) {
+        .bottom-nav-inner { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+        .bottom-nav-inner::-webkit-scrollbar { display: none; }
+        .bottom-link { flex: 1 0 64px; min-width: 64px; }
+        .bottom-link span { font-size: 11px; }
+      }
+
+      /* ── TYPE / LAYOUT ── */
+      .eyebrow { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+      .section { padding: 72px 24px; position: relative; }
+      @media (min-width: 768px) { .section { padding: 96px 40px; } }
+      .container { max-width: 1400px; margin: 0 auto; }
+      .section-title { font-family: 'Newsreader', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; font-size: clamp(30px, 4.2vw, 54px); color: #fff; }
+      .section-sub { color: rgba(255,255,255,0.45); font-size: 16px; margin-top: 12px; max-width: 46em; }
+      .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; transition: all 0.4s; }
+      .card:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
+      .band { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); background: linear-gradient(180deg, rgba(0,87,222,0.05), rgba(0,0,0,0)); }
+
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #000; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; white-space: nowrap; border: 0; border-radius: 999px; padding: 16px 32px; box-shadow: 0 0 20px rgba(255,255,255,0.2); cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+      .btn:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(255,255,255,0.28); }
+      .btn-ghost { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); box-shadow: none; }
+      .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+      .btn-sm { padding: 12px 22px; font-size: 14px; }
+
+      .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+      .reveal.in { opacity: 1; transform: translateY(0); }
+
+      /* ── HERO ── */
+      .hero { position: relative; padding: 120px 24px 56px; overflow: hidden; background: #050505; }
+      @media (min-width: 768px) { .hero { padding: 150px 40px 72px; } }
+      .hero-bg { position: absolute; inset: 0; z-index: 0; background-image: url('../assets/img/blog/hero-people-work.jpg'); background-size: cover; background-position: center 35%; opacity: 0.42; transform: scale(1.03); }
+      .hero-veil { position: absolute; inset: 0; z-index: 1; background:
+        linear-gradient(180deg, rgba(5,5,5,0.72) 0%, rgba(5,5,5,0.86) 55%, #050505 100%),
+        radial-gradient(90% 80% at 15% 20%, rgba(0,87,222,0.30), transparent 62%); }
+      .hero-grid { position: absolute; inset: 0; z-index: 2; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); }
+      .hero-inner { position: relative; z-index: 3; max-width: 1400px; margin: 0 auto; }
+      .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 9px 20px; margin-bottom: 24px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); backdrop-filter: blur(8px); }
+      .hero-pill .dot { width: 8px; height: 8px; border-radius: 999px; background: #0064FF; animation: pulse 1.6s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .hero-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.045em; line-height: 1.03; font-size: clamp(38px, 6vw, 76px); color: #fff; max-width: 16em; }
+      .hero-h1 .accent { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+      .hero-sub { margin-top: 20px; color: rgba(255,255,255,0.6); font-size: clamp(16px, 1.7vw, 19px); max-width: 54em; line-height: 1.65; }
+      .hero-meta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+      .hero-chip { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); backdrop-filter: blur(8px); }
+
+      /* ── FEATURED ── */
+      .feature { display: grid; grid-template-columns: 1fr; gap: 0; overflow: hidden; margin-top: 8px; }
+      @media (min-width: 900px) { .feature { grid-template-columns: 1.05fr 0.95fr; } }
+      .feature-media { position: relative; min-height: 280px; background-size: cover; background-position: center; }
+      @media (min-width: 900px) { .feature-media { min-height: 420px; } }
+      .feature-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(5,5,5,0.35) 0%, rgba(0,87,222,0.22) 100%); }
+      .feature-body { padding: 36px 32px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+      @media (min-width: 768px) { .feature-body { padding: 46px 44px; } }
+      .feature-tag { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #7fb4ff; }
+      .feature-title { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; letter-spacing: -0.02em; color: #fff; }
+      .feature-desc { color: rgba(255,255,255,0.55); font-size: 15.5px; line-height: 1.7; }
+      .feature-read { display: inline-flex; align-items: center; gap: 8px; color: #fff; font-weight: 600; font-size: 14.5px; margin-top: 4px; }
+      .feature-read span.arw { transition: transform 0.3s; }
+      .feature:hover .feature-read span.arw { transform: translateX(5px); }
+
+      /* ── POST GRID ── */
+      .post-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 34px; }
+      @media (min-width: 720px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1180px) { .post-grid { grid-template-columns: repeat(3, 1fr); } }
+      .post { display: flex; flex-direction: column; overflow: hidden; }
+      .post-media { height: 178px; background-size: cover; background-position: center; position: relative; }
+      .post-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,5,5,0.15) 0%, rgba(5,5,5,0.72) 100%); transition: opacity 0.5s; }
+      .post:hover .post-media::after { opacity: 0.7; }
+      .post-body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+      .post-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+      .post-title { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.32; color: #fff; }
+      .post-desc { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.65; }
+      .post-foot { margin-top: auto; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; color: rgba(255,255,255,0.42); }
+      .post-foot .go { color: #7fb4ff; font-weight: 600; }
+
+      /* ── CATEGORY ROW ── */
+      .cat-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+      .cat-pill { padding: 11px 22px; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.6); transition: all 0.25s; }
+      .cat-pill:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.22); color: #fff; transform: translateY(-2px); }
+
+      /* ── AUDIENCE CARDS ── */
+      .aud-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+      @media (min-width: 760px) { .aud-grid { grid-template-columns: repeat(3, 1fr); } }
+      .aud { padding: 30px 28px; display: flex; flex-direction: column; gap: 12px; }
+      .aud-ico { width: 46px; height: 46px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: rgba(0,100,255,0.12); border: 1px solid rgba(0,100,255,0.28); }
+      .aud-ico svg { width: 22px; height: 22px; stroke: #6aa8ff; stroke-width: 1.6; fill: none; }
+      .aud-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .aud-desc { color: rgba(255,255,255,0.5); font-size: 14.5px; line-height: 1.65; }
+      .aud-link { margin-top: auto; padding-top: 8px; color: #7fb4ff; font-weight: 600; font-size: 14px; }
+
+      /* ── NEWSLETTER ── */
+      .news-wrap { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center; }
+      @media (min-width: 900px) { .news-wrap { grid-template-columns: 1.1fr 0.9fr; } }
+      .news-form { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+      .news-input { flex: 1; min-width: 220px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 15px 24px; color: #fff; font-size: 15px; outline: none; transition: border-color 0.25s; }
+      .news-input::placeholder { color: rgba(255,255,255,0.35); }
+      .news-input:focus { border-color: rgba(0,100,255,0.6); }
+      .news-note { color: rgba(255,255,255,0.4); font-size: 13.5px; margin-top: 12px; }
+      .news-visual { position: relative; border-radius: 22px; overflow: hidden; min-height: 240px; background-image: url('../assets/img/blog/hero-ai-abstract.jpg'); background-size: cover; background-position: center; border: 1px solid rgba(255,255,255,0.08); }
+      .news-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(0,87,222,0.28), rgba(5,5,5,0.78)); }
+
+      /* ── FINAL ── */
+      .final { text-align: center; padding: 96px 24px 88px; }
+      .final-title { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(32px, 5.2vw, 62px); line-height: 1.08; letter-spacing: -0.02em; color: #fff; margin-bottom: 22px; }
+      .final-sub { color: rgba(255,255,255,0.45); font-size: clamp(16px, 2vw, 19px); line-height: 1.6; margin: 0 auto 36px; max-width: 40em; }
+      .final-ctas { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+      @media (min-width: 640px) { .final-ctas { flex-direction: row; } }
+
+      /* ── FOOTER ── */
+      .footer { background: #060606; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px clamp(20px, 5vw, 60px) 30px; }
+      .footer-brand { text-align: center; margin-bottom: 44px; }
+      .footer-brand img { height: 150px; margin: 0 auto 16px; }
+      .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px; padding-bottom: 50px; }
+      .footer-col h3 { font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin-bottom: 18px; color: #fff; }
+      .footer-col a { display: block; color: #a9a9a9; font-size: 13px; line-height: 1.9; }
+      .footer-col a:hover { color: #fff; }
+      .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+      .footer-bottom p, .footer-bottom a { color: #a9a9a9; font-size: 13px; }
+      .footer-bottom a:hover { color: #fff; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    
+      /* ── TCC mobile polish (generated) ── */
+      @media (max-width: 767px) {
+        html { -webkit-text-size-adjust: 100%; }
+        main.main-scroll, .sidebar { -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* comfortable tap targets */
+        .finder-chip { min-height: 44px; display: inline-flex; align-items: center; padding: 11px 18px; font-size: 12.5px; }
+        .mode-btn { min-height: 44px; }
+        .popular-card { min-height: 60px; justify-content: center; }
+        .chip-row { gap: 8px; }
+        .bottom-link { min-height: 52px; }
+        .cat-pill, .c-oth { min-height: 44px; display: inline-flex; align-items: center; }
+        .btn, .btn-sm { min-height: 46px; }
+        .news-input { min-height: 50px; }
+
+        /* breathe below the fold */
+        .section { padding-left: 18px; padding-right: 18px; }
+        .eco-inner { padding-left: 18px; padding-right: 18px; }
+        .container { padding-left: 0; padding-right: 0; }
+        .footer { padding-left: 20px; padding-right: 20px; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+        /* fluid display type that cannot overflow */
+        .hero-h1, .section-title, .final-title, .a-title, .c-title, .feature-title, .a-cta .ct-t {
+          overflow-wrap: anywhere; word-break: break-word;
+        }
+        .hero-sub, .section-sub, .feature-desc, .post-desc, .a-standfirst { font-size: 15.5px; line-height: 1.68; }
+
+        /* card media stays proportional on narrow screens */
+        .post-media { height: 160px; }
+        .feature-media { min-height: 210px; }
+
+        /* article measure + code-free reading width */
+        .a-body { padding-left: 20px; padding-right: 20px; }
+        .a-body p, .a-body li { font-size: 16.5px; line-height: 1.78; }
+        .a-phase { gap: 14px; }
+
+        /* grids collapse cleanly rather than squashing */
+        .a-stats, .a-flag { grid-template-columns: 1fr; }
+        .eco-grid { row-gap: 10px; }
+      }
+
+      @media (max-width: 480px) {
+        .section { padding-top: 52px; padding-bottom: 52px; }
+        .hero, .a-hero, .c-hero { padding-left: 18px; padding-right: 18px; }
+        .hero { padding-top: 92px; padding-bottom: 40px; }
+        .a-hero { padding-top: 100px; padding-bottom: 40px; }
+        .c-hero { padding-top: 96px; padding-bottom: 44px; }
+
+        /* stack the hero search so the button is full-width and thumbable */
+        .hero-search { flex-direction: column; align-items: stretch; padding: 8px; gap: 8px; border-radius: 18px; }
+        .hero-search-input { width: 100%; padding: 12px 12px; }
+        .hero-search-btn { width: 100%; padding: 14px 18px; font-size: 14.5px; border-radius: 12px; }
+
+        /* finder bar stacks the same way */
+        .finder-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+        .finder-count { text-align: right; }
+
+        /* two-up stats read better than three-up on very narrow screens */
+        .hero-stats { gap: 10px; }
+        .hero-stat .v { font-size: 26px; }
+        .hero-stat .l { font-size: 11.5px; }
+
+        /* footer single column */
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        .footer-brand img { height: 116px; }
+
+        /* related/next cards full width */
+        .a-related { grid-template-columns: 1fr; }
+        .final-ctas { gap: 12px; }
+        .final-ctas .btn, .final-ctas .btn-ghost, .a-cta .ct-row .btn { width: 100%; }
+        .a-cta .ct-row { flex-direction: column; align-items: stretch; }
+
+        .a-body h2 { font-size: clamp(23px, 7vw, 30px); }
+        .a-body h3 { font-size: 18px; }
+        .a-quote p { font-size: 19px !important; }
+      }
+
+      @media (max-width: 360px) {
+        .hero-h1 { font-size: clamp(28px, 9.5vw, 40px); }
+        .section-title { font-size: clamp(24px, 8vw, 34px); }
+        .finder-chip { padding: 10px 14px; font-size: 12px; }
+        .a-body { padding-left: 16px; padding-right: 16px; }
+      }
+
+      @supports (padding: max(0px)) {
+        @media (max-width: 767px) {
+          .bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px); height: auto; min-height: 52px; }
+          .mobile-header { padding-top: env(safe-area-inset-top, 0px); height: auto; min-height: 52px; }
+        }
+      }
+
+    
+      /* ── skip link (accessibility) ── */
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 99999; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+      .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; overflow: visible; outline: 2px solid #fff; outline-offset: 2px; }
+
+      /* ══════════ ARTICLE ══════════ */
+      .a-hero { position: relative; padding: 130px 24px 46px; overflow: hidden; background: #050505; }
+      @media (min-width: 768px) { .a-hero { padding: 158px 40px 58px; } }
+      .a-hero-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center 40%; opacity: 0.38; transform: scale(1.03); }
+      .a-hero-veil { position: absolute; inset: 0; z-index: 1; background:
+        linear-gradient(180deg, rgba(5,5,5,0.74) 0%, rgba(5,5,5,0.88) 58%, #050505 100%),
+        radial-gradient(85% 78% at 18% 18%, rgba(0,87,222,0.30), transparent 62%); }
+      .a-hero-grid { position: absolute; inset: 0; z-index: 2; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); }
+      .a-hero-inner { position: relative; z-index: 3; max-width: 900px; margin: 0 auto; }
+      .crumbs { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.42); margin-bottom: 22px; flex-wrap: wrap; }
+      .crumbs a:hover { color: #fff; }
+      .crumbs .sep { opacity: 0.4; }
+      .crumbs .cur { color: rgba(255,255,255,0.7); }
+      .a-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #7fb4ff; background: rgba(0,100,255,0.1); border: 1px solid rgba(0,100,255,0.28); border-radius: 999px; padding: 8px 16px; margin-bottom: 20px; backdrop-filter: blur(8px); }
+      .a-title { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.045em; line-height: 1.06; font-size: clamp(30px, 4.6vw, 54px); color: #fff; }
+      .a-title .accent { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+      .a-standfirst { margin-top: 20px; color: rgba(255,255,255,0.6); font-size: clamp(16px, 1.6vw, 18.5px); line-height: 1.7; max-width: 44em; }
+      .a-byline { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-size: 13px; color: rgba(255,255,255,0.45); }
+      .a-byline .who { color: rgba(255,255,255,0.8); font-weight: 600; }
+      .a-byline .dot-sep { width: 4px; height: 4px; border-radius: 999px; background: rgba(255,255,255,0.28); }
+
+      .a-body { max-width: 780px; margin: 0 auto; padding: 58px 24px 0; }
+      @media (min-width: 768px) { .a-body { padding: 74px 40px 0; } }
+      .a-body > * + * { margin-top: 22px; }
+      .a-body h2 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; line-height: 1.14; font-size: clamp(26px, 3.2vw, 38px); color: #fff; margin-top: 54px; scroll-margin-top: 80px; }
+      .a-body h3 { font-size: clamp(18px, 2vw, 21px); font-weight: 700; letter-spacing: -0.02em; color: #fff; margin-top: 38px; }
+      .a-body p { color: rgba(255,255,255,0.68); font-size: 17px; line-height: 1.82; }
+      .a-body strong, .a-body b { color: #fff; font-weight: 600; }
+      .a-body a { color: #7fb4ff; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(127,180,255,0.35); transition: text-decoration-color 0.25s; }
+      .a-body a:hover { text-decoration-color: #7fb4ff; }
+      .a-body ul, .a-body ol { padding-left: 4px; display: flex; flex-direction: column; gap: 12px; }
+      .a-body li { color: rgba(255,255,255,0.68); font-size: 17px; line-height: 1.75; padding-left: 26px; position: relative; }
+      .a-body ul li::before { content: ''; position: absolute; left: 4px; top: 12px; width: 7px; height: 7px; border-radius: 999px; background: #0064FF; box-shadow: 0 0 10px rgba(0,100,255,0.7); }
+      .a-body ol { counter-reset: n; }
+      .a-body ol li { padding-left: 40px; counter-increment: n; }
+      .a-body ol li::before { content: counter(n); position: absolute; left: 0; top: 1px; font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; color: #7fb4ff; width: 26px; height: 26px; border-radius: 999px; background: rgba(0,100,255,0.12); border: 1px solid rgba(0,100,255,0.3); display: flex; align-items: center; justify-content: center; }
+      .a-body hr { border: 0; border-top: 1px solid rgba(255,255,255,0.09); margin: 46px 0; }
+      .a-lede { font-size: 20px !important; line-height: 1.75 !important; color: rgba(255,255,255,0.78) !important; }
+
+      .a-callout { border: 1px solid rgba(0,100,255,0.28); background: linear-gradient(140deg, rgba(0,87,222,0.13), rgba(0,87,222,0.02)); border-radius: 18px; padding: 26px 28px; display: flex; flex-direction: column; gap: 10px; }
+      .a-callout .co-label { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #7fb4ff; }
+      .a-callout p { font-size: 16px !important; color: rgba(255,255,255,0.74) !important; line-height: 1.72 !important; }
+
+      .a-quote { border-left: 2px solid #0064FF; padding: 6px 0 6px 24px; }
+      .a-quote p { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px) !important; line-height: 1.45 !important; color: rgba(255,255,255,0.86) !important; }
+
+      .a-stats { display: grid; grid-template-columns: 1fr; gap: 14px; }
+      @media (min-width: 620px) { .a-stats { grid-template-columns: repeat(3, 1fr); } }
+      .a-stat { border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.03); border-radius: 16px; padding: 22px 20px; }
+      .a-stat .num { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(28px, 3.4vw, 38px); line-height: 1; color: #fff; }
+      .a-stat .lbl { margin-top: 8px; font-size: 13.5px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+      .a-phases { display: flex; flex-direction: column; gap: 14px; }
+      .a-phase { display: flex; gap: 18px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.03); border-radius: 16px; padding: 22px 24px; }
+      .a-phase .ph-n { font-family: 'DM Mono', monospace; font-size: 12px; color: #7fb4ff; flex-shrink: 0; padding-top: 3px; letter-spacing: 0.1em; }
+      .a-phase .ph-t { font-size: 16.5px; font-weight: 700; color: #fff; letter-spacing: -0.01em; margin-bottom: 6px; }
+      .a-phase .ph-d { font-size: 15px !important; color: rgba(255,255,255,0.6) !important; line-height: 1.7 !important; }
+      .a-phase .ph-d { margin: 0 !important; }
+
+      .a-flag { display: grid; grid-template-columns: 1fr; gap: 14px; }
+      @media (min-width: 700px) { .a-flag { grid-template-columns: repeat(2, 1fr); } }
+      .a-flag .fl { border-radius: 16px; padding: 22px 24px; border: 1px solid rgba(255,255,255,0.09); background: rgba(255,255,255,0.03); }
+      .a-flag .fl .fl-h { display: block; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; color: #fff; }
+      .a-flag .fl.good .fl-h { color: #6ee7a8; }
+      .a-flag .fl.bad .fl-h { color: #ff8a8a; }
+      .a-flag .fl p { font-size: 14.5px !important; color: rgba(255,255,255,0.6) !important; line-height: 1.68 !important; margin: 0 !important; }
+
+      .a-faq { border-top: 1px solid rgba(255,255,255,0.08); }
+      .a-faq details { border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .a-faq summary { list-style: none; cursor: pointer; padding: 22px 44px 22px 0; position: relative; font-size: 17.5px; font-weight: 600; color: #fff; letter-spacing: -0.015em; line-height: 1.45; }
+      .a-faq summary::-webkit-details-marker { display: none; }
+      .a-faq summary::after { content: '+'; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-family: 'DM Mono', monospace; font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.45); transition: transform 0.3s; }
+      .a-faq details[open] summary::after { content: '−'; color: #7fb4ff; }
+      .a-faq details p { padding: 0 0 24px; color: rgba(255,255,255,0.62); font-size: 16px; line-height: 1.78; margin: 0; }
+
+      .a-cta { border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(140deg, rgba(0,87,222,0.16), rgba(5,5,5,0.4)); border-radius: 22px; padding: 40px 34px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+      .a-cta .ct-t { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.12; letter-spacing: -0.02em; color: #fff; }
+      .a-cta .ct-d { color: rgba(255,255,255,0.58); font-size: 15.5px; line-height: 1.72; }
+      .a-cta .ct-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+      .a-related { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+      @media (min-width: 760px) { .a-related { grid-template-columns: repeat(2, 1fr); } }
+      .a-rel { display: flex; flex-direction: column; gap: 10px; padding: 24px 24px 26px; }
+      .a-rel .rl-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+      .a-rel .rl-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.34; color: #fff; }
+      .a-rel .rl-desc { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.62; }
+      .a-rel .rl-go { margin-top: auto; padding-top: 12px; color: #7fb4ff; font-weight: 600; font-size: 14px; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal { opacity: 1 !important; transform: none !important; }
+      }
+    </style>
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+  <!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899', { anonymize_ip: true });
+    </script>
+  <noscript><style id="reveal-noscript">.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+  <body>
+    <div class="app-shell baseline-root">
+<aside class="sidebar">
+        <a href="/" class="brand-serif sidebar-brand">thecodingcompany</a>
+        <nav class="sidebar-nav">
+          <a href="/" class="sidebar-link"><span class="label">Home</span></a>
+          <a href="/bootcamps" class="sidebar-link"><span class="label">CERT+</span></a>
+          <a href="/placement" class="sidebar-link"><span class="label">Placements</span></a>
+          <a href="/blog" class="sidebar-link active"><span class="label">Blog</span></a>
+          <a href="/100-club" class="sidebar-link"><span class="label">100 Club</span></a>
+          <a href="/domains" class="sidebar-link"><span class="label">Domains</span></a>
+          <a href="/roadmaps/" class="sidebar-link"><span class="label">Roadmaps</span></a>
+                  </nav>
+        <div class="sidebar-bottom">
+          <a href="/webinars" class="sidebar-webinars">Webinars</a>
+          <a href="/login" class="btn-login">Member Login</a>
+        </div>
+      </aside>
+
+      <main class="main-scroll">
+<header class="mobile-header">
+          <a href="/" class="brand-serif mobile-brand">thecodingcompany</a>
+          <div class="mobile-actions">
+            <a href="/login" class="mobile-login" aria-label="Login"></a>
+            <button class="mobile-cta" type="button" onclick="window.location.href='/bootcamps'">Get certified</button>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <!-- ═══════ ARTICLE HERO ═══════ -->
+          <header class="a-hero">
+            <div class="a-hero-bg" style="background-image:url('../assets/img/blog/hero-ai-abstract.jpg')" aria-hidden="true"></div>
+            <div class="a-hero-veil" aria-hidden="true"></div>
+            <div class="a-hero-grid" aria-hidden="true"></div>
+            <div class="a-hero-inner">
+              <nav class="crumbs reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><span class="cur">AI tools in interviews</span>
+              </nav>
+              <div class="a-tag reveal">Interview</div>
+              <h1 class="a-title reveal">AI tools in an interview. <span class="accent">What is allowed, and what ends it.</span></h1>
+              <p class="a-standfirst reveal">Every interviewer now assumes you use AI. The question is no longer whether you do. It is whether you can be trusted with it — and that is a question you answer in about four minutes.</p>
+              <div class="a-byline reveal">
+                <span class="who">The Coding Company</span>
+                <span class="dot-sep"></span>
+                <span>11 November 2026</span>
+                <span class="dot-sep"></span>
+                <span>9 min read</span>
+              </div>
+            </div>
+          </header>
+
+          <!-- ═══════ ARTICLE BODY ═══════ -->
+          <article class="a-body">
+          <p class="a-lede">Two years ago, using AI in a technical interview was straightforward cheating. Today the same behaviour is either cheating, expected, or actively scored — depending entirely on the company, and usually without anyone telling you which. Guessing wrong is expensive in both directions: hide it and you look dishonest, over-announce it and you look like you cannot work without it.</p>
+          <h2 id="policies">The three policies you will actually meet</h2>
+          <p>Almost every interview falls into one of three regimes. The problem is that candidates assume the first one and prepare for it, while most companies have quietly moved to the second or third.</p>
+          <div class="a-flag">
+        <div class="fl bad reveal"><strong class="fl-h">Closed — no AI at all</strong><p>Common in proctored assessments and in some banks, defence-adjacent firms and regulated roles. Detection is usually behavioural rather than technical: tab switches, paste events, implausible speed. Do not test this policy. Ask before the interview, in writing.</p></div>
+        <div class="fl good reveal"><strong class="fl-h">Disclosed — AI allowed, must be declared</strong><p>The most common policy among product companies. You may use tools; you must say which, and you must be able to defend every line. This is the regime most candidates are unprepared for, because they prepare either to hide it or to skip it.</p></div>
+        <div class="fl bad reveal"><strong class="fl-h">Expected — AI is part of the task</strong><p>Increasingly common for AI-adjacent roles. You are given a broken function and a model, and marked on how fast you locate the lie in the output. Here, refusing to use AI is the failure mode.</p></div>
+      </div>
+          <p>You can usually find out which regime you are in before the interview with one email: "For the technical round, should I assume AI assistants are permitted, and if so do you want tool use declared?" Interviewers answer this. It is a normal question, and asking it signals that you have done this before.</p>
+          <h2 id="rejection">What actually gets you rejected</h2>
+          <p>It is almost never the use of a tool. It is one of four behaviours around it.</p>
+          <ul>
+        <li><strong>Undisclosed use that the interviewer detects.</strong> The interview is over not because you used a model, but because you were willing to conceal it. Trust is the thing being assessed, and it is now unrecoverable in that room.</li>
+        <li><strong>Being unable to explain your own submission.</strong> If you cannot walk through a line of code you just presented, the interviewer concludes the work is not yours. One "why did you write it that way?" is enough to surface this.</li>
+        <li><strong>Confident output you did not verify.</strong> A model that invents a library method produces code that looks correct and fails at runtime. Handing that in is worse than handing in nothing, because it shows you cannot tell the difference.</li>
+        <li><strong>Using AI as the first move, not the second.</strong> Interviewers notice when you reach for a tool before you have read the problem. It reads as dependence, and dependence is the trait the "expected" regime is specifically screening out.</li>
+      </ul>
+          <div class="a-callout reveal"><div class="co-label">The four-minute rule</div><p>Most interviewers form a view of your AI judgement within the first four minutes of a technical task — before you have written much code. What they are watching is whether you read first, plan second, generate third, and verify fourth. Get that order wrong and the rest of the interview is spent recovering.</p></div>
+          <h2 id="disclosure">How to disclose well</h2>
+          <p>Disclosure is not a confession. Done properly it is evidence of exactly the judgement employers are short of. A useful shape:</p>
+          <div class="a-quote reveal"><p>"I used the assistant to draft the parsing function and to suggest edge cases. I rewrote the error handling myself because it mishandled empty input, and I tested it against three cases before running it."</p></div>
+          <p>That sentence does four things in twelve seconds: it names the tool, states the scope, shows a specific correction you made, and proves you tested. Compare it with "I used ChatGPT for some of it", which names nothing and proves nothing.</p>
+          <p>The disclosure should also be honest about what you did <em>not</em> use it for. Interviewers are alert to overclaiming in both directions, and a candidate who says "I did the data model by hand because I wanted to be sure of the relationships" is telling them something useful about how they work.</p>
+          <h2 id="verify">Verifying an AI answer in sixty seconds</h2>
+          <p>The skill the "expected" regime is testing has a repeatable shape. It is worth rehearsing until it is automatic.</p>
+          <ol>
+        <li><strong>Does it run?</strong> Execute the smallest possible case before reading the logic. A worked example catches invented methods immediately.</li>
+        <li><strong>Does it survive an edge?</strong> Empty input, one item, duplicates, a negative number. Models are trained on the happy path and fail at the boundaries.</li>
+        <li><strong>Is the claim in the comment true?</strong> Generated comments often describe what the model intended rather than what the code does. Read the code, not the prose.</li>
+        <li><strong>Would I defend this line under questioning?</strong> If there is a line you cannot explain, delete it and write your own. Unexplainable code is a liability you are volunteering for.</li>
+      </ol>
+          <h2 id="judgement">The interview is measuring judgement, not purity</h2>
+          <p>There is a version of this advice that says "never use AI in an interview, it looks weak". That is now as wrong as the opposite. Companies are hiring people who will use these tools on Monday. What they cannot hire is someone whose output they cannot trust, or whose process they cannot see.</p>
+          <p>So the thing to practise is not abstinence. It is the sequence: read, plan, generate, verify, disclose. Every part of that sequence is observable, and every part of it is a mark in your favour when you do it out loud.</p>
+          <p>Our assessment rubric makes this explicit — undisclosed tool use where disclosure is required invalidates a result, and verified use scores higher than unassisted work of the same quality. The reasoning is the same one an interviewer uses: a credential that cannot be defended is worth nothing to the person holding it.</p>
+
+            <hr />
+            <h2 id="faq">Frequently asked questions</h2>
+            <div class="a-faq">
+            <details>
+              <summary>Is it cheating to use AI in a technical interview?</summary>
+              <p>Only if the company has said not to. Under a disclosed-use policy it is permitted and expected; under a closed-book policy it is cheating. The policy is usually discoverable by asking before the interview, and asking is itself a positive signal.</p>
+            </details>
+            <details>
+              <summary>Should I tell the interviewer I used AI?</summary>
+              <p>If the policy requires disclosure, yes, and precisely: name the tool, the scope, what you changed, and how you tested. If the policy is silent, disclose anyway — undisclosed use that is later detected ends the process, while disclosed use is a demonstration of judgement.</p>
+            </details>
+            <details>
+              <summary>What if I cannot explain the AI-generated code?</summary>
+              <p>Delete it and write your own. Unexplainable code is worse than slower code, because the interviewer is assessing whether your output can be trusted, not how fast you typed.</p>
+            </details>
+            <details>
+              <summary>Do companies ban AI in interviews?</summary>
+              <p>Some do, particularly in proctored assessments and regulated industries. Detection is usually behavioural rather than technical, and the penalty is typically disqualification rather than a lower score — which is why asking first is worth the email.</p>
+            </details>
+            <details>
+              <summary>How do I get better at verifying AI output?</summary>
+              <p>Practise the four-step check until it is automatic: run the smallest case, test an edge case, read the code rather than the comments, and delete anything you cannot defend line by line. It takes about sixty seconds once rehearsed.</p>
+            </details>
+            </div>
+
+            <hr />
+            <div class="a-cta reveal">
+              <div class="ct-t">Test your judgement, not your memory.</div>
+              <p class="ct-d">The diagnostic scores you the way a real paper does, then shows you the reasoning behind every miss.</p>
+              <div class="ct-row">
+                <a class="btn btn-sm" href="/diagnostic/">Sit the diagnostic</a>
+                <a class="btn btn-ghost btn-sm" href="/verify/rubric/">Read the marking rubric</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ═══════ RELATED ═══════ -->
+          <section class="section" style="padding-top:64px">
+            <div class="container" style="max-width:900px">
+              <div class="eyebrow reveal" style="margin-bottom:16px">Keep reading</div>
+              <h2 class="section-title reveal">Related guides</h2>
+              <div class="a-related">
+            <a class="card a-rel reveal" href="/blog/tcs-nqt-what-it-tests.html">
+              <div class="rl-tag">Placement</div>
+              <div class="rl-title">What the TCS NQT Actually Tests</div>
+              <p class="rl-desc">Section structure, the four places marks disappear, and a three-week plan that respects the clock.</p>
+              <span class="rl-go">Read next →</span>
+            </a>
+            <a class="card a-rel reveal" href="/blog/how-to-read-a-job-description.html">
+              <div class="rl-tag">Interview</div>
+              <div class="rl-title">How to Read a Job Description</div>
+              <p class="rl-desc">What a hiring manager is actually filtering for, and how to map your evidence to it in ten minutes.</p>
+              <span class="rl-go">Read next →</span>
+            </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- ═══════ FINAL ═══════ -->
+          <section class="final">
+            <div class="container reveal">
+              <h2 class="final-title">Everyone says they know AI.<br /><span class="serif-i">Prove it — and get hired.</span></h2>
+              <p class="final-sub">Pick your role, earn the credential, and let the placement programme help you land the offer.</p>
+              <div class="final-ctas">
+                <a href="/bootcamps/" class="btn">Explore all certifications</a>
+                <a href="/placement/" class="btn btn-ghost">How placements work</a>
+              </div>
+            </div>
+          </section>
+
+<footer class="footer">
+            <div class="footer-brand">
+              <img src="../assets/img/tcc-logo.png" alt="The Coding Company" />
+            </div>
+            <div class="footer-grid">
+              <div class="footer-col">
+                <h3>Programs</h3>
+                <a href="/bootcamps">CERT+ certifications</a><a href="/prep+/companies/">Prep+ practice</a><a href="/placement">Placement programme</a><a href="/100-club">100 Club</a><a href="/gigs">Gigs</a><a href="/domains">Domains</a>
+              <a href="/worksim/">WorkSim (pilot)</a></div>
+              <div class="footer-col">
+                <h3>Prepare</h3>
+                <a href="/prep+/companies/">Company patterns</a><a href="/prep+/aptitude/">Aptitude &amp; Reasoning</a><a href="/prep+/programming/">Programming</a><a href="/prep+/dsa/">DSA Patterns</a><a href="/prep+/mcq/">Technical MCQs</a><a href="/prep+/mock-tests/">Mock Tests</a>
+              </div>
+              <div class="footer-col">
+                <h3>Resources</h3>
+                <a href="/blog/">Blog &amp; guides</a><a href="/ai-courses-for/">AI courses by role</a><a href="/blog/role-based-ai-certifications-vs-generic.html">CERT+ vs generic certificates</a><a href="/blog/how-to-get-ai-internship-2026.html">Get an AI internship</a><a href="/webinars">AI career sessions</a>
+              </div>
+              <div class="footer-col">
+                <h3>Company</h3>
+                <a href="/careers/">Careers</a>
+                <a href="/contact">Contact us</a><a href="/login">Login</a><a href="/terms-of-service">Terms of use</a><a href="/privacy-policy">Privacy Policy</a><a href="/refund-policy">Refund Policy</a>
+              </div>
+              <div class="footer-col">
+                <h3>Talk to us</h3>
+                <a href="https://wa.me/919182160152" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="mailto:hello@thecodingcompany.io">hello@thecodingcompany.io</a>
+                <a href="mailto:admissions@thecodingcompany.io">admissions@thecodingcompany.io</a>
+                <a href="https://www.linkedin.com/company/112741155/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.instagram.com/thecodingcompany.io/" target="_blank" rel="noopener">Instagram</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; <span id="year">2026</span> The Coding Company. All rights reserved.</p>
+              <a href="/privacy-policy">Privacy &middot; Terms</a>
+            </div>
+            <p style="margin-top:14px;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7">The Coding Company &middot; Hyderabad, Telangana, India &middot; <a href="mailto:hello@thecodingcompany.io" style="color:inherit;text-decoration:underline">hello@thecodingcompany.io</a> &middot; <a href="https://wa.me/919182160152" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">+91 91821 60152</a></p>
+                      </footer>
+        </div>
+      </main>
+
+<nav class="bottom-nav">
+        <div class="bottom-nav-inner">
+          <a href="/" class="bottom-link"><span>Home</span></a>
+          <a href="/bootcamps" class="bottom-link"><span>CERT+</span></a>
+          <a href="/placement" class="bottom-link"><span>Placements</span></a>
+          <a href="/100-club" class="bottom-link"><span>Club</span></a>
+          <a href="/roadmaps/" class="bottom-link"><span>Roadmaps</span></a>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      /* Scroll reveal — IntersectionObserver, with a scroll fallback for the
+         nested .main-scroll container. */
+      (function () {
+        var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+        if (!items.length) return;
+        var done = false;
+
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+        items.forEach(function (el) { io.observe(el); });
+
+        function fallback() {
+          if (done) return;
+          var h = window.innerHeight || document.documentElement.clientHeight;
+          for (var i = items.length - 1; i >= 0; i--) {
+            var r = items[i].getBoundingClientRect();
+            if (r.top < h * 0.92 && r.bottom > 0) { items[i].classList.add('in'); items.splice(i, 1); }
+          }
+          if (!items.length) done = true;
+        }
+        var scroller = document.querySelector('main.main-scroll') || window;
+        scroller.addEventListener('scroll', fallback, { passive: true });
+        window.addEventListener('resize', fallback);
+        fallback();
+        window.addEventListener('load', fallback);
+      })();
+    </script>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

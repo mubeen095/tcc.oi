@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="color-scheme" content="dark" />
+<title>Graded examples: full marks, partial marks, fail | TCC</title>
+<meta name="description" content="The same CERT+ task answered three ways, each marked against the published rubric with reviewer notes explaining every point awarded and lost.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thecodingcompany.io/verify/samples/">
+<meta property="og:title" content="Graded examples: full marks, partial marks, fail | TCC">
+<meta property="og:description" content="The same CERT+ task answered three ways, each marked against the published rubric with reviewer notes explaining every point awarded and lost.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://thecodingcompany.io/verify/samples/">
+<meta property="og:locale" content="en_IN">
+<meta name="theme-color" content="#060606">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap">
+<!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+<link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a">
+<link rel="stylesheet" href="/assets/css/tcc-verify.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecodingcompany.io/"},{"@type":"ListItem","position":2,"name":"Verify","item":"https://thecodingcompany.io/verify/"},{"@type":"ListItem","position":3,"name":"Samples","item":"https://thecodingcompany.io/verify/samples/"}]}</script>
+
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+    <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899', { anonymize_ip: true });
+    </script>
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+  </head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/img/tcc-logo-mark.png" width="66" height="44" alt="The Coding Company"></a>
+    <nav class="top" aria-label="Primary">
+      <a href="/bootcamps/">CERT+</a>
+      <a href="/prep+/companies/">Prep+</a>
+      <a href="/placement/">Placements</a>
+      <a href="/verify/" aria-current="page">Verify</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="wrap">
+    <div class="eyebrow">Verification · Samples</div>
+    <h1 class="display">The same task, marked three ways.</h1>
+    <p class="lede">A rubric proves nothing until you see it applied. Below is one Practitioner-level task answered at distinction, developing and not-yet level, with the reviewer notes that produced each mark.</p>
+
+    <div class="callout">
+      <p><strong>What these are.</strong> Worked exemplars written by our assessment team to calibrate reviewers — not real candidate submissions. We label them this way because presenting invented candidates as real graduates is the exact behaviour this site exists to argue against.</p>
+    </div>
+
+    <h2>The task</h2>
+    <div class="card">
+      <p style="margin:0"><strong>Support triage.</strong> A SaaS company receives 500 support tickets a week. Design an AI-assisted triage workflow. State where the model acts alone, where a human must confirm, how you would measure whether it is working, and what you would do when it fails.</p>
+      <p class="meta" style="margin:10px 0 0">Practitioner level · 60 minutes · role artifact 45 marks, judgement 25, applied knowledge 30</p>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head">
+        <b>Exemplar A — distinction</b>
+        <span class="tag good">91 / 100</span>
+      </div>
+      <div class="sample-body">
+        <p><strong>Approach.</strong> Classify on arrival into four routing buckets, draft a first response for three of them, and escalate anything touching billing disputes or security to a human queue before a draft is generated at all.</p>
+        <p><strong>Where the model acts alone:</strong> tagging, routing and internal summarisation. No customer-visible text is sent without a human pressing send, because the cost of one wrong refund promise exceeds the saving on a thousand correct drafts.</p>
+        <p><strong>Measurement:</strong> first-response time, percentage of drafts sent without edit, re-open rate within seven days, and a weekly sample of 50 closed tickets read by a human. Re-open rate is the guardrail — speed without it just moves work downstream.</p>
+        <p><strong>When it fails:</strong> if re-open rate rises above baseline for two consecutive weeks, the auto-draft is switched off for that bucket and the failures are read before the prompt is touched. Models fail in clusters, and clusters are diagnostic.</p>
+        <div class="marks">Artifact <b>43/45</b> · Judgement <b>24/25</b> · Applied knowledge <b>24/30</b></div>
+        <p><strong>Reviewer note.</strong> Names the failure mode it is optimising against, and picks a guardrail that would actually catch it. Loses points only on model selection: it never says which class of model suits classification versus generation, or why.</p>
+      </div>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head">
+        <b>Exemplar B — developing</b>
+        <span class="tag warn">62 / 100</span>
+      </div>
+      <div class="sample-body">
+        <p><strong>Approach.</strong> Use an LLM to read each ticket, assign a category and priority, and draft a reply. Route low-priority tickets straight to the draft. Send high-priority tickets to a human.</p>
+        <p><strong>Measurement:</strong> track accuracy of categorisation and customer satisfaction.</p>
+        <p><strong>When it fails:</strong> retrain the model on the misclassified tickets.</p>
+        <div class="marks">Artifact <b>29/45</b> · Judgement <b>13/25</b> · Applied knowledge <b>20/30</b></div>
+        <p><strong>Reviewer note.</strong> The shape is right and the writing is clear, which is why this passes. Three things cost it 29 marks. "Low priority" and "safe to answer automatically" are treated as the same thing, and they are not — a low-priority billing question is still a billing question. Accuracy is stated as a goal with no threshold, so the workflow has no switch. And "retrain the model" is not available to a support team, which means the failure plan is theoretical.</p>
+      </div>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head">
+        <b>Exemplar C — not yet</b>
+        <span class="tag">38 / 100</span>
+      </div>
+      <div class="sample-body">
+        <p><strong>Approach.</strong> Connect the ticketing system to ChatGPT with an API key. Let it answer all tickets automatically. This reduces workload by 80 percent and improves customer experience.</p>
+        <p><strong>Measurement:</strong> number of tickets handled.</p>
+        <div class="marks">Artifact <b>14/45</b> · Judgement <b>6/25</b> · Applied knowledge <b>18/30</b></div>
+        <p><strong>Reviewer note.</strong> Fails on the criterion that matters most, which is judgement. There is no human boundary on an irreversible action, no measurement that could detect harm, and a specific performance number with nothing behind it. Note that the applied-knowledge mark is not zero — the candidate knows what an API is. Knowing a tool and being trusted with it are different marks, and only the second one gets you hired.</p>
+      </div>
+    </div>
+
+    <h2>What this is meant to show</h2>
+    <p>Exemplar B is the one to read twice. It is fluent, plausible and wrong in three specific ways, and it still passes — because a pass means "employable with support", not "finished". A provider that only shows you distinction-level work is showing you its best day, not its standard.</p>
+    <div class="pager">
+      <a href="/verify/rubric/"><span class="dir">Previous</span>How we mark things</a>
+      <a href="/verify/stats/"><span class="dir">Next</span>Published stats</a>
+    </div>
+    <p class="meta">Page last reviewed 2026-11-14. If anything here is wrong, write to <a class="inline" href="mailto:hello@thecodingcompany.io">hello@thecodingcompany.io</a> and we will correct it publicly.</p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Programmes</h3>
+        <a href="/bootcamps/">CERT+</a>
+        <a href="/prep+/companies/">Prep+</a>
+        <a href="/placement/">Placements</a>
+        <a href="/100-club/">100 Club</a>
+      </div>
+      <div>
+        <h3>Evidence</h3>
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/verify/">Verify</a>
+        <a href="/verify/rubric/">Marking rubric</a>
+        <a href="/verify/stats/">Published stats</a>
+        <a href="/verify/what-we-dont-claim/">What we don't claim</a>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <a href="/careers/">Careers</a>
+        <a href="/partners/">Partners</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/refund-policy/">Refunds</a>
+      </div>
+    </div>
+    <div class="legal">
+      The Coding Company · Hyderabad, Telangana, India<br>
+      TCC CERT+ is an industry credential issued by The Coding Company. It is not a government licence or a regulated professional qualification.
+    </div>
+  </div>
+</footer>
+    <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

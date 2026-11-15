@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+    <title>Become a member | The Coding Company — Apply in 2 minutes</title>
+    <meta name="keywords" content="placement in india, internships in india, internship certificate, job placement, campus placement, placement preparation, technical interview, coding interview, fresher jobs, placement training">
+    <meta name="description" content="Apply to join The Coding Company. Every application is read by a human and answered within 2 working days." />
+    <meta property="og:title" content="Become a member | The Coding Company" />
+    <meta property="og:description" content="Apply to join The Coding Company. Human-reviewed applications, answered within 2 working days. No payment until you're accepted." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/tcc-og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://thecodingcompany.io/become-a-member" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/tcc-favicon-96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/tcc-apple-touch.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+      body { background: #050505; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button, input, select, textarea { font-family: inherit; }
+
+      h1, h2 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+      .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
+      .mono { font-family: 'DM Mono', 'Roboto Mono', monospace; }
+
+      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #050505; }
+
+      .sidebar { display: none; position: sticky; top: 0; width: 200px; min-height: 100%; padding: 24px 16px; flex-direction: column; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.05); background: #050505; overflow-y: auto; overflow-x: hidden; }
+      @media (min-width: 768px) { .sidebar { display: flex; } }
+      .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: rgba(255,255,255,0.58); transition: all 0.3s; position: relative; }
+      .sidebar-link svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 1.5; }
+      .sidebar-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+      .sidebar-link.active { color: #fff; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12), transparent 70%); mask-image: linear-gradient(to right, black 40%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%); }
+      .sidebar-link .label { font-weight: 500; letter-spacing: 0.01em; }
+      .sidebar-nav { margin-top: 25vh; }
+      .sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+      .sidebar-webinars { display: flex; align-items: center; gap: 12px; padding: 12px 4px; color: rgba(255,255,255,0.58); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; transition: color 0.3s; }
+      .sidebar-webinars:hover { color: #fff; }
+      .sidebar-webinars svg { width: 16px; height: 16px; stroke-width: 1.5; }
+      .btn-login { display: block; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 20px; font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s; }
+      .btn-login:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+      .brand-serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+      .sidebar-brand { font-size: 21px; padding: 0 8px; margin-bottom: 24px; transition: all 0.3s; }
+      .sidebar-brand:hover { text-shadow: 0 0 16px rgba(255,255,255,0.4); }
+
+      .main-scroll { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; }
+
+      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(6,6,6,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+      @media (min-width: 768px) { .mobile-header { display: none; } }
+      @media (max-width: 767px) { .main-scroll > .content-wrap { padding-top: 52px; } }
+      .mobile-brand { font-size: 19px; }
+      .mobile-actions { display: flex; align-items: center; gap: 10px; }
+      .mobile-login { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); transition: all 0.3s; }
+      .mobile-login:hover { background: rgba(255,255,255,0.15); }
+      .mobile-login svg { width: 20px; height: 20px; stroke-width: 1.5; }
+      .mobile-cta { font-size: 12px; font-weight: 600; background: #0064FF; color: #fff; border: 0; border-radius: 999px; padding: 9px 16px; white-space: nowrap; transition: background 0.2s; }
+      .mobile-cta:hover { background: rgb(0,70,178); }
+      @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 17px; } .mobile-cta { font-size: 11px; padding: 8px 12px; } }
+
+      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #060606; align-items: stretch; }
+      @media (max-width: 767px) { .bottom-nav { display: flex; height: 52px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; } }
+      @media (max-width: 767px) { .bottom-link svg { display: none; } }
+      .bottom-nav-inner { display: flex; justify-content: space-around; align-items: stretch; width: 100%; height: 100%; }
+      .bottom-link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; flex: 1; min-width: 0; color: #999; transition: all 0.2s; }
+      .bottom-link svg { width: 26px; height: 26px; stroke-width: 1.5; transition: all 0.3s; }
+      .bottom-link:hover { color: rgba(255,255,255,0.7); }
+      .bottom-link.active { color: #fff; }
+      .bottom-link span { font-size: 12px; font-weight: 400; line-height: 1; }
+
+      @media (max-width: 384px) {
+        .bottom-nav-inner { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+        .bottom-nav-inner::-webkit-scrollbar { display: none; }
+        .bottom-link { flex: 1 0 64px; min-width: 64px; }
+        .bottom-link span { font-size: 11px; }
+      }
+      .content-wrap { padding-bottom: 90px; }
+      @media (min-width: 768px) { .content-wrap { padding-bottom: 0; } }
+
+      .btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #0057DE; color: #fff; border: 0; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; border-radius: 38px; box-shadow: 0px 4px 8.8px 0px rgba(0,0,0,0.33); transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease; cursor: pointer; }
+      .btn-primary:hover { background: #0A63EA; box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.4); transform: translateY(-1px); }
+      .btn-white { display: inline-flex; align-items: center; justify-content: center; background: #fff; color: #000; border: 0; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; border-radius: 60px; box-shadow: 0px 4px 8.8px 0px rgba(0,0,0,0.33); transition: box-shadow 0.2s ease, transform 0.15s ease; cursor: pointer; }
+      .btn-white:hover { box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.4); transform: translateY(-1px); }
+      .btn-white.pill-lg { font-size: 18px; padding: 20px 40px; }
+      .btn-primary.pill-lg { font-size: 18px; padding: 20px 40px; border-radius: 60px; }
+
+      .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+      .reveal.in { opacity: 1; transform: translateY(0); }
+
+      /* --- Application layout --- */
+      .apply-hero { position: relative; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; justify-content: center; background: #060606; overflow: hidden; }
+      .apply-glow { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 0; pointer-events: none; background: radial-gradient(ellipse 68% 26% at 49% 12%, rgba(18,87,165,0.6) 0%, rgba(18,87,165,0.28) 55%, rgba(18,87,165,0) 82%); }
+      .apply-fade { position: absolute; left: 0; right: 0; bottom: 0; height: 34%; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 100%); }
+      .apply-content { position: relative; z-index: 2; max-width: min(720px, 94%); margin: 0 auto; padding: 46px 0 60px; width: 100%; }
+      .apply-eyebrow { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 22px; }
+      .apply-h1 { font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; font-size: clamp(34px, 4.6vw, 58px); margin-bottom: 18px; }
+      .apply-sub { color: rgba(255,255,255,0.9); font-weight: 500; letter-spacing: -0.02em; font-size: clamp(18px, 2vw, 24px); max-width: 24em; margin-bottom: 40px; }
+      .apply-sub .serif-i { color: #fff; }
+
+      .apply-card { background: rgba(15,15,15,0.85); border: 1px solid rgba(255,255,255,0.14); border-radius: 20px; padding: 32px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+      .apply-steps { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+      .apply-step { width: 32px; height: 32px; border-radius: 999px; background: #3096ff; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-weight: 500; font-size: 13px; color: #fff; flex-shrink: 0; }
+      .apply-step-line { flex: 1; height: 0; border-top: 2px dashed #fff; opacity: 0.4; }
+      @media (max-width: 560px) { .apply-steps { display: none; } }
+
+      .field { margin-bottom: 18px; }
+      .field label { display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 8px; }
+      .field input, .field select, .field textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.16); border-radius: 12px; padding: 14px 16px; color: #fff; font-size: 15px; outline: none; transition: border-color 0.2s, background 0.2s; appearance: none; -webkit-appearance: none; }
+      .field select { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
+      .field select option { background: #111; color: #fff; }
+      .field textarea { resize: vertical; min-height: 84px; }
+      .field input:focus, .field select:focus, .field textarea:focus { border-color: #3096ff; background: rgba(49,150,255,0.08); }
+      .field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,0.35); }
+
+      .apply-submit { width: 100%; padding: 18px; font-size: 16px; margin-top: 6px; }
+
+      .apply-note { text-align: center; color: rgba(255,255,255,0.45); font-size: 13px; margin-top: 18px; }
+      .apply-note a { text-decoration: underline; text-underline-offset: 3px; }
+      .apply-note a:hover { color: #fff; }
+
+      /* --- Evaluation state --- */
+      .eval-card { background: rgba(15,15,15,0.85); border: 1px solid rgba(255,255,255,0.14); border-radius: 20px; padding: 40px 32px; text-align: center; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); display: none; }
+      .eval-spinner { width: 46px; height: 46px; margin: 0 auto 22px; border-radius: 999px; border: 3px solid rgba(255,255,255,0.14); border-top-color: #3096ff; animation: spin 1s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .eval-title { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+      .eval-status { font-family: 'DM Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.06em; text-transform: uppercase; min-height: 18px; }
+
+      /* --- Verdicts --- */
+      .verdict { background: rgba(15,15,15,0.9); border-radius: 20px; padding: 44px 32px; text-align: center; border: 1px solid rgba(255,255,255,0.14); display: none; }
+      .verdict.in { display: block; animation: fadeInUp 0.5s cubic-bezier(0.16,1,0.3,1) both; }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      .verdict-badge { width: 64px; height: 64px; border-radius: 999px; background: rgba(48,150,255,0.16); border: 1px solid rgba(48,150,255,0.5); display: flex; align-items: center; justify-content: center; margin: 0 auto 22px; }
+      .verdict-badge svg { width: 28px; height: 28px; stroke: #fff; }
+      .verdict-title { font-size: clamp(26px, 3vw, 34px); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 12px; }
+      .verdict-sub { color: rgba(255,255,255,0.72); font-size: 15px; max-width: 34em; margin: 0 auto 28px; }
+      .verdict-cta { display: inline-flex; align-items: center; justify-content: center; background: #fff; color: #000; font-weight: 600; font-size: 15px; padding: 16px 40px; border-radius: 60px; transition: all 0.2s; }
+      .verdict-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(255,255,255,0.18); }
+      .verdict-alt { display: block; margin-top: 16px; color: rgba(255,255,255,0.5); font-size: 13px; }
+      .verdict-alt a { text-decoration: underline; text-underline-offset: 3px; }
+      .verdict-alt a:hover { color: #fff; }
+
+      .loading-hide { display: none !important; }
+      .loader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1700; background: #060606; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s ease, visibility 0.5s ease; }
+      .loader.hide { opacity: 0; visibility: hidden; }
+      .loader-text { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; color: rgba(153,153,153,0.65); letter-spacing: -0.08px; font-size: 16px; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.85) 50%, transparent 100%); background-size: 152px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 2.166s linear infinite; }
+      @keyframes shimmer { 0% { background-position: -152px 0; } 100% { background-position: 152px 0; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    
+      /* ── TCC mobile polish (generated) ── */
+      @media (max-width: 767px) {
+        html { -webkit-text-size-adjust: 100%; }
+        main.main-scroll, .sidebar { -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* comfortable tap targets */
+        .finder-chip { min-height: 44px; display: inline-flex; align-items: center; padding: 11px 18px; font-size: 12.5px; }
+        .mode-btn { min-height: 44px; }
+        .popular-card { min-height: 60px; justify-content: center; }
+        .chip-row { gap: 8px; }
+        .bottom-link { min-height: 52px; }
+        .cat-pill, .c-oth { min-height: 44px; display: inline-flex; align-items: center; }
+        .btn, .btn-sm { min-height: 46px; }
+        .news-input { min-height: 50px; }
+
+        /* breathe below the fold */
+        .section { padding-left: 18px; padding-right: 18px; }
+        .eco-inner { padding-left: 18px; padding-right: 18px; }
+        .container { padding-left: 0; padding-right: 0; }
+        .footer { padding-left: 20px; padding-right: 20px; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+        /* fluid display type that cannot overflow */
+        .hero-h1, .section-title, .final-title, .a-title, .c-title, .feature-title, .a-cta .ct-t {
+          overflow-wrap: anywhere; word-break: break-word;
+        }
+        .hero-sub, .section-sub, .feature-desc, .post-desc, .a-standfirst { font-size: 15.5px; line-height: 1.68; }
+
+        /* card media stays proportional on narrow screens */
+        .post-media { height: 160px; }
+        .feature-media { min-height: 210px; }
+
+        /* article measure + code-free reading width */
+        .a-body { padding-left: 20px; padding-right: 20px; }
+        .a-body p, .a-body li { font-size: 16.5px; line-height: 1.78; }
+        .a-phase { gap: 14px; }
+
+        /* grids collapse cleanly rather than squashing */
+        .a-stats, .a-flag { grid-template-columns: 1fr; }
+        .eco-grid { row-gap: 10px; }
+      }
+
+      @media (max-width: 480px) {
+        .section { padding-top: 52px; padding-bottom: 52px; }
+        .hero, .a-hero, .c-hero { padding-left: 18px; padding-right: 18px; }
+        .hero { padding-top: 92px; padding-bottom: 40px; }
+        .a-hero { padding-top: 100px; padding-bottom: 40px; }
+        .c-hero { padding-top: 96px; padding-bottom: 44px; }
+
+        /* stack the hero search so the button is full-width and thumbable */
+        .hero-search { flex-direction: column; align-items: stretch; padding: 8px; gap: 8px; border-radius: 18px; }
+        .hero-search-input { width: 100%; padding: 12px 12px; }
+        .hero-search-btn { width: 100%; padding: 14px 18px; font-size: 14.5px; border-radius: 12px; }
+
+        /* finder bar stacks the same way */
+        .finder-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+        .finder-count { text-align: right; }
+
+        /* two-up stats read better than three-up on very narrow screens */
+        .hero-stats { gap: 10px; }
+        .hero-stat .v { font-size: 26px; }
+        .hero-stat .l { font-size: 11.5px; }
+
+        /* footer single column */
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        .footer-brand img { height: 116px; }
+
+        /* related/next cards full width */
+        .a-related { grid-template-columns: 1fr; }
+        .final-ctas { gap: 12px; }
+        .final-ctas .btn, .final-ctas .btn-ghost, .a-cta .ct-row .btn { width: 100%; }
+        .a-cta .ct-row { flex-direction: column; align-items: stretch; }
+
+        .a-body h2 { font-size: clamp(23px, 7vw, 30px); }
+        .a-body h3 { font-size: 18px; }
+        .a-quote p { font-size: 19px !important; }
+      }
+
+      @media (max-width: 360px) {
+        .hero-h1 { font-size: clamp(28px, 9.5vw, 40px); }
+        .section-title { font-size: clamp(24px, 8vw, 34px); }
+        .finder-chip { padding: 10px 14px; font-size: 12px; }
+        .a-body { padding-left: 16px; padding-right: 16px; }
+      }
+
+      @supports (padding: max(0px)) {
+        @media (max-width: 767px) {
+          .bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px); height: auto; min-height: 52px; }
+          .mobile-header { padding-top: env(safe-area-inset-top, 0px); height: auto; min-height: 52px; }
+        }
+      }
+
+    
+      /* ── skip link (accessibility) ── */
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 99999; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+      .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; overflow: visible; outline: 2px solid #fff; outline-offset: 2px; }
+</style>
+      <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecodingcompany.io/"},{"@type":"ListItem","position":2,"name":"Become A Member","item":"https://thecodingcompany.io/become-a-member/"}]}</script>
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899');
+    </script>
+  <noscript><style id="reveal-noscript">.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="loader" id="loader"><p class="loader-text">Patience—you're about to be impressed.</p></div>
+
+    <div class="app-shell" id="app">
+      <aside class="sidebar">
+        <a href="/" class="brand-serif sidebar-brand">thecodingcompany</a>
+        <nav class="sidebar-nav">
+          <a href="/" class="sidebar-link"><span class="label">Home</span></a>
+          <a href="/bootcamps" class="sidebar-link"><span class="label">CERT+</span></a>
+          <a href="/placement" class="sidebar-link"><span class="label">Placements</span></a>
+          <a href="/100-club" class="sidebar-link"><span class="label">100 Club</span></a>
+          <a href="/domains" class="sidebar-link"><span class="label">Domains</span></a>
+          <a href="/roadmaps/" class="sidebar-link"><span class="label">Roadmaps</span></a>
+                  </nav>
+        <div class="sidebar-bottom">
+          <a href="/webinars" class="sidebar-webinars">Webinars</a>
+          <a href="/login" class="btn-login">Member Login</a>
+        </div>
+      </aside>
+
+      <main class="main-scroll" id="main-content" tabindex="-1">
+        <header class="mobile-header">
+          <a href="/" class="brand-serif mobile-brand">thecodingcompany</a>
+          <div class="mobile-actions">
+            <a href="/login" class="mobile-login" aria-label="Login"></a>
+            <button class="mobile-cta" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="apply-hero">
+            <div class="apply-glow"></div>
+            <div class="apply-fade"></div>
+            <div class="apply-content">
+              <div class="reveal">
+                <p class="apply-eyebrow">Become a member</p>
+                <h1 class="apply-h1">Apply in <span class="serif-i">2 minutes</span>.</h1>
+                <p class="apply-sub">A human reads every application and replies within 2 working days. No payment is taken until you&rsquo;re accepted. We optimise for fit, not volume.</p>
+                <!-- cohort:apply --><p class="cohort-line"><span class="cl-dot" aria-hidden="true"></span><span>Applications open for Cohort 01, starting <strong>18 Jan 2027</strong> &middot; 50 seats &middot; closes <strong>11 Jan 2027</strong></span></p><!-- /cohort:apply -->
+              </div>
+
+              <form id="applyForm" class="apply-card reveal" novalidate>
+<input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important">
+                <div class="apply-steps">
+                  <div class="apply-step">1</div><div class="apply-step-line"></div>
+                  <div class="apply-step">2</div><div class="apply-step-line"></div>
+                  <div class="apply-step">3</div>
+                </div>
+                <div class="field">
+                  <label for="f-name">Full name</label>
+                  <input id="f-name" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="f-email">Work email</label>
+                  <input id="f-email" name="email" type="email" placeholder="jane@company.com" autocomplete="email" required />
+                </div>
+                <div class="field">
+                  <label for="f-company">Current company</label>
+                  <input id="f-company" name="company" type="text" placeholder="Where do you work?" autocomplete="organization" required />
+                </div>
+                <div class="field">
+                  <label for="f-role">Current role</label>
+                  <input id="f-role" name="role" type="text" placeholder="e.g. Product Manager, Founder, Engineer" autocomplete="organization-title" required />
+                </div>
+                <div class="field">
+                  <label for="f-exp">Years of experience</label>
+                  <select id="f-exp" name="experience" required>
+                    <option value="" disabled selected>Select your experience</option>
+                    <option value="0-2">0 – 2 years</option>
+                    <option value="3-5">3 – 5 years</option>
+                    <option value="6-9">6 – 9 years</option>
+                    <option value="10+">10+ years</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="f-city">City</label>
+                  <input id="f-city" name="city" type="text" placeholder="Bengaluru, Delhi, Mumbai, …" autocomplete="address-level2" />
+                </div>
+                <div class="field">
+                  <label for="f-link">LinkedIn / profile URL <span style="opacity:0.5;text-transform:none;letter-spacing:0">(optional)</span></label>
+                  <input id="f-link" name="linkedin" type="url" placeholder="linkedin.com/in/janedoe" />
+                </div>
+                <div class="field">
+                  <label for="f-mission">What do you want to build?</label>
+                  <textarea id="f-mission" name="mission" placeholder="In one line — what problem are you going to ship with AI?"></textarea>
+                </div>
+                <button class="btn-primary apply-submit" type="submit">Submit application</button>
+                <p class="apply-note">We read every application and reply within 2 working days. No payment is taken until you&rsquo;re accepted. Questions? <a href="mailto:admissions@thecodingcompany.io">admissions@thecodingcompany.io</a></p>
+              </form>
+
+              <div class="eval-card reveal" id="evalCard">
+                <div class="eval-spinner"></div>
+                <p class="eval-title">Sending your application</p>
+                <p class="eval-status" id="evalStatus">Just a moment…</p>
+              </div>
+
+              <div class="verdict" id="verdict">
+                <div class="verdict-badge"></div>
+                <h2 class="verdict-title">Application received.</h2>
+                <p class="verdict-sub">We&rsquo;ve got your details. A human reviews every application and replies within 2 working days at the email you gave us. Nothing is charged until you&rsquo;re accepted.</p>
+                <a class="verdict-cta" href="/bootcamps">Explore the curriculum</a>
+                <span class="verdict-alt">Changed your mind? Read the <a href="/refund-policy">refund policy</a>.</span>
+              </div>
+
+              <div class="verdict" id="verdictError" style="display:none">
+                <div class="verdict-badge"></div>
+                <h2 class="verdict-title">That didn&rsquo;t send.</h2>
+                <p class="verdict-sub">Your application wasn&rsquo;t received. Please try again, or email <a href="mailto:admissions@thecodingcompany.io" style="text-decoration:underline">admissions@thecodingcompany.io</a> and we&rsquo;ll sort it out.</p>
+                <a class="verdict-cta" href="/contact">Contact us</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <nav class="bottom-nav">
+        <div class="bottom-nav-inner">
+          <a href="/" class="bottom-link"><span>Home</span></a>
+          <a href="/bootcamps" class="bottom-link"><span>CERT+</span></a>
+          <a href="/placement" class="bottom-link"><span>Placements</span></a>
+          <a href="/100-club" class="bottom-link"><span>Club</span></a>
+          <a href="/roadmaps/" class="bottom-link"><span>Roadmaps</span></a>
+        </div>
+      </nav>
+
+    </div>
+
+    <script>
+      (function () {
+        var loader = document.getElementById('loader');
+        window.addEventListener('load', function () { setTimeout(function () { loader.classList.add('hide'); }, 400); });
+        setTimeout(function () { loader.classList.add('hide'); }, 3000);
+
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        var form = document.getElementById('applyForm');
+        var evalCard = document.getElementById('evalCard');
+        var evalStatus = document.getElementById('evalStatus');
+        var verdict = document.getElementById('verdict');
+
+        var verdictError = document.getElementById('verdictError');
+        var statuses = ['Sending your application…', 'Confirming…'];
+
+        function toBackend(payload) {
+          return fetch('/api/forms', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          var payload = {
+            form_type: 'become-a-member',
+            name: document.getElementById('f-name').value || '',
+            email: document.getElementById('f-email').value || '',
+            company: document.getElementById('f-company').value || '',
+            role: document.getElementById('f-role').value || '',
+            experience: document.getElementById('f-exp').value || '',
+            city: document.getElementById('f-city').value || '',
+            linkedin: document.getElementById('f-link').value || '',
+            mission: document.getElementById('f-mission').value || ''
+          };
+          form.classList.add('loading-hide');
+          evalCard.classList.add('in');
+          evalCard.style.display = 'block';
+          var i = 0;
+          var ticker = setInterval(function () {
+            if (i < statuses.length) { evalStatus.textContent = statuses[i]; i++; }
+          }, 700);
+
+          toBackend(payload).then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            clearInterval(ticker);
+            evalCard.style.display = 'none';
+            verdict.classList.add('in');
+          }).catch(function (err) {
+            console.error('Application submit failed:', err);
+            clearInterval(ticker);
+            evalCard.style.display = 'none';
+            form.classList.remove('loading-hide');
+            verdictError.style.display = 'block';
+            verdictError.classList.add('in');
+          });
+        });
+      })();
+    </script>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>TCC Blog | AI Courses, Certifications, Internships &amp; Placement</title>
+    <link>https://thecodingcompany.io/blog/</link>
+    <description>AI courses, role-based AI certifications, internships, placement programs and interview guides for students and professionals. From The Coding Company (TCC).</description>
+    <language>en-in</language>
+    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://thecodingcompany.io/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://thecodingcompany.io/tcc-og.png</url>
+      <title>TCC Blog</title>
+      <link>https://thecodingcompany.io/blog/</link>
+    </image>
+    <item>
+      <title>How to Read a Job Description Like a Hiring Manager</title>
+      <link>https://thecodingcompany.io/blog/how-to-read-a-job-description.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/how-to-read-a-job-description.html</guid>
+      <description>A job description has three tiers of requirement and most candidates treat them as equal. Decode one in ten minutes and map your evidence to what gets screened.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Interview</category>
+    </item>
+    <item>
+      <title>AI Tools in an Interview: What Is Allowed, What Gets You Rejected</title>
+      <link>https://thecodingcompany.io/blog/ai-tools-in-interviews.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/ai-tools-in-interviews.html</guid>
+      <description>The three AI policies you will meet in interviews, the one behaviour that ends a process early, and how to disclose tool use in a way that earns marks.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Interview</category>
+    </item>
+    <item>
+      <title>What the TCS NQT Actually Tests (And What It Does Not)</title>
+      <link>https://thecodingcompany.io/blog/tcs-nqt-what-it-tests.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/tcs-nqt-what-it-tests.html</guid>
+      <description>A section-by-section breakdown of what the TCS NQT measures, the four places candidates lose marks, and how to spend three weeks preparing without wasting them.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Placement</category>
+    </item>
+    <item>
+      <title>AI Placement Programs Explained: How to Get Placed After Learning AI</title>
+      <link>https://thecodingcompany.io/blog/ai-placement-programs.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/ai-placement-programs.html</guid>
+      <description>What an AI placement program actually does, the red flags that separate a real one from marketing, and how TCC Placement Partner works in four phases.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Placement</category>
+    </item>
+    <item>
+      <title>How to Get an AI Internship in 2026: A Practical Guide for Students</title>
+      <link>https://thecodingcompany.io/blog/how-to-get-ai-internship-2026.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/how-to-get-ai-internship-2026.html</guid>
+      <description>A step-by-step roadmap from zero to your first AI internship — the skills that matter, the portfolio that convinces, and the outreach that gets replies.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Internships</category>
+    </item>
+    <item>
+      <title>Role-Based AI Certifications vs Generic AI Courses</title>
+      <link>https://thecodingcompany.io/blog/role-based-ai-certifications-vs-generic.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/role-based-ai-certifications-vs-generic.html</guid>
+      <description>Why a credential that names your job title beats a general certificate in the hiring stack — and when a broad AI course is still the right call.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <category>AI Career</category>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+    <title>Learn AI, Get Certified, Get Hired | TCC</title>
+    <meta name="description" content="AI certifications, real projects and placement support for students and working professionals. Prove your skills. Get hired." />
+    <meta name="keywords" content="campus placement preparation, placement practice, tcs nqt questions, infosys questions, wipro questions, accenture questions, aptitude practice, coding interview questions, fresher placement india">
+    <meta property="og:title" content="Placement practice & AI certifications for Indian students | TCC" />
+    <meta property="og:description" content="AI certifications, real projects and placement support for students and working professionals. Prove your skills. Get hired." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thecodingcompany.io/" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta property="og:site_name" content="The Coding Company (TCC)" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Placement practice | TCC Prep+" />
+    <meta name="twitter:description" content="AI certifications, real projects and placement support for students and working professionals. Prove your skills. Get hired." />
+    <meta name="twitter:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://thecodingcompany.io" />
+    <link rel="alternate" type="application/rss+xml" title="TCC Blog — AI Courses, Certifications & Placement" href="/feed.xml" />
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/tcc-favicon-96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/tcc-apple-touch.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <style>
+      /* ── Base ── */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+      body { background: #050505; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button { font-family: inherit; cursor: pointer; }
+
+      /* growthx fluid type baseline */
+      .baseline-root { --baseline-font: calc((16px + (100vw - 360px) * 4 / 360) / 16); }
+
+      h1, h2, .font-extra { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+      .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
+      .mono { font-family: 'DM Mono', 'Roboto Mono', monospace; }
+
+      /* ════════════════ TCC NAV LAYOUT ════════════════ */
+      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #050505; }
+
+      /* Desktop sidebar (matches TCC aside) */
+      .sidebar {
+        display: none;
+        width: 200px;
+        min-height: 100%;
+        padding: 24px 16px;
+        flex-direction: column;
+        flex-shrink: 0;
+        border-right: 1px solid rgba(255,255,255,0.05);
+        background: #050505;
+        overflow-y: auto; overflow-x: hidden;
+      }
+      @media (min-width: 768px) { .sidebar { display: flex; } }
+      .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: rgba(255,255,255,0.58); transition: all 0.3s; position: relative; }
+      .sidebar-link svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 1.5; }
+      .sidebar-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+      .sidebar-link.active { color: #fff; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12), transparent 70%); mask-image: linear-gradient(to right, black 40%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%); }
+      .sidebar-link.active svg { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
+      .sidebar-link .label { font-weight: 500; letter-spacing: 0.01em; }
+      .sidebar-nav { margin-top: 25vh; }
+      .sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+      .sidebar-webinars { display: flex; align-items: center; gap: 12px; padding: 12px 4px; color: rgba(255,255,255,0.58); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; transition: color 0.3s; }
+      .sidebar-webinars:hover { color: #fff; }
+      .sidebar-webinars svg { width: 16px; height: 16px; stroke-width: 1.5; }
+      .btn-login {
+        display: flex; align-items: center; justify-content: center; gap: 8px;
+        background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 12px; padding: 12px 20px; font-size: 13px; color: rgba(255,255,255,0.8);
+        font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
+        transition: all 0.3s;
+      }
+      .btn-login:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+      .btn-login-icon { display: none; width: 18px; height: 18px; flex-shrink: 0; }
+      .btn-login-label { white-space: nowrap; }
+      .brand-serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+      .sidebar-brand { font-size: 21px; padding: 0 8px; margin-bottom: 24px; transition: all 0.3s; }
+      .sidebar-brand:hover { text-shadow: 0 0 16px rgba(255,255,255,0.4); }
+
+      /* Scrollable main */
+      .main-scroll { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; }
+
+      /* Mobile top header (matches TCC header) */
+      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(6,6,6,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+      @media (min-width: 768px) { .mobile-header { display: none; } }
+      @media (max-width: 767px) { .main-scroll > .content-wrap { padding-top: 52px; } }
+      .mobile-brand { font-size: 19px; }
+      .mobile-actions { display: flex; align-items: center; gap: 10px; }
+      .mobile-login { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); transition: all 0.3s; }
+      .mobile-login:hover { background: rgba(255,255,255,0.15); }
+      .mobile-login svg { width: 20px; height: 20px; stroke-width: 1.5; }
+      .mobile-cta { font-size: 12px; font-weight: 600; background: #0064FF; color: #fff; border: 0; border-radius: 999px; padding: 9px 16px; white-space: nowrap; transition: background 0.2s; }
+      .mobile-cta:hover { background: rgb(0,70,178); }
+      @media (max-width: 430px) {
+        .mobile-header { padding: 0 12px; gap: 8px; }
+        .mobile-brand { font-size: 16px; }
+        .mobile-actions { gap: 8px; }
+        .mobile-login { width: 36px; height: 36px; }
+        .mobile-cta { font-size: 11px; padding: 8px 12px; }
+      }
+      @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 15px; } .mobile-cta { font-size: 10.5px; padding: 7px 10px; } }
+
+      /* Desktop top bar (matches growthx header: fixed right, 64px, scroll-reveal) */
+      .topbar {
+        display: none;
+        position: fixed; top: 0; right: 0; left: 200px; height: 64px; z-index: 120;
+        align-items: center; justify-content: flex-end;
+        padding: 10px 20px;
+        background: rgba(6,6,6,0.98); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+        border-bottom: 1px solid #1F1F1F;
+        opacity: 0; transform: translateY(-100%);
+        transition: all 0.25s ease-in-out;
+      }
+      @media (min-width: 768px) { .topbar { display: flex; } }
+      .topbar.visible { opacity: 1; transform: translateY(0); }
+      .topbar-cta {
+        font-size: 14px; font-weight: 600; font-family: 'Gilroy', 'Inter', system-ui, sans-serif;
+        background: #0064FF; color: #fff; border: 0; border-radius: 6px;
+        padding: 8px 18px; width: max-content; white-space: nowrap;
+        transition: background 0.2s; cursor: pointer;
+      }
+      .topbar-cta:hover { background: rgb(0,70,178); }
+
+      /* ── Collapsible sidebar (growthx: 200px open ⇄ 64px icon rail) ── */
+      .sidebar { position: sticky; top: 0; transition: width 0.2s ease-in-out; }
+      .sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 4px 0 8px; margin-bottom: 24px; }
+      .sidebar-head .sidebar-brand { margin-bottom: 0; flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; }
+      .sidebar-mark, .sidebar-toggle { display: none; }
+      .sidebar-toggle svg { width: 16px; height: 16px; }
+      .sidebar-toggle svg path { opacity: 0.4; transition: opacity 0.2s; }
+      .sidebar-toggle:hover { color: #fff; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); }
+      .sidebar-toggle:hover svg path { opacity: 1; }
+
+      body.sidebar-collapsed .sidebar { width: 64px; padding: 24px 8px; }
+      body.sidebar-collapsed .sidebar-head { justify-content: center; padding: 0; }
+      body.sidebar-collapsed .sidebar-head .sidebar-brand { display: none; }
+      body.sidebar-collapsed .sidebar-toggle { display: none; }
+      body.sidebar-collapsed .sidebar-mark { display: block; }
+      body.sidebar-collapsed .sidebar-link { justify-content: center; gap: 0; padding: 12px 0; }
+      body.sidebar-collapsed .sidebar-link .label { display: none; }
+      body.sidebar-collapsed .sidebar-webinars { justify-content: center; padding: 12px 0; }
+      body.sidebar-collapsed .sidebar-webinars > span { display: none; }
+      body.sidebar-collapsed .btn-login { width: 40px; height: 40px; padding: 0; border-radius: 999px; }
+      body.sidebar-collapsed .btn-login .btn-login-label { display: none; }
+      body.sidebar-collapsed .btn-login-icon { display: block; }
+      body.sidebar-collapsed .topbar { left: 64px; }
+
+      /* Mobile bottom nav (matches TCC nav) */
+      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #060606; align-items: stretch; }
+      @media (max-width: 767px) { .bottom-nav { display: flex; height: 52px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; } }
+      @media (max-width: 767px) { .bottom-link svg { display: none; } }
+      .bottom-nav-inner { display: flex; justify-content: space-around; align-items: stretch; width: 100%; height: 100%; }
+      .bottom-link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; flex: 1; min-width: 0; color: #999; transition: all 0.2s; }
+      .bottom-link svg { width: 26px; height: 26px; stroke-width: 1.5; transition: all 0.3s; }
+      .bottom-link:hover { color: rgba(255,255,255,0.7); }
+      .bottom-link.active { color: #fff; }
+      .bottom-link span { font-size: 12px; font-weight: 400; line-height: 1; }
+
+      @media (max-width: 384px) {
+        .bottom-nav-inner { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+        .bottom-nav-inner::-webkit-scrollbar { display: none; }
+        .bottom-link { flex: 1 0 64px; min-width: 64px; }
+        .bottom-link span { font-size: 11px; }
+      }
+      .content-wrap { padding-bottom: 90px; }
+      @media (min-width: 768px) { .content-wrap { padding-bottom: 0; } }
+
+      /* ── Buttons ── */
+      .btn-primary {
+        display: inline-flex; align-items: center; justify-content: center;
+        background: #0057DE; color: #fff; border: 0;
+        font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600;
+        letter-spacing: -0.01em; white-space: nowrap;
+        border-radius: 38px; box-shadow: 0px 4px 8.8px 0px rgba(0,0,0,0.33);
+        transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+        cursor: pointer;
+      }
+      .btn-primary:hover { background: #0A63EA; box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.4); transform: translateY(-1px); }
+      .btn-primary.pill-lg { font-size: 18px; padding: 20px 40px; border-radius: 60px; }
+      .btn-white {
+        display: inline-flex; align-items: center; justify-content: center;
+        background: #fff; color: #000; border: 0;
+        font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600;
+        letter-spacing: -0.01em; white-space: nowrap;
+        border-radius: 60px; box-shadow: 0px 4px 8.8px 0px rgba(0,0,0,0.33);
+        transition: box-shadow 0.2s ease, transform 0.15s ease;
+        cursor: pointer;
+      }
+      .btn-white:hover { box-shadow: 0px 6px 14px 0px rgba(0,0,0,0.4); transform: translateY(-1px); }
+      .btn-white.pill-lg { font-size: 18px; padding: 20px 40px; }
+
+      /* ── Reveal ── */
+      .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+      .reveal.in { opacity: 1; transform: none; }
+
+      /* ── Hero ── */
+      .hero { position: relative; min-height: 78vh; min-height: 78dvh; display: flex; flex-direction: column; justify-content: flex-start; background: #060606; overflow: hidden; }
+      @media (max-width: 767px) { .hero { min-height: calc(70vh - 52px); min-height: calc(70dvh - 52px); } }
+      .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 81%; z-index: 0; }
+      .hero-glow { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 68% 26% at 49% 17%, rgba(18,87,165,0.79) 0%, rgba(18,87,165,0.42) 55%, rgba(18,87,165,0) 82%); }
+      .hero-fade { position: absolute; left: 0; right: 0; bottom: 0; height: 40%; z-index: 2; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.88) 80%, #000 100%); }
+      .hero-content { position: relative; z-index: 3; max-width: min(1090px, 94%); margin: 0 auto; padding: 128px 0 60px; width: 100%; }
+      @media (max-width: 767px) { .hero-content { padding-top: 92px; } }
+      .hero-panel { position: absolute; z-index: 4; left: 50%; transform: translateX(-50%); bottom: clamp(20px, 3vh, 32px); width: min(1020px, 92%); text-align: center; }
+      .hero-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-style: normal; font-weight: 800; letter-spacing: -0.035em; line-height: 1.02; font-size: clamp(32px, 4.4vw, 56px); margin: 0 0 12px; text-shadow: 0 2px 26px rgba(0,0,0,0.6); text-wrap: balance; overflow-wrap: break-word; }
+      .hero-sub { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.01em; color: rgba(255,255,255,0.82); text-shadow: 0 1px 14px rgba(0,0,0,0.7); font-size: clamp(13.5px, 1.35vw, 15.5px); line-height: 1.55; max-width: 66em; margin: 0 auto 14px; }
+      .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; }
+      .hero-btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 28px; border-radius: 999px; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease; }
+      .hero-btn-primary { background: #fff; color: #000; }
+      .hero-btn-primary:hover { background: #e6e6e6; transform: translateY(-1px); }
+      .hero-btn-ghost { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+      .hero-btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.45); }
+      .hero-roadmap-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.62); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 2px; transition: color 0.2s ease, border-color 0.2s ease; }
+      .hero-roadmap-link:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
+      @media (max-width: 767px) { .hero-roadmap-link { margin-top: 12px; font-size: 12px; } }
+      @media (max-width: 767px) {
+        .hero-panel { bottom: 16px; width: calc(100% - 32px); max-width: 100%; }
+        .hero-panel .hero-h1 { font-size: clamp(22px, 6.4vw, 32px); margin-bottom: 8px; }
+        .hero-panel .hero-sub { font-size: 12.5px; line-height: 1.5; max-width: 100%; margin-bottom: 10px; }
+        .hero-panel .hero-btn { padding: 12px 18px; font-size: 13.5px; }
+        .hero-panel .hero-actions { width: 100%; gap: 10px; }
+      }
+      @media (max-width: 430px) {
+        .hero-panel .hero-actions { flex-direction: column; flex-wrap: nowrap; }
+        .hero-panel .hero-btn { width: 100%; padding: 12px 16px; font-size: 14px; }
+      }
+      @media (max-width: 340px) {
+        .hero-panel .hero-btn { padding: 11px 12px; font-size: 12px; }
+      }
+      /* Short viewports (small laptops, landscape phones): keep the copy clear of the subject */
+      @media (max-height: 720px) {
+        .hero-panel .hero-h1 { font-size: clamp(26px, 3.9vw, 46px); }
+        .hero-panel .hero-sub { font-size: 13px; margin-bottom: 12px; }
+        .hero-panel .hero-btn { padding: 11px 22px; font-size: 14px; }
+        .hero-fade { height: 50%; }
+      }
+      .hero-after { position: relative; background: #000; border-top: 1px solid rgba(255,255,255,0.06); }
+      .hero-after .hero-content { margin: 0 auto; max-width: min(1090px, 94%); }
+
+      /* TCC Ecosystem — TCC-style interactive pillar grid */
+      .eco-sec { position: relative; background: #050505; padding: clamp(80px, 10vw, 130px) 0; overflow: hidden; }
+      .eco-sec::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 240px; pointer-events: none; background: linear-gradient(180deg, rgba(113,113,122,0.10) 0%, rgba(113,113,122,0) 100%); }
+      .eco-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2; }
+      .eco-head { margin-bottom: 56px; opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+      .eco-head.in { opacity: 1; transform: none; }
+      .eco-title { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; font-size: clamp(30px, 3.6vw, 46px); letter-spacing: -0.03em; color: #fff; line-height: 1.15; margin: 0 0 16px; text-align: left; }
+      .eco-sub { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 42rem; margin: 0; }
+      @media (min-width: 768px) { .eco-sub { font-size: 16px; } }
+      .eco-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.08); overflow: hidden; }
+      .eco-card { position: relative; overflow: hidden; background: #070707; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; min-height: 170px; cursor: pointer; text-decoration: none; z-index: 1;
+        opacity: 0; transform: translateY(18px);
+        transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease, background-color 0.3s ease, filter 0.25s ease-out; }
+      .eco-card.in { opacity: 1; transform: none; }
+      @media (min-width: 768px) { .eco-card { padding: 32px; min-height: 210px; } }
+      .eco-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 25% 25%, rgba(255,255,255,0.045) 0%, transparent 65%); }
+      .eco-grid.focused .eco-card { filter: blur(3px) brightness(0.35); }
+      .eco-grid.focused .eco-card.active { filter: blur(0) brightness(1); z-index: 10; background: #0d0d0d;
+        box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.35), 0 0 30px rgba(255,255,255,0.06), 0 0 60px rgba(255,255,255,0.03); }
+      .ec-s5 { grid-column: span 5; } .ec-s6 { grid-column: span 6; } .ec-s7 { grid-column: span 7; } .ec-s12 { grid-column: span 12; }
+      @media (min-width: 768px) { .md-3 { grid-column: span 3; } .md-4 { grid-column: span 4; } .md-6 { grid-column: span 6; } }
+      .eco-icon { width: 40px; height: 40px; border-radius: 12px; position: relative; overflow: hidden; flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center;
+        background: linear-gradient(to bottom, #27272a 0%, #18181b 55%, #000 100%);
+        border: 1px solid rgba(63,63,70,0.5); box-shadow: 0 4px 14px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06);
+        transition: transform 0.3s ease; }
+      @media (min-width: 768px) { .eco-icon { width: 48px; height: 48px; } }
+      .eco-icon::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.07) 50%, transparent 100%); transform: translateX(-100%); animation: eco-shimmer 3.4s ease-in-out infinite; }
+      @keyframes eco-shimmer { 0% { transform: translateX(-100%); } 55%, 100% { transform: translateX(220%); } }
+      .eco-icon svg { width: 20px; height: 20px; position: relative; z-index: 1; stroke: rgba(255,255,255,0.8); fill: none; transition: transform 0.3s ease; }
+      @media (min-width: 768px) { .eco-icon svg { width: 22px; height: 22px; } }
+      .eco-card:hover .eco-icon, .eco-card.active .eco-icon { transform: scale(1.12); }
+      .eco-body { position: relative; z-index: 1; }
+      .eco-name { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 16px; letter-spacing: -0.02em; line-height: 1.375; color: rgba(255,255,255,0.88); margin: 0 0 6px; transition: color 0.25s; }
+      @media (min-width: 768px) { .eco-name { font-size: 20px; } }
+      .eco-desc { font-size: 12px; line-height: 1.625; font-weight: 300; letter-spacing: 0.02em; color: rgba(255,255,255,0.38); margin: 0; transition: color 0.25s; }
+      @media (min-width: 768px) { .eco-desc { font-size: 13.5px; } }
+      .eco-card.active .eco-name { color: #fff; } .eco-card.active .eco-desc { color: rgba(255,255,255,0.65); }
+      .eco-hair-t, .eco-hair-b { position: absolute; left: 0; right: 0; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+      .eco-hair-t { top: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); }
+      .eco-hair-b { bottom: 0; height: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); }
+      .eco-card.active .eco-hair-t, .eco-card.active .eco-hair-b { opacity: 1; }
+      @media (max-width: 767px) { .eco-desc { font-size: 12.5px; } }
+
+      /* Guides & resources */
+      .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 40px; }
+      .guide-card { display: flex; flex-direction: column; gap: 8px; padding: 26px 24px; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; background: rgba(255,255,255,0.03); transition: transform 0.25s, border-color 0.25s, background 0.25s; }
+      .guide-card:hover { transform: translateY(-4px); border-color: rgba(120,170,255,0.45); background: rgba(255,255,255,0.055); }
+      .guide-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+      .guide-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .guide-desc { font-size: 14px; color: rgba(255,255,255,0.62); line-height: 1.5; }
+      /* ── PREP+ HOMEPAGE SECTION ── */
+      .prep-cta-sec { background: #000; border-top: 1px solid rgba(255,255,255,0.06); }
+      .prep-cta-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 34px; }
+      @media (min-width: 900px) { .prep-cta-grid { grid-template-columns: repeat(3, 1fr); } }
+      .prep-mini { display: flex; flex-direction: column; gap: 8px; padding: 26px 24px; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; background: rgba(255,255,255,0.03); transition: transform 0.25s, border-color 0.25s, background 0.25s; }
+      .prep-mini:hover { transform: translateY(-4px); border-color: rgba(120,170,255,0.45); background: rgba(255,255,255,0.055); }
+      .prep-mini .pm-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+      .prep-mini .pm-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .prep-mini .pm-desc { font-size: 14px; color: rgba(255,255,255,0.62); line-height: 1.55; }
+      .prep-cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+      .prep-cta-row .p-btn { display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; border-radius: 999px; background: #fff; color: #000; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+      .prep-cta-row .p-btn:hover { background: #e6e6e6; }
+      .prep-cta-row .p-btn-ghost { display: inline-flex; align-items: center; justify-content: center; padding: 15px 30px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #fff; font-weight: 600; font-size: 15px; }
+      .prep-cta-row .p-btn-ghost:hover { background: rgba(255,255,255,0.1); }
+      .trust-bar { margin: 0 auto 56px; max-width: 1090px; }
+      .trust-label { font-family: 'DM Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.7); text-align: center; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px; }
+      .trust-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0; border: 1px solid rgba(255,255,255,0.16); border-radius: 14px; overflow: hidden; background: transparent; }
+      .trust-cell { display: flex; align-items: center; justify-content: center; height: 52px; background: transparent; }
+      .trust-cell img { max-height: 26px; max-width: 80px; object-fit: contain; opacity: 0.9; filter: brightness(0) invert(1); }
+      @media (max-width: 900px) { .trust-grid { display: none; } }
+      /* ── Official partner logos ── */
+      .partner-strip .ps-item { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 200px; }
+      .partner-strip .ps-box { height: 96px; display: flex; align-items: center; justify-content: center; }
+      .partner-strip .ps-logo { display: block; transition: transform .35s cubic-bezier(.16,1,.3,1), opacity .35s ease; }
+      .partner-strip .ps-item:hover .ps-logo { transform: scale(1.07); }
+      .partner-strip .ps-cap { font-size: 13px; color: rgba(255,255,255,.62); text-align: center; }
+      @keyframes psFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      .partner-strip .ps-box { animation: psFloat 5s ease-in-out infinite; }
+      .partner-strip .ps-item:nth-child(2) .ps-box { animation-delay: .6s; }
+      .partner-strip .ps-item:nth-child(3) .ps-box { animation-delay: 1.2s; }
+      @media (prefers-reduced-motion: reduce) { .partner-strip .ps-box { animation: none; } }
+      .partner-strip .ps-logo-for-light { display: none; }
+      html[data-theme="light"] .partner-strip .ps-logo-for-dark { display: none; }
+      html[data-theme="light"] .partner-strip .ps-logo-for-light { display: block; }
+      html[data-theme="light"] .partner-strip .ps-cap { color: rgba(0,0,0,.6); }
+      html[data-theme="light"] .partner-strip .ps-logo[src*="logo-openai"] { filter: brightness(0) !important; opacity: .85; }
+      html[data-theme="light"] .partner-strip .ps-logo[src*="partner-lovable"] { filter: none !important; opacity: .95; }
+
+      /* Partner row: three across at every width, including 320px phones */
+      .partner-strip .ps-item { min-width: 0; }
+      .ps-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; justify-items: center; gap: clamp(16px, 5vw, 64px); }
+      .ps-row .ps-item { width: 100%; }
+      @media (max-width: 640px) {
+        .ps-row { gap: 6px; }
+        .ps-row .ps-item { gap: 6px; }
+        .ps-row .ps-box { height: 44px; }
+        .ps-row .ps-logo { max-width: 100%; height: auto !important; max-height: 30px; object-fit: contain; }
+        .ps-row .ps-cap { font-size: 9px; line-height: 1.25; letter-spacing: 0.01em; }
+      }
+      html[data-theme="light"] .trust-label { color: rgba(0,0,0,.6); }
+      html[data-theme="light"] .trust-grid { border-color: rgba(0,0,0,.14); }
+      html[data-theme="light"] .trust-cell img { filter: brightness(0); opacity: .8; }
+      .logo-marquee-wrap { position: relative; display: none; overflow: hidden; margin-top: 24px; }
+      @media (max-width: 900px) { .logo-marquee-wrap { display: block; } }
+      .logo-marquee-wrap::before, .logo-marquee-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2; pointer-events: none; }
+      .logo-marquee-wrap::before { left: 0; background: linear-gradient(to right, rgba(0,0,0,0.8), transparent); }
+      .logo-marquee-wrap::after { right: 0; background: linear-gradient(to left, rgba(0,0,0,0.8), transparent); }
+      .logo-marquee { display: flex; width: max-content; animation: heroLogoMarquee 20s linear infinite; }
+      .logo-marquee-cell { display: flex; align-items: center; justify-content: center; min-width: 112px; height: 44px; border: 1px solid rgba(255,255,255,0.12); margin: 0 5px; border-radius: 10px; }
+      .logo-marquee-cell img { max-height: 24px; max-width: 72px; object-fit: contain; opacity: 0.85; filter: brightness(0) invert(1); }
+      @keyframes heroLogoMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+      /* ── Practice by company ── */
+      .rec-sec { background: #000; border-top: 1px solid rgba(255,255,255,0.06); padding: clamp(52px, 6vw, 84px) clamp(24px, 6vw, 80px) clamp(40px, 5vw, 64px); }
+      .rec-inner { max-width: 1200px; margin: 0 auto; }
+      .rec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+      .rec-eyebrow { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.58); margin: 0 0 10px; }
+      .rec-title { font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; font-size: clamp(26px, 3.2vw, 40px); margin: 0; }
+      .rec-sub { color: #a4a9b3; font-size: clamp(14.5px, 1.5vw, 17px); line-height: 1.55; max-width: 52ch; margin: 12px 0 0; }
+      .rec-all { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 3px; white-space: nowrap; transition: border-color 0.2s ease; }
+      .rec-all:hover { border-color: #fff; }
+      .rec-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 30px; }
+      .rec-card { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; background: rgba(255,255,255,0.025); text-decoration: none; transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease; }
+      .rec-card:hover { transform: translateY(-3px); border-color: rgba(120,170,255,0.45); background: rgba(255,255,255,0.05); }
+      .rec-logo { width: 56px; height: 56px; border-radius: 14px; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+      .rec-logo img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+      .rec-name { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; color: #fff; line-height: 1.25; }
+      .rec-meta { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.58); line-height: 1.5; }
+      @media (max-width: 1023px) { .rec-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 420px) {
+        .rec-grid { gap: 10px; }
+        .rec-card { padding: 14px; gap: 8px; }
+        .rec-logo { width: 46px; height: 46px; border-radius: 12px; }
+        .rec-name { font-size: 13.5px; }
+      }
+
+      /* ── Sections ── */
+      section { position: relative; }
+      .sec { background: #000; }
+      .sec-pad { padding: 70px clamp(24px, 6vw, 80px); }
+      .sec-title { font-weight: 800; letter-spacing: -0.04em; line-height: 1.06; font-size: clamp(24px, 2.8vw, 42px); margin-bottom: 18px; }
+      .sec-sub { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; color: #cacaca; font-size: clamp(16px, 1.6vw, 22px); max-width: 24em; letter-spacing: -0.01em; }
+      .sec-sub.muted { color: #a4a9b3; }
+
+      /* growth loop */
+      .loop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 50px; }
+      .loop-card { border: 1px solid rgba(255,255,255,0.37); border-radius: 14px; padding: 16px 22px 30px; display: flex; flex-direction: column; }
+      .loop-img { border-radius: 12px; object-fit: cover; width: 100%; aspect-ratio: 16/9; margin-bottom: 20px; }
+      .loop-num { font-family: 'DM Mono', monospace; font-weight: 500; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 15px; margin-bottom: 16px; }
+      .loop-title { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; margin-bottom: 8px; }
+      .loop-desc { color: #83888f; font-size: 14px; line-height: 1.55; }
+      @media (max-width: 900px) { .loop-grid { grid-template-columns: 1fr; } }
+
+      /* ladder */
+      .ladder-steps { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+      .ladder-step { width: 36px; height: 36px; border-radius: 999px; background: #3096ff; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-weight: 500; letter-spacing: -0.02em; font-size: 14px; color: #fff; flex-shrink: 0; }
+      .ladder-line { flex: 1; height: 0; border-top: 2px dashed #fff; opacity: 0.5; }
+      @media (max-width: 900px) { .ladder-steps { display: none; } }
+      .ladder-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+      .ladder-card { background: #000; border: 1px solid rgba(255,255,255,0.37); border-radius: 14px; min-height: 240px; padding: 40px 18px 18px; display: flex; flex-direction: column; }
+      .ladder-card.level5 { background: #0a0a0a; box-shadow: 0px 22px 50px 0px rgba(0,0,0,0.18); }
+      .ladder-level { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.6px; color: #3096ff; text-transform: uppercase; margin-bottom: 12px; }
+      .ladder-title { font-size: 22px; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 12px; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; }
+      .ladder-title .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
+      .ladder-title .strong { font-weight: 800; }
+      .ladder-desc { color: rgba(255,255,255,0.72); font-size: 13px; line-height: 1.6; margin-top: auto; }
+      .ladder-desc b { color: #fff; font-weight: 600; }
+      @media (max-width: 900px) { .ladder-grid { grid-template-columns: 1fr; gap: 14px; } }
+      .ladder-banner { margin-top: 36px; background: rgba(255,255,255,0.18); border: 2px solid rgba(255,255,255,0.37); border-radius: 10px; min-height: 120px; padding: 26px clamp(22px, 4vw, 60px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 22px; }
+      .ladder-banner-text { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; font-size: clamp(18px, 2vw, 30px); letter-spacing: -0.02em; }
+      .ladder-banner .btn-primary { font-size: 15px; padding: 16px 32px; }
+
+      /* credits */
+      .credits-sec { background: #060606; overflow: hidden; }
+      .credits-inner { position: relative; min-height: max(100vh, 1000px); display: flex; flex-direction: column; justify-content: flex-end; }
+      .credits-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+      .credits-fade-top { position: absolute; top: 0; left: 0; right: 0; height: 18%; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0) 75.6%); z-index: 1; }
+      .credits-fade-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(to top, #000 52%, rgba(0,0,0,0.92) 78%, transparent 100%); z-index: 1; }
+      .credits-content { position: relative; z-index: 2; padding: 0 clamp(24px, 6vw, 80px) 90px; }
+      .credits-sub { color: rgba(202,202,202,1); }
+      .credits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+      .credit-card { border-radius: 13px; padding: 18px 24px; display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(240,240,240,0.25); background: #0E0E0E; }
+      .credit-logo { height: 30px; max-width: 150px; object-fit: contain; margin-bottom: 8px; }
+      .credit-label { color: #fff; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
+      @media (max-width: 900px) { .credits-grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 560px) { .credits-grid { grid-template-columns: 1fr; } }
+
+      /* pricing */
+      .pricing-sec { background: #000; overflow: hidden; }
+      .pricing-inner { position: relative; padding: clamp(50px, 7vw, 80px) clamp(24px, 6vw, 80px); background-image: url('/assets/growthx/pricing-bg-2026-07-d.jpg'); background-size: cover; background-position: center; }
+      .pricing-fade-top { position: absolute; top: 0; left: 0; right: 0; height: 140px; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0) 95%); z-index: 0; }
+      .pricing-fade-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 140px; background: linear-gradient(0deg, #000 0%, rgba(0,0,0,0) 95%); z-index: 0; }
+      .pricing-content { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; text-align: center; }
+      .pricing-card { max-width: 780px; margin: 48px auto 0; background: #000; border: 1px solid rgba(255,255,255,0.37); border-radius: 30px; padding: 42px 44px; text-align: left; display: grid; grid-template-columns: 1fr 260px; gap: 36px; align-items: center; }
+      @media (max-width: 900px) { .pricing-card { grid-template-columns: 1fr; border-radius: 22px; padding: 24px; } }
+      .price-panel { background: rgba(217,217,217,0.09); border: 0.5px solid rgba(255,255,255,0.31); border-radius: 28px; overflow: hidden; padding: 8px; }
+      .price-cell { border-radius: 20px; padding: 22px; }
+      .price-cell.gold { background: linear-gradient(105deg, rgba(233,194,90,0.55) 0%, rgba(160,120,45,0.22) 55%, rgba(0,0,0,0) 100%); }
+      .price-cell.black { background: #000; border-radius: 20px; }
+      .price-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: #E9C25A; margin-bottom: 12px; }
+      .price-cell.black .price-tag { color: #0064FF; }
+      .price-digits { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.03em; font-size: 30px; line-height: 1; }
+      .price-cell.black .price-digits { font-size: 23px; }
+      .price-note { color: rgba(255,255,255,0.68); font-size: 12px; margin-top: 8px; }
+      .price-benefits { display: flex; flex-direction: column; gap: 13px; }
+      .price-benefit { display: flex; align-items: flex-start; gap: 12px; white-space: normal; overflow-wrap: break-word; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 17px; line-height: 1.35; letter-spacing: -0.01em; }
+      .price-benefit svg { flex-shrink: 0; }
+      .price-cta-wrap { margin-top: 36px; text-align: center; }
+      .price-cta-wrap .btn-primary { font-size: 15px; min-width: 220px; padding: 16px 30px; }
+      @media (max-width: 600px) {
+        .pricing-card { padding: 18px; gap: 22px; border-radius: 20px; }
+        .price-panel { border-radius: 20px; }
+        .price-cell { padding: 18px; }
+        .price-digits { font-size: clamp(25px, 8vw, 30px); }
+        .price-benefits { gap: 11px; }
+        .price-benefit { font-size: 15px; }
+        .price-cta-wrap .btn-primary { width: 100%; min-width: 0; }
+      }
+
+      /* not for everyone */
+      .nfe-sec { background: #000; overflow: hidden; }
+      .nfe-inner { position: relative; height: clamp(520px, 62vw, 800px); display: flex; align-items: center; justify-content: center; text-align: center; }
+      .nfe-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+      .nfe-fade-top { position: absolute; top: 0; left: 0; right: 0; height: 22%; background: linear-gradient(180deg, #000 0%, rgba(0,0,0,0) 95.2%); z-index: 1; }
+      .nfe-fade-bot { position: absolute; bottom: 0; left: 0; right: 0; height: 34%; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 45%, #000 100%); z-index: 1; }
+      .nfe-content { position: relative; z-index: 2; padding: 20px; max-width: 900px; margin: 0 auto; }
+      .nfe-title { font-size: clamp(32px, 4.4vw, 68px) !important; margin-bottom: 18px; }
+      .nfe-sub { color: #cacaca; font-size: clamp(15px, 1.7vw, 24px); max-width: 22em; margin: 0 auto 32px; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.01em; }
+      .nfe-content .btn-white { margin: 0 auto; }
+
+      /* FAQ */
+      .faq-sec { padding: 80px clamp(20px, 5vw, 60px) 50px; max-width: 1200px; margin: 0 auto; }
+      .faq-title { text-align: center; margin-bottom: 60px; font-size: clamp(28px, 3.2vw, 48px); }
+      .faq-item { background: rgba(238,238,238,0.15); border-radius: 10px; margin-bottom: 16px; overflow: hidden; }
+      .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: none; border: none; padding: 22px 24px; color: #fff; text-align: left; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 16px; letter-spacing: -0.01em; }
+      .faq-q .plus { flex-shrink: 0; width: 16px; height: 16px; transition: transform 0.15s ease; font-size: 18px; color: rgba(255,255,255,0.6); }
+      .faq-item.open .faq-q .plus { transform: rotate(45deg); }
+      .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1); }
+      .faq-a-inner { padding: 0 24px 24px; color: rgba(255,255,255,0.72); font-size: 14px; line-height: 1.65; max-width: 68em; }
+
+      /* footer */
+      .footer { background: #060606; padding: 50px clamp(20px, 5vw, 60px) 30px; }
+      .footer-brand { text-align: center; margin-bottom: 50px; }
+      .footer-brand img { height: 220px; margin: 0 auto 16px; }
+      .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px; padding-bottom: 50px; }
+      .footer-col h3 { font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin-bottom: 18px; color: #fff; }
+      .footer-col a { display: block; color: #a9a9a9; font-size: 13px; line-height: 1.9; }
+      .footer-col a:hover { color: #fff; }
+      .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+      .footer-bottom p, .footer-bottom a { color: #a9a9a9; font-size: 13px; }
+      .footer-bottom a:hover { color: #fff; }
+
+      /* loader */
+      .loader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1700; background: #060606; display: flex; align-items: center; justify-content: center; padding: 24px; transition: opacity 0.5s ease, visibility 0.5s ease; }
+      .loader.hide { opacity: 0; visibility: hidden; }
+      .loader-text { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; color: rgba(153,153,153,0.65); letter-spacing: -0.08px; font-size: clamp(13px, 4vw, 16px); text-align: center; max-width: 100%; overflow-wrap: break-word; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.85) 50%, transparent 100%); background-size: 152px 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 2.166s linear infinite; }
+      @keyframes shimmer { 0% { background-position: -152px 0; } 100% { background-position: 152px 0; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    
+      /* ── TCC mobile polish (generated) ── */
+      @media (max-width: 767px) {
+        html { -webkit-text-size-adjust: 100%; }
+        main.main-scroll, .sidebar { -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* comfortable tap targets */
+        .finder-chip { min-height: 44px; display: inline-flex; align-items: center; padding: 11px 18px; font-size: 12.5px; }
+        .mode-btn { min-height: 44px; }
+        .popular-card { min-height: 60px; justify-content: center; }
+        .chip-row { gap: 8px; }
+        .bottom-link { min-height: 52px; }
+        .cat-pill, .c-oth { min-height: 44px; display: inline-flex; align-items: center; }
+        .btn, .btn-sm { min-height: 46px; }
+        .news-input { min-height: 50px; }
+
+        /* breathe below the fold */
+        .section { padding-left: 18px; padding-right: 18px; }
+        .eco-inner { padding-left: 18px; padding-right: 18px; }
+        .container { padding-left: 0; padding-right: 0; }
+        .footer { padding-left: 20px; padding-right: 20px; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+        /* fluid display type that cannot overflow */
+        .hero-h1, .section-title, .final-title, .a-title, .c-title, .feature-title, .a-cta .ct-t {
+          overflow-wrap: anywhere; word-break: break-word;
+        }
+        .hero-sub, .section-sub, .feature-desc, .post-desc, .a-standfirst { font-size: 15.5px; line-height: 1.68; }
+
+        /* card media stays proportional on narrow screens */
+        .post-media { height: 160px; }
+        .feature-media { min-height: 210px; }
+
+        /* article measure + code-free reading width */
+        .a-body { padding-left: 20px; padding-right: 20px; }
+        .a-body p, .a-body li { font-size: 16.5px; line-height: 1.78; }
+        .a-phase { gap: 14px; }
+
+        /* grids collapse cleanly rather than squashing */
+        .a-stats, .a-flag { grid-template-columns: 1fr; }
+        .eco-grid { row-gap: 10px; }
+      }
+
+      @media (max-width: 480px) {
+        .section { padding-top: 52px; padding-bottom: 52px; }
+        .hero, .a-hero, .c-hero { padding-left: 18px; padding-right: 18px; }
+        .hero { padding-top: 92px; padding-bottom: 40px; }
+        .a-hero { padding-top: 100px; padding-bottom: 40px; }
+        .c-hero { padding-top: 96px; padding-bottom: 44px; }
+
+        /* stack the hero search so the button is full-width and thumbable */
+        .hero-search { flex-direction: column; align-items: stretch; padding: 8px; gap: 8px; border-radius: 18px; }
+        .hero-search-input { width: 100%; padding: 12px 12px; }
+        .hero-search-btn { width: 100%; padding: 14px 18px; font-size: 14.5px; border-radius: 12px; }
+
+        /* finder bar stacks the same way */
+        .finder-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+        .finder-count { text-align: right; }
+
+        /* two-up stats read better than three-up on very narrow screens */
+        .hero-stats { gap: 10px; }
+        .hero-stat .v { font-size: 26px; }
+        .hero-stat .l { font-size: 11.5px; }
+
+        /* footer single column */
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        .footer-brand img { height: 116px; }
+
+        /* related/next cards full width */
+        .a-related { grid-template-columns: 1fr; }
+        .final-ctas { gap: 12px; }
+        .final-ctas .btn, .final-ctas .btn-ghost, .a-cta .ct-row .btn { width: 100%; }
+        .a-cta .ct-row { flex-direction: column; align-items: stretch; }
+
+        .a-body h2 { font-size: clamp(23px, 7vw, 30px); }
+        .a-body h3 { font-size: 18px; }
+        .a-quote p { font-size: 19px !important; }
+      }
+
+      @media (max-width: 360px) {
+        .hero-h1 { font-size: clamp(28px, 9.5vw, 40px); }
+        .section-title { font-size: clamp(24px, 8vw, 34px); }
+        .finder-chip { padding: 10px 14px; font-size: 12px; }
+        .a-body { padding-left: 16px; padding-right: 16px; }
+      }
+
+      @supports (padding: max(0px)) {
+        @media (max-width: 767px) {
+          .bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px); height: auto; min-height: 52px; }
+          .mobile-header { padding-top: env(safe-area-inset-top, 0px); height: auto; min-height: 52px; }
+        }
+      }
+
+    
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .btn-bounce:hover { animation-play-state: paused; }
+
+    
+      /* ── skip link (accessibility) ── */
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 99999; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+      .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; overflow: visible; outline: 2px solid #fff; outline-offset: 2px; }
+
+</style>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thecodingcompany.io/#organization",
+      "name": "The Coding Company",
+      "alternateName": "TCC",
+      "url": "https://thecodingcompany.io",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thecodingcompany.io/assets/img/tcc-logo.png"
+      },
+      "description": "The Coding Company (TCC) is an AI education and placement company. It runs a global AI community, publishes 1,048 role-based AI certifications across 262 job roles and 32 industries (TCC CERT+), teaches in-depth AI courses, and supports learners into jobs through TCC Placement Partner. Every certification exists in four tiers: Foundation, Practitioner, Strategist and Executive.",
+      "slogan": "Learn AI. Get Certified. Get Placed.",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "India"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "knowsAbout": [
+        "AI courses",
+        "role-based AI certification",
+        "AI internships",
+        "AI placement programs",
+        "prompt engineering",
+        "AI adoption strategy",
+        "AI governance",
+        "AI for non-technical professionals"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student, working professional"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/112741155/",
+        "https://www.instagram.com/thecodingcompany.io/",
+        "https://lms.thecodingcompany.io/"
+      ],
+      "contactPoint": [
+        "https://www.linkedin.com/company/112741155/",
+        "https://www.instagram.com/thecodingcompany.io/",
+        "https://lms.thecodingcompany.io/"
+      ]
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://thecodingcompany.io/#educational",
+      "name": "The Coding Company",
+      "alternateName": "TCC",
+      "url": "https://thecodingcompany.io",
+      "parentOrganization": {
+        "@id": "https://thecodingcompany.io/#organization"
+      },
+      "description": "AI courses, role-based AI certifications (TCC CERT+), internships and a placement program for global learners.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "TCC CERT+",
+        "credentialCategory": "certification",
+        "description": "1,048 role-based AI certifications across 262 job roles and 32 industries, issued in four tiers: Foundation, Practitioner, Strategist and Executive."
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thecodingcompany.io/#website",
+      "name": "The Coding Company (TCC)",
+      "alternateName": "TCC",
+      "url": "https://thecodingcompany.io",
+      "publisher": {
+        "@id": "https://thecodingcompany.io/#organization"
+      },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://thecodingcompany.io/bootcamps/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "TCC Offerings",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "TCC CERT+ — Role-Based AI Certifications", "url": "https://thecodingcompany.io/bootcamps/"},
+        {"@type": "ListItem", "position": 2, "name": "TCC Placement Partner — Internships & Placement Program", "url": "https://thecodingcompany.io/placement/"},
+        {"@type": "ListItem", "position": 3, "name": "AI Courses by Role & Industry", "url": "https://thecodingcompany.io/ai-courses-for/"},
+        {"@type": "ListItem", "position": 4, "name": "TCC Blog — AI Courses, Careers & Placement Guides", "url": "https://thecodingcompany.io/blog/"},
+        {"@type": "ListItem", "position": 5, "name": "100 Club — AI Innovation Clubs in Colleges", "url": "https://thecodingcompany.io/100-club/"},
+        {"@type": "ListItem", "position": 6, "name": "Prep+ — Company-Wise Campus Placement Practice", "url": "https://thecodingcompany.io/prep+/companies/"}
+      ]
+    }</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is TCC a course or a community?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. TCC combines in-depth AI courses and role-based certifications (TCC CERT+) with a live global AI community, weekly expert sessions, build events and a placement program."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who conducts the AI immersion program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our team of AI implementation specialists — practitioners who build and ship AI systems for real companies — conducts the sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I've never written code. Can I do this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many TCC learners start from zero. The Foundation tier of TCC CERT+ assumes no coding background and walks you through practical AI tools step by step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What level of AI experience do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None required. TCC CERT+ has four tiers — Foundation, Practitioner, Strategist and Executive — so you can start at the right level for your role and industry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I'm a developer. Is TCC for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Developers use TCC to ship AI-powered products faster: LLM integration, agents, deployment and the full AI engineering stack, plus a community of operators and founders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can I actually build with TCC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voice agents, AI chatbots, automation workflows, marketing trackers, full deployed AI products — anything that solves a real problem, with a live URL and public repo as proof."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TCC help with placements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TCC Placement Partner provides resume building, portfolio development, interview preparation and access to a hiring network, with a goal of 10,000 offer letters per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is The Coding Company (TCC)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Coding Company (TCC) is a global AI community and education company. It offers in-depth AI courses, 1,048 role-based AI certifications called TCC CERT+, internships, and a placement program called TCC Placement Partner with a published goal of 10,000 offer letters per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does TCC stand for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC stands for The Coding Company. On the website the brand is written as \"thecodingcompany\" and the certification product is branded \"TCC CERT+\"."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does TCC sell?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC sells per-certification AI credentials (TCC CERT+, from Foundation to Executive) and in-depth AI courses. Placement support through TCC Placement Partner sits on top of those credentials. Pricing is per certification, so there is no single fee for the whole catalogue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is TCC CERT+?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC CERT+ is a catalogue of 1,048 role-based AI certifications. Each one covers a single job role and industry — for example a Prompt Engineer in Healthcare — and exists in four tiers: Foundation, Practitioner, Strategist and Executive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many AI certifications does TCC offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC offers 1,048 role-based AI certifications: 262 validated job roles multiplied by four tiers (Foundation, Practitioner, Strategist, Executive), spread across 32 industries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the four TCC CERT+ tiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Foundation assumes no prior AI or coding background and covers practical AI tools. Practitioner builds applied, role-specific workflows. Strategist covers designing AI initiatives and leading adoption. Executive covers AI strategy, governance and business impact for senior leaders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the right AI certification for my job title?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the CERT+ catalogue and type your job title. Examples include \"safety officer\", which maps to the HSE Officer track, \"janitor\", which maps to Maintenance Technician, and \"farmer\", which maps to Agronomist. The catalogue resolves common job titles to the nearest role, filters the grid live, and jumps to the best match on Enter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do TCC certifications take and how long are they valid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each credential states its own duration on its page, typically a few weeks of guided lessons plus hands-on role-specific build tasks and a final assessment. Credentials are verifiable, shareable and valid for three years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are TCC certifications accredited or recognised government licences?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC CERT+ credentials are industry credentials issued by The Coding Company, not government licences or regulated professional qualifications. They are verifiable, shareable badges that demonstrate role-specific AI capability to employers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which industries does TCC cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC covers 32 industries including marketing, human resources, sales, finance and banking, healthcare, software and IT, cybersecurity, legal, pharma and biotech, consulting, executive leadership, media, retail, manufacturing, construction, supply chain, agriculture, energy, telecom, transport, hospitality, insurance, government, defence, gaming, blockchain, mining, non-profit, design and education."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TCC have AI courses for non-technical people?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most of the 262 roles TCC covers are non-engineering — including sales, human resources, legal, nursing, teaching, agriculture, hospitality and retail. The Foundation tier assumes no coding background at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TCC have AI courses for software engineers and developers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Software and IT is one of the 32 covered industries, with roles spanning engineering, data, DevOps and product. Practitioner, Strategist and Executive tiers go deeper into LLM integration, agents, evaluation and deployment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get an AI certification for my specific job title?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases yes. TCC maps 650 common job titles onto its 262 canonical roles, so typing a real-world title such as \"store manager\" or \"credit analyst\" resolves to the closest certification. If no role matches, the catalogue shows the nearest available options instead of nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TCC Placement Partner a job guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. TCC Placement Partner is not a job guarantee. It provides structured career support, employer connections and readiness tools, and TCC publishes a goal of 10,000 offer letters per year across its learner community."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is eligible for TCC placements?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Learners who have completed a TCC CERT+ certification relevant to their target role (Foundation to Executive), or a TCC in-depth course, and who meet the portfolio-readiness checklist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TCC offer AI internships?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Internships are one of the core entry paths through TCC Placement Partner, alongside full-time role matching for experienced professionals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a degree to get an AI job through TCC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Many AI roles hire on demonstrated capability, so a portfolio of shipped AI projects plus a role-based certification often matters more than a specific degree."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the phases of TCC Placement Partner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Four phases: learn and certify, build a portfolio, get career-ready with resume and interview support, then get placed through the employer network. The roadmap is phased across twelve months toward the 10,000 offer letters per year goal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much do TCC AI certifications cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC CERT+ is priced per certification rather than as one fee for the whole catalogue, and each credential page carries its own enrolment details. Salary ranges shown on credential pages are illustrative market benchmarks for the role, not TCC fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the salary figures on TCC certification pages real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are illustrative sample data. Each credential page publishes India (₹ LPA) and USD benchmarks for its role with an explicit \"illustrative sample data\" disclaimer; they are market benchmarks, not offers or guarantees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is TCC different from a generic AI course?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A generic AI course teaches AI to everyone at once. TCC CERT+ is role-based: each of the 1,048 credentials targets one job title in one industry, and each is published in four tiers so a nurse, a lawyer and a prompt engineer each get a credential that speaks to their actual work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I choose a role-based AI certification or a general AI course?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose role-based when you need to prove AI capability for a specific job title or earn a promotion in a defined role, because the credential names that role and the skills tested match the work. Choose general courses when you are exploring AI before committing to a direction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best AI certification for my role?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start at the TCC CERT+ catalogue and search your job title. TCC resolves common titles to the nearest of its 262 roles, then shows that role\\u2019s four tiers so you can pick the level that matches your experience — Foundation if you are new to AI, Practitioner if you already use AI tools at work, Strategist if you lead adoption, and Executive if you own AI strategy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can an AI assistant get accurate facts about TCC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TCC publishes machine-readable summaries specifically for AI assistants: llms.txt and llms-full.txt for a readable overview, llms.json for structured facts, ai.txt for AI crawler policy, and faq.jsonl for a question-and-answer bank. All are served from https://thecodingcompany.io."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can AI crawlers index the TCC website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TCC allows AI crawlers including GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended and CCBot, and publishes ai.txt, llms.txt and a full sitemap to make indexing straightforward."
+      }
+    }
+  ]
+}</script>
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899');
+    </script>
+  <noscript><style id="reveal-noscript">.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="loader" id="loader"><p class="loader-text">Patience—you're about to be impressed.</p></div>
+
+    <div class="app-shell baseline-root" id="app">
+      <!-- Desktop sidebar nav (TCC aside) -->
+      <aside class="sidebar">
+        <div class="sidebar-head">
+          <a href="/" class="brand-serif sidebar-brand">thecodingcompany</a>
+          <button type="button" class="sidebar-mark" title="Expand sidebar" aria-label="Expand sidebar">T</button>
+          <button type="button" class="sidebar-toggle" title="Collapse sidebar" aria-label="Collapse sidebar"></button>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="/" class="sidebar-link active"><span class="label">Home</span></a>
+          <a href="/bootcamps" class="sidebar-link"><span class="label">CERT+</span></a>
+          <a href="/placement" class="sidebar-link"><span class="label">Placements</span></a>
+          <a href="/100-club" class="sidebar-link"><span class="label">100 Club</span></a>
+          <a href="/domains" class="sidebar-link"><span class="label">Domains</span></a>
+          <a href="/roadmaps/" class="sidebar-link"><span class="label">Roadmaps</span></a>
+                  </nav>
+        <div class="sidebar-bottom">
+          <a href="/webinars" class="sidebar-webinars"><span>Webinars</span></a>
+          <a href="/login" class="btn-login"><span class="btn-login-label">Member Login</span></a>
+        </div>
+      </aside>
+
+      <!-- Desktop top bar (growthx header) -->
+      <header class="topbar" id="topbar">
+        <button class="topbar-cta" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
+      </header>
+
+      <!-- Scrollable main -->
+      <main class="main-scroll" id="main-content" tabindex="-1">
+        <!-- Mobile top header -->
+        <header class="mobile-header">
+          <a href="/" class="brand-serif mobile-brand">thecodingcompany</a>
+          <div class="mobile-actions">
+            <a href="/login" class="mobile-login" aria-label="Login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a>
+            <button class="mobile-cta" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <!-- HERO -->
+          <section id="hero-section" class="hero">
+            <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/bootcamp-hero.jpg" aria-hidden="true" controlsList="nodownload noremoteplayback">
+              <source src="/bootcamp-hero.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-glow"></div>
+            <div class="hero-fade"></div>
+            <div class="hero-panel">
+              <h1 class="hero-h1">Think Beyond Degree.</h1>
+              <p class="hero-sub">A learning community for the most ambitious professionals in the world.</p>
+              <div class="hero-actions">
+                <a class="hero-btn hero-btn-primary" href="/placement/">Get my placement plan</a>
+                <a class="hero-btn hero-btn-ghost" href="/prep+/companies/">Try a TCS paper</a>
+              </div>
+              <a class="hero-roadmap-link" href="/verify/">See how we verify every claim <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </section>
+
+          <!-- OFFICIAL PARTNERS -->
+          <section id="official-partners-section" class="sec sec-pad">
+            <div class="partner-strip" style="margin:0 auto clamp(28px,4vw,44px);max-width:980px">
+              <h2 class="sec-title" style="text-align:center;margin:0 0 34px">Our partners</h2>
+              <div class="ps-row">
+                <div class="ps-item reveal" style="transition-delay:.05s">
+                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/logo-openai.webp" alt="OpenAI" style="height:48px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
+                  <span class="ps-cap">OpenAI &middot; Official Partner</span>
+                </div>
+                <div class="ps-item reveal" style="transition-delay:.18s">
+                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/partner-lovable.png" alt="Lovable" style="height:84px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
+                  <span class="ps-cap">Lovable &middot; Official Solutions Partner</span>
+                </div>
+                <div class="ps-item reveal" style="transition-delay:.31s">
+                  <div class="ps-box">
+                    <img class="ps-logo ps-logo-for-dark" src="/assets/growthx/partner-claude.svg" alt="Claude" style="height:48px;width:auto">
+                    <img class="ps-logo ps-logo-for-light" src="/assets/growthx/partner-claude-dark.svg" alt="Claude" style="height:48px;width:auto">
+                  </div>
+                  <span class="ps-cap">Claude &middot; Official Partner</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PRACTICE BY COMPANY -->
+          <section class="rec-sec" id="practice-by-company" aria-labelledby="rec-heading">
+            <div class="rec-inner">
+              <div class="rec-head">
+                <div>
+                  <p class="rec-eyebrow">Start here</p>
+                  <h2 class="rec-title" id="rec-heading">Know the paper before you sit for it.</h2>
+                  <p class="rec-sub">Every company runs its own pattern. Learn it once, and the exam stops being a surprise. Original questions, never leaked. Pick one and start; every set is open.</p>
+                  <p class="rec-sub" style="margin-top:12px"><a href="/diagnostic/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Not sure where you stand? Sit the 15-minute diagnostic first &rarr;</a></p>
+                </div>
+                <a class="rec-all" href="/prep+/companies/">All 71 companies</a>
+              </div>
+              <div class="rec-grid">
+                <a class="rec-card reveal" href="/prep+/companies/tcs/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/tcs.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">TCS</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 5 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/infosys/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/infosys.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">Infosys</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 3 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/wipro/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/wipro.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">Wipro</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 4 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/accenture/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/accenture.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">Accenture</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 4 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/cognizant/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/cognizant.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">Cognizant</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 4 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/capgemini/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/capgemini.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">Capgemini</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 4 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/hcl/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/hcl.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">HCLTech</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 4 rounds</span>
+                </a>
+                <a class="rec-card reveal" href="/prep+/companies/techmahindra/">
+                  <span class="rec-logo"><img src="/assets/img/company/clean/techmahindra.png" alt="" loading="lazy" decoding="async" /></span>
+                  <span class="rec-name">Tech Mahindra</span>
+                  <span class="rec-meta">2024&ndash;2026 patterns &middot; 4 rounds</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- GROWTH LOOP -->
+          <section id="growth-loop-section" class="sec sec-pad">
+            <div class="trust-bar">
+              <p class="trust-label">Tools and platforms you&rsquo;ll work with</p>
+              <div class="trust-grid">
+                <div class="trust-cell"><img src="/assets/growthx/logo-openai.webp" alt="OpenAI" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-google.webp" alt="Google" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-microsoft.webp" alt="Microsoft" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-eleven.webp" alt="ElevenLabs" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-lovable.webp" alt="Lovable" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-sarvam-ai.webp" alt="Sarvam AI" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-meta.png" alt="Meta" /></div>
+                <div class="trust-cell"><img src="/assets/growthx/logo-palantir.webp" alt="Palantir" /></div>
+              </div>
+              <div class="logo-marquee-wrap">
+                <div class="logo-marquee" id="logoMarquee">
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-openai.webp" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-google.webp" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-microsoft.webp" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-eleven.webp" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-lovable.webp" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-sarvam-ai.webp" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-meta.png" alt="" role="presentation" aria-hidden="true"></div>
+                  <div class="logo-marquee-cell"><img src="/assets/growthx/logo-palantir.webp" alt="" role="presentation" aria-hidden="true"></div>
+                </div>
+              </div>
+              <p style="text-align:center;font-size:11px;color:rgba(255,255,255,0.38);margin-top:14px;line-height:1.7">All product names and logos are trademarks of their respective owners. TCC is an independent education company and is not endorsed by them.</p>
+            </div>
+            <div class="reveal">
+              <h2 class="sec-title">This is not a course you finish.</h2>
+              <p class="sec-sub muted">It&rsquo;s a system you keep using &mdash; for your first job, your next role, and every build after that.</p>
+            </div>
+            <div class="loop-grid">
+              <div class="loop-card reveal">
+                <img class="loop-img" src="/assets/growthx/step-01-summit-flag.webp" alt="Select your goal" />
+                <div class="loop-num">01</div>
+                <div class="loop-title">Select your goal</div>
+                <p class="loop-desc">Better role, shipped product, network, or a new skill</p>
+              </div>
+              <div class="loop-card reveal">
+                <img class="loop-img" src="/assets/growthx/step-02-signpost.webp" alt="Get your roadmap" />
+                <div class="loop-num">02</div>
+                <div class="loop-title">Get your roadmap</div>
+                <p class="loop-desc">Who to meet / What to learn / What to build</p>
+              </div>
+              <div class="loop-card reveal">
+                <img class="loop-img" src="/assets/growthx/step-03-infinity-loop.webp" alt="Repeat" />
+                <div class="loop-num">03</div>
+                <div class="loop-title">Repeat</div>
+                <p class="loop-desc">Hit it, pick the next one; every loop compounds</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- AI PRODUCT LADDER -->
+          <section id="ai-product-ladder-section" class="sec sec-pad">
+            <div class="reveal">
+              <h2 class="sec-title" style="margin-top:0">Four days. One product. One thing you can actually show.</h2>
+              <div class="ladder-steps">
+                <div class="ladder-step">1</div><div class="ladder-line"></div>
+                <div class="ladder-step">2</div><div class="ladder-line"></div>
+                <div class="ladder-step">3</div><div class="ladder-line"></div>
+                <div class="ladder-step">4</div><div class="ladder-line"></div>
+                <div class="ladder-step">5</div>
+              </div>
+            </div>
+            <div class="ladder-grid">
+              <div class="ladder-card reveal">
+                <div class="ladder-level">Level 1</div>
+                <div class="ladder-title">The <span class="serif-i">user</span></div>
+                <p class="ladder-desc">You use ChatGPT or Claude every day. You have <b>never written code</b>. This is where most people start.</p>
+              </div>
+              <div class="ladder-card reveal">
+                <div class="ladder-level">Level 2</div>
+                <div class="ladder-title">The <span class="serif-i">vibe coder</span></div>
+                <p class="ladder-desc">You have shipped something with a <b>vibe coding tool</b>. Lovable, Bolt, Emergent.</p>
+              </div>
+              <div class="ladder-card reveal">
+                <div class="ladder-level">Level 3</div>
+                <div class="ladder-title">The <span class="serif-i">automator</span></div>
+                <p class="ladder-desc">You have built an <b>AI workflow or agent</b>. n8n, Make.</p>
+              </div>
+              <div class="ladder-card reveal">
+                <div class="ladder-level">Level 4</div>
+                <div class="ladder-title">The <span class="serif-i">coder</span></div>
+                <p class="ladder-desc">You use <b>Claude Code</b> to ship a full deployed product. Frontend, backend, database, live URL, public repo.</p>
+              </div>
+              <div class="ladder-card level5 reveal">
+                <div class="ladder-level">Level 5</div>
+                <div class="ladder-title">The <span class="serif-i">AI first</span> <span class="strong">leader</span></div>
+                <p class="ladder-desc">You <b>build and you distribute</b>. Product, users, traction. You stop waiting on anyone to ship your ideas.</p>
+              </div>
+            </div>
+            <div class="ladder-banner reveal">
+              <div class="ladder-banner-text"><!-- cohort:banner --><span>Cohort 01 starts <strong>18 Jan 2027</strong> &middot; 50 seats &middot; apply by <strong>11 Jan 2027</strong></span><!-- /cohort:banner --></div>
+              <button class="btn-primary" type="button" onclick="window.location.href='/bootcamps'">Explore detailed curriculum</button>
+            </div>
+          </section>
+
+          <!-- PRICING -->
+          <section id="pricing-section" class="pricing-sec">
+            <div class="pricing-inner">
+              <div class="pricing-fade-top"></div>
+              <div class="pricing-fade-bot"></div>
+              <div class="pricing-content reveal">
+                <h2 class="sec-title">Everything the interview asks for. Nothing it doesn't.</h2>
+                <!-- cohort:pricing --><p class="cohort-line center"><span class="cl-dot" aria-hidden="true"></span><span>Cohort 01 &middot; starts <strong>18 Jan 2027</strong> &middot; 50 seats &middot; applications close <strong>11 Jan 2027</strong></span></p><!-- /cohort:pricing -->
+                <div class="pricing-card">
+                  <div class="price-panel">
+                    <div class="price-cell gold">
+                      <div class="price-tag">Cohort fee</div>
+                      <div class="price-digits" style="margin-top:16px">₹14,999</div>
+                      <div class="price-note">one-time &middot; INR</div>
+                    </div>
+                    <div class="price-cell black">
+                      <div class="price-tag">Pay today</div>
+                      <div class="price-digits">₹0</div>
+                      <div class="price-note">pay only after you&rsquo;re accepted</div>
+                    </div>
+                  </div>
+                  <div class="price-benefits">
+                    <div class="price-benefit">Online live AI program</div>
+                    <div class="price-benefit">Live sessions with working AI practitioners</div>
+                    <div class="price-benefit">AI events and hackathons</div>
+                    <div class="price-benefit">Private builder community</div>
+                    <div class="price-benefit">50+ video lessons on AI &amp; GTM</div>
+                    <div class="price-benefit">Tool credits from our partners</div>
+                  </div>
+                </div>
+                <div class="price-cta-wrap">
+                  <button class="btn-primary" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
+                  <p style="margin-top:14px;text-align:center;font-size:13px;color:rgba(255,255,255,0.55);line-height:1.6">Apply &rarr; reviewed within 2 working days &rarr; pay securely &rarr; onboarding.<br>No payment is taken today.</p>
+                  <p style="margin-top:10px;text-align:center;font-size:12.5px"><a href="/enrol/" style="color:rgba(255,255,255,0.6);text-decoration:underline;text-underline-offset:2px">Already accepted? Complete your enrolment &rarr;</a></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- NOT FOR EVERYONE -->
+          <section id="not-for-everyone-section" class="nfe-sec">
+            <div class="nfe-inner">
+              <img class="nfe-bg" src="/assets/growthx/last-cta-fold-d.jpg" alt="" role="presentation" aria-hidden="true">
+              <div class="nfe-fade-top"></div>
+              <div class="nfe-fade-bot"></div>
+              <div class="nfe-content reveal">
+                <h2 class="sec-title nfe-title">This is not for everyone. It&rsquo;s for people who are done waiting.</h2>
+                <p class="nfe-sub">Every application is read by a human, not a keyword filter. We reply within 2 working days. We optimise for fit, not volume.</p>
+                <button class="btn-white pill-lg" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- GUIDES & RESOURCES -->
+          <section class="sec sec-pad" id="tcc-guides">
+            <div class="reveal">
+              <h2 class="sec-title">Guides &amp; resources</h2>
+              <p class="sec-sub muted">Everything you need to choose a course, get certified and get placed.</p>
+            </div>
+            <div class="guides-grid">
+              <a class="guide-card reveal" href="/ai-courses-for/">
+                <span class="guide-tag">COURSES</span>
+                <span class="guide-title">AI courses by role &amp; industry</span>
+                <span class="guide-desc">Find the right AI course for your job across 32 industries.</span>
+              </a>
+              <a class="guide-card reveal" href="/blog/how-to-get-ai-internship-2026.html">
+                <span class="guide-tag">INTERNSHIPS</span>
+                <span class="guide-title">How to get an AI internship in 2026</span>
+                <span class="guide-desc">A step-by-step plan from zero to your first role.</span>
+              </a>
+              <a class="guide-card reveal" href="/blog/ai-placement-programs.html">
+                <span class="guide-tag">PLACEMENT</span>
+                <span class="guide-title">How AI placement programs work</span>
+                <span class="guide-desc">What to look for and red flags to avoid.</span>
+              </a>
+              <a class="guide-card reveal" href="/blog/role-based-ai-certifications-vs-generic.html">
+                <span class="guide-tag">CERTIFICATION</span>
+                <span class="guide-title">Role-based certifications vs generic</span>
+                <span class="guide-desc">Why role-aligned proof wins with hiring teams.</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- THE TCC ECOSYSTEM (TCC-style pillar grid) -->
+          <section class="eco-sec" id="tcc-ecosystem" aria-labelledby="eco-heading">
+            <div class="eco-inner">
+              <div class="eco-head">
+                <h2 class="eco-title" id="eco-heading">One community. Sixteen ways in.</h2>
+                <p class="eco-sub">AI-native learning, building, certification and placement — inside a global network that stays with you after you get hired.</p>
+              </div>
+              <div class="eco-grid">
+                <a class="eco-card ec-s7 md-4" href="/bootcamps" aria-label="TCC Learn — live AI bootcamps and role-based certifications">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Learn</div>
+                    <p class="eco-desc">Live AI bootcamps &amp; role-based certifications</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s5 md-4" href="/bootcamps" aria-label="TCC CERT+ — 1,048 role-based AI certifications">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC CERT+</div>
+                    <p class="eco-desc">1,048 role-based AI certifications</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s5 md-4" href="/100-club" aria-label="TCC Club — the 100 Club builder community">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Club</div>
+                    <p class="eco-desc">The 100 Club builder community</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s7 md-3" href="/placement" aria-label="TCC Career — internships, placements and hiring">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Career</div>
+                    <p class="eco-desc">Internships, placements &amp; hiring</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s12 md-3" href="/blog" aria-label="TCC Guides — practical AI career, course and placement guides">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Guides</div>
+                    <p class="eco-desc">AI career, course &amp; placement guides</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s7 md-3" href="/prep+/companies/" aria-label="Prep+ — interview preparation">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">Prep+</div>
+                    <p class="eco-desc">Interview &amp; placement preparation</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s5 md-3" href="/webinars" aria-label="TCC Webinars — live AI career sessions">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m10 8 5 3-5 3z"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Webinars</div>
+                    <p class="eco-desc">Live AI career sessions</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s6 md-6" href="/100-club" aria-label="TCC Community — builders, alumni and 100 Club members">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Community</div>
+                    <p class="eco-desc">Builders, alumni &amp; 100 Club members</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <div class="eco-card ec-s6 md-6" aria-label="TCC Fest — AI festivals and hackathons, coming 2026">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Fest</div>
+                    <p class="eco-desc">AI festivals &amp; hackathons &mdash; coming 2026</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </div>
+                <a class="eco-card ec-s6 md-4" href="/roadmaps" aria-label="TCC Roadmaps — developer and AI career roadmaps for every role">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6 9 3l6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Roadmaps</div>
+                    <p class="eco-desc">A step-by-step path for every AI role</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s6 md-4" href="/domains" aria-label="TCC Domains — AI courses for 32 degree fields and industries">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Domains</div>
+                    <p class="eco-desc">AI courses for 32 fields &amp; industries</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s12 md-4" href="/gigs" aria-label="TCC Gigs — internships and freelance work matched to your skills">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Gigs</div>
+                    <p class="eco-desc">Internships &amp; freelance work, matched</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s6 md-3" href="/diagnostic" aria-label="TCC Diagnostic — a 15-minute scored placement readiness test">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Diagnostic</div>
+                    <p class="eco-desc">15-minute scored readiness test</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s6 md-3" href="/outcomes" aria-label="TCC Outcomes — placement outcomes, offers and packages">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 17v-5"/><path d="M12 17V9"/><path d="M17 17V6"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Outcomes</div>
+                    <p class="eco-desc">Offers, packages &amp; placement data</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s6 md-3" href="/verify" aria-label="TCC Verify — check any certificate or claim we make">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Verify</div>
+                    <p class="eco-desc">Check any certificate or claim</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+                <a class="eco-card ec-s6 md-3" href="/partners" aria-label="TCC Partners — partner marks and their exact scope">
+                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+                  <div class="eco-body">
+                    <div class="eco-name">TCC Partners</div>
+                    <p class="eco-desc">Partner marks and their exact scope</p>
+                  </div>
+                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- PREPARE FOR YOUR INTERVIEW (PREP+) -->
+          <section class="sec sec-pad prep-cta-sec" id="prep-section">
+            <div class="reveal">
+              <h2 class="sec-title">Prepare for your interview</h2>
+              <p class="sec-sub muted">Prep+ is TCC&rsquo;s interview and placement preparation library — the practice layer that sits under the certifications and the placement program.</p>
+            </div>
+            <div class="prep-cta-grid">
+              <a class="prep-mini reveal" href="/prep+/aptitude/">
+                <span class="pm-tag">Aptitude &amp; reasoning</span>
+                <span class="pm-title">Topics with worked solutions</span>
+                <span class="pm-desc">Quant, logical reasoning, data interpretation and verbal ability — every question solved, not just answered.</span>
+              </a>
+              <a class="prep-mini reveal" href="/prep+/dsa/">
+                <span class="pm-tag">DSA &amp; programming</span>
+                <span class="pm-title">Pattern-based coding practice</span>
+                <span class="pm-desc">Arrays, trees, graphs and DP, plus hands-on drills in Python, Java, SQL, JavaScript and C/C++.</span>
+              </a>
+              <a class="prep-mini reveal" href="/prep+/mock-tests/">
+                <span class="pm-tag">Mock tests &amp; company patterns</span>
+                <span class="pm-title">Sit a timed, scored paper</span>
+                <span class="pm-desc">Auto-scored mock tests and company exam patterns for TCS NQT, Infosys, Amazon and more.</span>
+              </a>
+            </div>
+            <div class="prep-cta-row reveal">
+              <a class="p-btn" href="/prep+/companies/">Start practising on Prep+</a>
+              <a class="p-btn-ghost" href="/placement/">Then get placed</a>
+            </div>
+          </section>
+
+          <!-- FAQ -->
+          <section class="faq-sec">
+            <h2 class="sec-title faq-title reveal">Frequently Asked Questions</h2>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">Is TCC a course or a community?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Both. TCC combines in-depth AI courses and role-based certifications (TCC CERT+) with a live global AI community, weekly expert sessions, build events and a placement program.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">Who conducts the AI immersion program?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Our team of AI implementation specialists — practitioners who build and ship AI systems for real companies — conduct the sessions.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">I&rsquo;ve never written code. Can I do this?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Yes. Many TCC learners start from zero. The Foundation tier of TCC CERT+ assumes no coding background and walks you through practical AI tools step by step — PMs, marketers, founders and designers all ship by day 4.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What level of AI experience do I need?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">None required. TCC CERT+ has four tiers — Foundation, Practitioner, Strategist and Executive — so you can start at the right level for your role and industry. Already building? Bring your hardest problem and use the week to crack it.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">I&rsquo;m a dev. Is TCC for me?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Yes. Developers use TCC to ship AI-powered products faster: LLM integration, agents, deployment and the full AI engineering stack. Bring your dream project, ship it, and get real feedback. The community of operators, marketers and founders is a bonus — early users and GTM in one place.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What can I actually build with TCC?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Voice agents, AI chatbots, automation workflows, marketing trackers, full deployed AI products — anything that solves a real problem, with a live URL and public repo as proof. Day 1 gives you a list to pick from if you don&rsquo;t have an idea yet.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">Does TCC help with placements?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Yes. TCC Placement Partner provides resume building, portfolio development, interview preparation and access to a hiring network, with a goal of 10,000 offer letters per year. See the <a href="/placement" style="text-decoration:underline">placement program</a> for the full roadmap.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What do I need before day 1?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">A laptop, a Claude Max plan, and an idea. That&rsquo;s it.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What is the time commitment?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Live sessions run Saturday to Tuesday. Building happens between sessions. Plan for 4 - 6 hours across the week.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">How often does the AI immersion program run?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Once a month.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">Do I get the recordings of the AI immersion program sessions?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">No. The sessions are live and built for unblocking. The building happens between sessions, not during them. Show up live.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">Can I join the next cohort if I miss this one?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Yes, but only within the next 2 cohorts. Meanwhile, your membership access opens up immediately.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What kind of events are hosted?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">You&rsquo;ll build over weekends - buildathons &amp; hackathons are at the core. Around them, the casual side as well - meet-ups, food crawls &amp; sundowners.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What do I get after paying?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">Access to the 4-day AI immersion program cohort and immediate membership - which includes build events in your city, a private Slack community, AI credits, your personalised AI roadmap, and 50+ video lessons on AI and GTM.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What is the validity of the membership?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">One year. From the second year onwards, renewal is lower annually.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What is the billing cycle and renewal date?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">The billing cycle is for 1 year, and the renewal date is 1 year from your date of purchase.</div></div>
+            </div>
+            <div class="faq-item reveal">
+              <button class="faq-q" type="button">What if I join and change my mind? What&rsquo;s the refund policy?<span class="plus">+</span></button>
+              <div class="faq-a"><div class="faq-a-inner">We encourage exploring membership details thoroughly before signing up. As we fall under digital goods category that are experiential in nature, we do not offer refunds.</div></div>
+            </div>
+          </section>
+
+          <!-- FOOTER -->
+          <footer class="footer">
+            <div class="footer-brand">
+              <img src="/assets/img/tcc-logo.png" alt="The Coding Company" />
+            </div>
+            <div class="footer-grid">
+              <div class="footer-col">
+                <h3>Programs</h3>
+                <a href="/bootcamps">CERT+ certifications</a><a href="/prep+/companies/">Prep+ practice</a><a href="/placement">Placement programme</a><a href="/100-club">100 Club</a><a href="/gigs">Gigs</a><a href="/domains">Domains</a>
+              <a href="/worksim/">WorkSim (pilot)</a></div>
+              <div class="footer-col">
+                <h3>Prepare</h3>
+                <a href="/prep+/companies/">Company patterns</a><a href="/prep+/aptitude/">Aptitude &amp; Reasoning</a><a href="/prep+/programming/">Programming</a><a href="/prep+/dsa/">DSA Patterns</a><a href="/prep+/mcq/">Technical MCQs</a><a href="/prep+/mock-tests/">Mock Tests</a>
+              </div>
+              <div class="footer-col">
+                <h3>Resources</h3>
+                <a href="/blog">Blog &amp; guides</a><a href="/ai-courses-for/">AI courses by role</a><a href="/blog/role-based-ai-certifications-vs-generic.html">CERT+ vs generic certificates</a><a href="/blog/how-to-get-ai-internship-2026.html">Get an AI internship</a><a href="/webinars">AI career sessions</a>
+              </div>
+              <div class="footer-col">
+                <h3>Company</h3>
+                <a href="/careers/">Careers</a>
+                <a href="/diagnostic/">Placement diagnostic</a>
+          <a href="/verify/">Verify our claims</a>
+          <a href="/partners/">Partners</a>
+          <a href="/contact">Contact us</a><a href="/login">Login</a><a href="/terms-of-service">Terms of use</a><a href="/privacy-policy">Privacy Policy</a><a href="/refund-policy">Refund Policy</a>
+              </div>
+              <div class="footer-col">
+                <h3>Talk to us</h3>
+                <a href="https://wa.me/919182160152" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="mailto:hello@thecodingcompany.io">hello@thecodingcompany.io</a>
+                <a href="mailto:admissions@thecodingcompany.io">admissions@thecodingcompany.io</a>
+                <a href="https://www.linkedin.com/company/112741155/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.instagram.com/thecodingcompany.io/" target="_blank" rel="noopener">Instagram</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 The Coding Company. All rights reserved.</p>
+              <a href="/privacy-policy">Privacy &middot; Terms</a>
+            </div>
+            <p style="margin-top:14px;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7">The Coding Company &middot; Hyderabad, Telangana, India &middot; <a href="mailto:hello@thecodingcompany.io" style="color:inherit;text-decoration:underline">hello@thecodingcompany.io</a> &middot; <a href="https://wa.me/919182160152" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">+91 91821 60152</a></p>
+          </footer>
+        </div>
+      </main>
+
+      <!-- Mobile bottom nav (TCC) -->
+      <nav class="bottom-nav">
+        <div class="bottom-nav-inner">
+          <a href="/" class="bottom-link active"><span>Home</span></a>
+          <a href="/bootcamps" class="bottom-link"><span>CERT+</span></a>
+          <a href="/placement" class="bottom-link"><span>Placements</span></a>
+          <a href="/100-club" class="bottom-link"><span>Club</span></a>
+          <a href="/roadmaps/" class="bottom-link"><span>Roadmaps</span></a>
+        </div>
+      </nav>
+
+    </div>
+
+    <script>
+      (function () {
+        // sidebar collapse / expand (matches growthx 200px ⇄ 64px rail)
+        function setCollapsed(c) {
+          document.body.classList.toggle('sidebar-collapsed', c);
+          try { localStorage.setItem('tcc-sidebar', c ? 'collapsed' : 'open'); } catch (e) {}
+        }
+        var mark = document.querySelector('.sidebar-mark');
+        var tog = document.querySelector('.sidebar-toggle');
+        if (mark) mark.addEventListener('click', function () { setCollapsed(false); });
+        if (tog) tog.addEventListener('click', function () { setCollapsed(true); });
+        setCollapsed(false);
+
+        var topbar = document.getElementById('topbar');
+        var scroller = document.querySelector('.main-scroll');
+        function onScroll() {
+          if (!topbar || !scroller) return;
+          topbar.classList.toggle('visible', scroller.scrollTop > 60);
+        }
+        if (topbar) { if (scroller) scroller.addEventListener('scroll', onScroll, { passive: true }); onScroll(); }
+        // loader
+        var loader = document.getElementById('loader');
+        window.addEventListener('load', function () {
+          setTimeout(function () { loader.classList.add('hide'); }, 400);
+        });
+        setTimeout(function () { loader.classList.add('hide'); }, 3000);
+
+        // scroll reveal (inside .main-scroll)
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+        // duplicate logo marquee
+        var lm = document.getElementById('logoMarquee');
+        if (lm) lm.innerHTML += lm.innerHTML;
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-q').forEach(function (q) {
+          q.addEventListener('click', function () {
+            var item = q.parentElement;
+            var a = q.nextElementSibling;
+            var open = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(function (o) {
+              o.classList.remove('open');
+              o.querySelector('.faq-a').style.maxHeight = '0px';
+            });
+            if (!open) {
+              item.classList.add('open');
+              a.style.maxHeight = a.scrollHeight + 'px';
+            }
+          });
+        });
+
+      })();
+    </script>
+    <script>
+      // The TCC Ecosystem — TCC-style interactions
+      (function () {
+        var grid = document.querySelector('.eco-grid');
+        if (!grid) return;
+        var cards = Array.prototype.slice.call(grid.querySelectorAll('.eco-card'));
+        var head = document.querySelector('.eco-head');
+
+        function clearFocus() {
+          grid.classList.remove('focused');
+          cards.forEach(function (c) { c.classList.remove('active'); });
+        }
+        function activate(card) {
+          grid.classList.add('focused');
+          cards.forEach(function (c) { c.classList.toggle('active', c === card); });
+        }
+
+        cards.forEach(function (card) {
+          card.addEventListener('mouseenter', function () { activate(card); });
+          // Touch devices: first tap previews the pillar, second tap follows the link
+          card.addEventListener('click', function (e) {
+            if (window.matchMedia('(hover: none)').matches && !card.classList.contains('active')) {
+              e.preventDefault();
+              activate(card);
+            }
+          });
+        });
+        grid.addEventListener('mouseleave', clearFocus);
+        grid.addEventListener('touchstart', function (e) {
+          if (!grid.contains(e.target)) clearFocus();
+        }, { passive: true });
+
+        // Staggered scroll-reveal (once, margin -80px like the original)
+        var revealed = false;
+        function revealNow() {
+          if (revealed) return;
+          revealed = true;
+          if (head) head.classList.add('in');
+          cards.forEach(function (c, i) {
+            setTimeout(function () { c.classList.add('in'); }, i * 70);
+          });
+        }
+        function inView() {
+          var rect = grid.getBoundingClientRect();
+          var vh = window.innerHeight || document.documentElement.clientHeight;
+          return rect.top < vh - 80 && rect.bottom > 80;
+        }
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) { if (en.isIntersecting) { revealNow(); io.disconnect(); } });
+          }, { rootMargin: '-80px' });
+          io.observe(grid);
+        }
+        // Fallback for browsers/contexts where IO is unreliable (also covers inner scroll containers)
+        var scroller = document.querySelector('main.main-scroll') || window;
+        function check() { if (inView()) { revealNow(); scroller.removeEventListener('scroll', check); window.removeEventListener('scroll', check); window.removeEventListener('resize', check); } }
+        scroller.addEventListener('scroll', check, { passive: true });
+        window.addEventListener('scroll', check, { passive: true });
+        window.addEventListener('resize', check);
+        check();
+      })();
+    </script>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+</body>
+</html>

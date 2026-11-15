@@ -1,0 +1,2102 @@
+/* tcc-fonts: Gilroy + Newsreader + DM Mono (growthx.club stack) */
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 300; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-Light.ttf') format('truetype'); }
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype'); }
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 800; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-ExtraBold.ttf') format('truetype'); }
+@font-face { font-family: 'Gilroy'; font-style: normal; font-weight: 900; font-display: swap; src: url('/assets/fonts/gilroy/Gilroy-Black.ttf') format('truetype'); }
+
+/* ============================================================================
+ * tcc-theme.css — TCC theme tokens, light-mode shell, diagrams and toggle.
+ *
+ * Loaded on every page after the page's own styles. Dark is the default and
+ * is byte-for-byte the original palette; light mode is opt-in via
+ * <html data-theme="light"> (set by tcc-theme.js before first paint).
+ *
+ * Content-component overrides for each page family live in the generated
+ * tcc-theme-pages.css.
+ * ==========================================================================*/
+
+/* --------------------------------------------------------------------------
+ * 1. Tokens
+ * ------------------------------------------------------------------------*/
+
+:root {
+  /* The original site rendered native controls in light mode even on the
+     dark theme; keeping that here preserves the dark-mode pixel baseline. */
+  color-scheme: light;
+
+  --tcc-canvas: #050505;
+  --tcc-surface: #0a0a0a;
+  --tcc-surface-2: #101010;
+  --tcc-surface-3: #141414;
+  --tcc-ink: #ffffff;
+  --tcc-ink-2: rgba(255, 255, 255, 0.72);
+  --tcc-ink-3: rgba(255, 255, 255, 0.55);
+  --tcc-line: rgba(255, 255, 255, 0.12);
+  --tcc-line-strong: rgba(255, 255, 255, 0.4);
+  --tcc-accent: #0057de;
+  --tcc-accent-ink: #ffffff;
+  --tcc-accent-soft: rgba(0, 87, 222, 0.16);
+  --tcc-done: #0057de;
+  --tcc-done-ink: #ffffff;
+  --tcc-learning: #0f2f66;
+  --tcc-learning-ink: #dce9ff;
+  --tcc-skip: #141414;
+  --tcc-skip-ink: rgba(255, 255, 255, 0.62);
+  --tcc-shadow: rgba(0, 0, 0, 0.45);
+
+  /* Diagram palette (SVG + swatches) */
+  --rmg-canvas: #070707;
+  --rmg-section-fill: rgba(255, 255, 255, 0.02);
+  --rmg-section-stroke: rgba(255, 255, 255, 0.35);
+  --rmg-topic: #ffffff;
+  --rmg-topic-ink: #0a0a0a;
+  --rmg-subtopic: #101010;
+  --rmg-subtopic-ink: #e6e6e6;
+  --rmg-subtopic-stroke: rgba(255, 255, 255, 0.4);
+  --rmg-button: #ffffff;
+  --rmg-button-ink: #0a0a0a;
+  --rmg-edge: rgba(47, 123, 255, 0.85);
+  --rmg-focus: #2f7bff;
+  --rmg-done-border: #8fc0ff;
+  --rmg-learning-border: #8fc0ff;
+  --rmg-skip-border: rgba(255, 255, 255, 0.4);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --tcc-canvas: #f7f7f5;
+  --tcc-surface: #ffffff;
+  --tcc-surface-2: #f0efec;
+  --tcc-surface-3: #e8e6e1;
+  --tcc-ink: #0a0a0a;
+  --tcc-ink-2: #3d3d3d;
+  --tcc-ink-3: #5f5f5f;
+  --tcc-line: rgba(0, 0, 0, 0.12);
+  --tcc-line-strong: rgba(0, 0, 0, 0.42);
+  --tcc-accent: #0057de;
+  --tcc-accent-ink: #ffffff;
+  --tcc-accent-soft: #dbe8ff;
+  --tcc-done: #0057de;
+  --tcc-done-ink: #ffffff;
+  --tcc-learning: #dbe8ff;
+  --tcc-learning-ink: #0a2a5e;
+  --tcc-skip: #f0efec;
+  --tcc-skip-ink: #5f5f5f;
+  --tcc-shadow: rgba(0, 0, 0, 0.18);
+
+  --rmg-canvas: #fbfbfa;
+  --rmg-section-fill: rgba(0, 0, 0, 0.02);
+  --rmg-section-stroke: rgba(0, 0, 0, 0.35);
+  --rmg-topic: #ffffff;
+  --rmg-topic-ink: #0a0a0a;
+  --rmg-subtopic: #f0efec;
+  --rmg-subtopic-ink: #1a1a1a;
+  --rmg-subtopic-stroke: rgba(0, 0, 0, 0.4);
+  --rmg-button: #0057de;
+  --rmg-button-ink: #ffffff;
+  --rmg-edge: rgba(0, 87, 222, 0.8);
+  --rmg-focus: #0057de;
+  --rmg-done-border: #0a3f9e;
+  --rmg-learning-border: #0057de;
+  --rmg-skip-border: rgba(0, 0, 0, 0.5);
+
+  /* Legacy one-off pages (legal, contact, cert hub) define their own palette
+     variables. Re-point them at the light tokens. */
+  --bg: #f7f7f5;
+  --ink: #0a0a0a;
+  --line: rgba(0, 0, 0, 0.14);
+  --muted: #4f4f4f;
+  --muted2: #6b6b6b;
+  --accent: #0057de;
+  --panel: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+ * 2. Base
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"],
+html[data-theme="light"] body {
+  background: var(--tcc-canvas);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] ::selection {
+  background: rgba(0, 87, 222, 0.2);
+  color: #0a0a0a;
+}
+
+html[data-theme="light"] * {
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+html[data-theme="light"] :focus-visible {
+  outline-color: var(--tcc-accent);
+}
+
+/* --------------------------------------------------------------------------
+ * 3. Shell chrome
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .app-shell,
+html[data-theme="light"] .main-scroll {
+  background: var(--tcc-canvas);
+}
+
+html[data-theme="light"] .sidebar {
+  background: var(--tcc-surface);
+  border-right-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .sidebar-brand {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .sidebar-link,
+html[data-theme="light"] .sidebar-webinars {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .sidebar-link:hover,
+html[data-theme="light"] .sidebar-webinars:hover,
+html[data-theme="light"] .sidebar-link.active {
+  color: var(--tcc-ink);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .sidebar-link.active {
+  background: radial-gradient(circle at 20% 50%, rgba(0, 87, 222, 0.12), transparent 70%);
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+html[data-theme="light"] .sidebar-toggle,
+html[data-theme="light"] .sidebar-mark {
+  color: #5f5f5f;
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .sidebar-toggle:hover,
+html[data-theme="light"] .sidebar-mark:hover {
+  color: var(--tcc-ink);
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--tcc-line-strong);
+}
+
+html[data-theme="light"] .btn-login,
+html[data-theme="light"] .mobile-login {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--tcc-line);
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .btn-login:hover,
+html[data-theme="light"] .mobile-login:hover {
+  background: rgba(0, 0, 0, 0.07);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .topbar {
+  background: rgba(247, 247, 245, 0.82);
+  border-bottom-color: var(--tcc-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+html[data-theme="light"] .topbar-cta,
+html[data-theme="light"] .mobile-cta,
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .btn.primary,
+html[data-theme="light"] .top-cta {
+  background: var(--tcc-accent);
+  color: #ffffff;
+  border-color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .topbar-cta:hover,
+html[data-theme="light"] .mobile-cta:hover,
+html[data-theme="light"] .btn-primary:hover,
+html[data-theme="light"] .btn.primary:hover,
+html[data-theme="light"] .top-cta:hover {
+  background: #0a63ea;
+  border-color: #0a63ea;
+  color: #ffffff;
+}
+
+html[data-theme="light"] .mobile-header {
+  background: rgba(247, 247, 245, 0.9);
+  border-bottom-color: var(--tcc-line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+html[data-theme="light"] .mobile-brand {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .bottom-nav {
+  background: var(--tcc-surface);
+  border-top: 1px solid var(--tcc-line);
+}
+
+html[data-theme="light"] .bottom-link {
+  color: #6b6b6b;
+}
+
+html[data-theme="light"] .bottom-link:hover,
+html[data-theme="light"] .bottom-link.active {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .footer {
+  background: var(--tcc-surface-2);
+  border-top: 1px solid var(--tcc-line);
+}
+
+html[data-theme="light"] .footer-col h3,
+html[data-theme="light"] .footer-brand {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .footer-col a,
+html[data-theme="light"] .footer-bottom,
+html[data-theme="light"] .footer-bottom a {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .footer-col a:hover,
+html[data-theme="light"] .footer-bottom a:hover {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .skip-link {
+  background: var(--tcc-accent);
+  color: #ffffff;
+}
+
+html[data-theme="light"] .loader {
+  background: var(--tcc-canvas);
+}
+
+html[data-theme="light"] .loader-text {
+  color: #5f5f5f;
+}
+
+/* --------------------------------------------------------------------------
+ * 4. Inline-style escapes
+ *    A handful of components (mostly prep+ question cards and dynamically
+ *    built quiz markup) hardcode colours in style="" attributes, which beat
+ *    any class selector. These scoped !important rules bring them into theme.
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] [style*="color:#fff"],
+html[data-theme="light"] [style*="color: #fff"],
+html[data-theme="light"] [style*="color:#ffffff"],
+html[data-theme="light"] [style*="color: #ffffff"] {
+  color: var(--tcc-ink) !important;
+}
+
+html[data-theme="light"] [style*="color:rgba(255,255,255"],
+html[data-theme="light"] [style*="color: rgba(255,255,255"],
+html[data-theme="light"] [style*="color:rgba(255, 255, 255"],
+html[data-theme="light"] [style*="color: rgba(255, 255, 255"] {
+  color: #3d3d3d !important;
+}
+
+/* Keep intentionally transparent text transparent (doubled attribute selector
+   raises specificity above the rule above; the trailing ")" makes it match
+   rgba(255,255,255,0) only, not rgba(255,255,255,0.6)). */
+html[data-theme="light"] [style*="color:rgba(255,255,255,0)"][style*="color:rgba(255,255,255,0)"],
+html[data-theme="light"] [style*="color: rgba(255,255,255,0)"][style*="color: rgba(255,255,255,0)"] {
+  color: rgba(255, 255, 255, 0) !important;
+}
+
+html[data-theme="light"] [style*="color:#7fb4ff"],
+html[data-theme="light"] [style*="color: #7fb4ff"],
+html[data-theme="light"] [style*="color:#7FB4FF"] {
+  color: #0057de !important;
+}
+
+html[data-theme="light"] [style*="color:#4DDF8D"],
+html[data-theme="light"] [style*="color:#4ddf8d"],
+html[data-theme="light"] [style*="color: #4DDF8D"] {
+  color: #0b6b40 !important;
+}
+
+/* White text on an accent-filled inline badge must stay white. */
+html[data-theme="light"] [style*="background:#0057DE"][style*="color:#fff"],
+html[data-theme="light"] [style*="background:#0057de"][style*="color:#fff"],
+html[data-theme="light"] [style*="background: #0057DE"][style*="color:#fff"],
+html[data-theme="light"] [style*="background: #0057de"][style*="color:#fff"] {
+  color: #ffffff !important;
+}
+
+/* Partner logos: three-across on mobile, even height so wordmarks align */
+.partner-strip .ps-logo { height: 26px; width: auto; }
+html[data-theme="light"] .code-editor [style*="color"],
+html[data-theme="light"] .code-bar [style*="color"],
+html[data-theme="light"] .code-out [style*="color"],
+html[data-theme="light"] .lang-select [style*="color"],
+html[data-theme="light"] .terminal [style*="color"] {
+  color: rgba(255, 255, 255, 0.66) !important;
+}
+
+html[data-theme="light"] [style*="background:#050505"],
+html[data-theme="light"] [style*="background: #050505"],
+html[data-theme="light"] [style*="background:#000"],
+html[data-theme="light"] [style*="background: #000"],
+html[data-theme="light"] [style*="background:#0a0a0a"],
+html[data-theme="light"] [style*="background: #0a0a0a"] {
+  background: var(--tcc-surface) !important;
+}
+
+html[data-theme="light"] [style*="border:1px solid rgba(255,255,255"],
+html[data-theme="light"] [style*="border: 1px solid rgba(255,255,255"] {
+  border-color: var(--tcc-line) !important;
+}
+
+/* --------------------------------------------------------------------------
+ * 5. Tailwind utility remaps (React-rendered pages: /domains, /learn)
+ *    The pre-rendered templates use the dark-first utility scale, so the
+ *    scale itself is remapped rather than every component.
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .bg-\[\#050505\],
+html[data-theme="light"] .bg-\[\#060707\],
+html[data-theme="light"] .bg-\[\#070505\],
+html[data-theme="light"] .bg-\[\#070707\],
+html[data-theme="light"] .bg-\[\#0a0a0a\],
+html[data-theme="light"] .bg-\[\#000000\],
+html[data-theme="light"] .bg-black {
+  background-color: var(--tcc-canvas) !important;
+}
+
+html[data-theme="light"] .bg-\[\#050505\]\/80 {
+  background-color: rgba(247, 247, 245, 0.8) !important;
+}
+
+html[data-theme="light"] .bg-\[\#050505\]\/90,
+html[data-theme="light"] .bg-\[\#050505\]\/95 {
+  background-color: rgba(247, 247, 245, 0.94) !important;
+}
+
+html[data-theme="light"] .bg-\[\#324444\] {
+  background-color: var(--tcc-surface-2) !important;
+}
+
+/* The /webinars/ page-info strip is content, not a cinematic panel. */
+html[data-theme="light"] .bg-black\/90 {
+  background-color: rgba(247, 247, 245, 0.94) !important;
+}
+
+/* /100-club/app/ renders a simulated editor: keep that one surface dark. */
+html[data-theme="light"] .bg-\[\#1e1e1e\] {
+  background-color: #1e1e1e !important;
+}
+
+html[data-theme="light"] .bg-\[\#3c3c3c\] {
+  background-color: #3c3c3c !important;
+}
+
+/* Navy CTA keeps its white label. */
+html[data-theme="light"] .bg-\[\#000080\] {
+  background-color: #000080 !important;
+}
+
+html[data-theme="light"] .bg-\[\#000080\].text-white {
+  color: #ffffff !important;
+}
+
+html[data-theme="light"] .from-\[\#050505\] {
+  --tw-gradient-from: #f7f7f5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(247 247 245 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+html[data-theme="light"] .via-\[\#050505\]\/45 {
+  --tw-gradient-to: rgb(247 247 245 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(247 247 245 / 0.45) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+html[data-theme="light"] .via-\[\#050505\]\/80 {
+  --tw-gradient-to: rgb(247 247 245 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(247 247 245 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+html[data-theme="light"] .text-white {
+  color: var(--tcc-ink) !important;
+}
+
+html[data-theme="light"] .text-white\/10 { color: rgba(10, 10, 10, 0.45) !important; }
+html[data-theme="light"] .text-white\/15 { color: rgba(10, 10, 10, 0.45) !important; }
+html[data-theme="light"] .text-white\/20 { color: rgba(10, 10, 10, 0.45) !important; }
+html[data-theme="light"] .text-white\/25 { color: rgba(10, 10, 10, 0.5) !important; }
+html[data-theme="light"] .text-white\/30 { color: rgba(10, 10, 10, 0.5) !important; }
+html[data-theme="light"] .text-white\/35 { color: rgba(10, 10, 10, 0.5) !important; }
+html[data-theme="light"] .text-white\/40 { color: rgba(10, 10, 10, 0.55) !important; }
+html[data-theme="light"] .text-white\/45 { color: rgba(10, 10, 10, 0.58) !important; }
+html[data-theme="light"] .text-white\/50 { color: rgba(10, 10, 10, 0.62) !important; }
+html[data-theme="light"] .text-white\/55 { color: rgba(10, 10, 10, 0.66) !important; }
+html[data-theme="light"] .text-white\/60 { color: rgba(10, 10, 10, 0.7) !important; }
+html[data-theme="light"] .text-white\/70 { color: rgba(10, 10, 10, 0.8) !important; }
+html[data-theme="light"] .text-white\/75 { color: rgba(10, 10, 10, 0.84) !important; }
+html[data-theme="light"] .text-white\/80 { color: rgba(10, 10, 10, 0.88) !important; }
+html[data-theme="light"] .text-white\/90 { color: rgba(10, 10, 10, 0.92) !important; }
+html[data-theme="light"] .text-white\/95 { color: rgba(10, 10, 10, 0.95) !important; }
+
+/* Semantic Tailwind colours used by the domain/course templates. On paper the
+   400-series pastels drop to ~2:1, so each family is re-pointed at its
+   accessible dark counterpart. */
+html[data-theme="light"] .text-red-50,
+html[data-theme="light"] .text-red-300,
+html[data-theme="light"] .text-red-300\/70,
+html[data-theme="light"] .text-red-400,
+html[data-theme="light"] .text-red-400\/70,
+html[data-theme="light"] .text-red-500,
+html[data-theme="light"] .text-red-600 {
+  color: #b42318 !important;
+}
+
+html[data-theme="light"] .text-green-300,
+html[data-theme="light"] .text-green-300\/70,
+html[data-theme="light"] .text-green-400,
+html[data-theme="light"] .text-emerald-300,
+html[data-theme="light"] .text-emerald-400,
+html[data-theme="light"] .text-emerald-400\/70 {
+  color: #0b6b40 !important;
+}
+
+html[data-theme="light"] .text-gray-900 {
+  color: var(--tcc-ink) !important;
+}
+
+html[data-theme="light"] .border-white { border-color: rgba(0, 0, 0, 0.55) !important; }
+html[data-theme="light"] .border-white\/5,
+html[data-theme="light"] .border-white\/\[0\.05\],
+html[data-theme="light"] .border-white\/\[0\.06\],
+html[data-theme="light"] .border-white\/\[0\.07\],
+html[data-theme="light"] .border-white\/\[0\.08\] { border-color: rgba(0, 0, 0, 0.09) !important; }
+html[data-theme="light"] .border-white\/10 { border-color: rgba(0, 0, 0, 0.14) !important; }
+html[data-theme="light"] .border-white\/15 { border-color: rgba(0, 0, 0, 0.2) !important; }
+html[data-theme="light"] .border-white\/20 { border-color: rgba(0, 0, 0, 0.26) !important; }
+html[data-theme="light"] .border-white\/30 { border-color: rgba(0, 0, 0, 0.38) !important; }
+html[data-theme="light"] .border-white\/40 { border-color: rgba(0, 0, 0, 0.48) !important; }
+
+html[data-theme="light"] .bg-white\/5,
+html[data-theme="light"] .bg-white\/\[0\.01\],
+html[data-theme="light"] .bg-white\/\[0\.015\],
+html[data-theme="light"] .bg-white\/\[0\.02\],
+html[data-theme="light"] .bg-white\/\[0\.03\],
+html[data-theme="light"] .bg-white\/\[0\.04\],
+html[data-theme="light"] .bg-white\/\[0\.05\],
+html[data-theme="light"] .bg-white\/\[0\.06\],
+html[data-theme="light"] .bg-white\/\[0\.08\] {
+  background-color: rgba(0, 0, 0, 0.035) !important;
+}
+
+html[data-theme="light"] .bg-white\/10 { background-color: rgba(0, 0, 0, 0.05) !important; }
+html[data-theme="light"] .bg-white\/15 { background-color: rgba(0, 0, 0, 0.06) !important; }
+html[data-theme="light"] .bg-white\/20 { background-color: rgba(0, 0, 0, 0.08) !important; }
+html[data-theme="light"] .bg-white\/30 { background-color: rgba(0, 0, 0, 0.1) !important; }
+html[data-theme="light"] .bg-white\/40 { background-color: rgba(0, 0, 0, 0.12) !important; }
+
+/* Semantic HSL tokens used by the React shell */
+html[data-theme="light"] {
+  --background: 40 14% 96%;
+  --foreground: 0 0% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 4%;
+  --primary: 0 0% 4%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 10% 93%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 40 10% 93%;
+  --muted-foreground: 0 0% 36%;
+  --accent: 40 10% 93%;
+  --accent-foreground: 0 0% 10%;
+  --border: 0 0% 88%;
+  --input: 0 0% 88%;
+  --ring: 0 0% 30%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 0 0% 4%;
+  --sidebar-primary: 0 0% 4%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 40 10% 93%;
+  --sidebar-accent-foreground: 0 0% 10%;
+  --sidebar-border: 0 0% 88%;
+  --sidebar-ring: 0 0% 30%;
+}
+
+/* --------------------------------------------------------------------------
+ * 6. Roadmap diagrams (.rmg-*)
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .rmg {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-band {
+  background: var(--tcc-canvas);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-eyebrow,
+html[data-theme="light"] .rmg-pan-hint,
+html[data-theme="light"] .rmg-note,
+html[data-theme="light"] .rmg-legend {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .rmg-heading,
+html[data-theme="light"] .rmg-title-text {
+  color: var(--tcc-ink);
+  fill: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-sub {
+  color: #4a4a4a;
+}
+
+html[data-theme="light"] .rmg-progress {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-progress-count strong {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-progress-label,
+html[data-theme="light"] .rmg-progress-count,
+html[data-theme="light"] .rmg-progress-foot span,
+html[data-theme="light"] .rmg-find span[aria-hidden],
+html[data-theme="light"] .rmg-find em {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .rmg-reset {
+  border-color: var(--tcc-line-strong);
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .rmg-reset:hover {
+  color: var(--tcc-accent);
+  border-color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .rmg-bar {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .rmg-panel {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-toolbar {
+  background: var(--tcc-surface-2);
+  border-bottom-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-legendbar {
+  background: var(--tcc-surface-2);
+  border-bottom-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-find input {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-find input::placeholder {
+  color: #6b6b6b;
+}
+
+html[data-theme="light"] .rmg-chip {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .rmg-chip:hover {
+  border-color: var(--tcc-accent);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-chip.is-active,
+html[data-theme="light"] .rmg-chip[aria-current="true"] {
+  background: var(--tcc-accent);
+  border-color: var(--tcc-accent);
+  color: #ffffff;
+}
+
+html[data-theme="light"] .rmg-zoom button {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-zoom button:hover {
+  border-color: var(--tcc-accent);
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .rmg-canvas {
+  background: var(--rmg-canvas);
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+/* SVG — class rules beat presentation attributes */
+html[data-theme="light"] .rmg-svg .rmg-section rect {
+  fill: var(--rmg-section-fill);
+  stroke: var(--rmg-section-stroke);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-section-label {
+  fill: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-section-outcome {
+  fill: #5f5f5f;
+}
+
+html[data-theme="light"] .rmg-svg .rmg-topic rect {
+  fill: var(--rmg-topic);
+  stroke: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-topic text {
+  fill: var(--rmg-topic-ink);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-topic:hover rect {
+  fill: #eef4ff;
+}
+
+html[data-theme="light"] .rmg-svg .rmg-subtopic rect {
+  fill: var(--rmg-subtopic);
+  stroke: var(--rmg-subtopic-stroke);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-subtopic text {
+  fill: var(--rmg-subtopic-ink);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-subtopic:hover rect {
+  fill: #e8e6e1;
+  stroke: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-button rect {
+  fill: var(--rmg-button);
+  stroke: var(--rmg-button);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-button text {
+  fill: var(--rmg-button-ink);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-button:hover rect {
+  fill: #0043b0;
+  stroke: #0043b0;
+}
+
+html[data-theme="light"] .rmg-svg path[fill="none"] {
+  stroke: var(--rmg-edge);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-linksgroup rect {
+  fill: rgba(0, 87, 222, 0.04);
+  stroke: rgba(0, 87, 222, 0.35);
+}
+
+/* Status: colour + shape (solid / dashed / dotted) */
+html[data-theme="light"] .rmg-svg .rmg-node[data-status="done"] rect {
+  fill: var(--tcc-done);
+  stroke: var(--rmg-done-border);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-node[data-status="done"] text {
+  fill: var(--tcc-done-ink);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-node[data-status="learning"] rect {
+  fill: var(--tcc-learning);
+  stroke: var(--rmg-learning-border);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-node[data-status="learning"] text {
+  fill: var(--tcc-learning-ink);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-node[data-status="skip"] rect {
+  fill: var(--tcc-skip);
+  stroke: var(--rmg-skip-border);
+}
+
+html[data-theme="light"] .rmg-svg .rmg-node[data-status="skip"] text {
+  fill: var(--tcc-skip-ink);
+}
+
+/* Legend swatches */
+html[data-theme="light"] .rmg-swatch {
+  border-color: rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="light"] .rmg-swatch-topic {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="light"] .rmg-swatch-sub {
+  background: var(--tcc-surface-2);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] .rmg-swatch-done {
+  background: var(--tcc-done);
+  border: 2px solid var(--rmg-done-border);
+}
+
+html[data-theme="light"] .rmg-swatch-learning {
+  background: var(--tcc-learning);
+  border: 2px dashed var(--rmg-learning-border);
+}
+
+html[data-theme="light"] .rmg-swatch-skip {
+  background: var(--tcc-skip);
+  border: 2px dotted var(--rmg-skip-border);
+}
+
+/* Mobile phase list */
+html[data-theme="light"] .rmg-list,
+html[data-theme="light"] .rmg-related-mobile {
+  background: var(--tcc-surface);
+}
+
+html[data-theme="light"] .rmg-list-phase {
+  border-bottom-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-list-phase-head h3 {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-list-num {
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .rmg-list-count,
+html[data-theme="light"] .rmg-list-outcome {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .rmg-list-topic {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.55);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-list-sub {
+  background: var(--tcc-surface-2);
+  border-color: rgba(0, 0, 0, 0.32);
+  color: #1a1a1a;
+}
+
+html[data-theme="light"] .rmg-list-topic[data-status="done"],
+html[data-theme="light"] .rmg-list-sub[data-status="done"] {
+  background: var(--tcc-done);
+  border-color: var(--rmg-done-border);
+  color: var(--tcc-done-ink);
+}
+
+html[data-theme="light"] .rmg-list-topic[data-status="learning"],
+html[data-theme="light"] .rmg-list-sub[data-status="learning"] {
+  background: var(--tcc-learning);
+  border-color: var(--rmg-learning-border);
+  color: var(--tcc-learning-ink);
+}
+
+html[data-theme="light"] .rmg-list-topic[data-status="skip"],
+html[data-theme="light"] .rmg-list-sub[data-status="skip"] {
+  background: var(--tcc-skip);
+  border-color: var(--rmg-skip-border);
+  color: var(--tcc-skip-ink);
+}
+
+html[data-theme="light"] .rmg-related-mobile a,
+html[data-theme="light"] .rmg-drawer-links a {
+  background: var(--tcc-surface-2);
+  border-color: var(--tcc-line);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-related-mobile a:hover,
+html[data-theme="light"] .rmg-drawer-links a:hover {
+  border-color: var(--tcc-accent);
+  background: var(--tcc-accent-soft);
+}
+
+/* Drawer */
+html[data-theme="light"] .rmg-drawer-backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] .rmg-drawer-panel,
+html[data-theme="light"] .rmg-drawer-head {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .rmg-drawer-title {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-drawer-kicker {
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .rmg-drawer-phase,
+html[data-theme="light"] .rmg-drawer-block h3 {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .rmg-drawer-summary,
+html[data-theme="light"] .rmg-drawer-block li {
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .rmg-drawer-block li::before {
+  background: var(--tcc-accent);
+}
+
+html[data-theme="light"] .rmg-drawer-close,
+html[data-theme="light"] .rmg-drawer-nav button {
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-drawer-close:hover,
+html[data-theme="light"] .rmg-drawer-nav button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--tcc-accent);
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .rmg-status button {
+  background: var(--tcc-surface-2);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .rmg-status button.is-active[data-status="done"] {
+  background: var(--tcc-done);
+  border: 3px solid var(--rmg-done-border);
+  color: var(--tcc-done-ink);
+}
+
+html[data-theme="light"] .rmg-status button.is-active[data-status="learning"] {
+  background: var(--tcc-learning);
+  border: 2px dashed var(--rmg-learning-border);
+  color: var(--tcc-learning-ink);
+}
+
+html[data-theme="light"] .rmg-status button.is-active[data-status="skip"] {
+  background: var(--tcc-skip);
+  border: 2px dotted var(--rmg-skip-border);
+  color: var(--tcc-skip-ink);
+}
+
+/* --------------------------------------------------------------------------
+ * 7. Program / course diagrams (.tpr-*) — mirrors .rmg-*
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .tpr {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr {
+  background: var(--tcc-canvas);
+  border-top-color: var(--tcc-line);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-eyebrow {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-heading {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-sub {
+  color: #4a4a4a;
+}
+
+html[data-theme="light"] .tpr-progress {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tpr-progress-label,
+html[data-theme="light"] .tpr-progress-count,
+html[data-theme="light"] .tpr-progress-foot span {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-progress-count strong {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-bar {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="light"] .tpr-reset {
+  border-color: var(--tcc-line-strong);
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .tpr-reset:hover {
+  color: var(--tcc-accent);
+  border-color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tpr-panel {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tpr-toolbar {
+  background: var(--tcc-surface-2);
+  border-bottom-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tpr-legendbar {
+  background: var(--tcc-surface-2);
+  border-bottom-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tpr-legend,
+html[data-theme="light"] .tpr-pan-hint,
+html[data-theme="light"] .tpr-note {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-find > span[aria-hidden] {
+  color: #6b6b6b;
+}
+
+html[data-theme="light"] .tpr-find input {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-find input::placeholder {
+  color: #6b6b6b;
+}
+
+html[data-theme="light"] .tpr-find em {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-chip {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .tpr-chip:hover {
+  border-color: var(--tcc-accent);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-chip.is-active,
+html[data-theme="light"] .tpr-chip[aria-current="true"] {
+  background: var(--tcc-accent);
+  border-color: var(--tcc-accent);
+  color: #ffffff;
+}
+
+html[data-theme="light"] .tpr-zoom button {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-zoom button:hover {
+  border-color: var(--tcc-accent);
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tpr-canvas {
+  background: var(--rmg-canvas);
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+html[data-theme="light"] .tpr-svg .tpr-section rect {
+  fill: var(--rmg-section-fill);
+  stroke: var(--rmg-section-stroke);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-section-label {
+  fill: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-section-outcome {
+  fill: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-svg .tpr-title-text {
+  fill: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-topic rect {
+  fill: var(--rmg-topic);
+  stroke: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-topic text {
+  fill: var(--rmg-topic-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-topic:hover rect {
+  fill: #eef4ff;
+}
+
+html[data-theme="light"] .tpr-svg .tpr-subtopic rect {
+  fill: var(--rmg-subtopic);
+  stroke: var(--rmg-subtopic-stroke);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-subtopic text {
+  fill: var(--rmg-subtopic-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-subtopic:hover rect {
+  fill: #e8e6e1;
+  stroke: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-button rect {
+  fill: var(--rmg-button);
+  stroke: var(--rmg-button);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-button text {
+  fill: var(--rmg-button-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-button:hover rect {
+  fill: #0043b0;
+  stroke: #0043b0;
+}
+
+html[data-theme="light"] .tpr-svg path[fill="none"] {
+  stroke: var(--rmg-edge);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-linksgroup rect {
+  fill: rgba(0, 87, 222, 0.04);
+  stroke: rgba(0, 87, 222, 0.35);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-node[data-status="done"] rect {
+  fill: var(--tcc-done);
+  stroke: var(--rmg-done-border);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-node[data-status="done"] text {
+  fill: var(--tcc-done-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-node[data-status="learning"] rect {
+  fill: var(--tcc-learning);
+  stroke: var(--rmg-learning-border);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-node[data-status="learning"] text {
+  fill: var(--tcc-learning-ink);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-node[data-status="skip"] rect {
+  fill: var(--tcc-skip);
+  stroke: var(--rmg-skip-border);
+}
+
+html[data-theme="light"] .tpr-svg .tpr-node[data-status="skip"] text {
+  fill: var(--tcc-skip-ink);
+}
+
+html[data-theme="light"] .tpr-swatch {
+  border-color: rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="light"] .tpr-swatch-topic {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="light"] .tpr-swatch-sub {
+  background: var(--tcc-surface-2);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] .tpr-swatch-done {
+  background: var(--tcc-done);
+  border: 2px solid var(--rmg-done-border);
+}
+
+html[data-theme="light"] .tpr-swatch-learning {
+  background: var(--tcc-learning);
+  border: 2px dashed var(--rmg-learning-border);
+}
+
+html[data-theme="light"] .tpr-swatch-skip {
+  background: var(--tcc-skip);
+  border: 2px dotted var(--rmg-skip-border);
+}
+
+html[data-theme="light"] .tpr-stepper,
+html[data-theme="light"] .tpr-related-mobile {
+  background: var(--tcc-surface);
+}
+
+html[data-theme="light"] .tpr-step {
+  border-bottom-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tpr-step-title {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-step-num {
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tpr-step-count,
+html[data-theme="light"] .tpr-step-outcome {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-step-topic {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.55);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-step-sub {
+  background: var(--tcc-surface-2);
+  border-color: rgba(0, 0, 0, 0.32);
+  color: #1a1a1a;
+}
+
+html[data-theme="light"] .tpr-step-topic[data-status="done"],
+html[data-theme="light"] .tpr-step-sub[data-status="done"] {
+  background: var(--tcc-done);
+  border-color: var(--rmg-done-border);
+  color: var(--tcc-done-ink);
+}
+
+html[data-theme="light"] .tpr-step-topic[data-status="learning"],
+html[data-theme="light"] .tpr-step-sub[data-status="learning"] {
+  background: var(--tcc-learning);
+  border-color: var(--rmg-learning-border);
+  color: var(--tcc-learning-ink);
+}
+
+html[data-theme="light"] .tpr-step-topic[data-status="skip"],
+html[data-theme="light"] .tpr-step-sub[data-status="skip"] {
+  background: var(--tcc-skip);
+  border-color: var(--rmg-skip-border);
+  color: var(--tcc-skip-ink);
+}
+
+html[data-theme="light"] .tpr-related-mobile a,
+html[data-theme="light"] .tpr-drawer-links a {
+  background: var(--tcc-surface-2);
+  border-color: var(--tcc-line);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-related-mobile a:hover,
+html[data-theme="light"] .tpr-drawer-links a:hover {
+  border-color: var(--tcc-accent);
+  background: var(--tcc-accent-soft);
+}
+
+html[data-theme="light"] .tpr-backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] .tpr-drawer-panel,
+html[data-theme="light"] .tpr-drawer-head {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tpr-drawer-title {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-drawer-kicker {
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tpr-drawer-phase,
+html[data-theme="light"] .tpr-drawer-block h3 {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tpr-drawer-summary,
+html[data-theme="light"] .tpr-drawer-block li {
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .tpr-drawer-block li::before {
+  background: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tpr-drawer-close,
+html[data-theme="light"] .tpr-drawer-nav button {
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-drawer-close:hover,
+html[data-theme="light"] .tpr-drawer-nav button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--tcc-accent);
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tpr-status button {
+  background: var(--tcc-surface-2);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tpr-status button.is-active[data-status="done"] {
+  background: var(--tcc-done);
+  border: 3px solid var(--rmg-done-border);
+  color: var(--tcc-done-ink);
+}
+
+html[data-theme="light"] .tpr-status button.is-active[data-status="learning"] {
+  background: var(--tcc-learning);
+  border: 2px dashed var(--rmg-learning-border);
+  color: var(--tcc-learning-ink);
+}
+
+html[data-theme="light"] .tpr-status button.is-active[data-status="skip"] {
+  background: var(--tcc-skip);
+  border: 2px dotted var(--rmg-skip-border);
+  color: var(--tcc-skip-ink);
+}
+
+/* --------------------------------------------------------------------------
+ * 8. Ecosystem strip (.tcc-eco, injected by domain-ecosystem.js)
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .tcc-eco {
+  background: var(--tcc-canvas);
+  border-top-color: var(--tcc-line);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tcc-eco h2 {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tcc-eco-eyebrow,
+html[data-theme="light"] .tcc-eco-sub {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tcc-eco-card {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tcc-eco-card h3 {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tcc-eco-card p {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tcc-eco-card:hover {
+  border-color: var(--tcc-accent);
+  background: var(--tcc-accent-soft);
+}
+
+html[data-theme="light"] .tcc-eco-card.is-here {
+  border-color: var(--tcc-accent);
+  background: var(--tcc-accent-soft);
+}
+
+html[data-theme="light"] .tcc-eco-num,
+html[data-theme="light"] .tcc-eco-tag,
+html[data-theme="light"] .tcc-eco-desc,
+html[data-theme="light"] .tcc-eco-more,
+html[data-theme="light"] .tcc-eco-fine,
+html[data-theme="light"] .tcc-eco-note {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .tcc-eco-tag {
+  border-color: var(--tcc-line-strong);
+}
+
+html[data-theme="light"] .tcc-eco-title {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tcc-eco-go {
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] a.tcc-eco-card:hover .tcc-eco-go {
+  color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tcc-eco-sub strong,
+html[data-theme="light"] .tcc-eco-note strong {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .tcc-eco-more a {
+  color: #3d3d3d;
+  border-bottom-color: var(--tcc-line-strong);
+}
+
+html[data-theme="light"] .tcc-eco-more a:hover {
+  color: var(--tcc-accent);
+  border-bottom-color: var(--tcc-accent);
+}
+
+html[data-theme="light"] .tcc-eco-cta {
+  border-top-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .tcc-eco-btn {
+  background: var(--tcc-accent);
+  color: #ffffff;
+}
+
+html[data-theme="light"] .tcc-eco-btn:hover {
+  background: #0a63ea;
+  color: #ffffff;
+}
+
+html[data-theme="light"] .tcc-eco-ghost {
+  background: transparent;
+  color: var(--tcc-ink);
+  border-color: var(--tcc-line-strong);
+}
+
+html[data-theme="light"] .tcc-eco-ghost:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--tcc-accent);
+  border-color: var(--tcc-accent);
+}
+
+/* --------------------------------------------------------------------------
+ * 8b. Career-scope panels (.cs-*, injected by career-a25e60eb.js)
+ *     These live only in the runtime bundle, so the page-CSS generator never
+ *     sees them.
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .cs-head {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .cs-head::before {
+  background: var(--tcc-ink);
+}
+
+html[data-theme="light"] .cs-market {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .cs-market b {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .cs-card {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .cs-card h3 {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .cs-card p {
+  color: #4a4a4a;
+}
+
+html[data-theme="light"] .cs-sub {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .cs-table th,
+html[data-theme="light"] .cs-table tr.head th {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .cs-table td {
+  color: var(--tcc-ink);
+  border-top-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .cs-table td:first-child {
+  color: #3d3d3d;
+}
+
+html[data-theme="light"] .cs-graph-wrap {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .cs-caption {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .cs-chip {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .cs-chip small {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .cs-event {
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line);
+}
+
+html[data-theme="light"] .cs-event b {
+  color: var(--tcc-ink);
+}
+
+html[data-theme="light"] .cs-event span {
+  color: #5f5f5f;
+}
+
+html[data-theme="light"] .cs-event::before {
+  background: #0b6b40;
+}
+
+html[data-theme="light"] .cs-note {
+  color: #5f5f5f;
+}
+
+/* --------------------------------------------------------------------------
+ * 9. Cinematic panels keep their dark treatment
+ * ------------------------------------------------------------------------*/
+
+html[data-theme="light"] .hero,
+html[data-theme="light"] .c-hero,
+html[data-theme="light"] .a-hero,
+html[data-theme="light"] .apply-hero,
+html[data-theme="light"] .prep-hero {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .hero .hero-h1,
+html[data-theme="light"] .hero .hero-sub,
+html[data-theme="light"] .hero .hero-pill,
+html[data-theme="light"] .hero .hero-roadmap-link,
+html[data-theme="light"] .hero .hero-stat .v,
+html[data-theme="light"] .hero .hero-stat .l,
+html[data-theme="light"] .c-hero h1,
+html[data-theme="light"] .c-hero p,
+html[data-theme="light"] .a-hero h1,
+html[data-theme="light"] .a-hero p,
+html[data-theme="light"] .apply-hero h1,
+html[data-theme="light"] .apply-hero p {
+  color: #ffffff;
+}
+
+html[data-theme="light"] .hero .hero-sub,
+html[data-theme="light"] .hero .hero-roadmap-link,
+html[data-theme="light"] .hero .hero-stat .l,
+html[data-theme="light"] .c-hero p,
+html[data-theme="light"] .a-hero p,
+html[data-theme="light"] .apply-hero p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="light"] .code-editor,
+html[data-theme="light"] .code-out,
+html[data-theme="light"] .code-bar,
+html[data-theme="light"] .lang-select,
+html[data-theme="light"] .terminal {
+  background: #0b0d12;
+  color: #e6e6e6;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+ * 10. Theme toggle
+ * ------------------------------------------------------------------------*/
+
+.tcc-theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  margin: 0 0 10px;
+  padding: 0 14px;
+  border: 1px solid var(--tcc-line);
+  border-radius: 12px;
+  background: rgba(127, 127, 127, 0.06);
+  color: var(--tcc-ink-2);
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.tcc-theme-toggle:hover {
+  border-color: var(--tcc-line-strong);
+  color: var(--tcc-ink);
+  background: rgba(127, 127, 127, 0.1);
+}
+
+.tcc-theme-toggle:focus-visible {
+  outline: 2px solid var(--tcc-accent);
+  outline-offset: 2px;
+}
+
+.tcc-theme-toggle-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+}
+
+.tcc-theme-toggle-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tcc-theme-toggle-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Icon-only variant (mobile header) */
+.tcc-theme-toggle.is-compact {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.tcc-theme-toggle.is-compact .tcc-theme-toggle-label {
+  display: none;
+}
+
+/* Tiny switch pinned inside the home hero. The hero stays cinematic (dark)
+   in both themes, so the control keeps a light icon on a dark scrim. */
+.tcc-theme-toggle.is-hero {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 6;
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(8, 8, 8, 0.42);
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tcc-theme-toggle.is-hero:hover {
+  background: rgba(8, 8, 8, 0.66);
+  border-color: rgba(255, 255, 255, 0.48);
+  color: #ffffff;
+}
+
+.tcc-theme-toggle.is-hero .tcc-theme-toggle-label {
+  display: none;
+}
+
+.tcc-theme-toggle.is-hero .tcc-theme-toggle-icon,
+.tcc-theme-toggle.is-hero .tcc-theme-toggle-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 767px) {
+  .tcc-theme-toggle.is-hero {
+    top: 64px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+  }
+}
+
+/* Collapsed desktop rail */
+body.sidebar-collapsed .sidebar .tcc-theme-toggle {
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+body.sidebar-collapsed .sidebar .tcc-theme-toggle .tcc-theme-toggle-label {
+  display: none;
+}
+
+/* Fallback for client-rendered shells that never expose .sidebar-bottom */
+.tcc-theme-toggle.is-fixed {
+  position: fixed;
+  right: 16px;
+  bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  z-index: 240;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--tcc-surface);
+  border-color: var(--tcc-line-strong);
+  box-shadow: 0 6px 20px var(--tcc-shadow);
+}
+
+.tcc-theme-toggle.is-fixed .tcc-theme-toggle-label {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .tcc-theme-toggle.is-fixed {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tcc-theme-toggle {
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Honeypot field
+ * Off-screen rather than display:none — naive bots skip hidden fields but
+ * happily fill anything that exists in the DOM.
+ * ------------------------------------------------------------------------*/
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* --------------------------------------------------------------------------
+ * Accessibility baseline
+ * A single global focus ring, so every interactive element on every page is
+ * keyboard-visible — including ones added later. Motion is reduced for anyone
+ * who asks for it, which also makes .reveal content appear immediately
+ * instead of waiting on an IntersectionObserver.
+ * ------------------------------------------------------------------------*/
+:focus-visible {
+  outline: 2px solid var(--tcc-accent);
+  outline-offset: 2px;
+}
+
+html[data-theme="light"] :focus-visible {
+  outline-color: #0057de;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .btn, button, a {
+    border: 1px solid currentColor;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Cohort line
+ * The next cohort date, capacity and deadline. Rendered from
+ * data/cohorts.json by scripts/build-cohorts.mjs — never hardcoded in a page.
+ * `.on-dark` is for surfaces that stay dark in both themes (hero video).
+ * ------------------------------------------------------------------------*/
+.cohort-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 8px 14px;
+  border: 1px solid var(--tcc-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--tcc-surface) 72%, transparent);
+  font-family: 'DM Mono', ui-monospace, monospace;
+  font-size: 11.5px;
+  line-height: 1.45;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tcc-ink-2);
+  text-align: left;
+  max-width: 100%;
+}
+
+.cohort-line strong {
+  color: var(--tcc-ink);
+  font-weight: 500;
+}
+
+.cohort-line .cl-dot {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tcc-accent);
+  box-shadow: 0 0 0 3px var(--tcc-accent-soft);
+}
+
+.cohort-line.center {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cohort-line.on-dark {
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.cohort-line.on-dark strong {
+  color: #fff;
+}
+
+.cohort-line.is-closed .cl-dot {
+  background: #b8761f;
+  box-shadow: 0 0 0 3px rgba(184, 118, 31, 0.22);
+}
+
+@media (max-width: 520px) {
+  .cohort-line {
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    padding: 8px 12px;
+  }
+}
+
+/* Phones: the pill is a flex row, so let the label wrap inside it instead of
+   pushing the badge past the viewport edge. */
+@media (max-width: 640px) {
+  .cohort-line,
+  .cohort-line.center {
+    display: flex;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cohort-line > span:last-child {
+    min-width: 0;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+  }
+  .cohort-line .cl-dot {
+    margin-top: 4px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Mobile form controls
+ * iOS Safari zooms the page when a control with font-size < 16px is focused,
+ * which shifts the layout and leaves the user pinch-zooming back out. Android
+ * Chrome does the same on some keyboards. Force 16px at phone and tablet
+ * widths; desktop keeps the designed size.
+ * ------------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]):not([type="file"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Touch targets
+ * Apple HIG and WCAG 2.5.5 ask for roughly 44×44px on touch screens. Links
+ * that sit inside a sentence are exempt (WCAG 2.5.8) and keep their text
+ * height. Everything below is a control the thumb is meant to hit.
+ * ------------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .mobile-login {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+  }
+
+  .mobile-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .tcc-theme-toggle.is-compact,
+  .tcc-theme-toggle.is-hero {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .hero-roadmap-link,
+  .rm-hero-link,
+  .pager a {
+    min-height: 44px;
+  }
+
+  .rec-all {
+    display: flex;
+    align-items: center;
+  }
+
+  button,
+  [role="button"],
+  input[type="submit"],
+  .btn {
+    min-height: 44px;
+  }
+
+  /* Footer columns: one thumb-sized row per link. */
+  .footer-col a,
+  .rm-footer-links a,
+  footer.site .cols a,
+  footer.foot a {
+    display: flex !important;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1.35 !important;
+  }
+
+  .footer-col h3,
+  footer.site h3 {
+    margin-bottom: 6px !important;
+  }
+}
+
+/* Long unbroken strings (emails, URLs, ids) must wrap instead of pushing the
+ * page wider than the phone. */
+body {
+  overflow-wrap: break-word;
+}
+
+/* --------------------------------------------------------------------------
+ * iPhone notch / home indicator
+ * Every page opts into viewport-fit=cover (scripts/fix-viewport.mjs). These
+ * rules keep content inside the safe area while backgrounds stay full-bleed.
+ * ------------------------------------------------------------------------*/
+body {
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+@media (max-width: 1024px) {
+  .mobile-header {
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+  }
+
+  .bottom-nav {
+    padding-left: env(safe-area-inset-left, 0px) !important;
+    padding-right: env(safe-area-inset-right, 0px) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Global mobile ergonomics
+ * - stop Android's font boosting from resizing text inside wide blocks
+ * - keep anchored headings clear of the fixed mobile header
+ * - remove the 300ms double-tap delay on controls
+ * ------------------------------------------------------------------------*/
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+summary {
+  touch-action: manipulation;
+}
+
+/* App-shell pages scroll inside .main-scroll, not on <html>, so the fixed
+ * header offset has to be repeated on the real scroll container. Only phones
+ * have the fixed top header, so desktop anchor jumps keep their position. */
+.main-scroll {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+}
+
+@media (max-width: 767px) {
+  html,
+  .main-scroll {
+    scroll-padding-top: 72px;
+  }
+}
+
+/* Standalone top bars (100 Club apply, admin) use their own classes rather
+ * than the app shell, so they need the same 44px floor. */
+@media (max-width: 1024px) {
+  a.brand,
+  .topbar .brand-serif,
+  .top-cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0;
+  }
+}
+
+/* Reserve the fixed header's height, including the notch inset when the page
+ * is opened full-screen on iOS. Only below 768px, where the header exists. */
+@media (max-width: 767px) {
+  main.main-scroll > .content-wrap {
+    padding-top: calc(53px + env(safe-area-inset-top, 0px)) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * h1 / h2 and the wordmark back on Instrument Serif.
+ *
+ * The GrowthX stack (Gilroy body, Newsreader display) stays exactly as it is
+ * everywhere else. Only real headings and the logo wordmark revert to the
+ * pre-GrowthX serif.
+ *
+ * !important is required on the family: bare h1/h2 element selectors lose to
+ * the 700+ per-page class rules (.section-title, .prep-h1, .rd-h2, …), and
+ * .rmg-heading / .rmg-drawer-title already declare the family !important.
+ * Weight is forced to 400 because Instrument Serif ships a single weight —
+ * anything heavier is synthesised bold and renders badly.
+ * ------------------------------------------------------------------------*/
+h1,
+h2,
+.rmg-heading,
+.rmg-drawer-title {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em;
+}
+
+/* The hero headline was italic before the sweep; keep that. */
+.hero-h1 {
+  font-style: italic;
+}
+
+/* Accent spans live *inside* the headings, so they have to match or one
+ * headline renders in two different serifs. Scoped to h1/h2 on purpose:
+ * .serif-i elsewhere (ladder cards, ecosystem tiles) stays Newsreader. */
+h1 .accent,
+h2 .accent,
+h1 .serif-i,
+h2 .serif-i {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-style: italic;
+  font-weight: 400 !important;
+}
+
+/* Wordmark: sidebar, mobile header, footer, roadmap footer (445 pages). */
+.brand-serif {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Careers nav: 6 links squeeze into <300px at mobile; wrap + full-width fixes it */
+@media (max-width: 700px) {
+  header.site .bar { flex-wrap: wrap; }
+  nav.top { width: 100%; }
+  nav.top a { min-height: 44px; flex: 1 1 33%; }
+}
+
+/* Partner logos: three-across on mobile, even height so wordmarks align */
+.partner-strip .ps-logo { height: 26px; width: auto; }

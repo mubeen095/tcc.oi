@@ -1,0 +1,35 @@
+{
+  "name": "tcc-site-backend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "db:setup": "node scripts/schema.js",
+    "build:certs": "node scripts/build-certs.js",
+    "build:industries": "node scripts/build-industry-pages.js",
+    "build:prep": "node scripts/build-prep-pages.js",
+    "build:ai": "node scripts/build-ai-artifacts.js",
+    "build:seo": "node scripts/build-verify-pages.mjs && node scripts/build-certs.js && node scripts/build-industry-pages.js && node scripts/build-prep-pages.js && node scripts/build-blog-articles.js && node scripts/build-blog-categories.js && node scripts/build-blog-hub.mjs && node scripts/build-blog-feed.mjs && node scripts/build-careers.mjs && node scripts/polish-mobile.js && node scripts/build-ai-artifacts.js && node scripts/patch-ai-discovery.js && node scripts/inject-ga4.mjs && node scripts/inject-noscript-reveal.mjs && node scripts/fix-meta.mjs && node scripts/fix-viewport.mjs && node scripts/build-cohorts.mjs && node scripts/inject-careers-links.js && node scripts/build-sitemap.mjs && node scripts/preflight.mjs",
+    "build:blog": "node scripts/build-blog-articles.js && node scripts/build-blog-categories.js && node scripts/build-blog-hub.mjs && node scripts/build-blog-feed.mjs",
+    "audit:ai": "node scripts/audit-ai.js",
+    "audit:theme": "node scripts/audit-theme.mjs",
+    "audit:theme:both": "MODE=both node scripts/audit-theme.mjs",
+    "audit:emoji": "node scripts/audit-emoji.mjs",
+    "audit:diagram-labels": "node scripts/audit-diagram-labels.mjs",
+    "audit:leads": "node scripts/audit-lead-paths.mjs",
+    "copy:clean": "node scripts/remove-free-word.js --apply && node scripts/verify-no-free.mjs",
+    "verify:copy": "node scripts/verify-no-free.mjs",
+    "verify:brand": "node scripts/verify-no-vybe.mjs",
+    "verify:logos": "node scripts/verify-logos.mjs",
+    "emoji:remove": "node scripts/remove-emoji.mjs --apply",
+    "inject:theme": "node scripts/inject-theme.mjs",
+    "dev": "node server.js",
+    "preflight": "node scripts/preflight.mjs",
+    "test": "node --test tests/*.test.cjs",
+    "cohorts": "node scripts/build-cohorts.mjs",
+    "audit:responsive": "node scripts/audit-responsive.mjs",
+    "inject:careers": "node scripts/inject-careers-links.js"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.10.0"
+  }
+}

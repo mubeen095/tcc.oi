@@ -1,0 +1,25 @@
+{
+  "_note": "Single source of truth for cohort dates. Edit this file, then run `npm run build:seo` (or `node scripts/build-cohorts.mjs`). Dates are IST and must be YYYY-MM-DD. applyBy is the published application deadline; decideBy is the published decision date. If a cohort fills, set seatsLeft and seatsUpdated — a seatsLeft older than 7 days is ignored and the site falls back to total capacity.",
+  "timezone": "Asia/Kolkata",
+  "capacity": 50,
+  "cohorts": [
+    {
+      "id": "2027-01",
+      "label": "Cohort 01",
+      "start": "2027-01-18",
+      "applyBy": "2027-01-11",
+      "decideBy": "2027-01-14",
+      "seatsLeft": null,
+      "seatsUpdated": null
+    },
+    {
+      "id": "2027-02",
+      "label": "Cohort 02",
+      "start": "2027-02-12",
+      "applyBy": "2027-02-05",
+      "decideBy": "2027-02-09",
+      "seatsLeft": null,
+      "seatsUpdated": null
+    }
+  ]
+}

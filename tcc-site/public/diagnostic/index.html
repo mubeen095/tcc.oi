@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="color-scheme" content="dark" />
+<title>Placement Diagnostic — Scored in 15 Minutes | TCC</title>
+<meta name="description" content="Fifteen questions, fifteen minutes, scored the moment you submit. See exactly which sections of a real placement paper cost you marks — and why.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thecodingcompany.io/diagnostic/">
+<meta property="og:title" content="Placement Diagnostic — scored in 15 minutes">
+<meta property="og:description" content="Sit a real placement paper. Get a section-by-section score and the reasoning behind every answer you missed.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://thecodingcompany.io/diagnostic/">
+<meta name="theme-color" content="#060606">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap">
+<!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+<link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a">
+<style>
+:root{
+  --bg:var(--tcc-canvas,#050505);
+  --surface:var(--tcc-surface,#0a0a0a);
+  --surface2:var(--tcc-surface-2,#101010);
+  --ink:var(--tcc-ink,#fff);
+  --ink2:var(--tcc-ink-2,rgba(255,255,255,.72));
+  --ink3:var(--tcc-ink-3,rgba(255,255,255,.55));
+  --line:var(--tcc-line,rgba(255,255,255,.12));
+  --lineStrong:var(--tcc-line-strong,rgba(255,255,255,.4));
+  --accent:#0057de;
+  --good:#2e9e63;
+  --warn:#b8761f;
+  --bad:#c0453b;
+}
+html[data-theme="light"]{--good:#1d7a4a;--warn:#8a5a12;--bad:#a4352c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:99999;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;text-decoration:none;font-weight:500;font-size:.875rem}
+.skip-link:focus{position:fixed;left:16px;top:16px;width:auto;height:auto;overflow:visible;outline:2px solid var(--ink);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header.site .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:-.02em}
+.brand img{height:44px;width:auto}
+nav.top{display:flex;gap:18px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+nav.top::-webkit-scrollbar{display:none}
+nav.top a{color:var(--ink3);text-decoration:none;font-size:13.5px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+nav.top a:hover,nav.top a[aria-current]{color:var(--ink)}
+
+main{padding:56px 0 96px}
+.eyebrow{font-family:'DM Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink3)}
+h1{font-family: 'Newsreader', Georgia, serif;font-weight:400;font-size:clamp(38px,6vw,60px);line-height:1.03;letter-spacing:-.025em;margin:14px 0 0}
+.lede{color:var(--ink2);font-size:17.5px;line-height:1.65;margin:18px 0 0;max-width:58ch}
+.mono{font-family:'DM Mono',ui-monospace,monospace}
+
+/* ── intro ────────────────────────────────────────────── */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:36px 0 0}
+.fact{background:var(--surface);padding:18px 20px}
+.fact b{display:block;font-size:22px;letter-spacing:-.02em}
+.fact span{display:block;color:var(--ink3);font-size:12.5px;margin-top:2px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:0 26px;border-radius:999px;border:1px solid transparent;
+  background:var(--ink);color:var(--bg);font:inherit;font-weight:600;font-size:15.5px;
+  text-decoration:none;cursor:pointer;transition:transform .16s ease,opacity .16s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:none}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--lineStrong)}
+.btn.small{min-height:44px;padding:0 20px;font-size:14px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.fineprint{color:var(--ink3);font-size:13px;margin-top:18px;line-height:1.6}
+.rule{height:1px;background:var(--line);margin:44px 0}
+h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin:0 0 10px}
+p{margin:0 0 14px;color:var(--ink2)}
+ul{margin:0 0 16px;padding-left:20px;color:var(--ink2)}
+li{margin-bottom:8px}
+.sectionlist{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid var(--line)}
+.sectionlist li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);margin:0;font-size:14.5px}
+.sectionlist .n{color:var(--ink3);font-family:'DM Mono',monospace;font-size:12px}
+
+/* ── test ─────────────────────────────────────────────── */
+.examhead{position:sticky;top:60px;z-index:40;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 0}
+.examhead .row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.examhead .pos{font-size:13.5px;color:var(--ink2)}
+.examhead .pos b{color:var(--ink)}
+.timer{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:14px;font-variant-numeric:tabular-nums;border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--surface)}
+.timer.low{border-color:var(--bad);color:var(--bad)}
+.progress{height:3px;background:var(--line);margin-top:12px;border-radius:2px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--ink);width:0;transition:width .25s ease}
+
+.qcard{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 26px 24px}
+.qsec{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px}
+.qprompt{font-size:17.5px;line-height:1.55;letter-spacing:-.01em;margin:0 0 20px;color:var(--ink);white-space:pre-wrap}
+pre.code{font-family:'DM Mono',ui-monospace,monospace;font-size:13.5px;line-height:1.6;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;margin:0 0 20px;color:var(--ink)}
+fieldset{border:0;margin:0;padding:0}
+legend.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.opt{display:flex;align-items:flex-start;gap:13px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;cursor:pointer;transition:border-color .15s ease,background .15s ease}
+.opt:hover{border-color:var(--lineStrong)}
+.opt input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:20px;height:20px;margin:3px 0 0;border:1.5px solid var(--lineStrong);border-radius:50%;display:grid;place-content:center;cursor:pointer}
+.opt input:checked{border-color:var(--ink)}
+.opt input:checked::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.opt input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.opt:has(input:checked){border-color:var(--lineStrong);background:var(--surface2)}
+.opt span{font-size:15px;line-height:1.5}
+
+.navrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap}
+.dots{display:flex;gap:6px;flex-wrap:wrap;margin-top:26px}
+.dots button{width:26px;height:26px;border-radius:7px;border:1px solid var(--line);background:transparent;color:var(--ink3);font-family:'DM Mono',monospace;font-size:11px;cursor:pointer;padding:0}
+.dots button:hover{border-color:var(--lineStrong);color:var(--ink)}
+.dots button.done{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dots button[aria-current="true"]{outline:2px solid var(--accent);outline-offset:2px}
+.dots button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ── result ───────────────────────────────────────────── */
+.scorewrap{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:30px}
+.ring{
+  --pct:0;
+  flex:0 0 auto;width:150px;height:150px;border-radius:50%;
+  background:conic-gradient(var(--ink) calc(var(--pct) * 1%), var(--line) 0);
+  display:grid;place-content:center;position:relative;
+}
+.ring::after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--bg)}
+.ring .val{position:relative;z-index:1;text-align:center;line-height:1}
+.ring .val b{display:block;font-size:38px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.ring .val small{display:block;font-size:12px;color:var(--ink3);margin-top:4px;font-family:'DM Mono',monospace}
+.verdict h2{font-family: 'Gilroy', 'Inter', system-ui, sans-serif;font-size:31px;font-weight:400;margin:0 0 6px;letter-spacing:-.02em}
+.verdict p{margin:0;max-width:40ch}
+.bandtag{display:inline-block;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px;margin-bottom:12px;color:var(--ink2)}
+
+.bars{margin-top:34px;display:grid;gap:14px}
+.bar .top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:7px}
+.bar .top span:last-child{color:var(--ink3);font-family:'DM Mono',monospace;font-size:12.5px}
+.bar .track{height:7px;border-radius:999px;background:var(--line);overflow:hidden}
+.bar .fill{height:100%;border-radius:999px;background:var(--ink);width:0;transition:width .6s cubic-bezier(.2,.7,.2,1)}
+.bar.weak .fill{background:var(--bad)}
+.bar.mid .fill{background:var(--warn)}
+
+details.review{border-top:1px solid var(--line);padding:16px 0}
+details.review:last-of-type{border-bottom:1px solid var(--line)}
+details.review summary{cursor:pointer;font-size:14.5px;font-weight:600;list-style:none;display:flex;gap:12px;align-items:flex-start}
+details.review summary::-webkit-details-marker{display:none}
+details.review summary::before{content:"+";font-family:'DM Mono',monospace;color:var(--ink3);flex:0 0 auto}
+details.review[open] summary::before{content:"−"}
+details.review .body{padding:12px 0 2px 24px;font-size:14.5px;color:var(--ink2)}
+details.review .body .code{font-family:'DM Mono',monospace;font-size:13px;white-space:pre-wrap;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0;color:var(--ink)}
+details.review .ans{font-size:13.5px;margin:8px 0}
+details.review .ans b{color:var(--ink)}
+details.review .why{color:var(--ink2);font-size:14px}
+
+.capture{margin-top:40px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.capture h2{margin-bottom:6px}
+.capture p{font-size:14.5px;margin:0 0 18px}
+.field{display:block;margin-bottom:12px}
+.field span{display:block;font-size:12.5px;color:var(--ink3);margin-bottom:6px}
+.field input{width:100%;min-height:48px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--ink);font:inherit;font-size:15px}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--tcc-accent-soft,rgba(0,87,222,.16))}
+.status{font-size:13.5px;margin-top:12px;min-height:20px;color:var(--ink2)}
+.status.ok{color:var(--good)}
+.status.err{color:var(--bad)}
+
+.next{margin-top:44px}
+.next .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+.next a{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;transition:border-color .18s ease,transform .18s ease}
+.next a:hover{border-color:var(--lineStrong);transform:translateY(-1px)}
+.next a b{display:block;font-size:15px;margin-bottom:4px}
+.next a span{font-size:13.5px;color:var(--ink3)}
+
+footer.site{border-top:1px solid var(--line);padding:32px 0 44px;color:var(--ink3);font-size:13px}
+footer.site a{color:var(--ink3);text-decoration:none}
+footer.site a:hover{color:var(--ink)}
+
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (max-width:640px){
+  .facts{grid-template-columns:1fr}
+  .qcard{padding:22px 18px}
+  .scorewrap{gap:20px}
+  .ring{width:124px;height:124px}
+  .ring .val b{font-size:32px}
+  .verdict h2{font-size:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LearningResource","name":"TCC Placement Diagnostic","description":"A fifteen-question, fifteen-minute placement-readiness diagnostic covering quantitative aptitude, reasoning, technical fundamentals and data interpretation. Scored instantly with explanations.","url":"https://thecodingcompany.io/diagnostic/","inLanguage":"en-IN","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"The Coding Company","url":"https://thecodingcompany.io/"},"teaches":["Quantitative aptitude","Logical reasoning","Data structures fundamentals","SQL","HTTP basics","Data interpretation"]}
+</script>
+    <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899');
+    </script>
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecodingcompany.io/"},{"@type":"ListItem","position":2,"name":"Diagnostic","item":"https://thecodingcompany.io/diagnostic/"}]}</script>
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+  </head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/img/tcc-logo-mark.png" width="66" height="44" alt="The Coding Company"></a>
+    <nav class="top" aria-label="Primary">
+      <a href="/bootcamps/">CERT+</a>
+      <a href="/prep+/companies/">Prep+</a>
+      <a href="/placement/">Placements</a>
+      <a href="/verify/">Verify</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="wrap">
+
+    <!-- ── INTRO ───────────────────────────────────────── -->
+    <section id="screen-intro" aria-labelledby="intro-h">
+      <div class="eyebrow">Placement diagnostic</div>
+      <h1 id="intro-h">Fifteen questions. Fifteen minutes. No sales call.</h1>
+      <p class="lede">This is the same format most campus and fresher tests use. Sit it, submit it, and get a section-by-section score with the reasoning behind every answer you missed. You see the result before anyone contacts you.</p>
+
+      <div class="facts">
+        <div class="fact"><b>15</b><span>questions</span></div>
+        <div class="fact"><b>15 min</b><span>hard timer</span></div>
+        <div class="fact"><b>Instant</b><span>scored report</span></div>
+      </div>
+
+      <ul class="sectionlist" aria-label="What the paper covers">
+        <li><span>Quantitative</span><span class="n">4 questions</span></li>
+        <li><span>Reasoning</span><span class="n">5 questions</span></li>
+        <li><span>Technical fundamentals</span><span class="n">4 questions</span></li>
+        <li><span>Data interpretation</span><span class="n">2 questions</span></li>
+      </ul>
+
+      <div class="actions">
+        <button class="btn" id="start-btn" type="button">Start the paper</button>
+        <a class="btn ghost" href="/verify/rubric/">Read the marking scheme first</a>
+      </div>
+
+      <p class="fineprint">No account, no card, no phone number. Your answers are scored on our server and are not stored unless you ask us to email you the report. The paper is a genuine diagnostic, not a lead magnet with a fake pass mark.</p>
+
+      <div class="rule"></div>
+
+      <h2>Why we publish the paper instead of describing it</h2>
+      <p>Every coaching brand claims it can diagnose you. Very few will let you test that claim in a quarter of an hour. If our paper is weak, you will know before you spend a rupee — and so will we.</p>
+      <p><a href="/verify/">See everything else we claim, and the evidence for each one →</a></p>
+    </section>
+
+    <!-- ── TEST ────────────────────────────────────────── -->
+    <section id="screen-test" hidden aria-labelledby="q-heading">
+      <div class="examhead">
+        <div class="row">
+          <div class="pos" aria-live="polite">Question <b id="q-pos">1</b> of <span id="q-total">15</span></div>
+          <div class="timer" id="timer" role="timer" aria-live="off"><span id="timer-val">15:00</span></div>
+        </div>
+        <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+      </div>
+
+      <div class="qcard">
+        <div class="qsec" id="q-section">Quantitative</div>
+        <h2 id="q-heading" class="qprompt" style="font-family:inherit;font-size:17.5px;line-height:1.55;letter-spacing:-.01em;margin:0 0 20px" tabindex="-1"></h2>
+        <pre class="code" id="q-code" hidden></pre>
+        <form id="q-form">
+          <fieldset id="q-options">
+            <legend class="sr">Choose one answer</legend>
+          </fieldset>
+        </form>
+
+        <div class="navrow">
+          <button class="btn ghost small" id="prev-btn" type="button">Previous</button>
+          <button class="btn small" id="next-btn" type="button">Next question</button>
+        </div>
+      </div>
+
+      <div class="dots" id="dots" role="group" aria-label="Jump to question"></div>
+
+      <div class="actions">
+        <button class="btn ghost small" id="submit-btn" type="button">Submit paper</button>
+      </div>
+      <p class="status" id="test-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- ── RESULT ──────────────────────────────────────── -->
+    <section id="screen-result" hidden aria-labelledby="result-h">
+      <div class="eyebrow">Your result</div>
+      <div class="scorewrap">
+        <div class="ring" id="score-ring"><div class="val"><b id="score-num">0</b><small id="score-of">of 15</small></div></div>
+        <div class="verdict">
+          <span class="bandtag" id="band-tag">Band</span>
+          <h2 id="result-h"><span id="band-title">Result</span></h2>
+          <p id="band-line"></p>
+        </div>
+      </div>
+
+      <div class="bars" id="bars" aria-label="Score by section"></div>
+
+      <div class="rule"></div>
+
+      <h2 id="review-h">What you missed, and why</h2>
+      <p id="review-lede" style="font-size:14.5px">Each item shows the correct answer and the reasoning. If you got everything right, this section says so.</p>
+      <div id="review"></div>
+
+      <div class="capture">
+        <h2>Keep the full report</h2>
+        <p>We will email the section breakdown and the worked explanations so you can revisit them. One email. No sequence.</p>
+        <form id="capture-form" novalidate>
+          <input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important">
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label class="field"><span>Name (optional)</span><input type="text" name="name" autocomplete="name" placeholder="Your name"></label>
+          <button class="btn small" type="submit">Email me the report</button>
+          <p class="status" id="capture-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="next">
+        <h2>Where to go next</h2>
+        <div class="cards">
+          <a href="/verify/rubric/"><b>The full marking scheme</b><span>Every section, weighted the way the real paper is.</span></a>
+          <a href="/verify/samples/"><b>Graded sample answers</b><span>Three anonymised responses with the marks each one earned.</span></a>
+          <a href="/prep+/companies/"><b>Prep+ company papers</b><span>The actual rounds, company by company.</span></a>
+          <a href="/placement/"><b>Talk to a placement lead</b><span>Bring your score. The conversation starts from evidence.</span></a>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn ghost small" id="retake-btn" type="button">Retake the paper</button>
+        <a class="btn ghost small" href="/verify/">What we publish about ourselves</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p style="margin:0 0 8px">The Coding Company · Hyderabad, India</p>
+    <p style="margin:0"><a href="/">Home</a> · <a href="/verify/">Verify</a> · <a href="/contact/">Contact</a> · <a href="/privacy-policy/">Privacy</a></p>
+    <p style="margin:12px 0 0;font-size:12px">Question wording is original TCC material. Format follows publicly documented campus and fresher testing patterns.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var screens = { intro: $('screen-intro'), test: $('screen-test'), result: $('screen-result') };
+
+  var state = {
+    questions: null,
+    sections: [],
+    index: 0,
+    answers: {},
+    startedAt: 0,
+    submittedAt: 0,
+    remaining: 0,
+    timerId: null,
+    result: null,
+    submitting: false
+  };
+
+  function show(name) {
+    Object.keys(screens).forEach(function (k) { screens[k].hidden = k !== name; });
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  function track(name, params) {
+    try {
+      if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+    } catch (e) { /* analytics must never break the paper */ }
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  /* ── load the paper ─────────────────────────────────── */
+  fetch('/api/diagnostic', { headers: { Accept: 'application/json' } })
+    .then(function (r) { if (!r.ok) throw new Error('load failed'); return r.json(); })
+    .then(function (data) {
+      state.questions = data.questions;
+      state.sections = data.sections;
+      state.remaining = data.timeLimitSeconds || 900;
+      $('q-total').textContent = data.questions.length;
+      $('score-of').textContent = 'of ' + data.questions.length;
+      buildDots();
+    })
+    .catch(function () {
+      $('start-btn').disabled = true;
+      $('start-btn').textContent = 'The paper could not load';
+      var note = document.createElement('p');
+      note.className = 'fineprint';
+      note.textContent = 'Check your connection and reload. If this keeps happening, write to us at hello@thecodingcompany.io.';
+      $('screen-intro').appendChild(note);
+    });
+
+  function sectionName(id) {
+    var s = state.sections.filter(function (x) { return x.id === id; })[0];
+    return s ? s.name : id;
+  }
+
+  function buildDots() {
+    var box = $('dots');
+    box.innerHTML = '';
+    state.questions.forEach(function (q, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = i + 1;
+      b.setAttribute('aria-label', 'Question ' + (i + 1));
+      b.addEventListener('click', function () { state.index = i; renderQuestion(); });
+      box.appendChild(b);
+    });
+  }
+
+  function start() {
+    state.startedAt = Date.now();
+    state.answers = {};
+    state.index = 0;
+    state.remaining = 900;
+    show('test');
+    renderQuestion();
+    startTimer();
+    track('diagnostic_start', { questions: state.questions.length });
+    $('q-heading').focus();
+  }
+
+  function startTimer() {
+    clearInterval(state.timerId);
+    var endAt = Date.now() + state.remaining * 1000;
+    tick();
+    state.timerId = setInterval(function () {
+      state.remaining = Math.max(0, Math.round((endAt - Date.now()) / 1000));
+      tick();
+      if (state.remaining <= 0) {
+        clearInterval(state.timerId);
+        submit(true);
+      }
+    }, 500);
+  }
+
+  function tick() {
+    var m = Math.floor(state.remaining / 60);
+    var s = state.remaining % 60;
+    $('timer-val').textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    $('timer').classList.toggle('low', state.remaining <= 60);
+  }
+
+  function renderQuestion() {
+    var q = state.questions[state.index];
+    var total = state.questions.length;
+
+    $('q-pos').textContent = state.index + 1;
+    $('q-section').textContent = sectionName(q.section);
+
+    /* Split prompt/code blocks on a blank line. */
+    var parts = q.prompt.split('\n\n');
+    $('q-heading').textContent = parts[0];
+    var codeEl = $('q-code');
+    if (parts.length > 1) {
+      codeEl.textContent = parts.slice(1).join('\n\n');
+      codeEl.hidden = false;
+    } else {
+      codeEl.hidden = true;
+      codeEl.textContent = '';
+    }
+
+    var fieldset = $('q-options');
+    fieldset.innerHTML = '<legend class="sr">Choose one answer</legend>';
+    q.options.forEach(function (opt, i) {
+      var label = document.createElement('label');
+      label.className = 'opt';
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'answer';
+      input.value = String(i);
+      input.checked = state.answers[q.id] === i;
+      input.addEventListener('change', function () {
+        state.answers[q.id] = i;
+        updateDots();
+      });
+      var span = document.createElement('span');
+      span.textContent = opt;
+      label.appendChild(input);
+      label.appendChild(span);
+      fieldset.appendChild(label);
+    });
+
+    $('prev-btn').disabled = state.index === 0;
+    var last = state.index === total - 1;
+    $('next-btn').textContent = last ? 'Review answers' : 'Next question';
+    $('next-btn').disabled = last;
+
+    $('progress-bar').style.width = ((state.index + 1) / total * 100) + '%';
+    updateDots();
+  }
+
+  function updateDots() {
+    var total = state.questions.length;
+    Array.prototype.forEach.call($('dots').children, function (b, i) {
+      var q = state.questions[i];
+      b.classList.toggle('done', state.answers[q.id] !== undefined);
+      b.setAttribute('aria-current', i === state.index ? 'true' : 'false');
+    });
+    var answered = Object.keys(state.answers).length;
+    $('test-status').textContent = answered + ' of ' + total + ' answered';
+  }
+
+  function submit(auto) {
+    if (state.submitting) return;
+    var answered = Object.keys(state.answers).length;
+    var total = state.questions.length;
+
+    if (!auto && answered < total) {
+      var missing = total - answered;
+      $('test-status').textContent = missing + ' question' + (missing === 1 ? '' : 's') + ' unanswered. Submit anyway? Press submit again.';
+      if (!state.warned) { state.warned = true; return; }
+    }
+
+    state.submitting = true;
+    state.submittedAt = Date.now();
+    clearInterval(state.timerId);
+    $('submit-btn').disabled = true;
+    $('next-btn').disabled = true;
+    $('test-status').textContent = 'Scoring…';
+
+    fetch('/api/diagnostic', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        answers: state.answers,
+        started_at: state.startedAt,
+        submitted_at: state.submittedAt
+      })
+    })
+      .then(function (r) { if (!r.ok) throw new Error('score failed'); return r.json(); })
+      .then(function (data) {
+        state.result = data;
+        renderResult(data);
+        show('result');
+        track('diagnostic_complete', {
+          score: data.score,
+          total: data.total,
+          percent: data.percent,
+          band: data.band.key,
+          seconds: data.elapsedSeconds
+        });
+        $('result-h').setAttribute('tabindex', '-1');
+        $('result-h').focus();
+      })
+      .catch(function () {
+        state.submitting = false;
+        $('submit-btn').disabled = false;
+        $('test-status').textContent = 'We could not score that. Check your connection and press submit again.';
+      });
+  }
+
+  function renderResult(d) {
+    $('score-num').textContent = d.score;
+    $('score-of').textContent = 'of ' + d.total;
+    $('score-ring').style.setProperty('--pct', d.percent);
+    $('band-tag').textContent = d.percent + '% correct';
+    $('band-title').textContent = d.band.title;
+    $('band-line').textContent = d.band.line;
+
+    var bars = $('bars');
+    bars.innerHTML = '';
+    d.sections.forEach(function (s) {
+      var pct = s.total ? Math.round((s.correct / s.total) * 100) : 0;
+      var el = document.createElement('div');
+      el.className = 'bar' + (pct < 50 ? ' weak' : pct < 75 ? ' mid' : '');
+      el.innerHTML =
+        '<div class="top"><span>' + esc(s.name) + '</span><span>' + s.correct + ' / ' + s.total + '</span></div>' +
+        '<div class="track"><i class="fill" style="width:0"></i></div>';
+      bars.appendChild(el);
+      requestAnimationFrame(function () {
+        el.querySelector('.fill').style.width = pct + '%';
+      });
+    });
+
+    var review = $('review');
+    review.innerHTML = '';
+    if (!d.review.length) {
+      $('review-lede').textContent = 'Nothing missed. Every question correct — the remaining work is speed and interview delivery.';
+      return;
+    }
+    $('review-lede').textContent = 'Each item shows the correct answer and the reasoning behind it.';
+    d.review.forEach(function (item, i) {
+      var parts = item.prompt.split('\n\n');
+      var det = document.createElement('details');
+      det.className = 'review';
+      var sum = document.createElement('summary');
+      sum.textContent = parts[0];
+      var body = document.createElement('div');
+      body.className = 'body';
+
+      var html = '';
+      if (parts.length > 1) html += '<div class="code">' + esc(parts.slice(1).join('\n\n')) + '</div>';
+      html += '<p class="ans">Your answer: <b>' + esc(item.your || 'Not answered') + '</b></p>';
+      html += '<p class="ans">Correct answer: <b>' + esc(item.correct) + '</b></p>';
+      html += '<p class="why">' + esc(item.why) + '</p>';
+      body.innerHTML = html;
+
+      det.appendChild(sum);
+      det.appendChild(body);
+      review.appendChild(det);
+    });
+  }
+
+  /* ── capture ─────────────────────────────────────────── */
+  $('capture-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = e.target;
+    var status = $('capture-status');
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    var d = state.result;
+    var body = {
+      form_type: 'diagnostic',
+      email: form.elements.email.value.trim(),
+      name: (form.elements.name.value || '').trim(),
+      score: d ? d.score : '',
+      total: d ? d.total : '',
+      band: d ? d.band.key : '',
+      sections: d ? d.sections : [],
+      _t: state.startedAt || Date.now(),
+      _page: '/diagnostic/'
+    };
+
+    status.className = 'status';
+    status.textContent = 'Sending…';
+
+    fetch('/api/forms', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    })
+      .then(function (r) { if (!r.ok) throw new Error('failed'); return r.json(); })
+      .then(function () {
+        status.className = 'status ok';
+        status.textContent = 'Sent. The report is on its way to ' + body.email + '.';
+        form.reset();
+      })
+      .catch(function () {
+        status.className = 'status err';
+        status.textContent = 'That did not send. Try again, or write to hello@thecodingcompany.io.';
+      });
+  });
+
+  /* ── wiring ──────────────────────────────────────────── */
+  $('start-btn').addEventListener('click', start);
+  $('prev-btn').addEventListener('click', function () {
+    if (state.index > 0) { state.index--; renderQuestion(); $('q-heading').focus(); }
+  });
+  $('next-btn').addEventListener('click', function () {
+    if (state.index < state.questions.length - 1) { state.index++; renderQuestion(); $('q-heading').focus(); }
+  });
+  $('submit-btn').addEventListener('click', function () { submit(false); });
+  $('retake-btn').addEventListener('click', function () {
+    state.submitting = false;
+    state.warned = false;
+    state.result = null;
+    $('submit-btn').disabled = false;
+    $('capture-form').reset();
+    $('capture-status').textContent = '';
+    show('intro');
+    $('start-btn').focus();
+  });
+
+  /* Escape never leaves the paper mid-attempt; warn once. */
+  window.addEventListener('beforeunload', function (e) {
+    if (!screens.test.hidden && Object.keys(state.answers).length) {
+      e.preventDefault();
+      e.returnValue = '';
+    }
+  });
+})();
+</script>
+    <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

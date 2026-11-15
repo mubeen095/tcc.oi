@@ -1,0 +1,298 @@
+{
+  "id": "sdr-beginner",
+  "role": "Sales Development Representative",
+  "level": "Beginner",
+  "title": "First call of the day",
+  "length": 10,
+  "pointsPerMoment": 10,
+  "moments": [
+    {
+      "skill": "Opening",
+      "text": "Ravi Menon, Operations Manager at a 40-truck logistics firm in Pune, picks up on the second ring. \"Yeah? Two minutes. What is this about?\"",
+      "options": [
+        {
+          "text": "I'll keep it short — we help logistics teams cut delivery delays. Worth ten minutes?",
+          "points": 4,
+          "next": 1,
+          "feedback": "You pitched before you knew anything about his operation. He has no reason to care yet."
+        },
+        {
+          "text": "Fair. One question — what's costing you more right now, late deliveries or fuel?",
+          "points": 10,
+          "next": 1,
+          "feedback": "Strong. You earned the next thirty seconds by making it about him instead of your product."
+        },
+        {
+          "text": "Are you the person who decides on operations software?",
+          "points": 3,
+          "next": 1,
+          "feedback": "Too early. You asked for authority before you had given him any reason to talk."
+        }
+      ]
+    },
+    {
+      "skill": "Discovery",
+      "text": "He exhales. \"Both, honestly. Trucks are running late and diesel is eating us alive.\"",
+      "options": [
+        {
+          "text": "That's exactly what we fix. Our platform—",
+          "points": 3,
+          "next": 2,
+          "feedback": "You jumped to the pitch the moment he opened up. The opening was there and you closed it."
+        },
+        {
+          "text": "Which one is hurting the P&L more this quarter?",
+          "points": 10,
+          "next": 3,
+          "feedback": "Excellent. You made him prioritise, which tells you what the meeting should be about."
+        },
+        {
+          "text": "How many trucks are you running?",
+          "points": 5,
+          "next": 4,
+          "feedback": "Useful data, but it puts the work back on him without showing why it matters to you."
+        }
+      ]
+    },
+    {
+      "skill": "Listening",
+      "text": "\"We fix exactly that. Our platform gives you live ETAs, route optimisation, fuel analytics—\" \"Hold on. I didn't ask for a demo. I asked what this call is about.\"",
+      "options": [
+        {
+          "text": "Sorry — let me start over. What does a late delivery actually cost you?",
+          "points": 8,
+          "next": 5,
+          "feedback": "Good recovery. You stopped selling and started listening, which is the only way back."
+        },
+        {
+          "text": "Right, but the demo is ten minutes and it'll answer everything.",
+          "points": 2,
+          "next": 5,
+          "feedback": "You pushed a demo after he told you not to. Rapport is now gone and he is looking for an exit."
+        },
+        {
+          "text": "Fair enough. I'll email you some information instead.",
+          "points": 3,
+          "next": 5,
+          "feedback": "You gave up the call instead of earning it back. Most replies to that email never come."
+        }
+      ]
+    },
+    {
+      "skill": "Discovery",
+      "text": "\"Fuel, easily. We're spending about 18% more per kilometre than last year and I can't tell which routes are bleeding it.\"",
+      "options": [
+        {
+          "text": "Do you know which routes are worst, or is it invisible right now?",
+          "points": 10,
+          "next": 5,
+          "feedback": "Excellent. You surfaced a specific, measurable gap — that is what a good meeting is built on."
+        },
+        {
+          "text": "18% is a lot. We can bring that down.",
+          "points": 4,
+          "next": 5,
+          "feedback": "Probably true, but unsupported. You claimed an outcome before you had evidence."
+        },
+        {
+          "text": "Have you looked at your fuel card data?",
+          "points": 6,
+          "next": 5,
+          "feedback": "Reasonable direction, but you are telling him how to do his job before you have earned it."
+        }
+      ]
+    },
+    {
+      "skill": "Qualification",
+      "text": "\"Forty-two. Why does that matter?\"",
+      "options": [
+        {
+          "text": "It tells me whether the problem is big enough to justify a change.",
+          "points": 6,
+          "next": 5,
+          "feedback": "Honest, but blunt. He now feels sized up rather than understood."
+        },
+        {
+          "text": "Because at 42 trucks, a 3% fuel saving is real money. Is that worth fifteen minutes?",
+          "points": 9,
+          "next": 5,
+          "feedback": "Strong. You quantified the stakes in his terms and converted it into a next step."
+        },
+        {
+          "text": "Just trying to understand your setup.",
+          "points": 3,
+          "next": 5,
+          "feedback": "Vague. He will read that as a script and disengage."
+        }
+      ]
+    },
+    {
+      "skill": "Objection handling",
+      "text": "\"We already use a TMS. Been with them three years.\"",
+      "options": [
+        {
+          "text": "Then I'm probably wasting your time. Thanks for—",
+          "points": 0,
+          "next": 6,
+          "feedback": "You accepted the brush-off immediately. Most deals die exactly here, and they die quietly."
+        },
+        {
+          "text": "Makes sense. What's the one thing it still doesn't do well?",
+          "points": 10,
+          "next": 6,
+          "feedback": "Textbook. You turned a wall into a door without attacking his existing choice."
+        },
+        {
+          "text": "We're much better than them.",
+          "points": 2,
+          "next": 6,
+          "feedback": "Unprovable and insulting to his judgement. He chose that vendor and you just called it a mistake."
+        }
+      ]
+    },
+    {
+      "skill": "Objection handling",
+      "text": "\"Look, just send me an email and I'll look at it.\"",
+      "options": [
+        {
+          "text": "Sure — what should I put in the subject line so it doesn't get lost?",
+          "points": 8,
+          "next": 7,
+          "feedback": "Clever. You got a small commitment that makes the email far more likely to be opened."
+        },
+        {
+          "text": "Happy to. I'll send it today.",
+          "points": 3,
+          "next": 7,
+          "feedback": "Polite, but you handed control to his inbox, which is where most follow-ups go to die."
+        },
+        {
+          "text": "I will — but could I ask one thing first? What would make you take a meeting?",
+          "points": 10,
+          "next": 7,
+          "feedback": "Excellent. You traded the email for information, which is a far better deal for you."
+        }
+      ]
+    },
+    {
+      "skill": "Commercial",
+      "text": "\"And what does this cost? Give me a number.\"",
+      "options": [
+        {
+          "text": "It depends on trucks and modules — roughly ₹4,000 per truck per month.",
+          "points": 6,
+          "next": 8,
+          "feedback": "A number is fine, but you priced before value was established. He is now anchored on cost."
+        },
+        {
+          "text": "Before I quote, what's that 18% fuel gap costing you monthly?",
+          "points": 10,
+          "next": 8,
+          "feedback": "Strong. You anchored price against his loss instead of your cost, which is how margin survives."
+        },
+        {
+          "text": "I'll have to get back to you on pricing.",
+          "points": 2,
+          "next": 8,
+          "feedback": "You lost credibility at the exact moment he tested you. He will assume it is expensive."
+        }
+      ]
+    },
+    {
+      "skill": "Credibility",
+      "text": "\"We tried something like this in 2023. It was a mess. Why are you different?\"",
+      "options": [
+        {
+          "text": "We're not like them — our product actually works.",
+          "points": 2,
+          "next": 9,
+          "feedback": "Empty claim. He has heard that sentence from every vendor who has ever called him."
+        },
+        {
+          "text": "What went wrong in 2023? If it's the same failure, I'll tell you honestly.",
+          "points": 10,
+          "next": 9,
+          "feedback": "Excellent. Honesty plus diagnosis is how trust gets built after a bad experience."
+        },
+        {
+          "text": "Every vendor says that, I know. But we have 40 logistics clients.",
+          "points": 5,
+          "next": 9,
+          "feedback": "Social proof helps, but you did not address the scar he just showed you."
+        }
+      ]
+    },
+    {
+      "skill": "Qualification",
+      "text": "\"Even if I liked it, I'd have to get my CFO and the ops head involved.\"",
+      "options": [
+        {
+          "text": "Great — can you get them on the next call?",
+          "points": 5,
+          "next": 10,
+          "feedback": "Useful intent, but you are asking him to do your work without giving him a reason."
+        },
+        {
+          "text": "Understood. What would each of them need to see to say yes?",
+          "points": 10,
+          "next": 10,
+          "feedback": "Excellent. You mapped the actual decision criteria before you ever met them."
+        },
+        {
+          "text": "No problem, I'll send a proposal for them.",
+          "points": 3,
+          "next": 10,
+          "feedback": "You are now selling to an inbox, not a committee. Proposals without a champion stall."
+        }
+      ]
+    },
+    {
+      "skill": "Closing",
+      "text": "\"Alright. I've got a few minutes left. What are you proposing?\"",
+      "options": [
+        {
+          "text": "Thursday 11am, thirty minutes, you and your ops head — I'll bring the route-level fuel analysis.",
+          "points": 10,
+          "next": 11,
+          "feedback": "Perfect close: specific, scoped, and tied directly to the pain he described."
+        },
+        {
+          "text": "Whenever works for you — just let me know.",
+          "points": 3,
+          "next": 11,
+          "feedback": "You handed him the decision and the calendar. In practice, nothing will happen."
+        },
+        {
+          "text": "Let me send over a deck first.",
+          "points": 5,
+          "next": 11,
+          "feedback": "A deck is a delay tactic. You had momentum and you spent it on homework."
+        }
+      ]
+    },
+    {
+      "skill": "Closing",
+      "text": "\"Thursday's tight. Monday morning is better.\"",
+      "options": [
+        {
+          "text": "Monday 10am works. I'll send the invite now, with one line on what I'll bring.",
+          "points": 10,
+          "next": null,
+          "feedback": "Clean. Confirmed, documented, and set up for a real conversation rather than a chat."
+        },
+        {
+          "text": "Monday's fine.",
+          "points": 6,
+          "next": null,
+          "feedback": "Confirmed, but thin. No agenda, no anchor, and a higher chance he cancels."
+        },
+        {
+          "text": "Monday doesn't work for me — Thursday is better.",
+          "points": 2,
+          "next": null,
+          "feedback": "You made his constraint about you. Unnecessary friction at the finish line."
+        }
+      ]
+    }
+  ]
+}

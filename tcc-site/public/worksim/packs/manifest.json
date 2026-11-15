@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "updated": "2026-11-11",
+  "shifts": [
+    {
+      "id": "sdr-beginner",
+      "role": "Sales Development Representative",
+      "roleId": "sdr",
+      "level": "Beginner",
+      "title": "First call of the day",
+      "blurb": "A 40-truck logistics firm picks up. Qualify the pain, survive the objections, and try to book the meeting.",
+      "pack": "packs/sdr/beginner.json",
+      "minutes": 12,
+      "skills": ["Discovery", "Objection handling", "Closing"],
+      "available": true
+    },
+    {
+      "id": "sdr-intermediate",
+      "role": "Sales Development Representative",
+      "roleId": "sdr",
+      "level": "Intermediate",
+      "title": "The champion went quiet",
+      "blurb": "Your internal champion has stopped replying and a competitor is circling. Recover the deal.",
+      "pack": "packs/sdr/intermediate.json",
+      "minutes": 15,
+      "skills": ["Multi-threading", "Pipeline", "Negotiation"],
+      "available": false
+    },
+    {
+      "id": "data-analyst-beginner",
+      "role": "Data Analyst",
+      "roleId": "data-analyst",
+      "level": "Beginner",
+      "title": "The number nobody trusts",
+      "blurb": "Two dashboards disagree by 12%. Find out which one is wrong before the leadership review.",
+      "pack": "packs/data-analyst/beginner.json",
+      "minutes": 15,
+      "skills": ["Data quality", "Analysis", "Communication"],
+      "available": false
+    },
+    {
+      "id": "software-engineer-beginner",
+      "role": "Software Engineer",
+      "roleId": "software-engineer",
+      "level": "Beginner",
+      "title": "The bug that only happens on Fridays",
+      "blurb": "A production issue that reproduces once a week. Triage it without breaking anything else.",
+      "pack": "packs/software-engineer/beginner.json",
+      "minutes": 15,
+      "skills": ["Debugging", "Prioritisation", "Communication"],
+      "available": false
+    }
+  ]
+}

@@ -1,0 +1,1761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+    <title>Ola 2024 Practice Paper — 2 Rounds | TCC Prep+</title>
+    <meta name="description" content="Sit the Ola 2024 pattern: Technical Round → Coding Round. Aptitude and technical rounds scored instantly, a live coding round you run in the browser." />
+    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://thecodingcompany.io/prep+/companies/ola/2024/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ola 2024 Practice Paper — 2 Rounds | TCC Prep+" />
+    <meta property="og:description" content="Sit the Ola 2024 pattern: Technical Round → Coding Round. Aptitude and technical rounds scored instantly, a live coding round you run in the browser, then a readiness report with the topics to improve. From TCC Prep+." />
+    <meta property="og:url" content="https://thecodingcompany.io/prep+/companies/ola/2024/" />
+    <meta property="og:site_name" content="The Coding Company (TCC)" />
+    <meta property="og:image" content="/vs-ig-posts-youtube-thumbnail.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ola 2024 Practice Paper — 2 Rounds | TCC Prep+" />
+    <meta name="twitter:description" content="Sit the Ola 2024 pattern: Technical Round → Coding Round. Aptitude and technical rounds scored instantly, a live coding round you run in the browser, then a readiness report with the topics to improve. From TCC Prep+." />
+    <link rel="icon" type="image/x-icon" href="../../../../favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../assets/img/tcc-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../../assets/img/tcc-favicon-96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/img/tcc-apple-touch.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "/prep+/companies/ola/2024/",
+      "url": "https://thecodingcompany.io/prep+/companies/ola/2024/",
+      "name": "Ola 2024 Practice Paper — 2 Rounds | TCC Prep+",
+      "description": "Sit the Ola 2024 pattern: Technical Round → Coding Round. Aptitude and technical rounds scored instantly, a live coding round you run in the browser, then a readiness report with the topics to improve. From TCC Prep+.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://thecodingcompany.io/#website"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Coding Company",
+        "url": "https://thecodingcompany.io"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thecodingcompany.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Prep+",
+          "item": "https://thecodingcompany.io/prep+/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Companies",
+          "item": "https://thecodingcompany.io/prep+/companies/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ola",
+          "item": "https://thecodingcompany.io/prep+/companies/ola/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "2024 paper",
+          "item": "https://thecodingcompany.io/prep+/companies/ola/2024/"
+        }
+      ]
+    },
+    {
+      "@type": "Quiz",
+      "name": "Ola 2024 practice paper",
+      "about": "Technical Round, Coding Round",
+      "educationalLevel": "Professional",
+      "numberOfQuestions": 10,
+      "timeRequired": "PT55M",
+      "isAccessibleForFree": true,
+      "provider": {
+        "@type": "Organization",
+        "name": "The Coding Company",
+        "url": "https://thecodingcompany.io"
+      }
+    }
+  ]
+}
+    </script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+      body { background: #050505; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button, input, select, textarea { font-family: inherit; }
+
+      h1, h2 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+      .serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.02em; }
+      .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
+      .mono { font-family: 'DM Mono', 'Roboto Mono', monospace; }
+
+      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #050505; }
+
+      .sidebar { display: none; position: sticky; top: 0; width: 200px; min-height: 100%; padding: 24px 16px; flex-direction: column; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.05); background: #050505; overflow-y: auto; overflow-x: hidden; }
+      @media (min-width: 768px) { .sidebar { display: flex; } }
+      .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: rgba(255,255,255,0.58); transition: all 0.3s; position: relative; }
+      .sidebar-link svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 1.5; }
+      .sidebar-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+      .sidebar-link.active { color: #fff; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12), transparent 70%); mask-image: linear-gradient(to right, black 40%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%); }
+      .sidebar-link.active svg { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
+      .sidebar-link .label { font-weight: 500; letter-spacing: 0.01em; }
+      .sidebar-nav { margin-top: 25vh; }
+      .sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+      .sidebar-webinars { display: flex; align-items: center; gap: 12px; padding: 12px 4px; color: rgba(255,255,255,0.58); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; transition: color 0.3s; }
+      .sidebar-webinars:hover { color: #fff; }
+      .sidebar-webinars svg { width: 16px; height: 16px; stroke-width: 1.5; }
+      .btn-login { display: block; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 20px; font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s; }
+      .btn-login:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+      .brand-serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+      .sidebar-brand { font-size: 21px; padding: 0 8px; margin-bottom: 24px; transition: all 0.3s; }
+      .sidebar-brand:hover { text-shadow: 0 0 16px rgba(255,255,255,0.4); }
+
+      .main-scroll { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; }
+
+      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(6,6,6,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+      @media (min-width: 768px) { .mobile-header { display: none; } }
+      @media (max-width: 767px) { .main-scroll > .content-wrap { padding-top: 52px; } }
+      .mobile-brand { font-size: 19px; }
+      .mobile-actions { display: flex; align-items: center; gap: 10px; }
+      .mobile-login { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); transition: all 0.3s; }
+      .mobile-login svg { width: 20px; height: 20px; stroke-width: 1.5; }
+      .mobile-cta { font-size: 12px; font-weight: 600; background: #0064FF; color: #fff; border: 0; border-radius: 999px; padding: 9px 16px; white-space: nowrap; transition: background 0.2s; cursor: pointer; }
+      @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 17px; } .mobile-cta { font-size: 11px; padding: 8px 12px; } }
+
+      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #060606; align-items: stretch; }
+      @media (max-width: 767px) { .bottom-nav { display: flex; height: 52px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; } }
+      @media (max-width: 767px) { .bottom-link svg { display: none; } }
+      .bottom-nav-inner { display: flex; justify-content: space-around; align-items: stretch; width: 100%; height: 100%; }
+      .bottom-link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; min-width: 0; color: #999; transition: all 0.2s; }
+      .bottom-link svg { width: 26px; height: 26px; stroke-width: 1.5; }
+      .bottom-link.active { color: #fff; }
+      .bottom-link span { font-size: 12px; font-weight: 400; line-height: 1; }
+
+      @media (max-width: 384px) {
+        .bottom-nav-inner { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+        .bottom-nav-inner::-webkit-scrollbar { display: none; }
+        .bottom-link { flex: 1 0 64px; min-width: 64px; }
+        .bottom-link span { font-size: 11px; }
+      }
+      .content-wrap { padding-bottom: 90px; }
+      @media (min-width: 768px) { .content-wrap { padding-bottom: 0; } }
+
+      .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+      .reveal.in { opacity: 1; transform: translateY(0); }
+
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #000; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; white-space: nowrap; border: 0; border-radius: 999px; padding: 16px 32px; box-shadow: 0 0 20px rgba(255,255,255,0.2); cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+      .btn:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(255,255,255,0.28); }
+      .btn svg { width: 16px; height: 16px; }
+      .btn-primary { background: #0057DE; color: #fff; box-shadow: 0 4px 20px rgba(0,87,222,0.4); }
+      .btn-primary:hover { background: #0A63EA; }
+      .btn-ghost { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); box-shadow: none; }
+      .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+      .btn-sm { padding: 12px 22px; font-size: 14px; }
+
+      .eyebrow { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+      .section { padding: 72px 24px; position: relative; }
+      @media (min-width: 768px) { .section { padding: 96px 40px; } }
+      .container { max-width: 1400px; margin: 0 auto; }
+      .section-title { font-family: 'Newsreader', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; font-size: clamp(30px, 4.2vw, 54px); color: #fff; }
+      .section-sub { color: rgba(255,255,255,0.45); font-size: 16px; margin-top: 12px; max-width: 46em; }
+      .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; transition: all 0.4s; }
+      .card:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
+
+      /* ── HERO ── */
+      .hero { position: relative; padding: 132px 24px 64px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(5,5,5,0) 62%); }
+      @media (min-width: 768px) { .hero { padding: 168px 40px 88px; } }
+      .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); }
+      .hero-inner { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; }
+      .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 9px 20px; margin-bottom: 26px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+      .hero-pill .dot { width: 8px; height: 8px; border-radius: 999px; background: #0064FF; animation: pulse 1.6s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .hero-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.045em; line-height: 1.03; font-size: clamp(38px, 6vw, 78px); color: #fff; max-width: 17em; }
+      .hero-h1 .accent { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+      .hero-sub { margin-top: 22px; color: rgba(255,255,255,0.55); font-size: clamp(16px, 1.7vw, 19px); max-width: 56em; line-height: 1.65; }
+      .hero-goal { margin-top: 26px; display: inline-flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+      .hero-goal .v { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(34px, 4.6vw, 56px); line-height: 1; color: #7fb4ff; }
+      .hero-goal .l { font-size: 14px; color: rgba(255,255,255,0.55); }
+      .hero-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 34px; }
+      @media (min-width: 640px) { .hero-ctas { flex-direction: row; } }
+
+      /* ── STATS ── */
+      .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      @media (min-width: 900px) { .stat-grid { grid-template-columns: repeat(4, 1fr); } }
+      .stat-card { padding: 28px 26px; }
+      .stat-value { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(36px, 4.4vw, 52px); line-height: 1; color: #fff; }
+      .stat-label { color: rgba(255,255,255,0.5); font-size: 13.5px; margin-top: 10px; line-height: 1.5; }
+
+      /* ── PILLARS ── */
+      .pillar-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 40px; }
+      @media (min-width: 760px) { .pillar-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1100px) { .pillar-grid { grid-template-columns: repeat(4, 1fr); } }
+      .pillar-card { padding: 30px 28px; display: flex; flex-direction: column; gap: 14px; }
+      .pillar-icon { width: 50px; height: 50px; border-radius: 15px; display: flex; align-items: center; justify-content: center; background: rgba(0,100,255,0.12); border: 1px solid rgba(0,100,255,0.28); }
+      .pillar-icon svg { width: 23px; height: 23px; stroke: #6aa8ff; stroke-width: 1.6; fill: none; }
+      .pillar-title { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .pillar-desc { color: rgba(255,255,255,0.5); font-size: 14.5px; line-height: 1.65; }
+
+      /* ── STEPS ── */
+      .steps-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+      @media (min-width: 760px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1100px) { .steps-grid { grid-template-columns: repeat(4, 1fr); } }
+      .step-card { padding: 30px 28px; display: flex; flex-direction: column; gap: 14px; }
+      .step-num { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.28em; color: rgba(255,255,255,0.3); }
+      .step-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .step-desc { color: rgba(255,255,255,0.5); font-size: 14.5px; line-height: 1.65; }
+
+      /* ── ROADMAP ── */
+      .roadmap { display: grid; gap: 16px; margin-top: 40px; max-width: 900px; }
+      .phase { display: flex; gap: 20px; align-items: flex-start; padding: 26px 28px; }
+      .phase-num { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(0,87,222,0.16); border: 1px solid rgba(0,100,255,0.4); color: #7fb4ff; font-weight: 700; font-family: 'DM Mono', monospace; font-size: 15px; }
+      .phase-title { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+      .phase-meta { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.36); margin-bottom: 6px; }
+      .phase-desc { color: rgba(255,255,255,0.5); font-size: 14.5px; line-height: 1.65; margin-top: 8px; }
+
+      /* ── FAQ ── */
+      .faq { display: grid; gap: 14px; margin-top: 34px; max-width: 900px; }
+      .faq-item { padding: 24px 26px; }
+      .faq-item h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 8px; letter-spacing: -0.01em; }
+      .faq-item p { color: rgba(255,255,255,0.5); font-size: 14.5px; line-height: 1.7; }
+      .faq-item p a { color: #7fb4ff; text-decoration: underline; }
+
+      /* ── BAND ── */
+      .band { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); background: linear-gradient(180deg, rgba(0,87,222,0.05), rgba(0,0,0,0)); }
+
+      /* ── FINAL ── */
+      .final { text-align: center; padding: 110px 24px 96px; }
+      .final-title { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(34px, 5.6vw, 68px); line-height: 1.08; letter-spacing: -0.02em; color: #fff; margin-bottom: 24px; }
+      .final-sub { color: rgba(255,255,255,0.45); font-size: clamp(16px, 2.1vw, 20px); line-height: 1.6; margin-bottom: 40px; max-width: 40em; margin-left: auto; margin-right: auto; }
+      .final-ctas { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+      @media (min-width: 640px) { .final-ctas { flex-direction: row; } }
+
+      /* ── FOOTER ── */
+      .footer { background: #060606; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px clamp(20px, 5vw, 60px) 30px; }
+      .footer-brand { text-align: center; margin-bottom: 44px; }
+      .footer-brand img { height: 150px; margin: 0 auto 16px; }
+      .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px; padding-bottom: 50px; }
+      .footer-col h3 { font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin-bottom: 18px; color: #fff; }
+      .footer-col a { display: block; color: #a9a9a9; font-size: 13px; line-height: 1.9; }
+      .footer-col a:hover { color: #fff; }
+      .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+      .footer-bottom p, .footer-bottom a { color: #a9a9a9; font-size: 13px; }
+      .footer-bottom a:hover { color: #fff; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    
+      /* ── TCC mobile polish (generated) ── */
+      @media (max-width: 767px) {
+        html { -webkit-text-size-adjust: 100%; }
+        main.main-scroll, .sidebar { -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* comfortable tap targets */
+        .finder-chip { min-height: 44px; display: inline-flex; align-items: center; padding: 11px 18px; font-size: 12.5px; }
+        .mode-btn { min-height: 44px; }
+        .popular-card { min-height: 60px; justify-content: center; }
+        .chip-row { gap: 8px; }
+        .bottom-link { min-height: 52px; }
+        .cat-pill, .c-oth { min-height: 44px; display: inline-flex; align-items: center; }
+        .btn, .btn-sm { min-height: 46px; }
+        .news-input { min-height: 50px; }
+
+        /* breathe below the fold */
+        .section { padding-left: 18px; padding-right: 18px; }
+        .eco-inner { padding-left: 18px; padding-right: 18px; }
+        .container { padding-left: 0; padding-right: 0; }
+        .footer { padding-left: 20px; padding-right: 20px; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+        /* fluid display type that cannot overflow */
+        .hero-h1, .section-title, .final-title, .a-title, .c-title, .feature-title, .a-cta .ct-t {
+          overflow-wrap: anywhere; word-break: break-word;
+        }
+        .hero-sub, .section-sub, .feature-desc, .post-desc, .a-standfirst { font-size: 15.5px; line-height: 1.68; }
+
+        /* card media stays proportional on narrow screens */
+        .post-media { height: 160px; }
+        .feature-media { min-height: 210px; }
+
+        /* article measure + code-free reading width */
+        .a-body { padding-left: 20px; padding-right: 20px; }
+        .a-body p, .a-body li { font-size: 16.5px; line-height: 1.78; }
+        .a-phase { gap: 14px; }
+
+        /* grids collapse cleanly rather than squashing */
+        .a-stats, .a-flag { grid-template-columns: 1fr; }
+        .eco-grid { row-gap: 10px; }
+      }
+
+      @media (max-width: 480px) {
+        .section { padding-top: 52px; padding-bottom: 52px; }
+        .hero, .a-hero, .c-hero { padding-left: 18px; padding-right: 18px; }
+        .hero { padding-top: 92px; padding-bottom: 40px; }
+        .a-hero { padding-top: 100px; padding-bottom: 40px; }
+        .c-hero { padding-top: 96px; padding-bottom: 44px; }
+
+        /* stack the hero search so the button is full-width and thumbable */
+        .hero-search { flex-direction: column; align-items: stretch; padding: 8px; gap: 8px; border-radius: 18px; }
+        .hero-search-input { width: 100%; padding: 12px 12px; }
+        .hero-search-btn { width: 100%; padding: 14px 18px; font-size: 14.5px; border-radius: 12px; }
+
+        /* finder bar stacks the same way */
+        .finder-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+        .finder-count { text-align: right; }
+
+        /* two-up stats read better than three-up on very narrow screens */
+        .hero-stats { gap: 10px; }
+        .hero-stat .v { font-size: 26px; }
+        .hero-stat .l { font-size: 11.5px; }
+
+        /* footer single column */
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        .footer-brand img { height: 116px; }
+
+        /* related/next cards full width */
+        .a-related { grid-template-columns: 1fr; }
+        .final-ctas { gap: 12px; }
+        .final-ctas .btn, .final-ctas .btn-ghost, .a-cta .ct-row .btn { width: 100%; }
+        .a-cta .ct-row { flex-direction: column; align-items: stretch; }
+
+        .a-body h2 { font-size: clamp(23px, 7vw, 30px); }
+        .a-body h3 { font-size: 18px; }
+        .a-quote p { font-size: 19px !important; }
+      }
+
+      @media (max-width: 360px) {
+        .hero-h1 { font-size: clamp(28px, 9.5vw, 40px); }
+        .section-title { font-size: clamp(24px, 8vw, 34px); }
+        .finder-chip { padding: 10px 14px; font-size: 12px; }
+        .a-body { padding-left: 16px; padding-right: 16px; }
+      }
+
+      @supports (padding: max(0px)) {
+        @media (max-width: 767px) {
+          .bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px); height: auto; min-height: 52px; }
+          .mobile-header { padding-top: env(safe-area-inset-top, 0px); height: auto; min-height: 52px; }
+        }
+      }
+
+    
+      /* ── skip link (accessibility) ── */
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 99999; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+      .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; overflow: visible; outline: 2px solid #fff; outline-offset: 2px; }
+
+      /* ── Placement × Prep+ shared hub ── */
+      .prep-topbar { max-width: 1400px; margin: 0 auto; padding: 96px 24px 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+      @media (min-width: 768px) { .prep-topbar { padding: 110px 40px 0; } }
+      @media (max-width: 767px) { .prep-topbar { padding: 20px 18px 0; } }
+      .prep-crumbs { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .prep-crumbs a:hover { color: #fff; }
+      .prep-crumbs .sep { opacity: 0.4; }
+      .placement-subnav { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); border-radius: 999px; }
+      .placement-subnav a { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.62); padding: 8px 15px; border-radius: 999px; white-space: nowrap; transition: color .2s ease, background-color .2s ease; }
+      .placement-subnav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
+      .placement-subnav a.active { color: #050505; background: #fff; }
+      .prep-topbar + .hero { padding-top: 44px; }
+      @media (max-width: 767px) { .placement-subnav a { padding: 8px 12px; } }
+
+      /* ── Prep+ practice tracks ── */
+      .track-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 40px; }
+      @media (min-width: 700px) { .track-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1100px) { .track-grid { grid-template-columns: repeat(3, 1fr); } }
+      .track-card { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px; text-decoration: none; color: inherit; }
+      .track-num { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+      .track-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .track-desc { color: rgba(255,255,255,0.58); font-size: 14px; line-height: 1.6; }
+      .track-go { margin-top: auto; padding-top: 8px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #7fb4ff; }
+      .track-card:hover .track-go { color: #fff; }
+      .track-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 34px; }
+      @media (min-width: 640px) { .track-ctas { flex-direction: row; } }
+
+      /* ═══ TCC PREP+ ═══ */
+      .skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: #fff; color: #000; padding: 10px 16px; border-radius: 0 0 10px 0; font-weight: 600; }
+      .skip-link:focus { left: 0; }
+      .prep-hero { position: relative; padding: 128px 24px 56px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(5,5,5,0) 62%); }
+      @media (min-width: 768px) { .prep-hero { padding: 150px 40px 72px; } }
+      .prep-hero-in { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; }
+      .prep-hero .grid-bg { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); }
+      .prep-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 9px 20px; margin-bottom: 26px; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+      .prep-pill .dot { width: 8px; height: 8px; border-radius: 999px; background: #0064FF; animation: pulse 1.6s ease-in-out infinite; }
+      .prep-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.045em; line-height: 1.04; font-size: clamp(36px, 5.6vw, 72px); color: #fff; max-width: 20em; }
+      .prep-h1 .accent { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+      .prep-sub { margin-top: 22px; color: rgba(255,255,255,0.58); font-size: clamp(16px, 1.7vw, 19px); max-width: 60em; line-height: 1.65; }
+      .prep-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 32px; }
+      @media (min-width: 640px) { .prep-ctas { flex-direction: row; flex-wrap: wrap; } }
+      .prep-crumbs { max-width: 1400px; margin: 0 auto; padding: 96px 24px 0; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      @media (min-width: 768px) { .prep-crumbs { padding: 110px 40px 0; } }
+      .prep-crumbs a:hover { color: #fff; }
+      .prep-crumbs .sep { opacity: 0.4; }
+
+      .prep-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 40px; }
+      @media (min-width: 700px) { .prep-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1100px) { .prep-grid { grid-template-columns: repeat(3, 1fr); } }
+      .prep-card { display: flex; flex-direction: column; gap: 12px; padding: 28px 26px; position: relative; }
+      .prep-card .pc-eyebrow { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+      .prep-card .pc-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .prep-card .pc-desc { color: rgba(255,255,255,0.56); font-size: 14.5px; line-height: 1.65; }
+      .prep-card .pc-meta { margin-top: auto; padding-top: 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #7fb4ff; }
+      a.prep-card:hover { border-color: rgba(127,180,255,0.5); background: rgba(255,255,255,0.06); }
+
+      .prep-list { display: grid; gap: 14px; margin-top: 36px; }
+      .prep-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; padding: 22px 26px; }
+      .prep-row .pr-name { font-weight: 700; font-size: 17px; color: #fff; letter-spacing: -0.01em; }
+      .prep-row .pr-note { color: rgba(255,255,255,0.56); font-size: 14.5px; line-height: 1.6; flex: 1 1 320px; }
+      .prep-row .pr-link { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #7fb4ff; white-space: nowrap; }
+      .prep-row:hover { border-color: rgba(127,180,255,0.45); }
+
+      .tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.66); }
+      .tag.high { border-color: rgba(0,100,255,0.5); color: #7fb4ff; }
+      .tag.med { border-color: rgba(255,255,255,0.2); }
+      .tag.easy { border-color: rgba(63,220,140,0.45); color: #6fe0a4; }
+      .tag.hard { border-color: rgba(255,120,120,0.45); color: #ff9a9a; }
+
+      .qa { display: grid; gap: 16px; margin-top: 34px; max-width: 960px; }
+      .qa-item { padding: 26px 28px; }
+      .qa-q { font-size: 17px; font-weight: 700; color: #fff; line-height: 1.5; letter-spacing: -0.01em; display: flex; gap: 12px; }
+      .qa-q .qn { font-family: 'DM Mono', monospace; font-size: 13px; color: rgba(255,255,255,0.4); flex-shrink: 0; padding-top: 3px; }
+      .qa-opts { list-style: none; display: grid; grid-template-columns: 1fr; gap: 8px; margin: 16px 0 0 30px; }
+      @media (min-width: 640px) { .qa-opts { grid-template-columns: repeat(2, 1fr); } }
+      .qa-opts li { color: rgba(255,255,255,0.68); font-size: 15px; padding: 8px 12px; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; }
+      .qa-opts li.correct { border-color: rgba(63,220,140,0.5); color: #9ff0c4; background: rgba(63,220,140,0.06); }
+      .qa-opts li .ol { font-family: 'DM Mono', monospace; color: rgba(255,255,255,0.4); margin-right: 8px; }
+      .qa-explain { margin-top: 16px; margin-left: 30px; padding: 16px 18px; border-left: 2px solid rgba(0,100,255,0.5); background: rgba(0,100,255,0.06); border-radius: 0 12px 12px 0; color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; }
+      .qa-explain strong { color: #fff; }
+      .qa-answer { margin-top: 16px; margin-left: 30px; color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; }
+      .qa-answer .lbl { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.42); display: block; margin-bottom: 6px; }
+      .qa-hint { margin-top: 12px; margin-left: 30px; color: rgba(255,255,255,0.56); font-size: 14.5px; }
+      .qa-hint .lbl { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.42); display: block; margin-bottom: 6px; }
+      .concept-list { margin-top: 24px; display: grid; gap: 10px; max-width: 900px; list-style: none; }
+      .concept-list li { padding-left: 26px; position: relative; color: rgba(255,255,255,0.62); font-size: 15.5px; line-height: 1.6; }
+      .concept-list li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 6px; height: 6px; border-radius: 999px; background: #7fb4ff; }
+
+      .tile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 34px; }
+      .tile { padding: 22px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; background: rgba(255,255,255,0.03); font-weight: 700; font-size: 16px; letter-spacing: -0.01em; color: #fff; transition: all 0.3s; }
+      .tile:hover { border-color: rgba(127,180,255,0.5); background: rgba(255,255,255,0.06); }
+      .tile .t-sector { display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-top: 6px; font-weight: 400; }
+
+      /* ── company logo-card grid ── */
+      .logo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 16px; margin-top: 34px; }
+      .logo-card { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 22px; border: 1px solid rgba(255,255,255,0.09); border-radius: 18px; background: rgba(255,255,255,0.03); transition: transform 0.25s, border-color 0.25s, background 0.25s; }
+      .logo-card:hover { transform: translateY(-4px); border-color: rgba(127,180,255,0.45); background: rgba(255,255,255,0.055); }
+      .logo-tile { display: flex; align-items: center; justify-content: center; height: 74px; border-radius: 14px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); overflow: hidden; }
+      .logo-word { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: 0.02em; font-size: 22px; line-height: 1; }
+      .logo-tile img { max-height: 42px; max-width: 82%; object-fit: contain; }
+      .logo-name { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+      .logo-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+      .logo-meta .lm { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 9px; }
+      .logo-card .go { margin-top: auto; font-size: 13.5px; color: rgba(255,255,255,0.72); display: inline-flex; align-items: center; gap: 6px; }
+      .logo-card:hover .go { color: #fff; }
+
+      /* ── year papers ── */
+      .year-row { display: grid; gap: 12px; margin-top: 26px; }
+      .year-card { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 18px 20px; border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; background: rgba(255,255,255,0.03); transition: border-color 0.2s, background 0.2s; }
+      .year-card:hover { border-color: rgba(127,180,255,0.45); background: rgba(255,255,255,0.055); }
+      .year-card .yc-y { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: 30px; line-height: 1; color: #fff; min-width: 92px; }
+      .year-card .yc-info { flex: 1 1 240px; }
+      .year-card .yc-info .t { font-size: 15px; color: #fff; font-weight: 600; }
+      .year-card .yc-info .s { font-size: 13px; color: rgba(255,255,255,0.62); margin-top: 3px; }
+      .year-card .yc-go { font-size: 13.5px; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; padding: 9px 18px; }
+      .year-card:hover .yc-go { background: #fff; color: #000; }
+
+      .pd-table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: 14px; }
+      .pd-table th, .pd-table td { text-align: left; padding: 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.82); }
+      .pd-table th { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+      .ref-list { display: grid; gap: 12px; margin-top: 24px; }
+      .ref-item { padding: 16px 18px; border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; background: rgba(255,255,255,0.03); }
+      .ref-item .rb { font-size: 15px; font-weight: 700; color: #fff; }
+      .ref-item .rw { font-size: 13.5px; color: rgba(255,255,255,0.66); margin-top: 4px; }
+      .ref-item .rn { font-size: 12.5px; color: rgba(255,255,255,0.5); margin-top: 6px; }
+      .ref-item a { color: #9cc4ff; font-size: 13.5px; }
+      .sec-collapse { margin-top: 18px; }
+
+      .rounds { list-style: none; display: grid; gap: 10px; margin-top: 22px; max-width: 900px; }
+      .rounds li { display: flex; gap: 14px; align-items: flex-start; padding: 16px 20px; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; background: rgba(255,255,255,0.03); color: rgba(255,255,255,0.72); font-size: 15px; }
+      .rounds li .rn { font-family: 'DM Mono', monospace; font-size: 12px; color: #7fb4ff; flex-shrink: 0; }
+      .fact-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 30px; }
+      .fact { padding: 20px 22px; }
+      .fact .fk { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
+      .fact .fv { color: rgba(255,255,255,0.78); font-size: 15px; line-height: 1.6; }
+
+      .cta-band { margin-top: 56px; padding: 40px 32px; border: 1px solid rgba(0,100,255,0.3); border-radius: 22px; background: linear-gradient(180deg, rgba(0,87,222,0.1), rgba(0,0,0,0)); text-align: center; }
+      .cta-band h2 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(26px, 3.6vw, 40px); letter-spacing: -0.02em; color: #fff; }
+      .cta-band p { color: rgba(255,255,255,0.58); margin-top: 12px; font-size: 16px; }
+      .cta-band .cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 26px; }
+
+      /* ── mock test player ── */
+      .mt-wrap { max-width: 960px; }
+      .mt-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding: 18px 22px; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; background: rgba(255,255,255,0.04); margin-top: 30px; position: sticky; top: 0; z-index: 40; backdrop-filter: blur(12px); }
+      .mt-timer { font-family: 'DM Mono', monospace; font-size: 20px; color: #7fb4ff; letter-spacing: 0.06em; }
+      .mt-progress { font-size: 14px; color: rgba(255,255,255,0.6); }
+      .mt-q { padding: 26px 28px; margin-top: 18px; }
+      .mt-opts { list-style: none; display: grid; gap: 10px; margin-top: 18px; }
+      .mt-opt { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; cursor: pointer; transition: all 0.2s; min-height: 48px; }
+      .mt-opt:hover { border-color: rgba(127,180,255,0.5); background: rgba(255,255,255,0.04); }
+      .mt-opt input { accent-color: #0064FF; width: 18px; height: 18px; }
+      .mt-opt .ok { color: rgba(255,255,255,0.82); }
+      .mt-opt.correct { border-color: rgba(63,220,140,0.6); background: rgba(63,220,140,0.08); }
+      .mt-opt.wrong { border-color: rgba(255,120,120,0.6); background: rgba(255,120,120,0.07); }
+      .mt-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+      .mt-result { margin-top: 26px; padding: 30px 28px; }
+      .mt-score { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(40px, 7vw, 64px); line-height: 1; color: #fff; }
+      .mt-review { margin-top: 22px; display: grid; gap: 12px; }
+      .mt-note { margin-top: 18px; color: rgba(255,255,255,0.5); font-size: 13.5px; }
+      .mt-empty { color: rgba(255,255,255,0.6); margin-top: 24px; }
+
+      .prep-meta-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+      .prep-meta-strip .m { display: flex; flex-direction: column; gap: 3px; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.09); border-radius: 14px; background: rgba(255,255,255,0.03); min-width: 110px; }
+      .prep-meta-strip .m .k { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+      .prep-meta-strip .m .v { font-weight: 600; font-size: 15px; color: #fff; }
+
+      .nav-siblings { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+      .nav-siblings a { font-size: 13.5px; padding: 10px 16px; border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; color: rgba(255,255,255,0.68); }
+      .nav-siblings a:hover { border-color: rgba(127,180,255,0.6); color: #fff; }
+      .nav-siblings a.on { border-color: rgba(127,180,255,0.6); color: #fff; background: rgba(0,100,255,0.1); }
+
+      .disclaimer { margin-top: 34px; padding: 18px 22px; border: 1px dashed rgba(255,255,255,0.14); border-radius: 14px; color: rgba(255,255,255,0.5); font-size: 13.5px; line-height: 1.7; max-width: 900px; }
+
+      /* Contrast-safe overrides for the shared shell's low-alpha greys. */
+      .prep-hero + .section .section-sub,
+      .section .section-sub { color: rgba(255,255,255,0.62); }
+      .prep-sub { color: rgba(255,255,255,0.62); }
+      .prep-sub, .section-sub, .pc-desc, .pr-note, .qa-answer, .qa-hint, .fact .fv { color: rgba(255,255,255,0.66); }
+
+      /* ── Prep+ mobile refinements ── */
+      @media (max-width: 767px) {
+        .prep-hero { padding-left: 18px; padding-right: 18px; }
+        .prep-card, .prep-row, .qa-item, .mt-q, .mt-result, .fact { padding: 22px 20px; }
+        .qa-q { font-size: 16px; }
+        .qa-opts, .qa-explain, .qa-answer, .qa-hint { margin-left: 0; }
+        .qa-q .qn { padding-top: 2px; }
+        .prep-row .pr-link { width: 100%; }
+        .prep-crumbs { padding-left: 18px; padding-right: 18px; }
+        .mt-bar { position: static; }
+        .mt-actions .btn, .mt-actions .btn-sm { width: 100%; }
+        .prep-ctas .btn { width: 100%; }
+        .nav-siblings a { min-height: 44px; display: inline-flex; align-items: center; }
+        .prep-grid { gap: 14px; }
+      }
+      @media (max-width: 480px) {
+        .prep-h1 { font-size: clamp(30px, 9vw, 44px); }
+        .prep-hero { padding-top: 100px; padding-bottom: 40px; }
+        .mt-timer { font-size: 18px; }
+        .qa-opts { grid-template-columns: 1fr; }
+        .tile-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+      }
+
+      /* ═══ multi-round paper engine ═══ */
+      :root { --logo-tile: 100px; }
+
+      /* ── company roster: white logo tiles ──
+         The PNGs are pre-normalised to an opaque white square canvas by
+         scripts/build-company-logo-tiles.js, so object-fit:contain never crops
+         and every mark has the same optical size. The white artwork fills the
+         tile, which keeps brand colours exact in both themes. Never invert or
+         cover these files. */
+      .roster-grid { display: flex; flex-wrap: wrap; gap: 14px; margin: 34px 0 0; }
+      .roster-card { display: block; width: var(--logo-tile); height: var(--logo-tile); border-radius: 22px; text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+      .roster-card:focus-visible { outline: 2px solid rgba(140,185,255,0.85); outline-offset: 4px; }
+      .rc-mark { position: relative; display: flex; align-items: center; justify-content: center; width: var(--logo-tile); height: var(--logo-tile); border-radius: 22px; overflow: hidden; background: linear-gradient(155deg, rgba(255,255,255,0.11), rgba(255,255,255,0.035)); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 10px 26px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.18); backdrop-filter: blur(18px) saturate(150%); -webkit-backdrop-filter: blur(18px) saturate(150%); transition: transform 0.28s cubic-bezier(0.2,0.9,0.3,1), border-color 0.28s ease, box-shadow 0.28s ease; }
+      .rc-mark::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(125% 95% at 20% 0%, rgba(255,255,255,0.20), rgba(255,255,255,0) 62%); pointer-events: none; }
+      .rc-mark--logo img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; background: #fff; transition: transform 0.3s cubic-bezier(0.2,0.9,0.3,1); }
+      .roster-card:hover .rc-mark { transform: translateY(-5px); border-color: rgba(255,255,255,0.34); box-shadow: 0 22px 44px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.30); }
+      .roster-card:hover .rc-mark--logo img { transform: scale(1.04); }
+      .roster-card:active .rc-mark { transform: translateY(-1px); }
+
+      /* ── sector filter: glass pills ── */
+      .sect-filter { display: flex; flex-wrap: wrap; gap: 10px; margin: 26px 0 0; }
+      .sect-filter button { position: relative; display: inline-flex; align-items: center; gap: 9px; overflow: hidden; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.72); background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035)); border: 1px solid rgba(255,255,255,0.14); border-radius: 999px; padding: 11px 8px 11px 18px; cursor: pointer; min-height: 44px; backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); box-shadow: 0 6px 18px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.16); transition: transform 0.22s cubic-bezier(0.2,0.9,0.3,1), color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease; }
+      .sect-filter button::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(115deg, transparent 22%, rgba(255,255,255,0.24) 48%, transparent 74%); transform: translateX(-130%); transition: transform 0.6s cubic-bezier(0.2,0.9,0.3,1); pointer-events: none; }
+      .sect-filter .sf-n { display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 22px; padding: 0 8px; border-radius: 999px; font-size: 10.5px; letter-spacing: 0.04em; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.14); transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease; }
+      .sect-filter button:hover { color: #fff; border-color: rgba(255,255,255,0.34); transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,0.44), inset 0 1px 0 rgba(255,255,255,0.26); }
+      .sect-filter button:hover::after { transform: translateX(130%); }
+      .sect-filter button:hover .sf-n { background: rgba(255,255,255,0.18); color: #fff; }
+      .sect-filter button:focus-visible { outline: 2px solid rgba(140,185,255,0.85); outline-offset: 3px; }
+      .sect-filter button[aria-pressed="true"] { color: #05070c; background: linear-gradient(160deg, #ffffff, #dde4ef); border-color: rgba(255,255,255,0.85); box-shadow: 0 10px 26px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.22), inset 0 1px 0 rgba(255,255,255,0.9); }
+      .sect-filter button[aria-pressed="true"] .sf-n { color: #05070c; background: rgba(5,7,12,0.10); border-color: rgba(5,7,12,0.14); }
+      .sect-filter button[aria-pressed="true"]::after { display: none; }
+
+      .round-strip { display: grid; gap: 12px; margin-top: 30px; }
+      .round-chip { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 16px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; background: rgba(255,255,255,0.03); }
+      .round-chip .rn-num { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); font-family: 'DM Mono', monospace; font-size: 13px; color: #fff; flex-shrink: 0; }
+      .round-chip.locked { opacity: 0.55; }
+      .round-chip.done .rn-num { background: #fff; color: #000; border-color: #fff; }
+      .round-chip .rn-t { font-weight: 700; color: #fff; font-size: 15px; }
+      .round-chip .rn-s { font-size: 13px; color: rgba(255,255,255,0.6); flex: 1 1 240px; }
+      .round-chip .rn-state { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+
+      .code-editor { width: 100%; min-height: 300px; background: #0b0d12; color: #e8e8e8; border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 16px; font-family: 'DM Mono', monospace; font-size: 13.5px; line-height: 1.6; resize: vertical; tab-size: 2; }
+      .code-editor:focus { outline: 2px solid rgba(127,180,255,0.6); outline-offset: 1px; }
+      .code-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 14px; }
+      .lang-select { background: #0b0d12; color: #fff; border: 1px solid rgba(255,255,255,0.16); border-radius: 10px; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12.5px; min-height: 44px; }
+      .code-out { margin-top: 14px; padding: 16px 18px; border-radius: 12px; background: #0b0d12; border: 1px solid rgba(255,255,255,0.12); font-family: 'DM Mono', monospace; font-size: 12.5px; color: rgba(255,255,255,0.82); white-space: pre-wrap; word-break: break-word; min-height: 48px; }
+      .code-out.ok { border-color: rgba(63,220,140,0.5); }
+      .code-out.bad { border-color: rgba(255,120,120,0.5); }
+
+      .cpu-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; background: #0a0a0a; position: sticky; top: 0; z-index: 40; }
+      /* The bar is sticky, so it must be opaque or the gate heading bleeds
+         through it. Light mode needs a matching solid tint. */
+      html[data-theme="light"] .cpu-bar.cpu-bar { background: #f3f3f1; }
+      /* .btn sets display:inline-flex, which beats the UA [hidden] rule. */
+      .btn[hidden], .pt-submit[hidden] { display: none !important; }
+      .cpu-clock { font-family: 'DM Mono', monospace; font-size: 22px; color: #fff; }
+      .cpu-prog { font-size: 13.5px; color: rgba(255,255,255,0.62); }
+      /* Land below the sticky bar when the gate or the result is scrolled to. */
+      #exam-gate, .result-hero, #cpu { scroll-margin-top: 92px; }
+
+
+      /* ── Post-test lead capture ── */
+      .pt-lead { margin-top: 28px; padding: clamp(22px, 3vw, 32px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); }
+      .pt-lead-head { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+      .pt-lead-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+      .pt-lead-title { font-size: clamp(18px, 2vw, 24px); font-weight: 800; letter-spacing: -0.03em; }
+      .pt-lead-sub { color: rgba(255,255,255,0.62); font-size: 13.5px; line-height: 1.6; max-width: 58ch; }
+      .pt-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .pt-full { grid-column: 1 / -1; }
+      .pt-field { display: flex; flex-direction: column; gap: 6px; }
+      .pt-label { font-size: 11.5px; color: rgba(255,255,255,0.64); }
+      .pt-input, .pt-select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; color: #fff; font-size: 14px; padding: 11px 12px; }
+      .pt-input:focus, .pt-select:focus { outline: none; border-color: rgba(120,170,255,0.9); box-shadow: 0 0 0 3px rgba(0,100,255,0.14); }
+      .pt-input[aria-invalid="true"], .pt-select[aria-invalid="true"] { border-color: #f87171; }
+      .pt-phone { display: flex; align-items: stretch; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; overflow: hidden; background: rgba(255,255,255,0.04); }
+      .pt-phone:focus-within { border-color: rgba(120,170,255,0.9); box-shadow: 0 0 0 3px rgba(0,100,255,0.14); }
+      .pt-phone[data-invalid="true"] { border-color: #f87171; }
+      .pt-prefix { display: flex; align-items: center; padding: 0 10px 0 12px; color: rgba(255,255,255,0.56); border-right: 1px solid rgba(255,255,255,0.1); }
+      .pt-phone .pt-input { border: 0; border-radius: 0; background: transparent; box-shadow: none; padding-left: 10px; }
+      .pt-err { display: none; margin: 0; font-size: 11.5px; color: #fca5a5; }
+      .pt-err.on { display: block; }
+      .pt-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .pt-level { position: relative; }
+      .pt-level input { position: absolute; inset: 0; opacity: 0; }
+      .pt-level span { display: flex; flex-direction: column; gap: 2px; padding: 10px 11px; border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; background: rgba(255,255,255,0.03); font-size: 12.5px; color: rgba(255,255,255,0.76); }
+      .pt-level small { font-family: 'DM Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.5); }
+      .pt-level input:checked + span { border-color: rgba(120,170,255,0.9); background: rgba(0,100,255,0.16); color: #fff; }
+      .pt-submit { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border: 0; border-radius: 999px; padding: 13px 18px; background: #fff; color: #000; font-weight: 600; cursor: pointer; }
+      .pt-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+      .pt-foot { margin: 10px 0 0; text-align: center; font-size: 11.5px; color: rgba(255,255,255,0.5); }
+      .pt-link { background: none; border: 0; color: #fff; text-decoration: underline; cursor: pointer; }
+      .pt-plan { display: grid; gap: 10px; }
+      .pt-plan-item { display: grid; grid-template-columns: 22px 1fr; gap: 12px; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.025); }
+      .pt-plan-item .n { color: #9dc0ff; font-family: 'DM Mono', monospace; font-size: 10px; padding-top: 2px; }
+      .pt-plan-item h4 { margin: 0 0 4px; font-size: 14px; }
+      .pt-plan-item p { margin: 0; color: rgba(255,255,255,0.62); font-size: 12.5px; line-height: 1.6; }
+      .pt-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .pt-ghost { display: inline-flex; align-items: center; justify-content: center; padding: 12px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); color: #fff; text-decoration: none; }
+      @media (max-width: 720px) { .pt-form { grid-template-columns: 1fr; } .pt-levels { grid-template-columns: 1fr; } }
+
+      /* ── signup gate + resume ── */
+      .cpu-resume { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(127,180,255,0.34); background: rgba(60,120,255,0.10); color: rgba(255,255,255,0.84); font-size: 13.5px; line-height: 1.55; }
+      .cpu-resume[hidden] { display: none; }
+      .cpu-resume button { flex-shrink: 0; background: none; border: 1px solid rgba(255,255,255,0.22); color: #fff; border-radius: 999px; padding: 8px 14px; font-size: 12.5px; cursor: pointer; }
+      .cpu-resume button:hover { border-color: rgba(255,255,255,0.45); }
+      .cpu-save { margin: 18px 0 0; font-size: 13px; color: rgba(255,255,255,0.62); }
+      .cpu-save.ok { color: #8fe8b6; }
+      .cpu-save.bad { color: #ff9a9a; }
+      .cpu-sum-sub { margin-top: 10px; color: rgba(255,255,255,0.7); }
+      .cpu-band-text { margin-top: 16px; max-width: 70ch; line-height: 1.65; color: rgba(255,255,255,0.72); }
+      .cpu-disclaimer { margin-top: 22px; font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.5); }
+      .cpu-code-label { color: rgba(255,255,255,0.6); font-size: 13px; }
+      /* Light-mode accents: the dark-theme pastels do not reach AA on white. */
+      html[data-theme="light"] .cpu-sum-sub,
+      html[data-theme="light"] .cpu-band-text { color: rgba(10,10,10,0.72); }
+      html[data-theme="light"] .cpu-disclaimer { color: rgba(10,10,10,0.58); }
+      html[data-theme="light"] .cpu-code-label { color: rgba(10,10,10,0.68); }
+      html[data-theme="light"] .eg-lock { color: #0057de; }
+      html[data-theme="light"] .cpu-save.ok { color: #0f7a44; }
+      html[data-theme="light"] .cpu-save.bad { color: #b42318; }
+      html[data-theme="light"] .band-strong { background: rgba(15,122,68,0.10); border-color: rgba(15,122,68,0.45); color: #0f7a44; }
+      html[data-theme="light"] .band-competitive { background: rgba(0,87,222,0.10); border-color: rgba(0,87,222,0.45); color: #0044b0; }
+      html[data-theme="light"] .band-borderline { background: rgba(150,90,0,0.10); border-color: rgba(150,90,0,0.45); color: #8a5300; }
+      html[data-theme="light"] .band-work { background: rgba(180,35,24,0.10); border-color: rgba(180,35,24,0.45); color: #b42318; }
+      /* A white pill disappears on the light canvas; use the site's primary. */
+      html[data-theme="light"] .pt-submit { background: #0057de; color: #fff; }
+      html[data-theme="light"] .pt-submit:hover { background: #0a63ea; }
+      .eg-lock { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #9dc0ff; }
+
+      .result-hero { margin-top: 26px; padding: 34px 30px; border-radius: 20px; }
+      .result-score { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(46px, 8vw, 74px); line-height: 1; color: #fff; }
+      .result-band { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 9px 18px; border-radius: 999px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
+      .band-strong { background: rgba(63,220,140,0.12); border: 1px solid rgba(63,220,140,0.5); color: #8fe8b6; }
+      .band-competitive { background: rgba(127,180,255,0.12); border: 1px solid rgba(127,180,255,0.5); color: #a8c8ff; }
+      .band-borderline { background: rgba(255,196,96,0.12); border: 1px solid rgba(255,196,96,0.5); color: #ffd28a; }
+      .band-work { background: rgba(255,120,120,0.12); border: 1px solid rgba(255,120,120,0.5); color: #ff9a9a; }
+      .improve-list { display: grid; gap: 10px; margin-top: 18px; }
+      .improve-item { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: baseline; padding: 14px 16px; border: 1px solid rgba(255,255,255,0.09); border-radius: 12px; background: rgba(255,255,255,0.03); }
+      .improve-item .ii-t { font-weight: 700; color: #fff; font-size: 14.5px; }
+      .improve-item .ii-s { color: rgba(255,255,255,0.62); font-size: 13.5px; flex: 1 1 220px; }
+      .improve-item a { color: #9cc4ff; font-size: 13px; }
+
+      @media (max-width: 767px) {
+        .round-chip, .improve-item { padding: 16px; }
+        .cpu-bar { position: static; }
+        #exam-gate, .result-hero, #cpu { scroll-margin-top: 76px; }
+        .code-editor { min-height: 240px; font-size: 13px; }
+        .code-bar .btn { width: 100%; }
+      }
+      @media (max-width: 640px) {
+        :root { --logo-tile: 86px; }
+        .roster-grid { gap: 12px; }
+      }
+
+    </style>
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+  <!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899', { anonymize_ip: true });
+    </script>
+  <noscript><style id="reveal-noscript">.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+  <body>
+    <a class="skip-link" href="#prep-main">Skip to content</a>
+    <div class="app-shell baseline-root" id="app">
+      <aside class="sidebar">
+        <a href="/" class="brand-serif sidebar-brand">thecodingcompany</a>
+        <nav class="sidebar-nav" aria-label="Primary">
+          <a href="/" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5 9.5V21h5v-6h4v6h5V9.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">Home</span></a>
+          <a href="/bootcamps" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6l8-3.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">CERT+</span></a>
+          <a href="/placement" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" stroke-linecap="round"/></svg><span class="label">Placement</span></a>
+          <a href="/100-club" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 21h8m-4-5v5M12 4a5 5 0 0 1 5 5c0 2.1-1.3 3.9-3 4.7V16H10v-2.3c-1.7-.8-3-2.6-3-4.7a5 5 0 0 1 5-5z" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">100 Club</span></a>
+          <a href="/domains" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span class="label">Domains</span></a>
+          <a href="/roadmaps/" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 4v14M15 6v14" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">Roadmaps</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <a href="/webinars" class="sidebar-webinars"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>Webinars</a>
+          <a href="/login" class="btn-login">Member Login</a>
+        </div>
+      </aside>
+
+      <main class="main-scroll" id="prep-main">
+        <header class="mobile-header">
+          <a href="/" class="brand-serif mobile-brand">thecodingcompany</a>
+          <div class="mobile-actions">
+            <a href="/login" class="mobile-login" aria-label="Login"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" stroke-linecap="round"/></svg></a>
+            <button class="mobile-cta" type="button" onclick="window.location.href='/prep+/'">Prep+</button>
+          </div>
+        </header>
+        <div class="content-wrap">
+          <nav class="prep-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/prep+/">Prep+</a><span class="sep">/</span><a href="/prep+/companies/">Companies</a><span class="sep">/</span><a href="/prep+/companies/ola/">Ola</a><span class="sep">/</span><span>2024</span></nav>
+          <section class="prep-hero">
+            <div class="grid-bg" aria-hidden="true"></div>
+            <div class="prep-hero-in reveal">
+              <div class="prep-pill">Ola &middot; 2024 pattern</div>
+              <h1 class="prep-h1">Ola 2024 paper</h1>
+              <p class="prep-sub">2 rounds, 10 tasks, about 55 minutes. Clear each round to unlock the next — the aptitude and technical rounds are scored instantly, and the coding round runs your code for real.</p>
+              <div class="prep-meta-strip">
+                <div class="m"><span class="k">Rounds</span><span class="v">2</span></div>
+                <div class="m"><span class="k">Tasks</span><span class="v">10</span></div>
+                <div class="m"><span class="k">Time</span><span class="v">~55 min</span></div>
+              </div>
+              <div class="prep-ctas">
+                <a class="btn" href="#cpu">Go to the paper</a>
+                <a class="btn btn-ghost" href="/prep+/companies/ola/">Ola rounds</a>
+              </div>
+            </div>
+          </section>
+          <section class="section" style="padding-top:24px">
+            <div class="container">
+              <h2 class="section-title reveal" style="margin-bottom:10px">How this paper works</h2>
+              <p class="section-sub reveal">Rounds unlock in order, the way the real process works. Your score and readiness update at the end of every round.</p>
+              <div class="round-strip" id="round-strip" aria-label="Round progress">
+                <div class="round-chip reveal" data-round="0">
+                  <span class="rn-num">1</span>
+                  <span class="rn-t">Technical Round</span>
+                  <span class="rn-s">Core CS fundamentals — DBMS, OS, networking, OOP, DSA and complexity.</span>
+                  <span class="rn-state">Ready</span>
+                </div>
+                <div class="round-chip reveal locked" data-round="1">
+                  <span class="rn-num">2</span>
+                  <span class="rn-t">Coding Round</span>
+                  <span class="rn-s">Write real code and run it. Graded on the sample test cases shown.</span>
+                  <span class="rn-state">Locked</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section" style="padding-top:8px">
+            <div class="container" id="cpu">
+              <div class="cpu-bar">
+                <span class="cpu-clock" id="cpu-clock">--:--</span>
+                <span class="cpu-prog" id="cpu-prog">Round 1 — Technical Round</span>
+                <button class="btn btn-sm" type="button" id="cpu-next">Start round 1</button>
+              </div>
+              <div class="cpu-resume" id="cpu-resume" hidden></div>
+              <div id="cpu-body" style="margin-top:22px"></div>
+              <div class="result-hero card" id="cpu-result" hidden></div>
+              <p class="mt-note">Everything runs in your browser. Your answers, score and profile are saved on this device, so you can close this tab and pick up where you left off.</p>
+            </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <h2 class="section-title reveal" style="margin-bottom:10px">Other years</h2>
+              <div class="nav-siblings reveal">
+                <a href="/prep+/companies/ola/" class="on">Ola rounds</a>
+                <a href="/prep+/companies/ola/2026/">2026 paper</a>
+                <a href="/prep+/companies/ola/2025/">2025 paper</a>
+                <a href="/prep+/companies/">All companies</a>
+              </div>
+              <div class="disclaimer">Original TCC questions written to Ola&rsquo;s publicly described pattern. Not transcribed company material. Unaffiliated with Ola. The readiness band is a study aid based on your score — it is an estimate, not a prediction of any real hiring outcome.</div>
+            </div>
+          </section>
+      <section class="section">
+        <div class="container">
+          <div class="cta-band reveal">
+            <h2>Practise here. Get placed there.</h2>
+            <p>Prep+ is unlimited practice. When you are ready to turn it into an offer, TCC Placement Partner handles portfolio, resume and interviews.</p>
+            <div class="cta-row">
+              <a class="btn" href="/placement/">See the placement program</a>
+              <a class="btn btn-ghost" href="/bootcamps/">Explore CERT+ certifications</a>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+          <footer class="footer">
+            <div class="footer-brand">
+              <img src="../../../../assets/img/tcc-logo.png" alt="The Coding Company" />
+            </div>
+            <div class="footer-grid">
+              <div class="footer-col">
+                <h3>Certifications</h3>
+                <a href="/bootcamps#catalog">All Certifications</a><a href="/bootcamps#catalog">Foundation</a><a href="/bootcamps#catalog">Practitioner</a><a href="/bootcamps#catalog">Strategist</a><a href="/bootcamps#catalog">Executive</a><a href="/bootcamps#catalog">By Industry</a>
+              </div>
+              <div class="footer-col">
+                <h3>Prepare</h3>
+                <a href="/prep+/aptitude/">Aptitude</a><a href="/prep+/programming/">Programming</a><a href="/prep+/dsa/">DSA</a><a href="/prep+/mcq/">Technical MCQs</a><a href="/prep+/companies/">Company Papers</a><a href="/prep+/mock-tests/">Mock Tests</a>
+              </div>
+              <div class="footer-col">
+                <h3>Careers</h3>
+                <a href="/placement/">Placement Program</a><a href="/ai-courses-for/">AI Courses by Role</a><a href="/bootcamps/">CERT+ Catalog</a><a href="/webinars">Webinars</a><a href="/100-club">100 Club</a>
+              <a href="/worksim/">WorkSim (pilot)</a></div>
+              <div class="footer-col">
+                <h3>Guides</h3>
+                <a href="/blog/how-to-get-ai-internship-2026.html">Get an AI Internship</a><a href="/blog/ai-placement-programs.html">AI Placement Programs</a><a href="/blog/role-based-ai-certifications-vs-generic.html">Role-Based Certifications</a><a href="/blog/">All Guides</a>
+              </div>
+              <div class="footer-col">
+                <h3>Company</h3>
+                <a href="/careers/">Careers</a>
+                <a href="/login">Login</a><a href="/domains">Domains</a><a href="/placement#gigs">Gigs</a><a href="/terms-of-service">Terms of use</a><a href="/privacy-policy">Privacy Policy</a><a href="/refund-policy">Refund Policy</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; <span id="year">2026</span> The Coding Company · Prep+</p>
+              <a href="/privacy-policy">Privacy · Terms</a>
+            </div>
+          </footer>
+      </main>
+      <nav class="bottom-nav" aria-label="Bottom">
+        <div class="bottom-nav-inner">
+          <a href="/" class="bottom-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5 9.5V21h5v-6h4v6h5V9.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Home</span></a>
+          <a href="/bootcamps" class="bottom-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6l8-3.5z" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>CERT+</span></a>
+          <a href="/placement" class="bottom-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" stroke-linecap="round"/></svg><span>Placement</span></a>
+          <a href="/100-club" class="bottom-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M8 21h8m-4-5v5M12 4a5 5 0 0 1 5 5c0 2.1-1.3 3.9-3 4.7V16H10v-2.3c-1.7-.8-3-2.6-3-4.7a5 5 0 0 1 5-5z" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Club</span></a>
+          <a href="/roadmaps/" class="bottom-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 4v14M15 6v14" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Roadmaps</span></a>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      /* Footer year */
+      var __y = document.getElementById('year');
+      if (__y) __y.textContent = new Date().getFullYear();
+
+      /* Scroll reveal — same IntersectionObserver pattern used sitewide,
+         with a scroll/resize fallback for the nested .main-scroll container. */
+      (function () {
+        var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+        if (!items.length) return;
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        items.forEach(function (el) { io.observe(el); });
+        function fallback() {
+          var h = window.innerHeight || document.documentElement.clientHeight;
+          items.forEach(function (el) {
+            if (el.classList.contains('in')) return;
+            var r = el.getBoundingClientRect();
+            if (r.top < h - 40) el.classList.add('in');
+          });
+        }
+        window.addEventListener('scroll', fallback, { passive: true });
+        window.addEventListener('resize', fallback);
+        setTimeout(fallback, 120);
+      })();
+    </script>
+    <script>
+      (function () {
+        var ROUNDS = [{"kind":"tech","name":"Technical Round","blurb":"Core CS fundamentals — DBMS, OS, networking, OOP, DSA and complexity.","minutes":10,"sections":[{"name":"Technical (CS Fundamentals)","topic":"Technical (CS Fundamentals)","questions":[{"q":"Which is true of a stack in recursion?","o":["It is unused","It stores each call frame","It stores heap objects","It stores files"],"a":1,"e":"Each recursive call pushes a frame with its parameters and locals.","t":"Data Structures"},{"q":"What is the worst-case complexity of Quick sort?","o":["O(n log n)","O(n)","O(n²)","O(log n)"],"a":2,"e":"With a consistently poor pivot choice, partitioning degrades to O(n²).","t":"Algorithms"},{"q":"Which data structure best detects whether a string has duplicate characters in one pass?","o":["Stack","Hash set","Queue","Binary tree"],"a":1,"e":"A hash set gives O(1) membership checks, so one pass suffices.","t":"Data Structures"},{"q":"What is memoisation?","o":["Caching results of subproblems","Writing documentation","Compressing code","Freeing memory"],"a":0,"e":"Memoisation stores subproblem results so they are not recomputed — the core of dynamic programming.","t":"Algorithms"},{"q":"Which of these is an ACID property of a transaction?","o":["Atomicity","Availability","Agility","Asynchrony"],"a":0,"e":"ACID is atomicity, consistency, isolation, durability.","t":"DBMS"},{"q":"What does the CAP theorem trade off?","o":["Speed, size, cost","Consistency, availability, partition tolerance","Reads, writes, storage","Latency, throughput, jitter"],"a":1,"e":"A distributed system can fully guarantee only two of consistency, availability and partition tolerance.","t":"Systems"},{"q":"What is the output of a post-order tree traversal?","o":["Root first","Left, right, root","Root, left, right","Left, root, right"],"a":1,"e":"Post-order visits left subtree, right subtree, then the root — used for deletions.","t":"Data Structures"},{"q":"What is the space complexity of storing an n x n matrix?","o":["O(n)","O(n log n)","O(n²)","O(2ⁿ)"],"a":2,"e":"An n x n matrix holds n² elements.","t":"Complexity"}]}]},{"kind":"code","name":"Coding Round","blurb":"Write real code and run it. Graded on the sample test cases shown.","minutes":45,"problems":[{"id":"valid-parentheses","title":"Balanced brackets","difficulty":"Easy","topic":"Stack","statement":"Given a string containing just the characters (, ), {, }, [ and ], decide whether the brackets are balanced and correctly nested.","examples":[{"input":"s = \"()[]{}\"","output":"true","why":"Every opening bracket is closed by the matching type in order."}],"approach":"Push each opening bracket onto a stack. On a closing bracket, the top of the stack must be its matching opener, which you then pop. At the end the stack must be empty.","complexity":"Time O(n), space O(n)","goal":"Return false for an empty-stack close, like \")\" or \"(]\".","cases":[{"input":"()[]{}","output":"true"},{"input":"(]","output":"false"},{"input":"([)]","output":"false"}],"starter":{"python":"def is_valid(s):\n    pairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []\n    for ch in s:\n        if ch in \"([{\":\n            stack.append(ch)\n        else:\n            if not stack or stack.pop() != pairs[ch]:\n                return False\n    return not stack\n\nprint(is_valid(\"()[]{}\"))","javascript":"function isValid(s) {\n  const pairs = { \")\": \"(\", \"]\": \"[\", \"}\": \"{\" };\n  const stack = [];\n  for (const ch of s) {\n    if (\"([{\".includes(ch)) stack.push(ch);\n    else if (stack.pop() !== pairs[ch]) return false;\n  }\n  return stack.length === 0;\n}\nconsole.log(isValid(\"()[]{}\"));","java":"import java.util.*;\npublic class Main {\n  public static boolean valid(String s){\n    Map<Character,Character> p=new HashMap<>();\n    p.put(')','('); p.put(']','['); p.put('}','{');\n    Deque<Character> st=new ArrayDeque<>();\n    for(char c:s.toCharArray()){\n      if(\"([{\".indexOf(c)>=0) st.push(c);\n      else if(st.isEmpty()||st.pop()!=p.get(c)) return false;\n    }\n    return st.isEmpty();\n  }\n  public static void main(String[] x){ System.out.println(valid(\"()[]{}\")); }\n}","cpp":"#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n  string s=\"()[]{}\"; stack<char> st; bool ok=true;\n  for(char c:s){\n    if(c=='('||c=='['||c=='{') st.push(c);\n    else { if(st.empty()){ok=false;break;} char t=st.top(); st.pop();\n      if((c==')'&&t!='(')||(c==']'&&t!='[')||(c=='}'&&t!='{')){ok=false;break;} }\n  }\n  cout<<((ok&&st.empty())?\"true\":\"false\");\n}"}},{"id":"reverse-string","title":"Reverse a string in place","difficulty":"Easy","topic":"Two pointers","statement":"Given a string (as an array of characters), reverse it in place using O(1) extra space and return the result.","examples":[{"input":"s = \"hello\"","output":"\"olleh\"","why":"Swapping from both ends inward reverses the string."}],"approach":"Use two pointers, one at each end. Swap the characters and move both inward until they meet. No extra array is needed.","complexity":"Time O(n), space O(1)","goal":"Do not allocate a second string of length n.","cases":[{"input":"hello","output":"olleh"},{"input":"abcd","output":"dcba"},{"input":"x","output":"x"}],"starter":{"python":"def reverse_string(s):\n    s = list(s)\n    i, j = 0, len(s) - 1\n    while i < j:\n        s[i], s[j] = s[j], s[i]\n        i, j = i + 1, j - 1\n    return \"\".join(s)\n\nprint(reverse_string(\"hello\"))","javascript":"function reverseString(s) {\n  const a = s.split(\"\");\n  let i = 0, j = a.length - 1;\n  while (i < j) { [a[i], a[j]] = [a[j], a[i]]; i++; j--; }\n  return a.join(\"\");\n}\nconsole.log(reverseString(\"hello\"));","java":"public class Main {\n  public static String reverse(String s) {\n    char[] a = s.toCharArray();\n    int i = 0, j = a.length - 1;\n    while (i < j) { char t = a[i]; a[i] = a[j]; a[j] = t; i++; j--; }\n    return new String(a);\n  }\n  public static void main(String[] x){ System.out.println(reverse(\"hello\")); }\n}","cpp":"#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n  string s=\"hello\";\n  int i=0,j=s.size()-1;\n  while(i<j) swap(s[i++],s[j--]);\n  cout<<s;\n}"}}]}];
+        var COMPANY = "Ola";
+        var COMPANY_ID = "ola";
+        var YEAR = "2024";
+
+        /* The signup gate sits after this section of this round. Section 0 of
+           round 0 is Numerical Ability (8 questions); move GATE.section to -1 to
+           gate at the end of the whole round instead. */
+        var GATE = { round: 0, section: 0 };
+
+        var STORE_KEY = 'tcc_exam_' + COMPANY_ID + '_' + YEAR;
+        var ATTEMPT_KEY = 'tcc_exam_attempts_' + COMPANY_ID + '_' + YEAR;
+        var PROFILE = null;          /* {leadId,name,email,phone,college,studyYear} */
+        var ATTEMPT = 1;
+        var RESTORE = null;
+        var STARTED_AT = Date.now();
+        var UTM = (function () {
+          var q = {};
+          try { new URLSearchParams(location.search).forEach(function (v, k) { q[k] = v; }); } catch (e) {}
+          return q;
+        })();
+
+        var clock = document.getElementById('cpu-clock');
+        var prog = document.getElementById('cpu-prog');
+        var bodyEl = document.getElementById('cpu-body');
+        var resultEl = document.getElementById('cpu-result');
+        var nextBtn = document.getElementById('cpu-next');
+
+        /* state */
+        var current = 0;               // index of the active round
+        var results = [];              // per-round result objects
+        var timer = null;
+        var remaining = 0;
+
+        function fmt(s) {
+          var m = Math.floor(s / 60), x = s % 60;
+          return (m < 10 ? '0' : '') + m + ':' + (x < 10 ? '0' : '') + x;
+        }
+        function esc(s) {
+          return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        /* ── shared helpers ────────────────────────────────────────────── */
+        function $(id) { return document.getElementById(id); }
+        function escv(sv) {
+          return String(sv == null ? '' : sv).replace(/[&<>"']/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+          });
+        }
+        function postJson(url, body) {
+          return fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+          }).then(function (res) {
+            var ct = (res.headers.get('content-type') || '').toLowerCase();
+            if (ct.indexOf('application/json') === -1) {
+              var no = res.status === 404 || res.status === 405 || res.status === 501;
+              var err = new Error(no ? 'offline' : 'Server error (' + res.status + ')');
+              err.offline = no;
+              throw err;
+            }
+            return res.json().then(function (data) {
+              if (!res.ok) { var e = new Error(data.error || 'Something went wrong.'); e.status = res.status; throw e; }
+              return data;
+            });
+          }, function () { var err = new Error('offline'); err.offline = true; throw err; });
+        }
+
+        /* ── persistence ───────────────────────────────────────────────── */
+        function storeGet(key) { try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; } }
+        function storeSet(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+        function storeDel(key) { try { localStorage.removeItem(key); } catch (e) {} }
+
+        /* Each tab claims the save slot when it boots. If another tab has
+           written more recently, this one stands down instead of clobbering
+           the newer progress (e.g. a finished paper in the other tab). */
+        var TAB_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
+        var LAST_WRITE = 0;
+
+        function saveState(extra) {
+          var s = storeGet(STORE_KEY) || {};
+          if (s.tab && s.tab !== TAB_ID && (s.updated || 0) > LAST_WRITE) return;
+          s.v = 1;
+          s.company = COMPANY_ID;
+          s.year = YEAR;
+          s.tab = TAB_ID;
+          s.profile = PROFILE;
+          s.results = results;
+          s.current = current;
+          s.phase = phase;
+          s.attempt = ATTEMPT;
+          s.remaining = remaining;
+          s.startedAt = STARTED_AT;
+          s.updated = Date.now();
+          LAST_WRITE = s.updated;
+          if (extra) Object.keys(extra).forEach(function (k) { s[k] = extra[k]; });
+          storeSet(STORE_KEY, s);
+        }
+
+        /* ── clock (pausable, resumes the remaining time) ───────────────── */
+        var clockPaused = false;
+        var tickSave = 0;
+        function startClock(minutes, resumeSeconds) {
+          if (timer) clearInterval(timer);
+          clockPaused = false;
+          remaining = (typeof resumeSeconds === 'number' && resumeSeconds > 0) ? resumeSeconds : minutes * 60;
+          clock.textContent = fmt(remaining);
+          timer = setInterval(function () {
+            if (clockPaused) return;
+            remaining--;
+            if (remaining <= 0) { remaining = 0; clock.textContent = fmt(0); autoSubmit(); return; }
+            clock.textContent = fmt(remaining);
+            if (++tickSave % 5 === 0) saveState();
+          }, 1000);
+        }
+        function stopClock() { if (timer) clearInterval(timer); timer = null; }
+        function pauseClock() { clockPaused = true; }
+        function resumeClock() { clockPaused = false; }
+
+        var autoSubmitFn = null;
+        function autoSubmit() { if (autoSubmitFn) autoSubmitFn(); }
+
+        /* How many questions into a round the gate sits, or -1 for no gate. */
+        function gatePointFor(roundIndex) {
+          if (roundIndex !== GATE.round || GATE.section < 0) return -1;
+          var round = ROUNDS[roundIndex];
+          if (!round || round.kind === 'code' || !round.sections) return -1;
+          var total = 0, n = 0;
+          round.sections.forEach(function (s) { total += s.questions.length; });
+          for (var i = 0; i <= GATE.section && i < round.sections.length; i++) n += round.sections[i].questions.length;
+          if (n <= 0 || n >= total) return -1;   /* gate at the end of the round instead */
+          return n;
+        }
+
+        /* ── MCQ round (aptitude or technical) ─────────────────────────── */
+        function renderMcq(round) {
+          var flat = [];
+          round.sections.forEach(function (sec) {
+            sec.questions.forEach(function (q) { flat.push({ q: q.q, o: q.o, a: q.a, e: q.e, t: sec.name }); });
+          });
+          var restore = (RESTORE && RESTORE.current === current) ? RESTORE : null;
+          var idx = (restore && typeof restore.idx === 'number') ? Math.min(Math.max(restore.idx, 0), flat.length - 1) : 0;
+          var answers = (restore && restore.answers && restore.answers.length === flat.length)
+            ? restore.answers
+            : new Array(flat.length).fill(null);
+          var gateAt = gatePointFor(current);
+
+          function persist() { saveState({ idx: idx, answers: answers }); }
+
+          function paint() {
+            if (gateAt > 0 && !PROFILE && idx >= gateAt) { showGate({ mode: 'mid', idx: gateAt, answers: answers }); return; }
+            var q = flat[idx];
+            prog.textContent = 'Round ' + (current + 1) + ' — ' + round.name + ' · Q' + (idx + 1) + '/' + flat.length;
+            var html = '<div class="card mt-q"><div class="qa-q"><span class="qn">' + String(idx + 1).padStart(2, '0') +
+              '</span><span>' + esc(q.q) + '</span><span class="tag easy" style="white-space:nowrap">' + esc(q.t) + '</span></div><ul class="mt-opts">';
+            q.o.forEach(function (opt, oi) {
+              var sel = answers[idx] === oi ? ' checked' : '';
+              html += '<li class="mt-opt"><label style="display:flex;gap:12px;align-items:center;width:100%;cursor:pointer">' +
+                '<input type="radio" name="cpu-opt" value="' + oi + '"' + sel + ' /><span class="ok">' +
+                esc(String.fromCharCode(65 + oi)) + '. ' + esc(opt) + '</span></label></li>';
+            });
+            html += '</ul><div class="mt-actions">' +
+              '<button class="btn btn-ghost btn-sm" type="button" id="cpu-prev"' + (idx === 0 ? ' disabled' : '') + '>Previous</button>' +
+              '<button class="btn btn-sm" type="button" id="cpu-qnext">' + (idx === flat.length - 1 ? 'Finish round' : 'Next') + '</button></div></div>';
+            bodyEl.innerHTML = html;
+            bodyEl.querySelectorAll('input[name="cpu-opt"]').forEach(function (r) {
+              r.addEventListener('change', function () { answers[idx] = parseInt(r.value, 10); persist(); });
+            });
+            var p = document.getElementById('cpu-prev');
+            if (p) p.addEventListener('click', function () { if (idx > 0) { idx--; paint(); persist(); } });
+            document.getElementById('cpu-qnext').addEventListener('click', function () {
+              if (idx < flat.length - 1) {
+                if (gateAt > 0 && !PROFILE && idx + 1 === gateAt) { persist(); showGate({ mode: 'mid', idx: gateAt, answers: answers }); return; }
+                idx++; paint(); persist();
+              } else { finishMcq(round, flat, answers); }
+            });
+          }
+          autoSubmitFn = function () { finishMcq(round, flat, answers); };
+          paint();
+        }
+
+        function finishMcq(round, flat, answers) {
+          stopClock();
+          var byTopic = {};
+          var correct = 0;
+          flat.forEach(function (q, i) {
+            var ok = answers[i] === q.a;
+            if (ok) correct++;
+            if (!byTopic[q.t]) byTopic[q.t] = { c: 0, t: 0 };
+            byTopic[q.t].t++;
+            if (ok) byTopic[q.t].c++;
+          });
+          results.push({
+            kind: round.kind,
+            name: round.name,
+            correct: correct,
+            total: flat.length,
+            pct: Math.round((correct / flat.length) * 100),
+            byTopic: byTopic
+          });
+          bodyEl.innerHTML = '';
+          roundComplete();
+          prog.textContent = 'Round ' + (current + 1) + ' complete — ' + correct + '/' + flat.length + ' (' + Math.round((correct / flat.length) * 100) + '%)';
+          clock.textContent = 'done';
+          showRoundSummary(round, correct, flat.length, byTopic);
+          saveState({ idx: null, answers: null });
+          unlockNextChip();
+        }
+
+        function showRoundSummary(round, correct, total, byTopic) {
+          var rows = Object.keys(byTopic).map(function (k) {
+            return '<tr><td>' + esc(k) + '</td><td>' + byTopic[k].c + ' / ' + byTopic[k].t + '</td></tr>';
+          }).join('');
+          resultEl.hidden = false;
+          resultEl.innerHTML = '<div class="result-score">' + correct + ' / ' + total + '</div>' +
+            '<p class="cpu-sum-sub">' + round.name + ' complete — ' + Math.round((correct / total) * 100) + '%.</p>' +
+            '<table class="pd-table"><thead><tr><th>Section</th><th>Score</th></tr></thead><tbody>' + rows + '</tbody></table>';
+          resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /* ── coding round ──────────────────────────────────────────────── */
+        function renderCode(round) {
+          var restore = (RESTORE && RESTORE.current === current) ? RESTORE : null;
+          var pIdx = (restore && typeof restore.pIdx === 'number') ? Math.min(Math.max(restore.pIdx, 0), round.problems.length - 1) : 0;
+          var solutions = (restore && restore.solutions) ? restore.solutions : {};
+
+          function paint() {
+            var p = round.problems[pIdx];
+            prog.textContent = 'Round ' + (current + 1) + ' — ' + round.name + ' · Problem ' + (pIdx + 1) + '/' + round.problems.length;
+            var lang = 'python';
+            var html =
+              '<div class="card" style="padding:26px">' +
+              '<div class="pc-eyebrow" style="font-family:\'DM Mono\',monospace;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.45)">' +
+                esc(p.difficulty) + ' · ' + esc(p.topic) + '</div>' +
+              '<h3 style="font-size:20px;font-weight:700;color:#fff;margin-top:8px">' + esc(p.title) + '</h3>' +
+              '<p style="color:rgba(255,255,255,0.7);font-size:15px;line-height:1.65;margin-top:12px">' + esc(p.statement) + '</p>' +
+              '<div class="qa-explain" style="margin-top:16px"><strong>Example.</strong> Input: <code>' + esc(p.examples[0].input) +
+                '</code> → Output: <code>' + esc(p.examples[0].output) + '</code>. ' + esc(p.examples[0].why) + '</div>' +
+              '<div class="qa-explain" style="margin-top:10px"><strong>Approach.</strong> ' + esc(p.approach) + ' <em>' + esc(p.complexity) + '</em>.</div>' +
+              '<div class="code-bar">' +
+                '<label for="cpu-lang" class="cpu-code-label">Language</label>' +
+                '<select class="lang-select" id="cpu-lang">' +
+                  '<option value="python">Python</option><option value="javascript">JavaScript</option>' +
+                  '<option value="java">Java</option><option value="cpp">C++</option>' +
+                '</select>' +
+                '<button class="btn btn-sm" type="button" id="cpu-run">Run on test cases</button>' +
+                '<button class="btn btn-ghost btn-sm" type="button" id="cpu-nextq">' +
+                  (pIdx === round.problems.length - 1 ? 'Finish coding round' : 'Next problem') +
+                '</button>' +
+              '</div>' +
+              '<label for="cpu-code" class="cpu-code-label" style="display:block;margin-top:16px">Your code</label>' +
+              '<textarea class="code-editor" id="cpu-code" spellcheck="false" aria-label="Code editor">' + esc(p.starter.python) + '</textarea>' +
+              '<div class="code-out" id="cpu-out">Run your code to check it against the test cases below.</div>' +
+              '<h4 style="margin-top:20px;color:#fff;font-size:15px">Sample test cases</h4>' +
+              '<table class="pd-table"><thead><tr><th>Input</th><th>Expected output</th></tr></thead><tbody>' +
+                p.cases.map(function (tc) { return '<tr><td><code>' + esc(tc.input) + '</code></td><td><code>' + esc(tc.output) + '</code></td></tr>'; }).join('') +
+              '</tbody></table>' +
+              '</div>';
+            bodyEl.innerHTML = html;
+
+            var ta = document.getElementById('cpu-code');
+            solutions[p.id] = solutions[p.id] || {};
+            if (!solutions[p.id].code) solutions[p.id].code = { python: p.starter.python, javascript: p.starter.javascript, java: p.starter.java, cpp: p.starter.cpp };
+            var sel = document.getElementById('cpu-lang');
+            var savedLang = solutions[p.id].lang || lang;
+            sel.value = savedLang;
+            ta.value = solutions[p.id].code[savedLang];
+            sel.addEventListener('change', function () {
+              solutions[p.id].code[savedLang] = ta.value;
+              savedLang = sel.value;
+              solutions[p.id].lang = savedLang;
+              ta.value = solutions[p.id].code[savedLang];
+              saveState({ pIdx: pIdx, solutions: solutions });
+            });
+            ta.addEventListener('input', function () {
+              solutions[p.id].code[savedLang] = ta.value;
+              saveState({ pIdx: pIdx, solutions: solutions });
+            });
+
+            document.getElementById('cpu-run').addEventListener('click', function () {
+              runCode(p, sel.value, ta.value);
+            });
+            document.getElementById('cpu-nextq').addEventListener('click', function () {
+              solutions[p.id].attempted = true;
+              nextProblem();
+            });
+          }
+
+          function nextProblem() {
+            if (pIdx < round.problems.length - 1) { pIdx++; paint(); saveState({ pIdx: pIdx, solutions: solutions }); }
+            else { finishCode(round, solutions); }
+          }
+
+          /* Compare against the expected output the same way for both the live
+             and the offline path, so the score means the same thing either way:
+             an exact match, or a whitespace-insensitive match. */
+          function outputMatches(got, expected) {
+            got = String(got).trim();
+            expected = String(expected).trim();
+            if (got === expected) return true;
+            return got.replace(/s+/g, '') === expected.replace(/s+/g, '');
+          }
+
+          /* Live execution endpoints, tried in order. The first is the public
+             Piston API; if it is blocked, rate-limited or down we fall through
+             to the offline grader rather than leaving the round ungraded. */
+          var RUN_ENDPOINTS = [
+            'https://emkc.org/api/v2/piston/execute'
+          ];
+
+          function runCode(p, lang, code) {
+            var out = document.getElementById('cpu-out');
+            var tc = p.cases[0];
+            out.className = 'code-out';
+            out.textContent = 'Running…';
+
+            var pistonLang = { python: 'python', javascript: 'javascript', java: 'java', cpp: 'c++' }[lang] || 'python';
+            var payload = {
+              language: pistonLang,
+              version: '*',
+              files: [{ name: guessFile(lang), content: code }],
+              stdin: tc.input,
+              compile_timeout: 10000,
+              run_timeout: 8000
+            };
+
+            tryLive(0);
+
+            function tryLive(i) {
+              if (i >= RUN_ENDPOINTS.length) { offlineCheck(p, tc); return; }
+              var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+              var to = ctrl ? setTimeout(function () { ctrl.abort(); }, 8000) : null;
+              fetch(RUN_ENDPOINTS[i], {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+                signal: ctrl ? ctrl.signal : undefined
+              }).then(function (r) {
+                if (to) clearTimeout(to);
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+              }).then(function (data) {
+                var run = data && data.run;
+                var stdout = (run && run.stdout) ? String(run.stdout).trim() : '';
+                var stderr = (run && run.stderr) ? String(run.stderr).trim() : '';
+                if (stderr && !stdout) {
+                  out.className = 'code-out bad';
+                  out.textContent = 'Runtime error:\n' + stderr;
+                  return;
+                }
+                var expected = tc.output.trim();
+                var ok = outputMatches(stdout, expected);
+                out.className = 'code-out ' + (ok ? 'ok' : 'bad');
+                out.textContent = (ok ? '✓ Matches expected output on the first test case.\n\n' : '✗ Output differs from expected.\n\n') +
+                  'Your output:\n' + (stdout || '(empty)') + '\n\nExpected:\n' + expected;
+                solutions[p.id].passed = ok || solutions[p.id].passed;
+              }).catch(function () {
+                if (to) clearTimeout(to);
+                tryLive(i + 1);
+              });
+            }
+          }
+
+          /* Offline grader: the learner runs their code wherever they like and
+             pastes the output here. We score it with the same comparison the
+             live path uses, so the round is never a dead end and the score is
+             still honest. */
+          function offlineCheck(p, tc) {
+            var out = document.getElementById('cpu-out');
+            out.className = 'code-out';
+            out.innerHTML =
+              'Live execution is unavailable right now, so this round is graded offline.\n\n' +
+              'Run your code on this input:\n' + esc(tc.input) + '\n\n' +
+              'Paste what your program printed, and it will be scored against the expected output:\n';
+            var box = document.createElement('textarea');
+            box.className = 'code-editor';
+            box.style.minHeight = '90px';
+            box.setAttribute('aria-label', 'Paste your program output');
+            box.value = solutions[p.id] && solutions[p.id].pasted ? solutions[p.id].pasted : '';
+            var check = document.createElement('button');
+            check.type = 'button';
+            check.className = 'btn btn-sm';
+            check.style.marginTop = '12px';
+            check.textContent = 'Score my output';
+            out.appendChild(box);
+            out.appendChild(check);
+            check.addEventListener('click', function () {
+              var got = box.value;
+              solutions[p.id].pasted = got;
+              var ok = outputMatches(got, tc.output);
+              solutions[p.id].passed = ok || solutions[p.id].passed;
+              out.className = 'code-out ' + (ok ? 'ok' : 'bad');
+              out.textContent = (ok ? '✓ Correct — that matches the expected output.\n\n' : '✗ Not quite.\n\n') +
+                'Your output:\n' + (got.trim() || '(empty)') + '\n\nExpected:\n' + tc.output.trim();
+            });
+          }
+
+          function guessFile(lang) {
+            return { python: 'main.py', javascript: 'main.js', java: 'Main.java', cpp: 'main.cpp' }[lang] || 'main.py';
+          }
+
+          autoSubmitFn = function () { finishCode(round, solutions); };
+          paint();
+        }
+
+        function finishCode(round, solutions) {
+          stopClock();
+          var passed = 0;
+          round.problems.forEach(function (p) { if (solutions[p.id] && solutions[p.id].passed) passed++; });
+          results.push({
+            kind: 'code',
+            name: round.name,
+            correct: passed,
+            total: round.problems.length,
+            pct: Math.round((passed / round.problems.length) * 100),
+            byTopic: {}
+          });
+          bodyEl.innerHTML = '';
+          roundComplete();
+          prog.textContent = 'Round ' + (current + 1) + ' complete — ' + passed + '/' + round.problems.length + ' coding problems passed';
+          clock.textContent = 'done';
+          saveState({ pIdx: null, solutions: null });
+          unlockNextChip();
+        }
+
+        /* ── progress chips ────────────────────────────────────────────── */
+        function unlockNextChip() {
+          var chips = document.querySelectorAll('.round-chip');
+          if (chips[current]) { chips[current].classList.remove('locked'); chips[current].classList.add('done'); var st = chips[current].querySelector('.rn-state'); if (st) st.textContent = 'Done'; }
+          if (chips[current + 1]) { chips[current + 1].classList.remove('locked'); var st2 = chips[current + 1].querySelector('.rn-state'); if (st2) st2.textContent = 'Ready'; }
+        }
+
+        /* ── final result + readiness report ───────────────────────────── */
+        function showFinal(silent) {
+          stopClock();
+          nextBtn.hidden = true;
+          clock.textContent = 'done';
+          prog.textContent = 'Paper complete';
+
+          var mcqCorrect = 0, mcqTotal = 0, codeCorrect = 0, codeTotal = 0;
+          var byTopic = {};
+          results.forEach(function (r) {
+            if (r.kind === 'code') { codeCorrect += r.correct; codeTotal += r.total; }
+            else {
+              mcqCorrect += r.correct; mcqTotal += r.total;
+              Object.keys(r.byTopic).forEach(function (k) {
+                if (!byTopic[k]) byTopic[k] = { c: 0, t: 0 };
+                byTopic[k].c += r.byTopic[k].c; byTopic[k].t += r.byTopic[k].t;
+              });
+            }
+          });
+          var totalCorrect = mcqCorrect + codeCorrect;
+          var totalTasks = mcqTotal + codeTotal;
+          var pct = totalTasks ? Math.round((totalCorrect / totalTasks) * 100) : 0;
+
+          var band, bandCls, bandText;
+          if (pct >= 75) { band = 'Strong'; bandCls = 'band-strong'; bandText = 'You are scoring at a level that typically clears the first filter at this pattern. Keep the pace and push accuracy higher.'; }
+          else if (pct >= 60) { band = 'Competitive'; bandCls = 'band-competitive'; bandText = 'You are in the competitive range. Sharpening the weaker sections below should move you comfortably past the cut.'; }
+          else if (pct >= 45) { band = 'Borderline'; bandCls = 'band-borderline'; bandText = 'You are close but not safe. The topics below are costing you the most marks — target those first.'; }
+          else { band = 'Needs work'; bandCls = 'band-work'; bandText = 'The fundamentals need more time before the real test. Work through the weak topics below, then retake this paper.'; }
+
+          var weak = Object.keys(byTopic).map(function (k) {
+            return { name: k, c: byTopic[k].c, t: byTopic[k].t, pct: Math.round((byTopic[k].c / byTopic[k].t) * 100) };
+          }).sort(function (a, b) { return a.pct - b.pct; }).slice(0, 5);
+
+          var improve = weak.map(function (w) {
+            return '<div class="improve-item"><span class="ii-t">' + esc(w.name) + '</span>' +
+              '<span class="ii-s">You scored ' + w.c + '/' + w.t + ' (' + w.pct + '%). ' + (w.pct < 50 ? 'This is your biggest gap — revise it first.' : 'A little revision here will lift your total.') + '</span>' +
+              '<a href="/prep+/aptitude/">Practise &rarr;</a></div>';
+          }).join('');
+
+          resultEl.hidden = false;
+          resultEl.innerHTML =
+            '<div class="result-score">' + totalCorrect + ' / ' + totalTasks + '</div>' +
+            '<div class="result-band ' + bandCls + '">' + band + ' · ' + pct + '%</div>' +
+            '<p class="cpu-band-text">' + bandText + '</p>' +
+            '<table class="pd-table" style="margin-top:22px"><thead><tr><th>Round</th><th>Score</th></tr></thead><tbody>' +
+              results.map(function (r) { return '<tr><td>' + esc(r.name) + '</td><td>' + r.correct + ' / ' + r.total + ' (' + r.pct + '%)</td></tr>'; }).join('') +
+              '<tr><td><strong>Overall</strong></td><td><strong>' + totalCorrect + ' / ' + totalTasks + '</strong></td></tr>' +
+            '</tbody></table>' +
+            (improve ? '<h3 style="color:#fff;font-size:17px;margin-top:28px">Where to improve</h3><div class="improve-list">' + improve + '</div>' : '') +
+            '<p class="cpu-disclaimer">This readiness band is a study aid based on your score on TCC Prep+ questions written to the ' + esc(COMPANY) + ' pattern. It is an estimate of where you are, not a prediction of any hiring decision.</p>' +
+            '<div class="mt-actions"><button class="btn btn-sm" type="button" id="cpu-again">Retake paper</button>' +
+            '<a class="btn btn-ghost btn-sm" href="/prep+/companies/' + COMPANY_ID + '/">Back to ' + esc(COMPANY) + '</a></div>' +
+            '<p class="cpu-save" id="cpu-save">Saving your score...</p>';
+
+          var again = document.getElementById('cpu-again');
+          if (again) again.addEventListener('click', resetPaper);
+          var alreadySaved = !!(RESTORE && RESTORE.submitted);
+          saveState({ complete: true, idx: null, answers: null, pIdx: null, solutions: null });
+          if (alreadySaved) {
+            var savedEl = document.getElementById('cpu-save');
+            if (savedEl) { savedEl.className = 'cpu-save ok'; savedEl.textContent = 'Score saved to your profile.'; }
+          } else {
+            submitScore(pct, band, function () { saveState({ submitted: true }); });
+          }
+          if (!silent) resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /* ── round sequencing ──────────────────────────────────────────── */
+        /* One handler, one meaning per state:
+             idle    -> start round 0
+             running -> current round's own controls advance it (nothing here)
+             between -> advance to the next round, or show the final result */
+        var phase = 'idle';
+
+        function startRound(i, resumeSeconds) {
+          var resumed = typeof resumeSeconds === 'number';
+          current = i;
+          phase = 'running';
+          var round = ROUNDS[i];
+          resultEl.hidden = true;
+          nextBtn.hidden = true;
+          prog.textContent = 'Round ' + (i + 1) + ' — ' + round.name;
+          startClock(round.minutes, resumeSeconds);
+          if (!resumed) RESTORE = null;
+          if (round.kind === 'code') renderCode(round);
+          else renderMcq(round);
+          if (!resumed) saveState({ idx: 0, answers: null, pIdx: 0, solutions: null });
+        }
+
+        nextBtn.addEventListener('click', function () {
+          if (phase === 'idle') { STARTED_AT = Date.now(); startRound(0); return; }
+          if (phase !== 'between') return;            /* ignore mid-round clicks */
+          if (current === GATE.round && !PROFILE) { showGate({ mode: 'between' }); return; }
+          if (current < ROUNDS.length - 1) startRound(current + 1);
+          else showFinal();
+        });
+
+        /* A round has finished: park on a "between" state so the next click
+           advances cleanly, and relabel the button. */
+        function roundComplete() {
+          phase = 'between';
+          nextBtn.hidden = false;
+          nextBtn.textContent = current === ROUNDS.length - 1
+            ? 'See final result'
+            : (current === GATE.round && !PROFILE ? 'Save your place to continue' : 'Continue to ' + ROUNDS[current + 1].name);
+        }
+
+        nextBtn.textContent = 'Start round 1';
+
+        /* ── signup gate ───────────────────────────────────────────────── */
+        var gatePending = null;
+
+        function gateMarkup(sectionName) {
+          var years = ['1st year', '2nd year', '3rd year', '4th year', '5th year / integrated'];
+          return '<section class="pt-lead" id="exam-gate" style="margin-top:0">' +
+            '<div class="pt-lead-head">' +
+              '<span class="eg-lock">Section complete · save your place</span>' +
+              '<h3 class="pt-lead-title">Unlock the rest of the ' + esc(COMPANY) + ' paper</h3>' +
+              '<p class="pt-lead-sub">You finished ' + esc(sectionName) + '. Add your details to continue — your answers and score are saved against them, so you can close this tab and pick up where you left off.</p>' +
+            '</div>' +
+            '<div id="eg-form-wrap">' +
+              '<form class="pt-form" id="egForm" novalidate>' +
+                '<div class="pt-field pt-full"><label class="pt-label" for="eg-name">Full name</label>' +
+                  '<input class="pt-input" id="eg-name" type="text" autocomplete="name" placeholder="Your name" aria-describedby="eg-name-err"><p class="pt-err" id="eg-name-err"></p></div>' +
+                '<div class="pt-field"><label class="pt-label" for="eg-email">Email</label>' +
+                  '<input class="pt-input" id="eg-email" type="email" autocomplete="email" placeholder="you@college.edu" aria-describedby="eg-email-err"><p class="pt-err" id="eg-email-err"></p></div>' +
+                '<div class="pt-field"><label class="pt-label" for="eg-phone">Phone number</label>' +
+                  '<div class="pt-phone"><span class="pt-prefix">+91</span><input class="pt-input" id="eg-phone" type="tel" inputmode="numeric" maxlength="10" placeholder="98765 43210" autocomplete="tel-national" aria-describedby="eg-phone-err"></div><p class="pt-err" id="eg-phone-err"></p></div>' +
+                '<div class="pt-field pt-full"><label class="pt-label" for="eg-college">College name</label>' +
+                  '<input class="pt-input" id="eg-college" type="text" autocomplete="organization" placeholder="e.g. VIT Vellore" aria-describedby="eg-college-err"><p class="pt-err" id="eg-college-err"></p></div>' +
+                '<div class="pt-field"><label class="pt-label" for="eg-year">Current year of study</label>' +
+                  '<select class="pt-select" id="eg-year"><option value="">Select</option>' +
+                    years.map(function (y) { return '<option value="' + y + '">' + y + '</option>'; }).join('') +
+                  '</select><p class="pt-err" id="eg-year-err"></p></div>' +
+                '<div class="pt-full"><button class="pt-submit" id="egSend" type="submit">Continue the paper</button>' +
+                  '<p class="pt-foot">Your details are saved with your score, so we can send you the result and the next paper for your target companies.</p></div>' +
+              '</form>' +
+            '</div>' +
+          '</section>';
+        }
+
+        function showGate(target) {
+          gatePending = target || { mode: 'between' };
+          pauseClock();
+          nextBtn.hidden = true;
+          var round = ROUNDS[GATE.round] || ROUNDS[0];
+          var section = (round.sections && round.sections[GATE.section]) ? round.sections[GATE.section].name : round.name;
+          prog.textContent = 'Section complete — save your place';
+          bodyEl.innerHTML = gateMarkup(section);
+          wireGate();
+          var gateEl = document.getElementById('exam-gate');
+          try { (gateEl || bodyEl).scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) {}
+        }
+
+        function wireGate() {
+          var form = $('egForm');
+
+          function setErr(id, msg) {
+            var input = $(id), err = $(id + '-err'), wrap = input && input.closest ? input.closest('.pt-phone') : null;
+            if (!input) return;
+            if (msg) {
+              input.setAttribute('aria-invalid', 'true');
+              if (wrap) wrap.setAttribute('data-invalid', 'true');
+              if (err) { err.textContent = msg; err.classList.add('on'); }
+            } else {
+              input.removeAttribute('aria-invalid');
+              if (wrap) wrap.removeAttribute('data-invalid');
+              if (err) { err.textContent = ''; err.classList.remove('on'); }
+            }
+          }
+
+          function validate() {
+            var ok = true, first = null;
+            function fail(id, m) { setErr(id, m); ok = false; first = first || $(id); }
+            if ($('eg-name').value.trim().length < 2) fail('eg-name', 'Enter your full name.'); else setErr('eg-name', '');
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($('eg-email').value.trim())) fail('eg-email', 'Enter a valid email address.'); else setErr('eg-email', '');
+            if (!/^[6-9]\d{9}$/.test($('eg-phone').value.replace(/\D/g, ''))) fail('eg-phone', 'Enter a valid 10-digit Indian mobile number.'); else setErr('eg-phone', '');
+            if ($('eg-college').value.trim().length < 3) fail('eg-college', 'Enter your college name.'); else setErr('eg-college', '');
+            if (!$('eg-year').value) fail('eg-year', 'Select your current year of study.'); else setErr('eg-year', '');
+            if (first) try { first.focus(); } catch (e) {}
+            return ok;
+          }
+
+          function admit(profile, leadId) {
+            PROFILE = {
+              leadId: leadId || null,
+              name: profile.name,
+              email: profile.email,
+              phone: profile.phone,
+              college: profile.college,
+              studyYear: profile.studyYear
+            };
+            saveState({ profile: PROFILE });
+            bodyEl.innerHTML = '';
+            unlockAfterGate();
+          }
+
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!validate()) return;
+            var btn = $('egSend');
+            var profile = {
+              name: $('eg-name').value.trim(),
+              email: $('eg-email').value.trim().toLowerCase(),
+              phone: '+91' + $('eg-phone').value.replace(/\D/g, ''),
+              college: $('eg-college').value.trim(),
+              studyYear: $('eg-year').value
+            };
+            btn.disabled = true; btn.textContent = 'Saving your place...';
+            postJson('/api/forms', {
+              form_type: 'exam-lead',
+              name: profile.name,
+              email: profile.email,
+              phone: profile.phone,
+              college: profile.college,
+              study_year: profile.studyYear,
+              company: COMPANY_ID,
+              paper_year: YEAR,
+              page_url: location.pathname,
+              utm_source: UTM.utm_source || '',
+              utm_medium: UTM.utm_medium || '',
+              utm_campaign: UTM.utm_campaign || ''
+            }).then(function (res) {
+              admit(profile, res && res.id);
+            }).catch(function (err) {
+              /* No backend (static preview) — still let them sit the paper.
+                 The score will not reach the sheet without a lead id. */
+              if (err.offline) { admit(profile, null); return; }
+              setErr('eg-email', err.message || 'Could not save your details. Try again.');
+              btn.disabled = false;
+              btn.textContent = 'Continue the paper';
+            });
+          });
+        }
+
+        function unlockAfterGate() {
+          var target = gatePending;
+          gatePending = null;
+          resumeClock();
+          if (target && target.mode === 'mid') {
+            RESTORE = { current: current, idx: target.idx, answers: target.answers };
+            renderMcq(ROUNDS[current]);
+            /* The gate saved the question we were on, not the one we unlock
+               into — persist the resume point so a reload lands there too. */
+            saveState({ idx: target.idx, answers: target.answers });
+          } else if (target && target.mode === 'between') {
+            if (current < ROUNDS.length - 1) startRound(current + 1);
+            else showFinal();
+          }
+        }
+
+        /* ── score submission ──────────────────────────────────────────── */
+        function pctFor(kind) {
+          for (var i = 0; i < results.length; i++) if (results[i].kind === kind) return results[i].pct;
+          return null;
+        }
+
+        function submitScore(overall, band, onSaved) {
+          var el = $('cpu-save');
+          if (!PROFILE || !PROFILE.leadId) {
+            if (el) { el.className = 'cpu-save'; el.textContent = 'Your score was not saved — we could not create your lead record.'; }
+            return;
+          }
+          var payload = {
+            lead_id: PROFILE.leadId,
+            attempt: ATTEMPT,
+            company: COMPANY_ID,
+            paper_year: YEAR,
+            apt_pct: pctFor('apt'),
+            tech_pct: pctFor('tech'),
+            code_pct: pctFor('code'),
+            overall_pct: overall,
+            band: band,
+            duration_min: Math.max(1, Math.round((Date.now() - STARTED_AT) / 60000)),
+            page_url: location.pathname,
+            utm_source: UTM.utm_source || '',
+            utm_medium: UTM.utm_medium || '',
+            utm_campaign: UTM.utm_campaign || '',
+            device: /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop'
+          };
+          if (el) { el.className = 'cpu-save'; el.textContent = 'Saving your score...'; }
+          postJson('/api/exam-score', payload).then(function (res) {
+            if (el) {
+              el.className = 'cpu-save ok';
+              el.textContent = res.sheet === 'ok'
+                ? 'Score saved. Your report has been recorded.'
+                : 'Score saved to your profile.';
+            }
+            storeSet(ATTEMPT_KEY, (storeGet(ATTEMPT_KEY) || 0) + 1);
+            if (onSaved) onSaved();
+          }).catch(function () {
+            if (el) { el.className = 'cpu-save bad'; el.textContent = 'We could not save your score. Keep this page open and try again.'; }
+          });
+        }
+
+        /* ── resume / restart ──────────────────────────────────────────── */
+        function resetPaper() {
+          /* A retake keeps the captured profile — the candidate has already
+             signed up — but clears every answer and starts a new attempt. */
+          var saved = storeGet(STORE_KEY) || {};
+          storeDel(STORE_KEY);
+          if (saved.profile) {
+            storeSet(STORE_KEY, {
+              v: 1,
+              company: COMPANY_ID,
+              year: YEAR,
+              tab: TAB_ID,
+              profile: saved.profile,
+              results: [],
+              current: 0,
+              phase: 'idle',
+              attempt: (saved.attempt || 1) + 1,
+              remaining: 0,
+              startedAt: Date.now(),
+              updated: Date.now()
+            });
+          }
+          location.reload();
+        }
+
+        function showResumeBanner(saved) {
+          var el = $('cpu-resume');
+          if (!el) return;
+          var label = saved.complete
+            ? 'you finished this paper'
+            : (saved.phase === 'between'
+              ? 'Round ' + (saved.current + 1) + ' is complete'
+              : 'Round ' + (saved.current + 1) + (typeof saved.idx === 'number' ? ', question ' + (saved.idx + 1) : ''));
+          var who = (PROFILE && PROFILE.name) ? ', ' + escv(PROFILE.name.split(' ')[0]) : '';
+          el.innerHTML = '<span>Welcome back' + who + ' — ' + label + '.</span>' +
+            '<button type="button" id="cpu-restart">' + (saved.complete ? 'Retake paper' : 'Start over') + '</button>';
+          el.hidden = false;
+          $('cpu-restart').addEventListener('click', function () {
+            if (saved.complete || confirm('Start this paper from the beginning? Your saved answers for this paper will be cleared.')) resetPaper();
+          });
+        }
+
+        function boot() {
+          ATTEMPT = (storeGet(ATTEMPT_KEY) || 0) + 1;
+          var saved = storeGet(STORE_KEY);
+          if (!saved || saved.company !== COMPANY_ID || saved.year !== YEAR) {
+            nextBtn.textContent = 'Start round 1';
+            return;
+          }
+          if (saved.profile) PROFILE = saved.profile;
+          if (saved.attempt) ATTEMPT = saved.attempt;
+          results = saved.results || [];
+          current = saved.current || 0;
+          phase = saved.phase || 'idle';
+          RESTORE = saved;
+          LAST_WRITE = saved.updated || 0;
+          if (saved.startedAt) STARTED_AT = saved.startedAt;
+          /* A retake has a profile but no progress yet: wait on the start
+             button instead of announcing "welcome back" to question 1. */
+          var hasProgress = saved.complete || phase !== 'idle' || results.length > 0;
+          if (hasProgress) showResumeBanner(saved);
+
+          if (saved.complete) {
+            showFinal(true);
+            /* A finished paper should reopen on the result, not the hero. */
+            try { resultEl.scrollIntoView({ block: 'start' }); } catch (e) {}
+            return;
+          }
+          if (phase === 'idle') {
+            nextBtn.hidden = false;
+            nextBtn.textContent = 'Start round 1';
+            prog.textContent = 'Round 1 — ' + ROUNDS[0].name;
+            clock.textContent = fmt(ROUNDS[0].minutes * 60);
+          } else if (phase === 'between') {
+            nextBtn.hidden = false;
+            nextBtn.textContent = current === ROUNDS.length - 1
+              ? 'See final result'
+              : 'Continue to ' + ROUNDS[current + 1].name;
+            prog.textContent = 'Round ' + (current + 1) + ' complete';
+            clock.textContent = 'paused';
+          } else {
+            startRound(current, typeof saved.remaining === 'number' ? saved.remaining : ROUNDS[current].minutes * 60);
+            /* Resume on the paper, not on the hero above it. */
+            try { document.getElementById('cpu').scrollIntoView({ block: 'start' }); } catch (e) {}
+          }
+        }
+
+        boot();
+
+      })();
+
+    </script>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+<title>Pack Studio — WorkSim</title>
+<link rel="canonical" href="https://thecodingcompany.io/worksim/studio/" />
+<meta name="description" content="Author and validate WorkSim shift packs." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+<link rel="stylesheet" href="../assets/worksim.css" />
+<link rel="stylesheet" href="studio.css" />
+<meta name="theme-color" content="#f7f7f5" />
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecodingcompany.io/"},{"@type":"ListItem","position":2,"name":"Worksim","item":"https://thecodingcompany.io/worksim/"},{"@type":"ListItem","position":3,"name":"Studio","item":"https://thecodingcompany.io/worksim//studio/"}]}</script>
+    <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899');
+    </script>
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+  </head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="../" aria-label="WorkSim home">
+    <span class="brand-mark">TCC</span>
+    <span class="brand-div"></span>
+    <span class="brand-product">WorkSim Studio</span>
+  </a>
+  <nav class="topnav">
+    <a href="../" class="topnav-link">Shifts</a>
+    <a href="../" class="topnav-link">Back to WorkSim</a>
+  </nav>
+</header>
+
+<main id="app" class="app wide">
+
+  <section class="studio-head">
+    <p class="eyebrow">Pack factory</p>
+    <h1 class="display">Build a shift.</h1>
+    <p class="lede">Write the moments, watch the graph validate itself, play it, export the JSON.</p>
+  </section>
+
+  <div class="toolbar">
+    <button class="btn" id="btn-new" type="button">New shift</button>
+    <button class="btn" id="btn-import" type="button">Import JSON</button>
+    <input type="file" id="file-import" accept=".json,application/json" hidden />
+    <select class="sel toolbar-sel" id="library">
+      <option value="">Load from library…</option>
+    </select>
+    <span class="toolbar-spacer"></span>
+    <button class="btn" id="btn-manifest" type="button">Copy manifest entry</button>
+    <button class="btn primary" id="btn-export" type="button">Export pack</button>
+  </div>
+
+  <div class="studio-grid">
+    <div id="editor"></div>
+    <aside class="studio-side">
+      <div class="panel" id="status"></div>
+      <div class="panel" id="preview"></div>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <span>WorkSim Studio</span>
+  <span class="foot-sep">·</span>
+  <span>Drafts stay on this device.</span>
+</footer>
+
+<script type="module" src="studio.js"></script>
+    <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+{
+  "outputDirectory": "public",
+  "buildCommand": "npm run build:seo",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thecodingcompany.io"
+        }
+      ],
+      "destination": "https://thecodingcompany.io/$1",
+      "permanent": true
+    },
+    {
+      "source": "/vybeclub",
+      "destination": "/100-club/",
+      "permanent": true
+    },
+    {
+      "source": "/vybeclub/:path*",
+      "destination": "/100-club/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/vybing",
+      "destination": "/100-club/app/",
+      "permanent": true
+    },
+    {
+      "source": "/vybing/:path*",
+      "destination": "/100-club/app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/architecture",
+      "destination": "/domains/architecture/",
+      "permanent": true
+    },
+    {
+      "source": "/bba",
+      "destination": "/domains/bba/",
+      "permanent": true
+    },
+    {
+      "source": "/biotech",
+      "destination": "/domains/biotech/",
+      "permanent": true
+    },
+    {
+      "source": "/civil",
+      "destination": "/domains/civil/",
+      "permanent": true
+    },
+    {
+      "source": "/commerce",
+      "destination": "/domains/commerce/",
+      "permanent": true
+    },
+    {
+      "source": "/cse",
+      "destination": "/domains/cse/",
+      "permanent": true
+    },
+    {
+      "source": "/data-science",
+      "destination": "/domains/data-science/",
+      "permanent": true
+    },
+    {
+      "source": "/design",
+      "destination": "/domains/design/",
+      "permanent": true
+    },
+    {
+      "source": "/ece",
+      "destination": "/domains/ece/",
+      "permanent": true
+    },
+    {
+      "source": "/eee",
+      "destination": "/domains/eee/",
+      "permanent": true
+    },
+    {
+      "source": "/it",
+      "destination": "/domains/it/",
+      "permanent": true
+    },
+    {
+      "source": "/mba",
+      "destination": "/domains/mba/",
+      "permanent": true
+    },
+    {
+      "source": "/mechanical",
+      "destination": "/domains/mechanical/",
+      "permanent": true
+    },
+    {
+      "source": "/learn/1-on-1",
+      "destination": "/bootcamps/",
+      "permanent": true
+    },
+    {
+      "source": "/learn/custom-course",
+      "destination": "/bootcamps/",
+      "permanent": true
+    },
+    {
+      "source": "/spa.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/become-a-member/",
+      "destination": "/become-a-member/index.html"
+    },
+    {
+      "source": "/become-a-member",
+      "destination": "/become-a-member/index.html"
+    },
+    {
+      "source": "/bootcamps/",
+      "destination": "/bootcamps/index.html"
+    },
+    {
+      "source": "/bootcamps",
+      "destination": "/bootcamps/index.html"
+    },
+    {
+      "source": "/bootcamps-loading",
+      "destination": "/bootcamps/index.html"
+    },
+    {
+      "source": "/100-club-apply/",
+      "destination": "/100-club-apply/index.html"
+    },
+    {
+      "source": "/100-club-apply",
+      "destination": "/100-club-apply/index.html"
+    },
+    {
+      "source": "/gigs/",
+      "destination": "/gigs/index.html"
+    },
+    {
+      "source": "/gigs",
+      "destination": "/gigs/index.html"
+    },
+    {
+      "source": "/gigs/apply/",
+      "destination": "/gigs/apply/index.html"
+    },
+    {
+      "source": "/gigs/apply",
+      "destination": "/gigs/apply/index.html"
+    },
+    {
+      "source": "/gigs/hire/",
+      "destination": "/gigs/hire/index.html"
+    },
+    {
+      "source": "/gigs/hire",
+      "destination": "/gigs/hire/index.html"
+    },
+    {
+      "source": "/login/",
+      "destination": "/login/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login/index.html"
+    },
+    {
+      "source": "/member/",
+      "destination": "/member/index.html"
+    },
+    {
+      "source": "/member",
+      "destination": "/member/index.html"
+    },
+    {
+      "source": "/admin/",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ],
+  "functions": {
+    "api/worksim/**/*.js": {
+      "includeFiles": "data/worksim/**"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/assets/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(mp4|webm|mp3|jpg|jpeg|png|webp|avif|svg|ico|woff2|woff|ttf)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    }
+  ]
+}

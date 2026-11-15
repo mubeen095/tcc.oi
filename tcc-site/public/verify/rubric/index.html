@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="color-scheme" content="dark" />
+<title>How we mark things — rubric and pass rules | TCC</title>
+<meta name="description" content="The complete marking scheme for the TCC diagnostic and every CERT+ assessment: criteria, weights, performance bands and the pass rule.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thecodingcompany.io/verify/rubric/">
+<meta property="og:title" content="How we mark things — rubric and pass rules | TCC">
+<meta property="og:description" content="The complete marking scheme for the TCC diagnostic and every CERT+ assessment: criteria, weights, performance bands and the pass rule.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://thecodingcompany.io/verify/rubric/">
+<meta property="og:locale" content="en_IN">
+<meta name="theme-color" content="#060606">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap">
+<!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+<link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a">
+<link rel="stylesheet" href="/assets/css/tcc-verify.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecodingcompany.io/"},{"@type":"ListItem","position":2,"name":"Verify","item":"https://thecodingcompany.io/verify/"},{"@type":"ListItem","position":3,"name":"Rubric","item":"https://thecodingcompany.io/verify/rubric/"}]}</script>
+
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+    <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899', { anonymize_ip: true });
+    </script>
+<!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+  </head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/img/tcc-logo-mark.png" width="66" height="44" alt="The Coding Company"></a>
+    <nav class="top" aria-label="Primary">
+      <a href="/bootcamps/">CERT+</a>
+      <a href="/prep+/companies/">Prep+</a>
+      <a href="/placement/">Placements</a>
+      <a href="/verify/" aria-current="page">Verify</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="wrap">
+    <div class="eyebrow">Verification · Marking</div>
+    <h1 class="display">How we mark things.</h1>
+    <p class="lede">Two things get a mark at TCC: the diagnostic you can sit right now, and the CERT+ assessments. Both are defined here in full. Nothing is marked on impression.</p>
+
+    <div class="toc">
+      <p>On this page</p>
+      <ul>
+        <li><a href="#diagnostic">1 · The diagnostic</a></li>
+        <li><a href="#cert">2 · CERT+ assessments</a></li>
+        <li><a href="#bands">3 · Performance bands</a></li>
+        <li><a href="#calibration">4 · How we stop reviewers drifting</a></li>
+      </ul>
+    </div>
+
+    <h2 id="diagnostic">1 · The diagnostic</h2>
+    <p>Fifteen questions across four sections, one mark each, no negative marking, fifteen-minute limit. The split is fixed:</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Section</th><th class="num">Questions</th><th class="num">Marks</th><th>What it measures</th></tr></thead>
+        <tbody>
+          <tr><td><b>Quantitative</b></td><td class="num">4</td><td class="num">4</td><td>Percentage change, rates, averages, sequential probability — the arithmetic that actually appears in placement papers</td></tr>
+          <tr><td><b>Reasoning</b></td><td class="num">5</td><td class="num">5</td><td>Sequences, set overlap, syllogism, inference from a passage, analogies</td></tr>
+          <tr><td><b>Technical</b></td><td class="num">4</td><td class="num">4</td><td>Complexity, language semantics, SQL null behaviour, HTTP status codes</td></tr>
+          <tr><td><b>Data interpretation</b></td><td class="num">2</td><td class="num">2</td><td>Reading a rate correctly, locating the real drop-off in a funnel</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The bands are set by what the score means for the next eight weeks of work, not by a curve. We do not rescale results to make them look better.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Score</th><th>Band</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td class="num">13–15</td><td><b>Tier-1 ready</b></td><td>You would clear most aptitude rounds today. Remaining work is speed and interview delivery.</td></tr>
+          <tr><td class="num">10–12</td><td><b>Close, with named gaps</b></td><td>Two or three specific topics are costing you marks. Closeable in weeks.</td></tr>
+          <tr><td class="num">6–9</td><td><b>Foundation needs structured work</b></td><td>You know more than you can execute under time pressure. The most common and most improvable profile.</td></tr>
+          <tr><td class="num">0–5</td><td><b>Start from the mechanics</b></td><td>Learn the underlying rules before practising papers, or you lock the errors in.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="cert">2 · CERT+ assessments</h2>
+    <p>Practitioner and above are marked out of 100 across four criteria. The weights are fixed and published before the cohort starts.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Criterion</th><th class="num">Weight</th><th>What earns marks</th></tr></thead>
+        <tbody>
+          <tr><td><b>Applied knowledge</b></td><td class="num">30</td><td>Correct, specific use of the concepts the role actually requires. Not definitions — decisions.</td></tr>
+          <tr><td><b>Role artifact</b></td><td class="num">45</td><td>A working output a colleague could use on Monday. Correct, complete, and honest about its limits.</td></tr>
+          <tr><td><b>Judgement and trade-offs</b></td><td class="num">25</td><td>Why this approach over the alternative, what you gave up, and what would change your mind.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p><strong>Pass rule:</strong> 60 of 100 overall, and no criterion below 40% of its weight. A brilliant artifact attached to thoughtless judgement fails, because that is the profile that damages teams in production.</p>
+    </div>
+
+    <h2 id="bands">3 · Performance bands</h2>
+    <p>The same four descriptors are used on every criterion. Reviewers pick the band first, then place the score inside it.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Band</th><th class="num">Range</th><th>Descriptor</th></tr></thead>
+        <tbody>
+          <tr><td><b>Distinction</b></td><td class="num">85–100</td><td>Would pass review at a good company without supervision. Explains its own limitations and the conditions under which it fails.</td></tr>
+          <tr><td><b>Competent</b></td><td class="num">70–84</td><td>Works, is defensible, and has one clear gap the candidate can name.</td></tr>
+          <tr><td><b>Developing</b></td><td class="num">55–69</td><td>Right direction, incomplete execution, or correct output with weak reasoning.</td></tr>
+          <tr><td><b>Not yet</b></td><td class="num">0–54</td><td>Misunderstands the problem, or produces output that would need to be redone.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="calibration">4 · How we stop reviewers drifting</h2>
+    <ul>
+      <li>Every artifact is scored blind. The reviewer sees a candidate ID, never a name.</li>
+      <li>Ten percent of artifacts are double-marked by a second reviewer.</li>
+      <li>If the two marks differ by more than ten points, a third reviewer resolves it and the rubric wording is reviewed.</li>
+      <li>Whenever a rubric line is rewritten, previously marked samples are re-marked against the new wording so the standard does not quietly move.</li>
+    </ul>
+    <p>This is ordinary assessment hygiene. It is published because most providers do not publish it, and the absence of a method is usually the point.</p>
+
+    <div class="actions">
+      <a class="btn" href="/diagnostic/">Sit the diagnostic</a>
+      <a class="btn ghost" href="/verify/samples/">See the rubric applied</a>
+    </div>
+    <div class="pager">
+      <a href="/verify/exam/"><span class="dir">Previous</span>The assessment format</a>
+      <a href="/verify/samples/"><span class="dir">Next</span>Graded examples</a>
+    </div>
+    <p class="meta">Page last reviewed 2026-11-14. If anything here is wrong, write to <a class="inline" href="mailto:hello@thecodingcompany.io">hello@thecodingcompany.io</a> and we will correct it publicly.</p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>Programmes</h3>
+        <a href="/bootcamps/">CERT+</a>
+        <a href="/prep+/companies/">Prep+</a>
+        <a href="/placement/">Placements</a>
+        <a href="/100-club/">100 Club</a>
+      </div>
+      <div>
+        <h3>Evidence</h3>
+        <a href="/diagnostic/">Diagnostic</a>
+        <a href="/verify/">Verify</a>
+        <a href="/verify/rubric/">Marking rubric</a>
+        <a href="/verify/stats/">Published stats</a>
+        <a href="/verify/what-we-dont-claim/">What we don't claim</a>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <a href="/careers/">Careers</a>
+        <a href="/partners/">Partners</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/refund-policy/">Refunds</a>
+      </div>
+    </div>
+    <div class="legal">
+      The Coding Company · Hyderabad, Telangana, India<br>
+      TCC CERT+ is an industry credential issued by The Coding Company. It is not a government licence or a regulated professional qualification.
+    </div>
+  </div>
+</footer>
+    <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

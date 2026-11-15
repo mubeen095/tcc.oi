@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#050505');
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <title>AI, Data &amp; Emerging Tech AI Certification | TCC CERT+</title>
+    <meta name="description" content="Role-based AI certifications and AI courses for ai, data &amp; emerging tech professionals. 56 credentials across 14 roles — Foundation to Executive." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://thecodingcompany.io/ai-courses-for/data/" />
+    <meta property="og:title" content="AI, Data &amp; Emerging Tech AI Certification | TCC CERT+" />
+    <meta property="og:description" content="Role-based AI certifications and AI courses for ai, data &amp; emerging tech professionals. 56 credentials across 14 roles — Foundation to Executive. Learn AI for your job with TCC CERT+." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thecodingcompany.io/ai-courses-for/data/" />
+    <meta property="og:site_name" content="The Coding Company (TCC)" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://thecodingcompany.io/ai-courses-for/data/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best AI certification for ai, data & emerging tech professionals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single answer, because the best credential depends on your exact job title. TCC CERT+ publishes 56 role-based AI certifications across 14 ai, data & emerging tech roles, each in four tiers: Foundation (no AI background needed), Practitioner (applying AI in daily workflows), Strategist (leading AI adoption) and Executive (owning AI strategy and governance). Start at the CERT+ catalogue, type your job title, and TCC resolves it to the nearest of its 262 roles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there AI courses for ai, data & emerging tech professionals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TCC CERT+ offers 56 certifications for 14 ai, data & emerging tech roles, from Foundation to Executive, plus in-depth AI courses. Each credential is built around the workflows, decisions and outcomes of that specific role rather than generic AI theory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do ai, data & emerging tech professionals need to know how to code to use AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Foundation tier assumes no prior AI or coding background and covers practical AI tools for the role. Later tiers go deeper into applied workflows, evaluation and strategy as needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which roles in ai, data & emerging tech does TCC cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TCC covers 14 ai, data & emerging tech roles: AI Agent Developer, AI Auditor, AI Ethicist, AI Researcher, BI Analyst, Computer Vision Engineer, Data Analyst, Data Engineer, Data Scientist, ML Engineer, MLOps Engineer, NLP Engineer, Quantum Computing Specialist, Robotics Engineer. Each one has a Foundation, Practitioner, Strategist and Executive credential."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TCC help ai, data & emerging tech professionals get hired?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TCC Placement Partner sits on top of the certifications and provides portfolio building, resume and interview support and employer connections, with a published goal of 10,000 offer letters per year. It is not a job guarantee."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://thecodingcompany.io/ai-courses-for/data/#credential-list",
+      "name": "TCC CERT+ credentials for AI, Data & Emerging Tech",
+      "numberOfItems": 56,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TCC CERT+ AI Agent Developer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-agent-developer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TCC CERT+ AI Agent Developer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-agent-developer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TCC CERT+ AI Agent Developer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-agent-developer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "TCC CERT+ AI Agent Developer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-agent-developer-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "TCC CERT+ AI Auditor — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-auditor-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "TCC CERT+ AI Auditor — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-auditor-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "TCC CERT+ AI Auditor — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-auditor-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "TCC CERT+ AI Auditor — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-auditor-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "TCC CERT+ AI Ethicist — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-ethicist-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "TCC CERT+ AI Ethicist — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-ethicist-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "TCC CERT+ AI Ethicist — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-ethicist-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "TCC CERT+ AI Ethicist — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-ethicist-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "TCC CERT+ AI Researcher — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-researcher-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "TCC CERT+ AI Researcher — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-researcher-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "TCC CERT+ AI Researcher — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-researcher-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "TCC CERT+ AI Researcher — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ai-researcher-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "TCC CERT+ BI Analyst — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=bi-analyst-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "name": "TCC CERT+ BI Analyst — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=bi-analyst-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "name": "TCC CERT+ BI Analyst — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=bi-analyst-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "name": "TCC CERT+ BI Analyst — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=bi-analyst-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "name": "TCC CERT+ Computer Vision Engineer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=computer-vision-engineer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "name": "TCC CERT+ Computer Vision Engineer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=computer-vision-engineer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "name": "TCC CERT+ Computer Vision Engineer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=computer-vision-engineer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "name": "TCC CERT+ Computer Vision Engineer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=computer-vision-engineer-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "name": "TCC CERT+ Data Analyst — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-analyst-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "name": "TCC CERT+ Data Analyst — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-analyst-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "name": "TCC CERT+ Data Analyst — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-analyst-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "name": "TCC CERT+ Data Analyst — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-analyst-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "name": "TCC CERT+ Data Engineer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-engineer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "name": "TCC CERT+ Data Engineer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-engineer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "name": "TCC CERT+ Data Engineer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-engineer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "name": "TCC CERT+ Data Engineer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-engineer-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "name": "TCC CERT+ Data Scientist — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-scientist-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "name": "TCC CERT+ Data Scientist — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-scientist-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "name": "TCC CERT+ Data Scientist — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-scientist-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "name": "TCC CERT+ Data Scientist — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=data-scientist-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "name": "TCC CERT+ ML Engineer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ml-engineer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "name": "TCC CERT+ ML Engineer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ml-engineer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 39,
+          "name": "TCC CERT+ ML Engineer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ml-engineer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 40,
+          "name": "TCC CERT+ ML Engineer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=ml-engineer-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 41,
+          "name": "TCC CERT+ MLOps Engineer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=mlops-engineer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 42,
+          "name": "TCC CERT+ MLOps Engineer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=mlops-engineer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 43,
+          "name": "TCC CERT+ MLOps Engineer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=mlops-engineer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 44,
+          "name": "TCC CERT+ MLOps Engineer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=mlops-engineer-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 45,
+          "name": "TCC CERT+ NLP Engineer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=nlp-engineer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 46,
+          "name": "TCC CERT+ NLP Engineer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=nlp-engineer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 47,
+          "name": "TCC CERT+ NLP Engineer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=nlp-engineer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 48,
+          "name": "TCC CERT+ NLP Engineer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=nlp-engineer-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 49,
+          "name": "TCC CERT+ Quantum Computing Specialist — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=quantum-computing-specialist-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 50,
+          "name": "TCC CERT+ Quantum Computing Specialist — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=quantum-computing-specialist-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 51,
+          "name": "TCC CERT+ Quantum Computing Specialist — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=quantum-computing-specialist-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 52,
+          "name": "TCC CERT+ Quantum Computing Specialist — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=quantum-computing-specialist-executive"
+        },
+        {
+          "@type": "ListItem",
+          "position": 53,
+          "name": "TCC CERT+ Robotics Engineer — Foundation",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=robotics-engineer-foundation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 54,
+          "name": "TCC CERT+ Robotics Engineer — Practitioner",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=robotics-engineer-practitioner"
+        },
+        {
+          "@type": "ListItem",
+          "position": 55,
+          "name": "TCC CERT+ Robotics Engineer — Strategist",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=robotics-engineer-strategist"
+        },
+        {
+          "@type": "ListItem",
+          "position": 56,
+          "name": "TCC CERT+ Robotics Engineer — Executive",
+          "url": "https://thecodingcompany.io/bootcamps/cert/?id=robotics-engineer-executive"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thecodingcompany.io/ai-courses-for/data/",
+      "url": "https://thecodingcompany.io/ai-courses-for/data/",
+      "name": "AI, Data & Emerging Tech AI Certification | TCC CERT+",
+      "description": "Role-based AI certifications and AI courses for ai, data & emerging tech professionals. 56 credentials across 14 roles — Foundation to Executive. Learn AI for your job with TCC CERT+.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://thecodingcompany.io/#website"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "AI education for AI, Data & Emerging Tech professionals"
+      },
+      "mentions": [
+        {
+          "@type": "WebPage",
+          "name": "TCC CERT+ catalogue",
+          "url": "https://thecodingcompany.io/bootcamps/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "AI Courses by Role & Industry",
+          "url": "https://thecodingcompany.io/ai-courses-for/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "TCC Placement Partner",
+          "url": "https://thecodingcompany.io/placement/"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://thecodingcompany.io/ai-courses-for/data/#credential-list"
+      },
+      "significantLink": "https://thecodingcompany.io/bootcamps/cert/?id=ai-agent-developer-foundation"
+    }
+  ]
+}
+    </script>
+    <style>
+      *{margin:0;padding:0;box-sizing:border-box}
+      body{background:#050505;color:#fff;font-family: 'Gilroy', 'Inter', system-ui, sans-serif;line-height:1.6}
+      .wrap{max-width:1080px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(20px,6vw,40px)}
+      h1{font-size:clamp(28px,5vw,46px);font-weight:800;letter-spacing:-.04em}
+      h2{font-size:clamp(22px,4vw,32px);font-weight:800;letter-spacing:-.03em;margin-top:56px}
+      .sub{color:rgba(255,255,255,.72);margin-top:14px;max-width:820px}
+      .crumbs{font-size:13px;color:rgba(255,255,255,.62);margin-bottom:20px}
+      .crumbs a{color:rgba(255,255,255,.72);text-decoration:none}
+      .roles{display:grid;gap:14px;margin-top:26px;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr))}
+      .role{padding:20px 22px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)}
+      .role-name{font-weight:700;font-size:16px}
+      .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+      .chip{font-size:12px;font-family:'DM Mono',monospace;letter-spacing:.04em;padding:5px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;color:rgba(255,255,255,.72);text-decoration:none}
+      .chip:hover{border-color:rgba(127,180,255,.7);color:#fff}
+      .cta{display:inline-block;margin-top:34px;padding:14px 28px;border-radius:999px;background:#fff;color:#050505;font-weight:700;text-decoration:none}
+      .links{margin-top:20px;display:flex;flex-wrap:wrap;gap:14px}
+      .links a{color:#7fb4ff;text-decoration:none;font-weight:600}
+      .faq{margin-top:22px;display:grid;gap:12px;max-width:900px}
+      .faq details{border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.03);padding:0}
+      .faq summary{cursor:pointer;padding:18px 22px;font-weight:700;font-size:16px;list-style:none}
+      .faq summary::-webkit-details-marker{display:none}
+      .faq summary::after{content:"+";float:right;color:rgba(255,255,255,.45);font-weight:400}
+      .faq details[open] summary::after{content:"–"}
+      .faq p{padding:0 22px 20px;color:rgba(255,255,255,.72);font-size:15px}
+      .faq a{color:#7fb4ff}
+      footer{padding:44px 20px;text-align:center;color:rgba(255,255,255,.62);border-top:1px solid rgba(255,255,255,.05);margin-top:60px}
+      @media (max-width: 1024px) {
+        .chip,
+        .links a{display:inline-flex;align-items:center;min-height:44px}
+      }
+    </style>
+  <!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecodingcompany.io/"},{"@type":"ListItem","position":2,"name":"AI Courses by Role","item":"https://thecodingcompany.io/ai-courses-for/"},{"@type":"ListItem","position":3,"name":"Data","item":"https://thecodingcompany.io/ai-courses-for//data/"}]}</script>
+    <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899', { anonymize_ip: true });
+    </script>
+</head>
+  <body>
+    <main class="wrap">
+      <div class="crumbs"><a href="/">Home</a> / <a href="/ai-courses-for/">AI Courses by Role</a> / <span>AI, Data &amp; Emerging Tech</span></div>
+      <h1>AI Certification &amp; AI Courses for AI, Data &amp; Emerging Tech Professionals</h1>
+      <p class="sub">TCC CERT+ offers <strong>56 role-based AI certifications</strong> across <strong>14 ai, data &amp; emerging tech roles</strong>, from Foundation to Executive. Each credential is built around what you actually do at work — not generic AI theory.</p>
+      <a class="cta" href="/bootcamps/">Explore all TCC CERT+ certifications</a>
+
+      <h2>Choose your role</h2>
+      <div class="roles">
+      <div class="role">
+        <div class="role-name">AI for AI Agent Developer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=ai-agent-developer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=ai-agent-developer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=ai-agent-developer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=ai-agent-developer-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for AI Auditor</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=ai-auditor-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=ai-auditor-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=ai-auditor-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=ai-auditor-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for AI Ethicist</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=ai-ethicist-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=ai-ethicist-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=ai-ethicist-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=ai-ethicist-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for AI Researcher</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=ai-researcher-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=ai-researcher-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=ai-researcher-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=ai-researcher-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for BI Analyst</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=bi-analyst-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=bi-analyst-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=bi-analyst-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=bi-analyst-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for Computer Vision Engineer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=computer-vision-engineer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=computer-vision-engineer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=computer-vision-engineer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=computer-vision-engineer-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for Data Analyst</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=data-analyst-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=data-analyst-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=data-analyst-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=data-analyst-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for Data Engineer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=data-engineer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=data-engineer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=data-engineer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=data-engineer-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for Data Scientist</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=data-scientist-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=data-scientist-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=data-scientist-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=data-scientist-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for ML Engineer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=ml-engineer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=ml-engineer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=ml-engineer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=ml-engineer-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for MLOps Engineer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=mlops-engineer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=mlops-engineer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=mlops-engineer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=mlops-engineer-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for NLP Engineer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=nlp-engineer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=nlp-engineer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=nlp-engineer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=nlp-engineer-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for Quantum Computing Specialist</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=quantum-computing-specialist-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=quantum-computing-specialist-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=quantum-computing-specialist-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=quantum-computing-specialist-executive">Executive</a></div>
+      </div>
+      <div class="role">
+        <div class="role-name">AI for Robotics Engineer</div>
+        <div class="chips"><a class="chip" href="/bootcamps/cert/?id=robotics-engineer-foundation">Foundation</a><a class="chip" href="/bootcamps/cert/?id=robotics-engineer-practitioner">Practitioner</a><a class="chip" href="/bootcamps/cert/?id=robotics-engineer-strategist">Strategist</a><a class="chip" href="/bootcamps/cert/?id=robotics-engineer-executive">Executive</a></div>
+      </div>
+      </div>
+
+      <h2>Why ai, data &amp; emerging tech professionals need role-based AI certification</h2>
+      <p class="sub">Generic AI courses teach everyone the same prompts. Role-based certification starts from your job: the workflows you own, the decisions you make, and the outcomes your team measures. Employers in ai, data &amp; emerging tech are looking for people who can point at a shipped result, not a completion certificate.</p>
+
+      <h2>How the four tiers work</h2>
+      <p class="sub"><strong>Foundation</strong> proves AI literacy for any role. <strong>Practitioner</strong> proves you apply AI in daily workflows. <strong>Strategist</strong> proves you can lead AI initiatives and evaluate trade-offs. <strong>Executive</strong> proves you can drive AI transformation across an organisation.</p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>What is the best AI certification for ai, data &amp; emerging tech professionals?</summary>
+          <p>There is no single answer, because the best credential depends on your exact job title. TCC CERT+ publishes <strong>56 role-based AI certifications</strong> across <strong>14 ai, data &amp; emerging tech roles</strong>, each in four tiers: Foundation (no AI background needed), Practitioner (applying AI in daily workflows), Strategist (leading AI adoption) and Executive (owning AI strategy and governance). Start at the <a href="/bootcamps/">CERT+ catalogue</a>, type your job title, and TCC resolves it to the nearest of its 262 roles.</p>
+        </details>
+        <details>
+          <summary>Are there AI courses for ai, data &amp; emerging tech professionals?</summary>
+          <p>Yes. TCC CERT+ offers 56 certifications for 14 ai, data &amp; emerging tech roles, from Foundation to Executive, plus in-depth AI courses. Each credential is built around the workflows, decisions and outcomes of that specific role rather than generic AI theory.</p>
+        </details>
+        <details>
+          <summary>Do ai, data &amp; emerging tech professionals need to know how to code to use AI?</summary>
+          <p>No. The Foundation tier assumes no prior AI or coding background and covers practical AI tools for the role. Later tiers go deeper into applied workflows, evaluation and strategy as needed.</p>
+        </details>
+        <details>
+          <summary>Which roles in ai, data &amp; emerging tech does TCC cover?</summary>
+          <p>TCC covers 14 ai, data &amp; emerging tech roles: AI Agent Developer, AI Auditor, AI Ethicist, AI Researcher, BI Analyst, Computer Vision Engineer, Data Analyst, Data Engineer, Data Scientist, ML Engineer, MLOps Engineer, NLP Engineer, Quantum Computing Specialist, Robotics Engineer. Each one has a Foundation, Practitioner, Strategist and Executive credential.</p>
+        </details>
+        <details>
+          <summary>Does TCC help ai, data &amp; emerging tech professionals get hired?</summary>
+          <p>Yes. <a href="/placement/">TCC Placement Partner</a> sits on top of the certifications and provides portfolio building, resume and interview support and employer connections, with a published goal of 10,000 offer letters per year. It is not a job guarantee.</p>
+        </details>
+      </div>
+
+      <div class="links">
+        <a href="/placement/">Get placed after certifying →</a>
+        <a href="/blog/role-based-ai-certifications-vs-generic.html">Role-based vs generic certificates →</a>
+        <a href="/blog/how-to-get-ai-internship-2026.html">How to get an AI internship →</a>
+      </div>
+    </main>
+    <footer>The Coding Company • Learn AI. Get Certified. Get Placed. · <a href="/worksim/">WorkSim (pilot)</a></footer>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>

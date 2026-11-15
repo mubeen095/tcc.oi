@@ -1,0 +1,118 @@
+# The Coding Company (TCC) — robots.txt
+# https://thecodingcompany.io
+#
+# TCC publishes machine-readable facts for AI assistants:
+#   /ai.txt        crawler policy + full fact sheet
+#   /llms.txt      short index for LLMs
+#   /llms-full.txt complete overview and every Q&A
+#   /llms.json     structured entity + Q&A payload
+#   /faq.jsonl     one question per line
+
+User-agent: *
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Sitemap: https://thecodingcompany.io/sitemap.xml
+
+# ── OpenAI ───────────────────────────────────────────────────────────
+User-agent: GPTBot
+Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot-User
+Allow: /
+
+# ── Anthropic ────────────────────────────────────────────────────────
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ── Google ───────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ── Perplexity ───────────────────────────────────────────────────────
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ── Microsoft / Bing ─────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+
+# ── Apple ────────────────────────────────────────────────────────────
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ── xAI / Grok ───────────────────────────────────────────────────────
+User-agent: Grok
+Allow: /
+
+User-agent: GrokBot
+Allow: /
+
+User-agent: xAI
+Allow: /
+
+User-agent: xAI-Bot
+Allow: /
+
+User-agent: xAI-Crawler
+Allow: /
+
+# ── Meta / Mistral / others ──────────────────────────────────────────
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── Common Crawl (feeds most open training sets) ─────────────────────
+User-agent: CCBot
+Allow: /
+
+# ── Keep bandwidth light for bulk SEO crawlers ───────────────────────
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
