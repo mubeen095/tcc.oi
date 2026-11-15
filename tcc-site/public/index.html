@@ -227,7 +227,7 @@
       .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; z-index: 0; }
       .hero-glow { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 68% 26% at 49% 17%, rgba(18,87,165,0.79) 0%, rgba(18,87,165,0.42) 55%, rgba(18,87,165,0) 82%); }
       .hero-fade { position: absolute; left: 0; right: 0; bottom: 0; height: 40%; z-index: 2; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.88) 80%, #000 100%); }
-      .hero-panel { position: static; transform: none; margin: 28px auto 0; width: auto; max-width: 1020px; text-align: center; }
+      .hero-panel { position: static; transform: none; margin: 28px auto 0; width: auto; max-width: 1020px; padding-inline: clamp(16px, 4vw, 32px); text-align: center; }
       .hero-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-style: normal; font-weight: 800; letter-spacing: -0.035em; line-height: 1.02; font-size: clamp(32px, 4.4vw, 56px); margin: 0 0 12px; text-shadow: 0 2px 26px rgba(0,0,0,0.6); text-wrap: balance; overflow-wrap: break-word; }
       .hero-sub { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.01em; color: rgba(255,255,255,0.82); text-shadow: 0 1px 14px rgba(0,0,0,0.7); font-size: clamp(13.5px, 1.35vw, 15.5px); line-height: 1.55; max-width: 66em; margin: 0 auto 14px; }
       .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; }
@@ -253,7 +253,12 @@
       @media (max-width: 340px) {
         .hero-panel .hero-btn { padding: 10px 8px; font-size: 11px; }
       }
-      /* Short viewports (small laptops, landscape phones): keep the copy clear of the subject */
+      /* ── Homepage opt-out: video is a full-bleed band, so the section must not
+     inset it. The generated mobile-polish layer pads .hero at <=480px for the
+     overlay heroes on other pages; this zeroes the inset for the homepage only. */
+      #hero-section.hero { padding: 0 0 40px; }
+
+/* Short viewports (small laptops, landscape phones): keep the copy clear of the subject */
       @media (max-height: 720px) {
         .hero-h1 { font-size: clamp(26px, 3.9vw, 46px); }
         .hero-sub { font-size: 13px; margin-bottom: 12px; }

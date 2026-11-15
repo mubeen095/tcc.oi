@@ -38,6 +38,10 @@ const BLOCK = `
         .popular-card { min-height: 60px; justify-content: center; }
         .chip-row { gap: 8px; }
         .bottom-link { min-height: 52px; }
+        /* homepage opt-out: video is a full-bleed band; the generated section
+           padding must not inset it — this rule is skipped on other pages since
+           they lack the #hero-section.hero selector. */
+        #hero-section.hero { padding: 0 0 40px; }
         .cat-pill, .c-oth { min-height: 44px; display: inline-flex; align-items: center; }
         .btn, .btn-sm { min-height: 46px; }
         .news-input { min-height: 50px; }
