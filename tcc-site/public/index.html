@@ -223,12 +223,11 @@
       /* ── Hero ── */
       .hero { position: relative; min-height: 78vh; min-height: 78dvh; display: flex; flex-direction: column; justify-content: flex-start; background: #060606; overflow: hidden; }
       @media (max-width: 767px) { .hero { min-height: calc(70vh - 52px); min-height: calc(70dvh - 52px); } }
-      .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 81%; z-index: 0; }
+      .hero-media { position: relative; height: clamp(300px, 54vh, 640px); overflow: hidden; }
+      .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; z-index: 0; }
       .hero-glow { position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 68% 26% at 49% 17%, rgba(18,87,165,0.79) 0%, rgba(18,87,165,0.42) 55%, rgba(18,87,165,0) 82%); }
       .hero-fade { position: absolute; left: 0; right: 0; bottom: 0; height: 40%; z-index: 2; pointer-events: none; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.88) 80%, #000 100%); }
-      .hero-content { position: relative; z-index: 3; max-width: min(1090px, 94%); margin: 0 auto; padding: 128px 0 60px; width: 100%; }
-      @media (max-width: 767px) { .hero-content { padding-top: 92px; } }
-      .hero-panel { position: absolute; z-index: 4; left: 50%; transform: translateX(-50%); bottom: clamp(5px, 1vh, 10px); width: min(1020px, 92%); text-align: center; }
+      .hero-panel { position: static; transform: none; margin: 28px auto 0; width: auto; max-width: 1020px; text-align: center; }
       .hero-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-style: normal; font-weight: 800; letter-spacing: -0.035em; line-height: 1.02; font-size: clamp(32px, 4.4vw, 56px); margin: 0 0 12px; text-shadow: 0 2px 26px rgba(0,0,0,0.6); text-wrap: balance; overflow-wrap: break-word; }
       .hero-sub { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.01em; color: rgba(255,255,255,0.82); text-shadow: 0 1px 14px rgba(0,0,0,0.7); font-size: clamp(13.5px, 1.35vw, 15.5px); line-height: 1.55; max-width: 66em; margin: 0 auto 14px; }
       .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; align-items: center; }
@@ -241,23 +240,23 @@
       .hero-roadmap-link:hover { color: #fff; border-color: rgba(255,255,255,0.6); }
       @media (max-width: 767px) { .hero-roadmap-link { margin-top: 12px; font-size: 12px; } }
       @media (max-width: 767px) {
-        .hero-panel { bottom: 8px; width: calc(100% - 32px); max-width: 100%; }
+        .hero-panel { margin: 20px auto 0; max-width: 1020px; }
         .hero-panel .hero-h1 { font-size: clamp(22px, 6.4vw, 32px); margin-bottom: 8px; }
         .hero-panel .hero-sub { font-size: 12.5px; line-height: 1.5; max-width: 100%; margin-bottom: 10px; }
         .hero-panel .hero-btn { padding: 12px 18px; font-size: 13.5px; }
-        .hero-panel .hero-actions { width: 100%; gap: 10px; }
+        .hero-panel .hero-actions { gap: 10px; }
       }
       @media (max-width: 430px) {
         .hero-panel .hero-actions { flex-direction: column; flex-wrap: nowrap; }
         .hero-panel .hero-btn { width: 100%; padding: 12px 16px; font-size: 14px; }
       }
       @media (max-width: 340px) {
-        .hero-panel .hero-btn { padding: 11px 12px; font-size: 12px; }
+        .hero-panel .hero-btn { padding: 10px 8px; font-size: 11px; }
       }
       /* Short viewports (small laptops, landscape phones): keep the copy clear of the subject */
       @media (max-height: 720px) {
-        .hero-panel .hero-h1 { font-size: clamp(26px, 3.9vw, 46px); }
-        .hero-panel .hero-sub { font-size: 13px; margin-bottom: 12px; }
+        .hero-h1 { font-size: clamp(26px, 3.9vw, 46px); }
+        .hero-sub { font-size: 13px; margin-bottom: 12px; }
         .hero-panel .hero-btn { padding: 11px 22px; font-size: 14px; }
         .hero-fade { height: 50%; }
       }
@@ -1057,11 +1056,13 @@
         <div class="content-wrap">
           <!-- HERO -->
           <section id="hero-section" class="hero">
-            <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/bootcamp-hero.jpg" aria-hidden="true" controlsList="nodownload noremoteplayback">
-              <source src="/bootcamp-hero.mp4" type="video/mp4" />
-            </video>
-            <div class="hero-glow"></div>
-            <div class="hero-fade"></div>
+            <div class="hero-media">
+              <video class="hero-bg" autoplay muted loop playsinline preload="metadata" poster="/bootcamp-hero.jpg" aria-hidden="true" controlsList="nodownload noremoteplayback">
+                <source src="/bootcamp-hero.mp4" type="video/mp4" />
+              </video>
+              <div class="hero-glow"></div>
+              <div class="hero-fade"></div>
+            </div>
             <div class="hero-panel">
               <h1 class="hero-h1">Think Beyond Degree.</h1>
               <p class="hero-sub">A learning community for the most ambitious professionals in the world.</p>
