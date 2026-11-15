@@ -24,7 +24,7 @@ const ROOT = path.resolve(__dirname, '..');
 const PUBLIC = path.join(ROOT, 'public');
 const BLOG = path.join(PUBLIC, 'blog');
 const CATDIR = path.join(BLOG, 'category');
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 const IMG = '/assets/img/blog';
 /* Category pages sit at /blog/category/, one level deeper than /blog/. */
 const REL_IMG = '../../assets/img/blog';

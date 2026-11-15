@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PUBLIC = path.join(__dirname, '..', 'public');
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 
 function walk(dir, acc) {
   acc = acc || [];

@@ -19,7 +19,7 @@ import { resolveEnrolment, renderCohort } from './cohorts.mjs';
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = path.join(ROOT, 'public');
 
-const BASE = 'https://thecodingcompany.com';
+const BASE = 'https://thecodingcompany.io';
 const REVIEWED = new Date().toISOString().slice(0, 10);
 const PAY_URL = 'https://payments.cashfree.com/forms/pr-rb';
 const COHORT = resolveEnrolment();

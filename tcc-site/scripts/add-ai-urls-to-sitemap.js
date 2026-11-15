@@ -18,11 +18,11 @@ const FILE = path.join(ROOT, 'sitemap.xml');
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const AI_URLS = [
-  { loc: 'https://thecodingcompany.com/llms.txt', changefreq: 'weekly', priority: '0.6' },
-  { loc: 'https://thecodingcompany.com/llms-full.txt', changefreq: 'weekly', priority: '0.6' },
-  { loc: 'https://thecodingcompany.com/llms.json', changefreq: 'weekly', priority: '0.6' },
-  { loc: 'https://thecodingcompany.com/ai.txt', changefreq: 'weekly', priority: '0.6' },
-  { loc: 'https://thecodingcompany.com/faq.jsonl', changefreq: 'weekly', priority: '0.6' }
+  { loc: 'https://thecodingcompany.io/llms.txt', changefreq: 'weekly', priority: '0.6' },
+  { loc: 'https://thecodingcompany.io/llms-full.txt', changefreq: 'weekly', priority: '0.6' },
+  { loc: 'https://thecodingcompany.io/llms.json', changefreq: 'weekly', priority: '0.6' },
+  { loc: 'https://thecodingcompany.io/ai.txt', changefreq: 'weekly', priority: '0.6' },
+  { loc: 'https://thecodingcompany.io/faq.jsonl', changefreq: 'weekly', priority: '0.6' }
 ];
 
 let xml = fs.readFileSync(FILE, 'utf8');

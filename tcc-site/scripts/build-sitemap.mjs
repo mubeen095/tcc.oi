@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = path.join(ROOT, 'public');
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 const OUT = path.join(PUBLIC, 'sitemap.xml');
 
 const EXCLUDE_PREFIXES = ['/admin', '/member', '/login', '/100-club/app'];

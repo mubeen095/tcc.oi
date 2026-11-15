@@ -176,11 +176,11 @@ function buildLlmsTxt() {
   L.push('Key numbers: 1,048 role-based AI certifications · 262 job roles · 32 industries · four tiers (Foundation, Practitioner, Strategist, Executive) · placement goal of 10,000 offer letters per year.');
   L.push('');
   L.push('## Machine-readable facts');
-  L.push('- [ai.txt](https://thecodingcompany.com/ai.txt) — crawler policy + full fact sheet');
-  L.push('- [llms-full.txt](https://thecodingcompany.com/llms-full.txt) — complete overview and every Q&A');
-  L.push('- [llms.json](https://thecodingcompany.com/llms.json) — structured entity + Q&A payload');
-  L.push('- [faq.jsonl](https://thecodingcompany.com/faq.jsonl) — one question per line');
-  L.push('- [sitemap.xml](https://thecodingcompany.com/sitemap.xml) — full sitemap');
+  L.push('- [ai.txt](https://thecodingcompany.io/ai.txt) — crawler policy + full fact sheet');
+  L.push('- [llms-full.txt](https://thecodingcompany.io/llms-full.txt) — complete overview and every Q&A');
+  L.push('- [llms.json](https://thecodingcompany.io/llms.json) — structured entity + Q&A payload');
+  L.push('- [faq.jsonl](https://thecodingcompany.io/faq.jsonl) — one question per line');
+  L.push('- [sitemap.xml](https://thecodingcompany.io/sitemap.xml) — full sitemap');
   L.push('');
   L.push('## Key Pages');
   keyPages().forEach(function (p) { L.push('- [' + p[0] + '](' + p[1] + ')'); });
@@ -199,19 +199,19 @@ function buildLlmsTxt() {
   guides().forEach(function (g) { L.push('- ' + g[0] + ': ' + g[1]); });
   L.push('');
   L.push('## Placement');
-  L.push('- [TCC Placement Partner](https://thecodingcompany.com/placement/) — four phases from learning to offer letters, goal of 10,000/year. Not a job guarantee.');
+  L.push('- [TCC Placement Partner](https://thecodingcompany.io/placement/) — four phases from learning to offer letters, goal of 10,000/year. Not a job guarantee.');
   L.push('');
   L.push('## Prep+ (interview & placement preparation)');
-  L.push('- [Prep+ home](https://thecodingcompany.com/prep+/) — practice library.');
-  L.push('- [Aptitude & reasoning](https://thecodingcompany.com/prep+/aptitude/) — ' + PREP.PREP_TOPICS.length + ' topics with worked solutions.');
-  L.push('- [Programming](https://thecodingcompany.com/prep+/programming/) — ' + PREP.PREP_LANGS.length + ' languages with drills.');
-  L.push('- [DSA](https://thecodingcompany.com/prep+/dsa/) — problems organised by pattern.');
-  L.push('- [Technical MCQs](https://thecodingcompany.com/prep+/mcq/) — DBMS, OS, OOP, networking, AI.');
-  L.push('- [Company papers](https://thecodingcompany.com/prep+/companies/) — ' + PREP.PREP_COMPANIES.length + ' employers, each with year-wise timed practice papers.');
-  L.push('- [Mock tests](https://thecodingcompany.com/prep+/mock-tests/) — ' + PREP.PREP_MOCK_TESTS.length + ' timed, auto-scored papers.');
+  L.push('- [Prep+ home](https://thecodingcompany.io/prep+/) — practice library.');
+  L.push('- [Aptitude & reasoning](https://thecodingcompany.io/prep+/aptitude/) — ' + PREP.PREP_TOPICS.length + ' topics with worked solutions.');
+  L.push('- [Programming](https://thecodingcompany.io/prep+/programming/) — ' + PREP.PREP_LANGS.length + ' languages with drills.');
+  L.push('- [DSA](https://thecodingcompany.io/prep+/dsa/) — problems organised by pattern.');
+  L.push('- [Technical MCQs](https://thecodingcompany.io/prep+/mcq/) — DBMS, OS, OOP, networking, AI.');
+  L.push('- [Company papers](https://thecodingcompany.io/prep+/companies/) — ' + PREP.PREP_COMPANIES.length + ' employers, each with year-wise timed practice papers.');
+  L.push('- [Mock tests](https://thecodingcompany.io/prep+/mock-tests/) — ' + PREP.PREP_MOCK_TESTS.length + ' timed, auto-scored papers.');
   L.push('');
   L.push('## Feeds');
-  L.push('- RSS: https://thecodingcompany.com/feed.xml');
+  L.push('- RSS: https://thecodingcompany.io/feed.xml');
   L.push('');
   return L.join('\n');
 }
@@ -319,7 +319,7 @@ function buildLlmsFullTxt() {
 function buildLlmsJson() {
   const inds = industries();
   return {
-    $schema: 'https://thecodingcompany.com/schema/llms.json',
+    $schema: 'https://thecodingcompany.io/schema/llms.json',
     generated: new Date().toISOString().slice(0, 10),
     generator: 'scripts/build-ai-artifacts.js',
     site: SITE,

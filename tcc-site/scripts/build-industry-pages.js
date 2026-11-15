@@ -13,7 +13,7 @@ const path = require('path');
 const { withTheme } = require('./theme-tags.cjs');
 
 const ROOT = path.join(__dirname, '..', 'public');
-const BASE = 'https://thecodingcompany.com';
+const BASE = 'https://thecodingcompany.io';
 const TODAY = '2026-10-19';
 
 global.window = {};

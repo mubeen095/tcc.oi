@@ -16,7 +16,7 @@ const PAPERS = require('../data/prep-papers.js');
 
 const ROOT = path.join(__dirname, '..', 'public');
 const FILE = path.join(ROOT, 'sitemap.xml');
-const BASE = 'https://thecodingcompany.com';
+const BASE = 'https://thecodingcompany.io';
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const urls = [];

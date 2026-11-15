@@ -37,7 +37,7 @@ const PAPERS = require('../data/prep-papers.js');
 const { buildPaper, companyPapers } = require('../data/prep-assemble.js');
 
 const ROOT = path.join(__dirname, '..', 'public');
-const BASE = 'https://thecodingcompany.com';
+const BASE = 'https://thecodingcompany.io';
 const SHELL_SRC = path.join(ROOT, 'placement', 'index.html');
 
 /* ── shared shell extracted from the placement page ──────────────────────── */

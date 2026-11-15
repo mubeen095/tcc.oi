@@ -21,7 +21,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const PUBLIC = path.join(ROOT, 'public');
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 
 const LINKS = [
   '<link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />',

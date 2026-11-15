@@ -29,7 +29,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = path.join(ROOT, 'public');
 
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 const EMAIL = 'careers@thecodingcompany.io';
 const DATE_POSTED = '2026-11-14';
 const VALID_THROUGH = '2027-05-31T23:59:59+05:30';

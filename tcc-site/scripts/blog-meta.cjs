@@ -9,7 +9,7 @@
  * ==========================================================================*/
 'use strict';
 
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 
 const ARTICLES = [
   {

@@ -20,7 +20,7 @@ const orgGraph = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://thecodingcompany.com/#organization',
+      '@id': 'https://thecodingcompany.io/#organization',
       name: E.organization.name,
       alternateName: E.organization.alternateName,
       url: E.organization.url,
@@ -39,11 +39,11 @@ const orgGraph = {
     },
     {
       '@type': 'EducationalOrganization',
-      '@id': 'https://thecodingcompany.com/#educational',
+      '@id': 'https://thecodingcompany.io/#educational',
       name: E.organization.name,
       alternateName: E.organization.alternateName,
       url: E.organization.url,
-      parentOrganization: { '@id': 'https://thecodingcompany.com/#organization' },
+      parentOrganization: { '@id': 'https://thecodingcompany.io/#organization' },
       description:
         'AI courses, role-based AI certifications (TCC CERT+), internships and a placement program for global learners.',
       hasCredential: {
@@ -56,17 +56,17 @@ const orgGraph = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://thecodingcompany.com/#website',
+      '@id': 'https://thecodingcompany.io/#website',
       name: 'The Coding Company (TCC)',
       alternateName: 'TCC',
-      url: 'https://thecodingcompany.com',
-      publisher: { '@id': 'https://thecodingcompany.com/#organization' },
+      url: 'https://thecodingcompany.io',
+      publisher: { '@id': 'https://thecodingcompany.io/#organization' },
       inLanguage: 'en',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://thecodingcompany.com/bootcamps/?q={search_term_string}'
+          urlTemplate: 'https://thecodingcompany.io/bootcamps/?q={search_term_string}'
         },
         'query-input': 'required name=search_term_string'
       }

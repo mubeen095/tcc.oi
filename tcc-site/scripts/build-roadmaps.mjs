@@ -261,7 +261,7 @@ function buildJsonLd(sections) {
         "@type": "ListItem",
         position,
         name: it.title,
-        url: `https://thecodingcompany.com/roadmaps/${it.slug}/`,
+        url: `https://thecodingcompany.io/roadmaps/${it.slug}/`,
       });
     }
   }
@@ -272,7 +272,7 @@ function buildJsonLd(sections) {
       name: "All developer roadmaps",
       description:
         `A catalog of ${position} step-by-step TCC roadmaps across roles, skills, and best practices, each with a five-phase study plan.`,
-      url: "https://thecodingcompany.com/roadmaps/",
+      url: "https://thecodingcompany.io/roadmaps/",
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: position,
@@ -293,24 +293,24 @@ function buildDetailJsonLd(item, section) {
           "@type": "WebPage",
           name: `${item.title} Roadmap | The Coding Company`,
           description: item.desc,
-          url: `https://thecodingcompany.com${detailHref(item)}`,
+          url: `https://thecodingcompany.io${detailHref(item)}`,
           isPartOf: {
             "@type": "CollectionPage",
             name: "All developer roadmaps",
-            url: "https://thecodingcompany.com/roadmaps/",
+            url: "https://thecodingcompany.io/roadmaps/",
           },
           about: { "@type": "Thing", name: item.title },
         },
         {
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://thecodingcompany.com/" },
-            { "@type": "ListItem", position: 2, name: "Roadmaps", item: "https://thecodingcompany.com/roadmaps/" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://thecodingcompany.io/" },
+            { "@type": "ListItem", position: 2, name: "Roadmaps", item: "https://thecodingcompany.io/roadmaps/" },
             {
               "@type": "ListItem",
               position: 3,
               name: `${item.title} roadmap`,
-              item: `https://thecodingcompany.com${detailHref(item)}`,
+              item: `https://thecodingcompany.io${detailHref(item)}`,
             },
           ],
         },
@@ -452,14 +452,14 @@ ${ctx.siteFooter}`;
     <meta name="description" content="${esc(item.desc)}" />
     <meta name="keywords" content="${esc(item.title)} roadmap, ${esc(item.title)} learning path, ${esc(section.label)} roadmap, TCC roadmaps" />
     <meta name="author" content="The Coding Company" />
-    <link rel="canonical" href="https://thecodingcompany.com${detailHref(item)}" />
+    <link rel="canonical" href="https://thecodingcompany.io${detailHref(item)}" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#050505" />
     <meta property="og:title" content="${esc(item.title)} Roadmap | The Coding Company" />
     <meta property="og:description" content="${esc(item.desc)}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://thecodingcompany.com${detailHref(item)}" />
+    <meta property="og:url" content="https://thecodingcompany.io${detailHref(item)}" />
     <meta property="og:image" content="/vs-ig-posts-youtube-thumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@thecodingco" />
@@ -852,14 +852,14 @@ ${siteFooter}`;
     <meta name="description" content="Browse ${total} step-by-step TCC roadmaps across roles, skills, and best practices. Each guide is an original five-phase study plan with practice and project milestones." />
     <meta name="keywords" content="developer roadmaps, career roadmap, placement preparation, frontend roadmap, backend roadmap, AI engineer roadmap, devops roadmap, coding career" />
     <meta name="author" content="The Coding Company" />
-    <link rel="canonical" href="https://thecodingcompany.com/roadmaps/" />
+    <link rel="canonical" href="https://thecodingcompany.io/roadmaps/" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#050505" />
     <meta property="og:title" content="All Developer Roadmaps | The Coding Company" />
     <meta property="og:description" content="Browse ${total} step-by-step developer roadmaps across roles, skills, and best practices." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thecodingcompany.com/roadmaps/" />
+    <meta property="og:url" content="https://thecodingcompany.io/roadmaps/" />
     <meta property="og:image" content="/vs-ig-posts-youtube-thumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@thecodingco" />
@@ -930,8 +930,8 @@ ${content}
   console.log(`wrote ${detailCount} roadmap guide pages`);
 
   upsertSitemap([
-    "https://thecodingcompany.com/roadmaps/",
-    ...flat.map((item) => `https://thecodingcompany.com${detailHref(item)}`),
+    "https://thecodingcompany.io/roadmaps/",
+    ...flat.map((item) => `https://thecodingcompany.io${detailHref(item)}`),
   ]);
 }
 

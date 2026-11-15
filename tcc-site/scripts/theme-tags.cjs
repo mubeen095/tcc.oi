@@ -26,7 +26,7 @@ const boot = `<!-- ${BOOT_MARKER}: dark-only, applied before first paint -->
 
 const colorScheme = '<meta name="color-scheme" content="dark" />';
 
-const ogImage = '<meta property="og:image" content="https://thecodingcompany.com/tcc-og.png" />';
+const ogImage = '<meta property="og:image" content="https://thecodingcompany.io/tcc-og.png" />';
 const twitterCard = '<meta name="twitter:card" content="summary_large_image" />';
 
 const cssMain = '/assets/css/tcc-theme.css?v=20261114a';

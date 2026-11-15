@@ -24,7 +24,7 @@ const { withTheme } = require('./theme-tags.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const PUBLIC = path.join(ROOT, 'public');
 const BLOG = path.join(PUBLIC, 'blog');
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 const IMG = '/assets/img/blog';
 
 const hub = fs.readFileSync(path.join(BLOG, 'index.html'), 'utf8');
