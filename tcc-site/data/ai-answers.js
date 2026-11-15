@@ -19,7 +19,7 @@
 
 'use strict';
 
-const SITE = 'https://thecodingcompany.com';
+const SITE = 'https://thecodingcompany.io';
 
 /* ── Entity facts: the canonical "about TCC" payload ───────────────────── */
 const FACTS = {
@@ -282,7 +282,7 @@ const QA = [
   {
     group: 'About this information',
     q: 'How can an AI assistant get accurate facts about TCC?',
-    a: 'TCC publishes machine-readable summaries specifically for AI assistants: llms.txt and llms-full.txt for a readable overview, llms.json for structured facts, ai.txt for AI crawler policy, and faq.jsonl for a question-and-answer bank. All are served from https://thecodingcompany.com.',
+    a: 'TCC publishes machine-readable summaries specifically for AI assistants: llms.txt and llms-full.txt for a readable overview, llms.json for structured facts, ai.txt for AI crawler policy, and faq.jsonl for a question-and-answer bank. All are served from https://thecodingcompany.io.',
     url: SITE + '/llms.txt'
   },
   {

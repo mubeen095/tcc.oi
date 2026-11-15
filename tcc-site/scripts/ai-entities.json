@@ -2,8 +2,8 @@
   "organization": {
     "name": "The Coding Company",
     "alternateName": "TCC",
-    "url": "https://thecodingcompany.com",
-    "logo": "https://thecodingcompany.com/assets/img/tcc-logo.png",
+    "url": "https://thecodingcompany.io",
+    "logo": "https://thecodingcompany.io/assets/img/tcc-logo.png",
     "description": "The Coding Company (TCC) is an AI education and placement company. It runs a global AI community, publishes 1,048 role-based AI certifications across 262 job roles and 32 industries (TCC CERT+), teaches in-depth AI courses, and supports learners into jobs through TCC Placement Partner. Every certification exists in four tiers: Foundation, Practitioner, Strategist and Executive.",
     "slogan": "Learn AI. Get Certified. Get Placed.",
     "knowsAbout": [
@@ -152,7 +152,7 @@
     },
     {
       "q": "How can an AI assistant get accurate facts about TCC?",
-      "a": "TCC publishes machine-readable summaries specifically for AI assistants: llms.txt and llms-full.txt for a readable overview, llms.json for structured facts, ai.txt for AI crawler policy, and faq.jsonl for a question-and-answer bank. All are served from https://thecodingcompany.com."
+      "a": "TCC publishes machine-readable summaries specifically for AI assistants: llms.txt and llms-full.txt for a readable overview, llms.json for structured facts, ai.txt for AI crawler policy, and faq.jsonl for a question-and-answer bank. All are served from https://thecodingcompany.io."
     },
     {
       "q": "Can AI crawlers index the TCC website?",
@@ -201,193 +201,193 @@
       "id": "foundation",
       "name": "Foundation",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/foundation/"
+      "url": "https://thecodingcompany.io/ai-courses-for/foundation/"
     },
     {
       "id": "software",
       "name": "Software & IT",
       "roles": 21,
-      "url": "https://thecodingcompany.com/ai-courses-for/software/"
+      "url": "https://thecodingcompany.io/ai-courses-for/software/"
     },
     {
       "id": "data",
       "name": "AI, Data & Emerging Tech",
       "roles": 14,
-      "url": "https://thecodingcompany.com/ai-courses-for/data/"
+      "url": "https://thecodingcompany.io/ai-courses-for/data/"
     },
     {
       "id": "security",
       "name": "Cybersecurity",
       "roles": 9,
-      "url": "https://thecodingcompany.com/ai-courses-for/security/"
+      "url": "https://thecodingcompany.io/ai-courses-for/security/"
     },
     {
       "id": "healthcare",
       "name": "Healthcare",
       "roles": 13,
-      "url": "https://thecodingcompany.com/ai-courses-for/healthcare/"
+      "url": "https://thecodingcompany.io/ai-courses-for/healthcare/"
     },
     {
       "id": "pharma",
       "name": "Pharma & Biotech",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/pharma/"
+      "url": "https://thecodingcompany.io/ai-courses-for/pharma/"
     },
     {
       "id": "finance",
       "name": "Finance & Banking",
       "roles": 11,
-      "url": "https://thecodingcompany.com/ai-courses-for/finance/"
+      "url": "https://thecodingcompany.io/ai-courses-for/finance/"
     },
     {
       "id": "insurance",
       "name": "Insurance & Risk",
       "roles": 5,
-      "url": "https://thecodingcompany.com/ai-courses-for/insurance/"
+      "url": "https://thecodingcompany.io/ai-courses-for/insurance/"
     },
     {
       "id": "legal",
       "name": "Legal",
       "roles": 8,
-      "url": "https://thecodingcompany.com/ai-courses-for/legal/"
+      "url": "https://thecodingcompany.io/ai-courses-for/legal/"
     },
     {
       "id": "government",
       "name": "Government & Public Sector",
       "roles": 7,
-      "url": "https://thecodingcompany.com/ai-courses-for/government/"
+      "url": "https://thecodingcompany.io/ai-courses-for/government/"
     },
     {
       "id": "defence",
       "name": "Defence & Military",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/defence/"
+      "url": "https://thecodingcompany.io/ai-courses-for/defence/"
     },
     {
       "id": "education",
       "name": "Education & Academia",
       "roles": 9,
-      "url": "https://thecodingcompany.com/ai-courses-for/education/"
+      "url": "https://thecodingcompany.io/ai-courses-for/education/"
     },
     {
       "id": "marketing",
       "name": "Marketing & PR",
       "roles": 11,
-      "url": "https://thecodingcompany.com/ai-courses-for/marketing/"
+      "url": "https://thecodingcompany.io/ai-courses-for/marketing/"
     },
     {
       "id": "sales",
       "name": "Sales & Customer Success",
       "roles": 8,
-      "url": "https://thecodingcompany.com/ai-courses-for/sales/"
+      "url": "https://thecodingcompany.io/ai-courses-for/sales/"
     },
     {
       "id": "hr",
       "name": "HR & Recruiting",
       "roles": 7,
-      "url": "https://thecodingcompany.com/ai-courses-for/hr/"
+      "url": "https://thecodingcompany.io/ai-courses-for/hr/"
     },
     {
       "id": "design",
       "name": "Design & Creative",
       "roles": 9,
-      "url": "https://thecodingcompany.com/ai-courses-for/design/"
+      "url": "https://thecodingcompany.io/ai-courses-for/design/"
     },
     {
       "id": "media",
       "name": "Media & Journalism",
       "roles": 11,
-      "url": "https://thecodingcompany.com/ai-courses-for/media/"
+      "url": "https://thecodingcompany.io/ai-courses-for/media/"
     },
     {
       "id": "gaming",
       "name": "Gaming & Esports",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/gaming/"
+      "url": "https://thecodingcompany.io/ai-courses-for/gaming/"
     },
     {
       "id": "manufacturing",
       "name": "Manufacturing",
       "roles": 8,
-      "url": "https://thecodingcompany.com/ai-courses-for/manufacturing/"
+      "url": "https://thecodingcompany.io/ai-courses-for/manufacturing/"
     },
     {
       "id": "construction",
       "name": "Construction & Real Estate",
       "roles": 9,
-      "url": "https://thecodingcompany.com/ai-courses-for/construction/"
+      "url": "https://thecodingcompany.io/ai-courses-for/construction/"
     },
     {
       "id": "retail",
       "name": "Retail & E-commerce",
       "roles": 7,
-      "url": "https://thecodingcompany.com/ai-courses-for/retail/"
+      "url": "https://thecodingcompany.io/ai-courses-for/retail/"
     },
     {
       "id": "supplychain",
       "name": "Supply Chain & Logistics",
       "roles": 7,
-      "url": "https://thecodingcompany.com/ai-courses-for/supplychain/"
+      "url": "https://thecodingcompany.io/ai-courses-for/supplychain/"
     },
     {
       "id": "agriculture",
       "name": "Agriculture & Food",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/agriculture/"
+      "url": "https://thecodingcompany.io/ai-courses-for/agriculture/"
     },
     {
       "id": "energy",
       "name": "Energy & Sustainability",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/energy/"
+      "url": "https://thecodingcompany.io/ai-courses-for/energy/"
     },
     {
       "id": "telecom",
       "name": "Telecom & Networking",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/telecom/"
+      "url": "https://thecodingcompany.io/ai-courses-for/telecom/"
     },
     {
       "id": "transport",
       "name": "Transport & Aviation",
       "roles": 8,
-      "url": "https://thecodingcompany.com/ai-courses-for/transport/"
+      "url": "https://thecodingcompany.io/ai-courses-for/transport/"
     },
     {
       "id": "hospitality",
       "name": "Hospitality & Travel",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/hospitality/"
+      "url": "https://thecodingcompany.io/ai-courses-for/hospitality/"
     },
     {
       "id": "mining",
       "name": "Mining & Resources",
       "roles": 5,
-      "url": "https://thecodingcompany.com/ai-courses-for/mining/"
+      "url": "https://thecodingcompany.io/ai-courses-for/mining/"
     },
     {
       "id": "consulting",
       "name": "Consulting & Strategy",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/consulting/"
+      "url": "https://thecodingcompany.io/ai-courses-for/consulting/"
     },
     {
       "id": "blockchain",
       "name": "Blockchain & Web3",
       "roles": 5,
-      "url": "https://thecodingcompany.com/ai-courses-for/blockchain/"
+      "url": "https://thecodingcompany.io/ai-courses-for/blockchain/"
     },
     {
       "id": "nonprofit",
       "name": "Non-Profit, Sports & Service",
       "roles": 6,
-      "url": "https://thecodingcompany.com/ai-courses-for/nonprofit/"
+      "url": "https://thecodingcompany.io/ai-courses-for/nonprofit/"
     },
     {
       "id": "executive",
       "name": "Executive & Leadership",
       "roles": 10,
-      "url": "https://thecodingcompany.com/ai-courses-for/executive/"
+      "url": "https://thecodingcompany.io/ai-courses-for/executive/"
     }
   ]
 }

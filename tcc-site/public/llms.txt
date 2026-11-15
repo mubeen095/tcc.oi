@@ -13,15 +13,15 @@ Key numbers: 1,048 role-based AI certifications · 262 job roles · 32 industrie
 - [sitemap.xml](https://thecodingcompany.io/sitemap.xml) — full sitemap
 
 ## Key Pages
-- [Home](https://thecodingcompany.com/)
-- [TCC CERT+ — Role-Based AI Certifications](https://thecodingcompany.com/bootcamps/)
-- [TCC Placement Partner — Internships & Placement](https://thecodingcompany.com/placement/)
-- [TCC Prep+ — Interview & Placement Preparation](https://thecodingcompany.com/prep+/)
-- [AI Courses by Role & Industry](https://thecodingcompany.com/ai-courses-for/)
-- [TCC Blog — AI Courses, Careers & Placement Guides](https://thecodingcompany.com/blog/)
-- [100 Club — AI Innovation Clubs in Colleges](https://thecodingcompany.com/100-club/)
-- [Webinars](https://thecodingcompany.com/webinars/)
-- [Gigs](https://thecodingcompany.com/gigs/)
+- [Home](https://thecodingcompany.io/)
+- [TCC CERT+ — Role-Based AI Certifications](https://thecodingcompany.io/bootcamps/)
+- [TCC Placement Partner — Internships & Placement](https://thecodingcompany.io/placement/)
+- [TCC Prep+ — Interview & Placement Preparation](https://thecodingcompany.io/prep+/)
+- [AI Courses by Role & Industry](https://thecodingcompany.io/ai-courses-for/)
+- [TCC Blog — AI Courses, Careers & Placement Guides](https://thecodingcompany.io/blog/)
+- [100 Club — AI Innovation Clubs in Colleges](https://thecodingcompany.io/100-club/)
+- [Webinars](https://thecodingcompany.io/webinars/)
+- [Gigs](https://thecodingcompany.io/gigs/)
 
 ## TCC CERT+ overview
 1,048 credentials = 262 validated job roles × 4 tiers, across 32 industries.
@@ -29,43 +29,43 @@ Each credential page documents: description, jobs, hiring companies, and India (
 salary packages (illustrative sample data). Credentials are verifiable and valid for 3 years.
 
 ## AI Courses by Industry (role-based long-tail hubs)
-- Foundation: https://thecodingcompany.com/ai-courses-for/foundation/
-- Software & IT: https://thecodingcompany.com/ai-courses-for/software/
-- AI, Data & Emerging Tech: https://thecodingcompany.com/ai-courses-for/data/
-- Cybersecurity: https://thecodingcompany.com/ai-courses-for/security/
-- Healthcare: https://thecodingcompany.com/ai-courses-for/healthcare/
-- Pharma & Biotech: https://thecodingcompany.com/ai-courses-for/pharma/
-- Finance & Banking: https://thecodingcompany.com/ai-courses-for/finance/
-- Insurance & Risk: https://thecodingcompany.com/ai-courses-for/insurance/
-- Legal: https://thecodingcompany.com/ai-courses-for/legal/
-- Government & Public Sector: https://thecodingcompany.com/ai-courses-for/government/
-- Defence & Military: https://thecodingcompany.com/ai-courses-for/defence/
-- Education & Academia: https://thecodingcompany.com/ai-courses-for/education/
-- Marketing & PR: https://thecodingcompany.com/ai-courses-for/marketing/
-- Sales & Customer Success: https://thecodingcompany.com/ai-courses-for/sales/
-- HR & Recruiting: https://thecodingcompany.com/ai-courses-for/hr/
-- Design & Creative: https://thecodingcompany.com/ai-courses-for/design/
-- Media & Journalism: https://thecodingcompany.com/ai-courses-for/media/
-- Gaming & Esports: https://thecodingcompany.com/ai-courses-for/gaming/
-- Manufacturing: https://thecodingcompany.com/ai-courses-for/manufacturing/
-- Construction & Real Estate: https://thecodingcompany.com/ai-courses-for/construction/
-- Retail & E-commerce: https://thecodingcompany.com/ai-courses-for/retail/
-- Supply Chain & Logistics: https://thecodingcompany.com/ai-courses-for/supplychain/
-- Agriculture & Food: https://thecodingcompany.com/ai-courses-for/agriculture/
-- Energy & Sustainability: https://thecodingcompany.com/ai-courses-for/energy/
-- Telecom & Networking: https://thecodingcompany.com/ai-courses-for/telecom/
-- Transport & Aviation: https://thecodingcompany.com/ai-courses-for/transport/
-- Hospitality & Travel: https://thecodingcompany.com/ai-courses-for/hospitality/
-- Mining & Resources: https://thecodingcompany.com/ai-courses-for/mining/
-- Consulting & Strategy: https://thecodingcompany.com/ai-courses-for/consulting/
-- Blockchain & Web3: https://thecodingcompany.com/ai-courses-for/blockchain/
-- Non-Profit, Sports & Service: https://thecodingcompany.com/ai-courses-for/nonprofit/
-- Executive & Leadership: https://thecodingcompany.com/ai-courses-for/executive/
+- Foundation: https://thecodingcompany.io/ai-courses-for/foundation/
+- Software & IT: https://thecodingcompany.io/ai-courses-for/software/
+- AI, Data & Emerging Tech: https://thecodingcompany.io/ai-courses-for/data/
+- Cybersecurity: https://thecodingcompany.io/ai-courses-for/security/
+- Healthcare: https://thecodingcompany.io/ai-courses-for/healthcare/
+- Pharma & Biotech: https://thecodingcompany.io/ai-courses-for/pharma/
+- Finance & Banking: https://thecodingcompany.io/ai-courses-for/finance/
+- Insurance & Risk: https://thecodingcompany.io/ai-courses-for/insurance/
+- Legal: https://thecodingcompany.io/ai-courses-for/legal/
+- Government & Public Sector: https://thecodingcompany.io/ai-courses-for/government/
+- Defence & Military: https://thecodingcompany.io/ai-courses-for/defence/
+- Education & Academia: https://thecodingcompany.io/ai-courses-for/education/
+- Marketing & PR: https://thecodingcompany.io/ai-courses-for/marketing/
+- Sales & Customer Success: https://thecodingcompany.io/ai-courses-for/sales/
+- HR & Recruiting: https://thecodingcompany.io/ai-courses-for/hr/
+- Design & Creative: https://thecodingcompany.io/ai-courses-for/design/
+- Media & Journalism: https://thecodingcompany.io/ai-courses-for/media/
+- Gaming & Esports: https://thecodingcompany.io/ai-courses-for/gaming/
+- Manufacturing: https://thecodingcompany.io/ai-courses-for/manufacturing/
+- Construction & Real Estate: https://thecodingcompany.io/ai-courses-for/construction/
+- Retail & E-commerce: https://thecodingcompany.io/ai-courses-for/retail/
+- Supply Chain & Logistics: https://thecodingcompany.io/ai-courses-for/supplychain/
+- Agriculture & Food: https://thecodingcompany.io/ai-courses-for/agriculture/
+- Energy & Sustainability: https://thecodingcompany.io/ai-courses-for/energy/
+- Telecom & Networking: https://thecodingcompany.io/ai-courses-for/telecom/
+- Transport & Aviation: https://thecodingcompany.io/ai-courses-for/transport/
+- Hospitality & Travel: https://thecodingcompany.io/ai-courses-for/hospitality/
+- Mining & Resources: https://thecodingcompany.io/ai-courses-for/mining/
+- Consulting & Strategy: https://thecodingcompany.io/ai-courses-for/consulting/
+- Blockchain & Web3: https://thecodingcompany.io/ai-courses-for/blockchain/
+- Non-Profit, Sports & Service: https://thecodingcompany.io/ai-courses-for/nonprofit/
+- Executive & Leadership: https://thecodingcompany.io/ai-courses-for/executive/
 
 ## Guides
-- How to Get an AI Internship in 2026: https://thecodingcompany.com/blog/how-to-get-ai-internship-2026.html
-- AI Placement Programs Explained: https://thecodingcompany.com/blog/ai-placement-programs.html
-- Role-Based vs Generic AI Certifications: https://thecodingcompany.com/blog/role-based-ai-certifications-vs-generic.html
+- How to Get an AI Internship in 2026: https://thecodingcompany.io/blog/how-to-get-ai-internship-2026.html
+- AI Placement Programs Explained: https://thecodingcompany.io/blog/ai-placement-programs.html
+- Role-Based vs Generic AI Certifications: https://thecodingcompany.io/blog/role-based-ai-certifications-vs-generic.html
 
 ## Placement
 - [TCC Placement Partner](https://thecodingcompany.io/placement/) — four phases from learning to offer letters, goal of 10,000/year. Not a job guarantee.
