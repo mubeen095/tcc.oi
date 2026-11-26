@@ -5,13 +5,31 @@
     <link>https://thecodingcompany.io/blog/</link>
     <description>AI courses, role-based AI certifications, internships, placement programs and interview guides for students and professionals. From The Coding Company (TCC).</description>
     <language>en-in</language>
-    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://thecodingcompany.io/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://thecodingcompany.io/tcc-og.png</url>
       <title>TCC Blog</title>
       <link>https://thecodingcompany.io/blog/</link>
     </image>
+    <item>
+      <title>Layoffs in India News: How to Read and Respond</title>
+      <link>https://thecodingcompany.io/blog/layoffs-in-india-news.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/layoffs-in-india-news.html</guid>
+      <description>Separate confirmed layoff facts from speculation, read what a report actually says, and choose a clear next step without inventing a crisis.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Career News</category>
+    </item>
+    <item>
+      <title>How to Work With AI: A Practical Guide for Every Role</title>
+      <link>https://thecodingcompany.io/blog/how-to-work-with-ai.html</link>
+      <guid isPermaLink="true">https://thecodingcompany.io/blog/how-to-work-with-ai.html</guid>
+      <description>A practical workflow for using AI on real work: choose the task, give context, check the output, keep the decision, and show what you contributed.</description>
+      <dc:creator>TCC Team</dc:creator>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <category>AI at Work</category>
+    </item>
     <item>
       <title>How to Read a Job Description Like a Hiring Manager</title>
       <link>https://thecodingcompany.io/blog/how-to-read-a-job-description.html</link>

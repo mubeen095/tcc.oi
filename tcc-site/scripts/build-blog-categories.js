@@ -117,6 +117,15 @@ function render(c) {
   const cards = items.map(postCard);
   if (c.extra) cards.push(postCard(c.extra));
 
+  const final = c.final || {
+    title: 'Prove the work you can do.<br /><span class="serif-i">Build role-ready proof.</span>',
+    desc: 'Choose a role, practise the work it needs, and show evidence an employer can understand.',
+    primary: 'Explore all certifications',
+    primaryHref: '/bootcamps/',
+    secondary: 'How placements work',
+    secondaryHref: '/placement/',
+  };
+
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -235,11 +244,11 @@ ${others}
           <!-- ═══════ FINAL ═══════ -->
           <section class="final">
             <div class="container reveal">
-              <h2 class="final-title">Everyone says they know AI.<br /><span class="serif-i">Prove it — and get hired.</span></h2>
-              <p class="final-sub">Pick your role, earn the credential, and let the placement programme help you land the offer.</p>
+              <h2 class="final-title">${final.title}</h2>
+              <p class="final-sub">${final.desc}</p>
               <div class="final-ctas">
-                <a href="/bootcamps/" class="btn">Explore all certifications</a>
-                <a href="/placement/" class="btn btn-ghost">How placements work</a>
+                <a href="${final.primaryHref}" class="btn">${final.primary}</a>
+                <a href="${final.secondaryHref}" class="btn btn-ghost">${final.secondary}</a>
               </div>
             </div>
           </section>

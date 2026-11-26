@@ -241,6 +241,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://thecodingcompany.io/blog/category/ai-at-work.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://thecodingcompany.io/blog/category/ai-career.html</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -249,6 +255,12 @@
   <url>
     <loc>https://thecodingcompany.io/blog/category/ai-courses.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecodingcompany.io/blog/category/career-news.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -279,6 +291,18 @@
   <url>
     <loc>https://thecodingcompany.io/blog/how-to-read-a-job-description.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecodingcompany.io/blog/how-to-work-with-ai.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thecodingcompany.io/blog/layoffs-in-india-news.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

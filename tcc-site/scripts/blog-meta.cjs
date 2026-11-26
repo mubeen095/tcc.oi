@@ -13,6 +13,32 @@ const SITE = 'https://thecodingcompany.io';
 
 const ARTICLES = [
   {
+    file: 'layoffs-in-india-news.html',
+    title: 'Layoffs in India News: How to Read and Respond',
+    seoTitle: 'Layoffs in India News: How to Read and Respond | TCC',
+    desc: 'Separate confirmed layoff facts from speculation, read what a report actually says, and choose a clear next step without inventing a crisis.',
+    tag: 'Career News',
+    date: '2026-11-27',
+    dateLabel: '27 November 2026',
+    readTime: 8,
+    image: 'hero-people-work.jpg',
+    imageAlt: 'A professional reviewing career information before making a decision',
+    category: 'career-news',
+  },
+  {
+    file: 'how-to-work-with-ai.html',
+    title: 'How to Work With AI: A Practical Guide for Every Role',
+    seoTitle: 'How to Work With AI: A Practical Guide for Every Role | TCC',
+    desc: 'A practical workflow for using AI on real work: choose the task, give context, check the output, keep the decision, and show what you contributed.',
+    tag: 'AI at Work',
+    date: '2026-11-27',
+    dateLabel: '27 November 2026',
+    readTime: 8,
+    image: 'hero-ai-neural.jpg',
+    imageAlt: 'An abstract neural network representing AI assistance at work',
+    category: 'ai-at-work',
+  },
+  {
     file: 'how-to-read-a-job-description.html',
     title: 'How to Read a Job Description Like a Hiring Manager',
     seoTitle: 'How to Read a Job Description Like a Hiring Manager | TCC',
@@ -95,6 +121,40 @@ const ARTICLES = [
 /* Category descriptors used by build-blog-categories.js. `from` is an ordered
    list of article files; every file must exist in ARTICLES. */
 const CATEGORIES = [
+  {
+    slug: 'career-news.html',
+    name: 'Career News',
+    crumb: 'Career News',
+    image: 'hero-people-work.jpg',
+    title: 'Career <span class="accent">news</span>',
+    sub: 'How to make sense of hiring headlines, layoff reports and workplace change without turning a news cycle into a career decision.',
+    from: ['layoffs-in-india-news.html', 'how-to-read-a-job-description.html', 'tcs-nqt-what-it-tests.html', 'ai-placement-programs.html'],
+    final: {
+      title: 'Careers change. Evidence travels.<br /><span class="serif-i">Build what you can explain.</span>',
+      desc: 'Keep your skills visible and your next step clear, whatever the hiring cycle does.',
+      primary: 'Browse all guides',
+      primaryHref: '/blog/',
+      secondary: 'How placement works',
+      secondaryHref: '/placement/',
+    },
+  },
+  {
+    slug: 'ai-at-work.html',
+    name: 'AI at Work',
+    crumb: 'AI at Work',
+    image: 'hero-ai-neural.jpg',
+    title: 'AI <span class="accent">at work</span>',
+    sub: 'Practical ways to use AI on real tasks, set boundaries, verify the output and show the judgement you bring to the role.',
+    from: ['how-to-work-with-ai.html', 'ai-tools-in-interviews.html', 'role-based-ai-certifications-vs-generic.html', 'ai-placement-programs.html'],
+    final: {
+      title: 'Use AI as a tool, not a story.<br /><span class="serif-i">Show the work behind it.</span>',
+      desc: 'Learn the workflow for your role, then build proof of the decisions you can make with it.',
+      primary: 'Find your AI role track',
+      primaryHref: '/ai-courses-for/',
+      secondary: 'Browse certifications',
+      secondaryHref: '/bootcamps/',
+    },
+  },
   {
     slug: 'ai-courses.html',
     name: 'AI Courses',

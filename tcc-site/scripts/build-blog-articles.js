@@ -185,6 +185,15 @@ function render(a) {
     ],
   };
 
+  const final = a.final || {
+    title: 'Prove the work you can do.<br /><span class="serif-i">Build role-ready proof.</span>',
+    desc: 'Choose a role, practise the work it needs, and show evidence an employer can understand.',
+    primary: 'Explore all certifications',
+    primaryHref: '/bootcamps/',
+    secondary: 'How placements work',
+    secondaryHref: '/placement/',
+  };
+
   const related = a.related
     .map(
       (r) => `            <a class="card a-rel reveal" href="${r.href}">
@@ -334,11 +343,11 @@ ${related}
           <!-- ═══════ FINAL ═══════ -->
           <section class="final">
             <div class="container reveal">
-              <h2 class="final-title">Everyone says they know AI.<br /><span class="serif-i">Prove it — and get hired.</span></h2>
-              <p class="final-sub">Pick your role, earn the credential, and let the placement programme help you land the offer.</p>
+              <h2 class="final-title">${final.title}</h2>
+              <p class="final-sub">${final.desc}</p>
               <div class="final-ctas">
-                <a href="/bootcamps/" class="btn">Explore all certifications</a>
-                <a href="/placement/" class="btn btn-ghost">How placements work</a>
+                <a href="${final.primaryHref}" class="btn">${final.primary}</a>
+                <a href="${final.secondaryHref}" class="btn btn-ghost">${final.secondary}</a>
               </div>
             </div>
           </section>
@@ -391,7 +400,298 @@ ${NAV}
 /* ══════════════════════ ARTICLES ══════════════════════ */
 
 const ARTICLES = [
-  /* ── 1. AI Placement Programs ── */
+  /* ── 1. Layoffs in India news ── */
+  {
+    file: 'layoffs-in-india-news.html',
+    crumb: 'Layoffs in India News',
+    tag: 'Career News',
+    date: '2026-11-27',
+    dateLabel: '27 November 2026',
+    readTime: 8,
+    wordCount: 1450,
+    image: 'hero-people-work.jpg',
+    seoTitle: 'Layoffs in India News: How to Read and Respond | TCC',
+    titlePlain: 'Layoffs in India News: How to Read and Respond',
+    h1: 'Layoffs in India news, <span class="accent">read calmly</span>.',
+    description:
+      'Separate confirmed layoff facts from speculation, read what a report actually says, and choose a clear next step without inventing a crisis.',
+    standfirst:
+      'A layoff headline can make a stable job feel temporary. Before you change anything, separate what is confirmed from what is inferred — then take a few reversible steps that improve your position either way.',
+    keywords: ['layoffs in India', 'India layoff news', 'tech layoffs India', 'layoff news', 'career planning after layoffs', 'job security India'],
+    about: ['Layoffs', 'India jobs', 'Career planning', 'Hiring'],
+    mentions: [],
+    body: [
+      {
+        html: `<p class="a-lede">When layoffs dominate the feed, the useful question is not "is everyone at risk?" It is "what is actually confirmed here, and what can I do this week that helps whether or not my role changes?" Those are two different questions, and mixing them is how a news cycle turns into a bad career decision.</p>`,
+      },
+      { h2: 'First, sort the report from the rumour', id: 'sort-report' },
+      {
+        html: `<p>A headline is a compressed claim. Before you forward it, comment on it, or plan around it, ask four things: who is named, what action is described, who confirms it, and whether later reporting has changed the earlier version.</p>`,
+      },
+      {
+        html: `<ul>
+          <li><strong>Company statement.</strong> The clearest source for what a company says it did, provided you read the full statement rather than a quote of a quote.</li>
+          <li><strong>Official filing or update, where relevant.</strong> Some organisations have formal disclosure obligations. A filing is stronger than a social post, but it still needs to be read in context.</li>
+          <li><strong>Independent reporting that names its source.</strong> "People familiar with the matter" is a source type, not a confirmation. It is worth weighing, not treating as settled fact.</li>
+          <li><strong>Dates and scope.</strong> A report about a past quarter, a single division or a proposed change is not the same as a current, company-wide action.</li>
+        </ul>`,
+      },
+      {
+        html: `<div class="a-callout reveal"><div class="co-label">A simple rule</div><p>Do not make a decision from a screenshot, a repost, or an unnamed internal note. Wait for a company statement, an official filing where one is relevant, or reporting that clearly says who supplied the claim.</p></div>`,
+      },
+      { h2: 'Read the wording carefully', id: 'wording' },
+      {
+        html: `<p>Layoff coverage uses several kinds of language that are often treated as interchangeable. They are not the same claim.</p>`,
+      },
+      {
+        html: `<div class="a-flag">
+          <div class="fl bad reveal"><strong class="fl-h">"Mass layoffs" in a headline</strong><p>Open the report. The body may describe a fear, a rumour, or a company denial rather than a confirmed action. The headline is not the evidence.</p></div>
+          <div class="fl good reveal"><strong class="fl-h">"Roles affected" with a named source</strong><p>This is more precise. Check the scope, the team, and whether the company has confirmed it before you draw a conclusion about your own job.</p></div>
+          <div class="fl bad reveal"><strong class="fl-h">"Hiring freeze"</strong><p>This usually describes future openings, not a decision about current employees. It matters most if you are applying, not necessarily if you are already employed.</p></div>
+          <div class="fl good reveal"><strong class="fl-h">"Restructuring" or "reorganisation"</strong><p>These can involve role changes, team moves or a smaller footprint. Ask what actually changes for the people involved instead of relying on the word itself.</p></div>
+        </div>`,
+      },
+      {
+        html: `<p>A denial of mass layoffs does not mean nothing changed. A hiring freeze does not mean current employees are affected. Precision is not pedantry; it is what stops you from preparing for the wrong risk.</p>`,
+      },
+      { h2: 'Check your own position without catastrophising', id: 'own-position' },
+      {
+        html: `<p>Once you know what the report actually says, look at your own work with the same discipline. You are not trying to prove that you are safe. You are trying to understand what would be easy or hard to replace if the organisation changed.</p>`,
+      },
+      {
+        html: `<ul>
+          <li><strong>Proximity.</strong> Is your role tied to a project, client or business unit named in the report?</li>
+          <li><strong>Feedback.</strong> What have you been told recently about the quality and value of your work? Written feedback is more useful than memory.</li>
+          <li><strong>Dependence.</strong> Who relies on your output, and could they explain what you do in one sentence?</li>
+          <li><strong>Portability.</strong> Which parts of your work would still be relevant in another company or another team?</li>
+        </ul>`,
+      },
+      {
+        html: `<p>If the answers are uncomfortable, that is useful information. It points to what you can change now, while you still have time and a stable base to work from.</p>`,
+      },
+      { h2: 'A short plan that helps either way', id: 'short-plan' },
+      {
+        html: `<p>You do not need to quit, confront anyone, or rewrite your life after a headline. You need a few reversible moves that are useful whether or not anything happens to your role.</p>`,
+      },
+      {
+        html: `<div class="a-phases">
+          <div class="a-phase reveal"><div class="ph-n">01</div><div><div class="ph-t">Build an evidence file</div><p class="ph-d">Write one line for each piece of work you are proud of: what you did, what changed, and how you know. Keep it factual. This becomes the source for your resume, your profile and your interview answers.</p></div></div>
+          <div class="a-phase reveal"><div class="ph-n">02</div><div><div class="ph-t">Refresh the resume around outcomes</div><p class="ph-d">Move your most relevant work to the top. Replace adjectives with things a reader can check. Do not add a number, a title or a result you cannot defend in an interview.</p></div></div>
+          <div class="a-phase reveal"><div class="ph-n">03</div><div><div class="ph-t">Map adjacent roles</div><p class="ph-d">List the job titles your experience already supports, not the ones you aspire to in the abstract. Read a few real postings and note which requirements you meet and which you do not.</p></div></div>
+          <div class="a-phase reveal"><div class="ph-n">04</div><div><div class="ph-t">Have two calm conversations</div><p class="ph-d">Ask a manager about team priorities and ask a peer what they are seeing in the market. Frame both as planning questions, not as accusations based on a headline.</p></div></div>
+        </div>`,
+      },
+      { h2: 'What not to do in the first hour', id: 'first-hour' },
+      {
+        html: `<div class="a-flag">
+          <div class="fl bad reveal"><strong class="fl-h">Do not post a panic update</strong><p>A public reaction can travel faster than the correction, and it can affect how colleagues and future employers read your judgement.</p></div>
+          <div class="fl good reveal"><strong class="fl-h">Do verify before you discuss</strong><p>Read the full report, check the original source, and separate what is confirmed from what is being speculated about.</p></div>
+          <div class="fl bad reveal"><strong class="fl-h">Do not stop doing your job</strong><p>Withdrawing from work because of an unconfirmed headline makes the situation worse for you and for the team around you.</p></div>
+          <div class="fl good reveal"><strong class="fl-h">Do make your work legible</strong><p>Summarise what you own, what you shipped and where you helped. Clarity is useful in a review, a referral conversation or an application.</p></div>
+        </div>`,
+      },
+      { h2: 'If you are directly affected', id: 'directly-affected' },
+      {
+        html: `<p>If the change is real and it applies to you, move from headlines to documents. Find out the effective date, the notice or severance terms, what happens to handover, whether internal roles are possible, and what you can ask to have confirmed in writing. Do not sign anything you have not had time to read.</p>`,
+      },
+      {
+        html: `<p>Then work in stages. Stabilise the immediate details. Document your work while it is fresh. Decide which roles actually fit your experience. Only then start applying in a focused way. A rushed application driven by fear is rarely better than a considered one sent a little later.</p>`,
+      },
+      { h2: 'Where AI fits, and where it does not', id: 'ai-fits' },
+      {
+        html: `<p>AI can help you turn scattered notes into a clear resume, draft a thoughtful outreach message, and practise answers to interview questions. It cannot tell you which roles will survive a news cycle, and it should never invent a result on your resume. Use it as a drafting aid and verify every claim before it leaves your hands.</p>`,
+      },
+      {
+        html: `<p>If you want to build a practical habit around this, start with <a href="/blog/how-to-work-with-ai.html">how to work with AI</a>: choose the task, give context, check the output, and keep the decision yourself.</p>`,
+      },
+      {
+        html: `<div class="a-cta reveal"><div class="ct-t">Turn uncertainty into a clear next step</div><p class="ct-d">See how TCC Placement Partner builds portfolio evidence, role positioning and interview readiness before employer conversations begin.</p><div class="ct-row"><a class="btn btn-sm" href="/placement/">Explore placement support</a><a class="btn btn-ghost btn-sm" href="/blog/how-to-read-a-job-description.html">Read the job-description guide</a></div></div>`,
+      },
+    ],
+    faq: [
+      {
+        q: 'Should I leave a company because of layoff headlines?',
+        a: 'A headline is a prompt to assess, not a signal to resign. Look at your own role, recent feedback, financial position and options before making any irreversible decision.',
+      },
+      {
+        q: 'How do I know if a layoff report is confirmed?',
+        a: 'Look for a company statement, an official filing where one is relevant, or reporting that clearly names its source. A repost, screenshot or unverified internal note is not confirmation.',
+      },
+      {
+        q: 'What should I update first if layoffs worry me?',
+        a: 'Start with an evidence file: one line per piece of work, with what you did, what changed and how you know. It can feed your resume, your profile and your interviews without inventing anything.',
+      },
+      {
+        q: 'Does every layoff story have one cause?',
+        a: 'No. Reports may point to restructuring, cost changes, automation or business conditions, and commentary often mixes those with opinion. Separate the stated reason from what a writer infers from it.',
+      },
+      {
+        q: 'Should I talk to my manager about layoff news?',
+        a: 'If it is done respectfully and framed around priorities, a calm conversation can help. Ask what the team is focused on and where your work fits, rather than presenting an unverified report as fact.',
+      },
+    ],
+    final: {
+      title: 'Careers change. Evidence travels.<br /><span class="serif-i">Build what you can explain.</span>',
+      desc: 'Keep your skills visible and your next step clear, whatever the hiring cycle does.',
+      primary: 'Browse all guides',
+      primaryHref: '/blog/',
+      secondary: 'How placement works',
+      secondaryHref: '/placement/',
+    },
+    cta: {
+      title: 'Turn uncertainty into a clear next step.',
+      desc: 'Focus on evidence, role alignment and interview readiness you can control.',
+      primary: 'Explore placement support',
+      primaryHref: '/placement/',
+      secondary: 'Read the job-description guide',
+      secondaryHref: '/blog/how-to-read-a-job-description.html',
+    },
+    related: [
+      { tag: 'AI at Work', title: 'How to Work With AI', desc: 'A practical workflow for real tasks: brief, context, verification and human ownership.', href: '/blog/how-to-work-with-ai.html' },
+      { tag: 'Interview', title: 'How to Read a Job Description', desc: 'Decode what a posting actually asks for and map your evidence to it.', href: '/blog/how-to-read-a-job-description.html' },
+    ],
+  },
+
+  /* ── 2. How to work with AI ── */
+  {
+    file: 'how-to-work-with-ai.html',
+    crumb: 'How to Work With AI',
+    tag: 'AI at Work',
+    date: '2026-11-27',
+    dateLabel: '27 November 2026',
+    readTime: 8,
+    wordCount: 1500,
+    image: 'hero-ai-neural.jpg',
+    seoTitle: 'How to Work With AI: A Practical Guide for Every Role | TCC',
+    titlePlain: 'How to Work With AI: A Practical Guide for Every Role',
+    h1: 'How to work with AI, <span class="accent">not around it</span>.',
+    description:
+      'A practical workflow for using AI on real work: choose the task, give context, check the output, keep the decision, and show what you contributed.',
+    standfirst:
+      'Working with AI is not about finding a magic prompt. It is about choosing the right task, giving enough context, verifying the result, and owning the decision that follows.',
+    keywords: ['how to work with AI', 'AI at work', 'using AI at work', 'AI workflow', 'AI for professionals', 'AI collaboration', 'AI verification'],
+    about: ['AI at work', 'AI literacy', 'Workplace skills', 'Career development'],
+    mentions: [
+      { name: 'TCC CERT+ role-based AI certifications', url: `${SITE}/bootcamps/`, type: 'EducationalOccupationalCredential' },
+      { name: 'AI courses by industry', url: `${SITE}/ai-courses-for/` },
+    ],
+    body: [
+      {
+        html: `<p class="a-lede">Most people use AI casually and then conclude it is either useless or magical. The difference is usually workflow. Treat an assistant like a capable but context-poor colleague: clear brief, visible reasoning, and a review step before anything goes out under your name.</p>`,
+      },
+      { h2: 'Start with the task, not the tool', id: 'start-task' },
+      {
+        html: `<p>Before you open an assistant, name the job you need done. Summarising, comparing, drafting, extracting, brainstorming, testing and explaining all require different inputs and different checks. "Use AI on this" is not a brief.</p>`,
+      },
+      {
+        html: `<div class="a-flag">
+          <div class="fl good reveal"><strong class="fl-h">Good first use — summarise a long document</strong><p>Give it the document and ask for the decision points, not a vague overview. Then check the summary against the source.</p></div>
+          <div class="fl good reveal"><strong class="fl-h">Good first use — draft a difficult message</strong><p>Give the audience, the purpose and the tone you want. Then rewrite the parts that do not sound like you.</p></div>
+          <div class="fl bad reveal"><strong class="fl-h">Poor use — invent a fact to fill a gap</strong><p>If you do not have a number, name or citation, ask the tool to mark it as missing. Do not let a plausible sentence become your evidence.</p></div>
+          <div class="fl bad reveal"><strong class="fl-h">Poor use — outsource a final judgement</strong><p>Hiring, safety, money and commitments to clients need context and accountability. The assistant can prepare the options; you still own the decision.</p></div>
+        </div>`,
+      },
+      { h2: 'The loop that makes AI useful', id: 'the-loop' },
+      {
+        html: `<p>Once the task is clear, run the same loop every time. It is deliberately boring, because a repeatable process beats a clever prompt you cannot reproduce.</p>`,
+      },
+      {
+        html: `<div class="a-phases">
+          <div class="a-phase reveal"><div class="ph-n">01</div><div><div class="ph-t">Frame the job</div><p class="ph-d">Say what you need, who it is for, what good looks like, and what the tool must not do. Constraints are more useful than adjectives.</p></div></div>
+          <div class="a-phase reveal"><div class="ph-n">02</div><div><div class="ph-t">Supply context</div><p class="ph-d">Paste the source material, define terms, and share decisions already made. An assistant cannot infer your workplace context from a single sentence.</p></div></div>
+          <div class="a-phase reveal"><div class="ph-n">03</div><div><div class="ph-t">Ask for options and risks</div><p class="ph-d">Request more than one version and ask which assumptions each one makes. This turns the output into a draft you can challenge, not an answer you have to accept.</p></div></div>
+          <div class="a-phase reveal"><div class="ph-n">04</div><div><div class="ph-t">Verify and own</div><p class="ph-d">Check facts, names, numbers, links and tone against your sources. Then make the final decision yourself. If you cannot explain the output with the tool closed, it is not ready.</p></div></div>
+        </div>`,
+      },
+      {
+        html: `<div class="a-callout reveal"><div class="co-label">The line to hold</div><p>AI can draft, compare, summarise and challenge. It cannot sign off on your work. The moment a tool output leaves your hands, it is your judgement on the page.</p></div>`,
+      },
+      { h2: 'Use AI without inventing evidence', id: 'no-invented-evidence' },
+      {
+        html: `<p>Fluent text is not the same as accurate text. This matters most in resumes, reports, proposals and interview answers, where a single invented result can undo the trust you built over a much longer period.</p>`,
+      },
+      {
+        html: `<ul>
+          <li><strong>Ask the tool to mark assumptions.</strong> Anything it could not verify should be visibly flagged, not quietly smoothed over.</li>
+          <li><strong>Cross-check against source documents.</strong> If a fact is not in the material you supplied, treat it as missing until you find it elsewhere.</li>
+          <li><strong>Keep your own edit trail.</strong> Note what you accepted, changed and rejected. It helps you revise later and makes your contribution clear.</li>
+          <li><strong>Respect data boundaries.</strong> Do not paste personal, confidential or unpublished material into a tool your organisation has not approved for that use.</li>
+        </ul>`,
+      },
+      { h2: 'Make it specific to your role', id: 'role-specific' },
+      {
+        html: `<p>A marketer, operations lead, nurse, analyst and developer do not need the same AI syllabus. Learn the workflow around the artefacts your role actually produces: briefs, handovers, dashboards, emails, test plans, documentation or customer replies.</p>`,
+      },
+      {
+        html: `<p>That is why role-based learning beats a generic prompt collection. You practise with the documents and decisions you will face, rather than with examples that never appear in your work. Browse <a href="/ai-courses-for/">AI courses by role and industry</a> to find the track that matches your job title.</p>`,
+      },
+      { h2: 'Show the work in interviews', id: 'interviews' },
+      {
+        html: `<p>If you use AI in your job, be ready to explain how. A clear answer — what you asked, what you checked, and what you changed — is stronger than pretending you worked without tools. Check the employer's policy first, because rules differ.</p>`,
+      },
+      {
+        html: `<ul>
+          <li><strong>What was the brief?</strong> Show that you directed the tool rather than accepting whatever came back.</li>
+          <li><strong>Which assumption did you reject?</strong> This is where your judgement becomes visible.</li>
+          <li><strong>How did you verify it?</strong> Name the source or test you used, not just the fact that you "reviewed" it.</li>
+        </ul>`,
+      },
+      {
+        html: `<p>For the wider policy question, read <a href="/blog/ai-tools-in-interviews.html">AI tools in an interview: what is allowed and what gets you rejected</a>. The short version is that disclosure rules vary, and asking before the interview is better than guessing.</p>`,
+      },
+      { h2: 'A small habit that compounds', id: 'habit' },
+      {
+        html: `<p>Keep a working log: the task, the brief, the output, the checks you ran and the decision you made. Over time you build a private library of prompts and review rules that fit your role. The tools will change. The habit of brief, verify and own will not.</p>`,
+      },
+      {
+        html: `<div class="a-cta reveal"><div class="ct-t">Learn AI for the job you actually do</div><p class="ct-d">Find role-based AI certifications that practise the tasks and documents your role produces.</p><div class="ct-row"><a class="btn btn-sm" href="/ai-courses-for/">Find your role track</a><a class="btn btn-ghost btn-sm" href="/blog/ai-tools-in-interviews.html">Read the interview policy guide</a></div></div>`,
+      },
+    ],
+    faq: [
+      {
+        q: 'Is using AI at work cheating?',
+        a: 'Only if your workplace or client has said it is not allowed. Ask first, disclose where required, and keep responsibility for the final work.',
+      },
+      {
+        q: 'What should I never put into an AI tool?',
+        a: 'Anything your organisation has not approved for that tool, especially personal data, confidential client material, credentials and unpublished financial information.',
+      },
+      {
+        q: 'How do I trust the output?',
+        a: 'Check it against source material, look for invented names or numbers, and test the reasoning on a case you already know. Do not treat fluent text as evidence.',
+      },
+      {
+        q: 'Can AI replace my judgement?',
+        a: 'No. It can prepare options and expose gaps, but accountability stays with you. The decision should reflect goals, constraints and context the tool may not have.',
+      },
+      {
+        q: 'How do I learn AI for my role?',
+        a: 'Start with the artefacts your role produces, then find a course or credential that practises those tasks. Browse the role and industry hubs on this site to match learning to your job title.',
+      },
+    ],
+    final: {
+      title: 'Use AI as a tool, not a story.<br /><span class="serif-i">Show the work behind it.</span>',
+      desc: 'Learn the workflow for your role, then build proof of the decisions you can make with it.',
+      primary: 'Find your AI role track',
+      primaryHref: '/ai-courses-for/',
+      secondary: 'Browse certifications',
+      secondaryHref: '/bootcamps/',
+    },
+    cta: {
+      title: 'Learn AI for the job you actually do.',
+      desc: 'Find role-based AI certifications, then build proof of the work you can do with them.',
+      primary: 'Find your role track',
+      primaryHref: '/ai-courses-for/',
+      secondary: 'Read the interview policy guide',
+      secondaryHref: '/blog/ai-tools-in-interviews.html',
+    },
+    related: [
+      { tag: 'Career News', title: 'Layoffs in India News', desc: 'How to verify a report, read the wording and plan a clear next step.', href: '/blog/layoffs-in-india-news.html' },
+      { tag: 'AI Career', title: 'Role-Based AI Certifications vs Generic AI Courses', desc: 'Why a credential that names your job title beats a general certificate.', href: '/blog/role-based-ai-certifications-vs-generic.html' },
+    ],
+  },
+
+  /* ── 3. AI Placement Programs ── */
   {
     file: 'ai-placement-programs.html',
     crumb: 'AI Placement Programs',

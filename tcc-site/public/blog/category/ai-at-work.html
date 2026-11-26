@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <!-- tcc-theme:boot: dark-only, applied before first paint -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', 'theme-color');
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', '#000000');
+      })();
+    </script>
+<title>AI at Work — TCC Blog</title>
+    <meta name="description" content="Practical ways to use AI on real tasks, set boundaries, verify the output and show the judgement you bring to the role." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="The Coding Company (TCC)" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://thecodingcompany.io/blog/category/ai-at-work.html" />
+    <meta property="og:title" content="AI at Work — TCC Blog" />
+    <meta property="og:description" content="Practical ways to use AI on real tasks, set boundaries, verify the output and show the judgement you bring to the role." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thecodingcompany.io/blog/category/ai-at-work.html" />
+    <meta property="og:site_name" content="The Coding Company (TCC)" />
+    <meta property="og:image" content="https://thecodingcompany.io/assets/img/blog/hero-ai-neural.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" type="application/rss+xml" title="TCC Blog — AI Courses, Certifications &amp; Placement" href="/feed.xml" />
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/tcc-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/img/tcc-favicon-96.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/tcc-apple-touch.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://thecodingcompany.io/blog/category/ai-at-work.html#collection",
+      "name": "AI at Work — TCC Blog",
+      "description": "Practical ways to use AI on real tasks, set boundaries, verify the output and show the judgement you bring to the role.",
+      "url": "https://thecodingcompany.io/blog/category/ai-at-work.html",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://thecodingcompany.io/blog/#blog"
+      },
+      "publisher": {
+        "@id": "https://thecodingcompany.io/#organization"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "How to Work With AI: A Practical Guide for Every Role",
+            "url": "https://thecodingcompany.io/blog/how-to-work-with-ai.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Tools in an Interview: What Is Allowed, and What Gets You Rejected",
+            "url": "https://thecodingcompany.io/blog/ai-tools-in-interviews.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Role-Based AI Certifications vs Generic AI Courses",
+            "url": "https://thecodingcompany.io/blog/role-based-ai-certifications-vs-generic.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "AI Placement Programs Explained: How to Get Placed After Learning AI",
+            "url": "https://thecodingcompany.io/blog/ai-placement-programs.html"
+          }
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://thecodingcompany.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://thecodingcompany.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI at Work",
+          "item": "https://thecodingcompany.io/blog/category/ai-at-work.html"
+        }
+      ]
+    }
+    </script>
+<style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+      body { background: #000000; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button { font-family: inherit; cursor: pointer; }
+
+      h1, h2 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.04em; }
+      .serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; letter-spacing: -0.02em; }
+      .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
+      .mono { font-family: 'DM Mono', 'Roboto Mono', monospace; }
+
+      /* ── SHELL ── */
+      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #000000; }
+      .sidebar { display: none; position: sticky; top: 0; width: 200px; min-height: 100%; padding: 24px 16px; flex-direction: column; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.05); background: #000000; overflow-y: auto; overflow-x: hidden; }
+      @media (min-width: 768px) { .sidebar { display: flex; } }
+      .sidebar-nav { margin-top: 25vh; }
+      .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: rgba(255,255,255,0.58); transition: all 0.3s; position: relative; }
+      .sidebar-link svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 1.5; }
+      .sidebar-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+      .sidebar-link.active { color: #fff; background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12), transparent 70%); -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%); mask-image: linear-gradient(to right, black 40%, transparent 100%); }
+      .sidebar-link.active svg { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
+      .sidebar-link .label { font-weight: 500; letter-spacing: 0.01em; }
+      .sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 12px; }
+      .sidebar-webinars { display: flex; align-items: center; gap: 12px; padding: 12px 4px; color: rgba(255,255,255,0.58); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; transition: color 0.3s; }
+      .sidebar-webinars:hover { color: #fff; }
+      .sidebar-webinars svg { width: 16px; height: 16px; stroke-width: 1.5; }
+      .btn-login { display: block; text-align: center; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px 20px; font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: all 0.3s; }
+      .btn-login:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #fff; }
+      .brand-serif { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+      .sidebar-brand { font-size: 21px; padding: 0 8px; margin-bottom: 24px; transition: all 0.3s; }
+      .sidebar-brand:hover { text-shadow: 0 0 16px rgba(255,255,255,0.4); }
+
+      .main-scroll { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; }
+      .content-wrap { padding-bottom: 90px; }
+      @media (min-width: 768px) { .content-wrap { padding-bottom: 0; } }
+
+      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+      @media (min-width: 768px) { .mobile-header { display: none; } }
+      @media (max-width: 767px) { .main-scroll > .content-wrap { padding-top: 52px; } }
+      .mobile-brand { font-size: 19px; }
+      .mobile-actions { display: flex; align-items: center; gap: 10px; }
+      .mobile-login { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); transition: all 0.3s; }
+      .mobile-login svg { width: 20px; height: 20px; stroke-width: 1.5; }
+      .mobile-cta { font-size: 12px; font-weight: 600; background: #0064FF; color: #fff; border: 0; border-radius: 999px; padding: 9px 16px; white-space: nowrap; transition: background 0.2s; cursor: pointer; }
+      .mobile-cta:hover { background: #0A63EA; }
+      @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 17px; } .mobile-cta { font-size: 11px; padding: 8px 12px; } }
+
+      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #000000; align-items: stretch; }
+      @media (max-width: 767px) { .bottom-nav { display: flex; height: 52px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; } }
+      .bottom-nav-inner { display: flex; justify-content: space-around; align-items: stretch; width: 100%; height: 100%; }
+      .bottom-link { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; min-width: 0; color: #999; transition: all 0.2s; }
+      .bottom-link svg { width: 26px; height: 26px; stroke-width: 1.5; }
+      @media (max-width: 767px) { .bottom-link svg { display: none; } }
+      .bottom-link.active { color: #fff; }
+      .bottom-link span { font-size: 12px; font-weight: 400; line-height: 1; }
+
+      @media (max-width: 384px) {
+        .bottom-nav-inner { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+        .bottom-nav-inner::-webkit-scrollbar { display: none; }
+        .bottom-link { flex: 1 0 64px; min-width: 64px; }
+        .bottom-link span { font-size: 11px; }
+      }
+
+      /* ── TYPE / LAYOUT ── */
+      .eyebrow { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+      .section { padding: 72px 24px; position: relative; }
+      @media (min-width: 768px) { .section { padding: 96px 40px; } }
+      .container { max-width: 1400px; margin: 0 auto; }
+      .section-title { font-family: 'Newsreader', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; font-size: clamp(30px, 4.2vw, 54px); color: #fff; }
+      .section-sub { color: rgba(255,255,255,0.45); font-size: 16px; margin-top: 12px; max-width: 46em; }
+      .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; transition: all 0.4s; }
+      .card:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
+      .band { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); background: linear-gradient(180deg, rgba(0,87,222,0.05), rgba(0,0,0,0)); }
+
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #000; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; white-space: nowrap; border: 0; border-radius: 999px; padding: 16px 32px; box-shadow: 0 0 20px rgba(255,255,255,0.2); cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; }
+      .btn:hover { transform: scale(1.03); box-shadow: 0 6px 24px rgba(255,255,255,0.28); }
+      .btn-ghost { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); box-shadow: none; }
+      .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+      .btn-sm { padding: 12px 22px; font-size: 14px; }
+
+      .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+      .reveal.in { opacity: 1; transform: translateY(0); }
+
+      /* ── HERO ── */
+      .hero { position: relative; padding: 120px 24px 56px; overflow: hidden; background: #000000; }
+      @media (min-width: 768px) { .hero { padding: 150px 40px 72px; } }
+      .hero-veil { position: absolute; inset: 0; z-index: 1; background:
+        linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.86) 55%, #000000 100%),
+        radial-gradient(90% 80% at 15% 20%, rgba(0,87,222,0.30), transparent 62%); }
+      .hero-grid { position: absolute; inset: 0; z-index: 2; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); }
+      .hero-inner { position: relative; z-index: 3; max-width: 1400px; margin: 0 auto; }
+      .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 9px 20px; margin-bottom: 24px; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); backdrop-filter: blur(8px); }
+      .hero-pill .dot { width: 8px; height: 8px; border-radius: 999px; background: #0064FF; animation: pulse 1.6s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+      .hero-h1 { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.045em; line-height: 1.03; font-size: clamp(38px, 6vw, 76px); color: #fff; max-width: 16em; }
+      .hero-h1 .accent { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; }
+      .hero-sub { margin-top: 20px; color: rgba(255,255,255,0.6); font-size: clamp(16px, 1.7vw, 19px); max-width: 54em; line-height: 1.65; }
+      .hero-meta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+      .hero-chip { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); backdrop-filter: blur(8px); }
+
+      /* ── FEATURED ── */
+      .feature { display: grid; grid-template-columns: 1fr; gap: 0; overflow: hidden; margin-top: 8px; }
+      @media (min-width: 900px) { .feature { grid-template-columns: 1.05fr 0.95fr; } }
+      .feature-media { position: relative; min-height: 280px; background-size: cover; background-position: center; }
+      @media (min-width: 900px) { .feature-media { min-height: 420px; } }
+      .feature-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(0,0,0,0.35) 0%, rgba(0,87,222,0.22) 100%); }
+      .feature-body { padding: 36px 32px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+      @media (min-width: 768px) { .feature-body { padding: 46px 44px; } }
+      .feature-tag { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #7fb4ff; }
+      .feature-title { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; letter-spacing: -0.02em; color: #fff; }
+      .feature-desc { color: rgba(255,255,255,0.55); font-size: 15.5px; line-height: 1.7; }
+      .feature-read { display: inline-flex; align-items: center; gap: 8px; color: #fff; font-weight: 600; font-size: 14.5px; margin-top: 4px; }
+      .feature-read span.arw { transition: transform 0.3s; }
+      .feature:hover .feature-read span.arw { transform: translateX(5px); }
+
+      /* ── POST GRID ── */
+      .post-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 34px; }
+      @media (min-width: 720px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1180px) { .post-grid { grid-template-columns: repeat(3, 1fr); } }
+      .post { display: flex; flex-direction: column; overflow: hidden; }
+      .post-media { height: 178px; background-size: cover; background-position: center; position: relative; }
+      .post-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.72) 100%); transition: opacity 0.5s; }
+      .post:hover .post-media::after { opacity: 0.7; }
+      .post-body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+      .post-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+      .post-title { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.32; color: #fff; }
+      .post-desc { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.65; }
+      .post-foot { margin-top: auto; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; color: rgba(255,255,255,0.42); }
+      .post-foot .go { color: #7fb4ff; font-weight: 600; }
+
+      /* ── CATEGORY ROW ── */
+      .cat-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+      .cat-pill { padding: 11px 22px; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.6); transition: all 0.25s; }
+      .cat-pill:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.22); color: #fff; transform: translateY(-2px); }
+
+      /* ── AUDIENCE CARDS ── */
+      .aud-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+      @media (min-width: 760px) { .aud-grid { grid-template-columns: repeat(3, 1fr); } }
+      .aud { padding: 30px 28px; display: flex; flex-direction: column; gap: 12px; }
+      .aud-ico { width: 46px; height: 46px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: rgba(0,100,255,0.12); border: 1px solid rgba(0,100,255,0.28); }
+      .aud-ico svg { width: 22px; height: 22px; stroke: #6aa8ff; stroke-width: 1.6; fill: none; }
+      .aud-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: #fff; }
+      .aud-desc { color: rgba(255,255,255,0.5); font-size: 14.5px; line-height: 1.65; }
+      .aud-link { margin-top: auto; padding-top: 8px; color: #7fb4ff; font-weight: 600; font-size: 14px; }
+
+      /* ── NEWSLETTER ── */
+      .news-wrap { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center; }
+      @media (min-width: 900px) { .news-wrap { grid-template-columns: 1.1fr 0.9fr; } }
+      .news-form { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+      .news-input { flex: 1; min-width: 220px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 15px 24px; color: #fff; font-size: 15px; outline: none; transition: border-color 0.25s; }
+      .news-input::placeholder { color: rgba(255,255,255,0.35); }
+      .news-input:focus { border-color: rgba(0,100,255,0.6); }
+      .news-note { color: rgba(255,255,255,0.4); font-size: 13.5px; margin-top: 12px; }
+      .news-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(0,87,222,0.28), rgba(0,0,0,0.78)); }
+
+      /* ── FINAL ── */
+      .final { text-align: center; padding: 96px 24px 88px; }
+      .final-title { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(32px, 5.2vw, 62px); line-height: 1.08; letter-spacing: -0.02em; color: #fff; margin-bottom: 22px; }
+      .final-sub { color: rgba(255,255,255,0.45); font-size: clamp(16px, 2vw, 19px); line-height: 1.6; margin: 0 auto 36px; max-width: 40em; }
+      .final-ctas { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+      @media (min-width: 640px) { .final-ctas { flex-direction: row; } }
+
+      /* ── FOOTER ── */
+      .footer { background: #000000; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px clamp(20px, 5vw, 60px) 30px; }
+      .footer-brand { text-align: center; margin-bottom: 44px; }
+      .footer-brand img { height: 150px; margin: 0 auto 16px; }
+      .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px; padding-bottom: 50px; }
+      .footer-col h3 { font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; margin-bottom: 18px; color: #fff; }
+      .footer-col a { display: block; color: #a9a9a9; font-size: 13px; line-height: 1.9; }
+      .footer-col a:hover { color: #fff; }
+      .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+      .footer-bottom p, .footer-bottom a { color: #a9a9a9; font-size: 13px; }
+      .footer-bottom a:hover { color: #fff; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      }
+    
+      /* ── TCC mobile polish (generated) ── */
+      @media (max-width: 767px) {
+        html { -webkit-text-size-adjust: 100%; }
+        main.main-scroll, .sidebar { -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        /* comfortable tap targets */
+        .finder-chip { min-height: 44px; display: inline-flex; align-items: center; padding: 11px 18px; font-size: 12.5px; }
+        .mode-btn { min-height: 44px; }
+        .popular-card { min-height: 60px; justify-content: center; }
+        .chip-row { gap: 8px; }
+        .bottom-link { min-height: 52px; }
+        .cat-pill, .c-oth { min-height: 44px; display: inline-flex; align-items: center; }
+        .btn, .btn-sm { min-height: 46px; }
+        .news-input { min-height: 50px; }
+
+        /* breathe below the fold */
+        .section { padding-left: 18px; padding-right: 18px; }
+        .eco-inner { padding-left: 18px; padding-right: 18px; }
+        .container { padding-left: 0; padding-right: 0; }
+        .footer { padding-left: 20px; padding-right: 20px; padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+
+        /* fluid display type that cannot overflow */
+        .hero-h1, .section-title, .final-title, .a-title, .c-title, .feature-title, .a-cta .ct-t {
+          overflow-wrap: anywhere; word-break: break-word;
+        }
+        .hero-sub, .section-sub, .feature-desc, .post-desc, .a-standfirst { font-size: 15.5px; line-height: 1.68; }
+
+        /* card media stays proportional on narrow screens */
+        .post-media { height: 160px; }
+        .feature-media { min-height: 210px; }
+
+        /* article measure + code-free reading width */
+        .a-body { padding-left: 20px; padding-right: 20px; }
+        .a-body p, .a-body li { font-size: 16.5px; line-height: 1.78; }
+        .a-phase { gap: 14px; }
+
+        /* grids collapse cleanly rather than squashing */
+        .a-stats, .a-flag { grid-template-columns: 1fr; }
+        .eco-grid { row-gap: 10px; }
+      }
+
+      @media (max-width: 480px) {
+        .section { padding-top: 52px; padding-bottom: 52px; }
+        .hero, .a-hero, .c-hero { padding-left: 18px; padding-right: 18px; }
+        .hero { padding-top: 92px; padding-bottom: 40px; }
+        .a-hero { padding-top: 100px; padding-bottom: 40px; }
+        .c-hero { padding-top: 96px; padding-bottom: 44px; }
+
+        /* stack the hero search so the button is full-width and thumbable */
+        .hero-search { flex-direction: column; align-items: stretch; padding: 8px; gap: 8px; border-radius: 18px; }
+        .hero-search-input { width: 100%; padding: 12px 12px; }
+        .hero-search-btn { width: 100%; padding: 14px 18px; font-size: 14.5px; border-radius: 12px; }
+
+        /* finder bar stacks the same way */
+        .finder-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+        .finder-count { text-align: right; }
+
+        /* two-up stats read better than three-up on very narrow screens */
+        .hero-stats { gap: 10px; }
+        .hero-stat .v { font-size: 26px; }
+        .hero-stat .l { font-size: 11.5px; }
+
+        /* footer single column */
+        .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+        .footer-brand img { height: 116px; }
+
+        /* related/next cards full width */
+        .a-related { grid-template-columns: 1fr; }
+        .final-ctas { gap: 12px; }
+        .final-ctas .btn, .final-ctas .btn-ghost, .a-cta .ct-row .btn { width: 100%; }
+        .a-cta .ct-row { flex-direction: column; align-items: stretch; }
+
+        .a-body h2 { font-size: clamp(23px, 7vw, 30px); }
+        .a-body h3 { font-size: 18px; }
+        .a-quote p { font-size: 19px !important; }
+      }
+
+      @media (max-width: 360px) {
+        .hero-h1 { font-size: clamp(28px, 9.5vw, 40px); }
+        .section-title { font-size: clamp(24px, 8vw, 34px); }
+        .finder-chip { padding: 10px 14px; font-size: 12px; }
+        .a-body { padding-left: 16px; padding-right: 16px; }
+      }
+
+      @supports (padding: max(0px)) {
+        @media (max-width: 767px) {
+          .bottom-nav { padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px); height: auto; min-height: 52px; }
+          .mobile-header { padding-top: env(safe-area-inset-top, 0px); height: auto; min-height: 52px; }
+        }
+      }
+
+    
+      /* ── skip link (accessibility) ── */
+      .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 99999; background: #3b82f6; color: #fff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; font-size: 0.875rem; }
+      .skip-link:focus { position: fixed; left: 16px; top: 16px; width: auto; height: auto; overflow: visible; outline: 2px solid #fff; outline-offset: 2px; }
+
+      .post-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 34px; }
+      @media (min-width: 720px) { .post-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1180px) { .post-grid { grid-template-columns: repeat(3, 1fr); } }
+      .post { display: flex; flex-direction: column; overflow: hidden; }
+      .post-media { height: 178px; background-size: cover; background-position: center; position: relative; }
+      .post-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.72) 100%); transition: opacity 0.5s; }
+      .post:hover .post-media::after { opacity: 0.7; }
+      .post-body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+      .post-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+      .post-title { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.32; color: #fff; }
+      .post-desc { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.65; }
+      .post-foot { margin-top: auto; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; font-size: 12.5px; color: rgba(255,255,255,0.42); }
+      .post-foot .go { color: #7fb4ff; font-weight: 600; }
+      /* ══════════ CATEGORY ══════════ */
+      .c-hero { position: relative; padding: 128px 24px 52px; overflow: hidden; background: #000000; }
+      @media (min-width: 768px) { .c-hero { padding: 154px 40px 64px; } }
+      .c-hero-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center 40%; opacity: 0.34; transform: scale(1.03); }
+      .c-hero-veil { position: absolute; inset: 0; z-index: 1; background:
+        linear-gradient(180deg, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.88) 58%, #000000 100%),
+        radial-gradient(85% 78% at 18% 18%, rgba(0,87,222,0.30), transparent 62%); }
+      .c-hero-grid { position: absolute; inset: 0; z-index: 2; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); }
+      .c-hero-inner { position: relative; z-index: 3; max-width: 1400px; margin: 0 auto; }
+      .crumbs { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.42); margin-bottom: 22px; flex-wrap: wrap; }
+      .crumbs a:hover { color: #fff; }
+      .crumbs .sep { opacity: 0.4; }
+      .crumbs .cur { color: rgba(255,255,255,0.7); }
+      .c-title { font-family: 'Newsreader', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; line-height: 1.06; font-size: clamp(34px, 5.4vw, 66px); color: #fff; }
+      .c-title .accent { font-style: italic; }
+      .c-sub { margin-top: 18px; color: rgba(255,255,255,0.58); font-size: clamp(16px, 1.7vw, 19px); line-height: 1.68; max-width: 46em; }
+      .c-count { margin-top: 24px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+
+      .c-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 34px; }
+      @media (min-width: 720px) { .c-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1180px) { .c-grid { grid-template-columns: repeat(3, 1fr); } }
+
+      .c-others { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+      .c-oth { padding: 12px 22px; border-radius: 999px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.6); transition: all 0.25s; }
+      .c-oth:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.22); color: #fff; transform: translateY(-2px); }
+      .c-empty { margin-top: 34px; padding: 46px 34px; text-align: center; }
+      .c-empty .t { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(22px, 3vw, 30px); color: #fff; }
+      .c-empty .d { margin-top: 10px; color: rgba(255,255,255,0.5); font-size: 15px; }
+    </style>
+    <link rel="alternate" type="text/plain" title="TCC facts for AI assistants (llms.txt)" href="/llms.txt" />
+    <link rel="alternate" type="text/plain" title="TCC full reference for AI assistants (llms-full.txt)" href="/llms-full.txt" />
+    <link rel="alternate" type="application/json" title="TCC structured facts (llms.json)" href="/llms.json" />
+    <link rel="alternate" type="application/jsonl" title="TCC Q&amp;A bank (faq.jsonl)" href="/faq.jsonl" />
+    <link rel="alternate" type="text/plain" title="TCC AI crawler policy (ai.txt)" href="/ai.txt" />
+  <!-- TCC theme: tokens, shell chrome, diagrams and light-mode overrides -->
+    <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a" />
+    <link rel="stylesheet" href="/assets/css/tcc-theme-pages.css" />
+      <!-- tcc-ga4: G-PW4XP93899 · cookieless -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PW4XP93899"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-PW4XP93899', { anonymize_ip: true });
+    </script>
+  <noscript><style id="reveal-noscript">.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+  <body>
+    <div class="app-shell baseline-root">
+<aside class="sidebar">
+        <a href="/" class="brand-serif sidebar-brand">thecodingcompany</a>
+        <nav class="sidebar-nav">
+          <a href="/" class="sidebar-link"><span class="label">Home</span></a>
+          <a href="/bootcamps" class="sidebar-link"><span class="label">CERT+</span></a>
+          <a href="/placement/" class="sidebar-link"><span class="label">Placements</span></a>
+          <a href="/blog" class="sidebar-link active"><span class="label">Blog</span></a>
+          <a href="/100-club" class="sidebar-link"><span class="label">100 Club</span></a>
+          <a href="/domains" class="sidebar-link"><span class="label">Domains</span></a>
+          <a href="/roadmaps/" class="sidebar-link"><span class="label">Roadmaps</span></a>
+                  </nav>
+        <div class="sidebar-bottom">
+          <a href="/webinars" class="sidebar-webinars">Webinars</a>
+          <a href="/login" class="btn-login">Member Login</a>
+        </div>
+      </aside>
+
+      <main class="main-scroll">
+<header class="mobile-header">
+          <a href="/" class="brand-serif mobile-brand">thecodingcompany</a>
+          <div class="mobile-actions">
+            <a href="/login" class="mobile-login" aria-label="Login"></a>
+            <button class="mobile-cta" type="button" onclick="window.location.href='/bootcamps'">Get certified</button>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <!-- ═══════ CATEGORY HERO ═══════ -->
+          <header class="c-hero">
+            <div class="c-hero-bg" style="background-image:url('../../assets/img/blog/hero-ai-neural.jpg')" aria-hidden="true"></div>
+            <div class="c-hero-veil" aria-hidden="true"></div>
+            <div class="c-hero-grid" aria-hidden="true"></div>
+            <div class="c-hero-inner">
+              <nav class="crumbs reveal" aria-label="Breadcrumb">
+                <a href="/">Home</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><span class="cur">AI at Work</span>
+              </nav>
+              <h1 class="c-title reveal">AI <span class="accent">at work</span></h1>
+              <p class="c-sub reveal">Practical ways to use AI on real tasks, set boundaries, verify the output and show the judgement you bring to the role.</p>
+              <div class="c-count reveal">4 guides in this topic</div>
+            </div>
+          </header>
+
+          <!-- ═══════ POSTS ═══════ -->
+          <section class="section" style="padding-top:26px">
+            <div class="container">
+              <div class="post-grid">
+              <a class="card post reveal" href="/blog/how-to-work-with-ai.html">
+                <div class="post-media" style="background-image:url('../../assets/img/blog/hero-ai-neural.jpg')" role="img" aria-label="An abstract neural network representing AI assistance at work"></div>
+                <div class="post-body">
+                  <div class="post-tag">AI at Work</div>
+                  <div class="post-title">How to Work With AI: A Practical Guide for Every Role</div>
+                  <p class="post-desc">A practical workflow for using AI on real work: choose the task, give context, check the output, keep the decision, and show what you contributed.</p>
+                  <div class="post-foot"><span>8 min read</span><span class="go">Read →</span></div>
+                </div>
+              </a>
+              <a class="card post reveal" href="/blog/ai-tools-in-interviews.html">
+                <div class="post-media" style="background-image:url('../../assets/img/blog/hero-ai-abstract.jpg')" role="img" aria-label="An abstract visual representing AI assistance during an interview"></div>
+                <div class="post-body">
+                  <div class="post-tag">Interview</div>
+                  <div class="post-title">AI Tools in an Interview: What Is Allowed, and What Gets You Rejected</div>
+                  <p class="post-desc">The three AI policies you will meet in interviews, the one behaviour that ends a process early, and how to disclose tool use in a way that earns marks.</p>
+                  <div class="post-foot"><span>9 min read</span><span class="go">Read →</span></div>
+                </div>
+              </a>
+              <a class="card post reveal" href="/blog/role-based-ai-certifications-vs-generic.html">
+                <div class="post-media" style="background-image:url('../../assets/img/blog/hero-chip.jpg')" role="img" aria-label="Close-up of an AI processor chip"></div>
+                <div class="post-body">
+                  <div class="post-tag">AI Career</div>
+                  <div class="post-title">Role-Based AI Certifications vs Generic AI Courses</div>
+                  <p class="post-desc">Why a credential that names your job title beats a general certificate in the hiring stack — and when a broad AI course is still the right call.</p>
+                  <div class="post-foot"><span>7 min read</span><span class="go">Read →</span></div>
+                </div>
+              </a>
+              <a class="card post reveal" href="/blog/ai-placement-programs.html">
+                <div class="post-media" style="background-image:url('../../assets/img/blog/hero-network.jpg')" role="img" aria-label="A network of connections representing employer introductions"></div>
+                <div class="post-body">
+                  <div class="post-tag">Placement</div>
+                  <div class="post-title">AI Placement Programs Explained: How to Get Placed After Learning AI</div>
+                  <p class="post-desc">What an AI placement program actually does, the red flags that separate a real one from marketing, and how TCC Placement Partner works in four phases.</p>
+                  <div class="post-foot"><span>9 min read</span><span class="go">Read →</span></div>
+                </div>
+              </a>
+              </div>
+
+              <div class="eyebrow reveal" style="margin-top:56px;margin-bottom:14px">Browse other topics</div>
+              <div class="c-others reveal">
+                <a class="c-oth" href="/blog/">All guides</a>
+                <a class="c-oth" href="/blog/category/career-news.html">Career News</a>
+                <a class="c-oth" href="/blog/category/ai-courses.html">AI Courses</a>
+                <a class="c-oth" href="/blog/category/internships.html">Internships</a>
+                <a class="c-oth" href="/blog/category/placement.html">Placement</a>
+                <a class="c-oth" href="/blog/category/ai-career.html">AI Career</a>
+                <a class="c-oth" href="/blog/category/interview.html">Interview</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- ═══════ FINAL ═══════ -->
+          <section class="final">
+            <div class="container reveal">
+              <h2 class="final-title">Use AI as a tool, not a story.<br /><span class="serif-i">Show the work behind it.</span></h2>
+              <p class="final-sub">Learn the workflow for your role, then build proof of the decisions you can make with it.</p>
+              <div class="final-ctas">
+                <a href="/ai-courses-for/" class="btn">Find your AI role track</a>
+                <a href="/bootcamps/" class="btn btn-ghost">Browse certifications</a>
+              </div>
+            </div>
+          </section>
+
+<footer class="footer">
+            <div class="footer-brand">
+              <img src="../../assets/img/tcc-logo.png" alt="The Coding Company" />
+            </div>
+            <div class="footer-grid">
+              <div class="footer-col">
+                <h3>Programs</h3>
+                <a href="/bootcamps">CERT+ certifications</a><a href="/prep+/companies/">Prep+ practice</a><a href="/placement/">Placement programme</a><a href="/100-club">100 Club</a><a href="/gigs">Gigs</a><a href="/domains">Domains</a>
+              <a href="/worksim/">WorkSim (pilot)</a></div>
+              <div class="footer-col">
+                <h3>Prepare</h3>
+                <a href="/prep+/companies/">Company patterns</a><a href="/prep+/aptitude/">Aptitude &amp; Reasoning</a><a href="/prep+/programming/">Programming</a><a href="/prep+/dsa/">DSA Patterns</a><a href="/prep+/mcq/">Technical MCQs</a><a href="/prep+/mock-tests/">Mock Tests</a>
+              </div>
+              <div class="footer-col">
+                <h3>Resources</h3>
+                <a href="/blog/">Blog &amp; guides</a><a href="/ai-courses-for/">AI courses by role</a><a href="/blog/role-based-ai-certifications-vs-generic.html">CERT+ vs generic certificates</a><a href="/blog/how-to-get-ai-internship-2026.html">Get an AI internship</a><a href="/webinars">AI career sessions</a>
+              </div>
+              <div class="footer-col">
+                <h3>Company</h3>
+                <a href="/careers/">Careers</a>
+                <a href="/contact">Contact us</a><a href="/login">Login</a><a href="/terms-of-service">Terms of use</a><a href="/privacy-policy">Privacy Policy</a><a href="/refund-policy">Refund Policy</a>
+              </div>
+              <div class="footer-col">
+                <h3>Talk to us</h3>
+                <a href="https://wa.me/919182160152" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="mailto:hello@thecodingcompany.io">hello@thecodingcompany.io</a>
+                <a href="mailto:admissions@thecodingcompany.io">admissions@thecodingcompany.io</a>
+                <a href="https://www.linkedin.com/company/112741155/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.instagram.com/thecodingcompany.io/" target="_blank" rel="noopener">Instagram</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; <span id="year">2026</span> The Coding Company. All rights reserved.</p>
+              <a href="/privacy-policy">Privacy &middot; Terms</a>
+            </div>
+            <p style="margin-top:14px;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7">The Coding Company &middot; Hyderabad, Telangana, India &middot; <a href="mailto:hello@thecodingcompany.io" style="color:inherit;text-decoration:underline">hello@thecodingcompany.io</a> &middot; <a href="https://wa.me/919182160152" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">+91 91821 60152</a></p>
+                      </footer>
+        </div>
+      </main>
+
+<nav class="bottom-nav">
+        <div class="bottom-nav-inner">
+          <a href="/" class="bottom-link"><span>Home</span></a>
+          <a href="/bootcamps" class="bottom-link"><span>CERT+</span></a>
+          <a href="/placement/" class="bottom-link"><span>Placements</span></a>
+          <a href="/100-club" class="bottom-link"><span>Club</span></a>
+          <a href="/roadmaps/" class="bottom-link"><span>Roadmaps</span></a>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      (function () {
+        var items = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+        if (!items.length) return;
+        var done = false;
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+        items.forEach(function (el) { io.observe(el); });
+        function fallback() {
+          if (done) return;
+          var h = window.innerHeight || document.documentElement.clientHeight;
+          for (var i = items.length - 1; i >= 0; i--) {
+            var r = items[i].getBoundingClientRect();
+            if (r.top < h * 0.92 && r.bottom > 0) { items[i].classList.add('in'); items.splice(i, 1); }
+          }
+          if (!items.length) done = true;
+        }
+        var scroller = document.querySelector('main.main-scroll') || window;
+        scroller.addEventListener('scroll', fallback, { passive: true });
+        window.addEventListener('resize', fallback);
+        fallback();
+        window.addEventListener('load', fallback);
+      })();
+    </script>
+      <!-- TCC theme: toggle, persistence and cross-tab sync -->
+    <script src="/assets/js/tcc-theme.js" defer></script>
+  </body>
+</html>
