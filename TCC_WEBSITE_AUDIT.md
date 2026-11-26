@@ -128,7 +128,7 @@
 | **Official partners (3 only)** | ✅ OpenAI, Lovable ("Lovable — Official Solutions Partner"), Claude |
 | **Mobile layout** | ⚠️ Needs verification: partner logos should be side-by-side on mobile (currently `flex-direction: column` on small screens per CSS line 343) |
 | **Light-mode/dark-mode logos** | ✅ `.ps-logo-for-light` / `.ps-logo-for-dark` toggles based on `data-theme` |
-| **Partner link URLs** | ✅ All `.io`; OpenAI, Lovable, Claude logos with "Official Partner"/"Official Solutions Partner" captions |
+| **Partner link URLs** | ✅ All `.io`; OpenAI, Lovable, Claude logos with "Affiliate Partner"/"Official Solutions Partner" captions |
 
 **Note:** The CSS rule `.partner-strip .ps-logo` appears **twice** (lines 340 and 2102 of `tcc-theme.css`) with identical declarations `height: 26px; width: auto;` — **duplicate rule, needs cleanup**.
 

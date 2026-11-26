@@ -56,7 +56,7 @@ This document lists every item that requires a business decision, legal confirma
 
 | # | Issue | Current Status | Required Action |
 |---|---|---|---|
-| 1 | Only 3 official partners confirmed; no scope lines provided | OpenAI, Lovable ("Official Solutions Partner"), Claude | **Owner must:**<br>• Confirm if TCC has additional partnerships beyond these 3<br>• Provide verified partnership descriptions (relationship, benefits, verification links)<br>• If only 3 partners: keep partner section as-is with current captions ("Official Partner", "Official Solutions Partner", "Official Partner")<br>• After approval: update partner captions or add partner descriptions within existing UI |
+| 1 | Only 3 official partners confirmed; no scope lines provided | OpenAI, Lovable ("Official Solutions Partner"), Claude | **Owner must:**<br>• Confirm if TCC has additional partnerships beyond these 3<br>• Provide verified partnership descriptions (relationship, benefits, verification links)<br>• If only 3 partners: keep partner section as-is with current captions ("Affiliate Partner", "Official Solutions Partner", "Affiliate Partner")<br>• After approval: update partner captions or add partner descriptions within existing UI |
 
 **Why this matters:** Partner descriptions must be accurate and verifiable. Fake or exaggerated partnership claims damage credibility and may expose TCC to legal risk.
 
