@@ -16,7 +16,7 @@
           meta.setAttribute('name', 'theme-color');
           document.head.appendChild(meta);
         }
-        meta.setAttribute('content', '#050505');
+        meta.setAttribute('content', '#000000');
       })();
     </script>
     <title>PwC 2026 Practice Paper — 2 Rounds | TCC Prep+</title>
@@ -115,7 +115,7 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
-      body { background: #050505; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
+      body { background: #000000; color: #fff; font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.5; overflow: hidden; }
       img { display: block; max-width: 100%; }
       a { color: inherit; text-decoration: none; }
       button, input, select, textarea { font-family: inherit; }
@@ -125,9 +125,9 @@
       .serif-i { font-family: 'Newsreader', Georgia, serif; font-style: italic; font-weight: 400; }
       .mono { font-family: 'DM Mono', 'Roboto Mono', monospace; }
 
-      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #050505; }
+      .app-shell { height: 100vh; height: 100dvh; overflow: hidden; display: flex; background: #000000; }
 
-      .sidebar { display: none; position: sticky; top: 0; width: 200px; min-height: 100%; padding: 24px 16px; flex-direction: column; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.05); background: #050505; overflow-y: auto; overflow-x: hidden; }
+      .sidebar { display: none; position: sticky; top: 0; width: 200px; min-height: 100%; padding: 24px 16px; flex-direction: column; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.05); background: #000000; overflow-y: auto; overflow-x: hidden; }
       @media (min-width: 768px) { .sidebar { display: flex; } }
       .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: rgba(255,255,255,0.58); transition: all 0.3s; position: relative; }
       .sidebar-link svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 1.5; }
@@ -148,7 +148,7 @@
 
       .main-scroll { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; position: relative; }
 
-      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(6,6,6,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+      .mobile-header { display: flex; position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1201; height: 52px; padding: 0 16px; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
       @media (min-width: 768px) { .mobile-header { display: none; } }
       @media (max-width: 767px) { .main-scroll > .content-wrap { padding-top: 52px; } }
       .mobile-brand { font-size: 19px; }
@@ -158,7 +158,7 @@
       .mobile-cta { font-size: 12px; font-weight: 600; background: #0064FF; color: #fff; border: 0; border-radius: 999px; padding: 9px 16px; white-space: nowrap; transition: background 0.2s; cursor: pointer; }
       @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 17px; } .mobile-cta { font-size: 11px; padding: 8px 12px; } }
 
-      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #060606; align-items: stretch; }
+      .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: #000000; align-items: stretch; }
       @media (max-width: 767px) { .bottom-nav { display: flex; height: 52px; padding-bottom: env(safe-area-inset-bottom, 0px); box-sizing: border-box; } }
       @media (max-width: 767px) { .bottom-link svg { display: none; } }
       .bottom-nav-inner { display: flex; justify-content: space-around; align-items: stretch; width: 100%; height: 100%; }
@@ -198,7 +198,7 @@
       .card:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); }
 
       /* ── HERO ── */
-      .hero { position: relative; padding: 132px 24px 64px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(5,5,5,0) 62%); }
+      .hero { position: relative; padding: 132px 24px 64px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(0,0,0,0) 62%); }
       @media (min-width: 768px) { .hero { padding: 168px 40px 88px; } }
       .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); }
       .hero-inner { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; }
@@ -266,7 +266,7 @@
       @media (min-width: 640px) { .final-ctas { flex-direction: row; } }
 
       /* ── FOOTER ── */
-      .footer { background: #060606; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px clamp(20px, 5vw, 60px) 30px; }
+      .footer { background: #000000; border-top: 1px solid rgba(255,255,255,0.06); padding: 50px clamp(20px, 5vw, 60px) 30px; }
       .footer-brand { text-align: center; margin-bottom: 44px; }
       .footer-brand img { height: 150px; margin: 0 auto 16px; }
       .footer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px; padding-bottom: 50px; }
@@ -388,7 +388,7 @@
       .placement-subnav { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); border-radius: 999px; }
       .placement-subnav a { font-family: 'DM Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.62); padding: 8px 15px; border-radius: 999px; white-space: nowrap; transition: color .2s ease, background-color .2s ease; }
       .placement-subnav a:hover { color: #fff; background: rgba(255,255,255,0.07); }
-      .placement-subnav a.active { color: #050505; background: #fff; }
+      .placement-subnav a.active { color: #000000; background: #fff; }
       .prep-topbar + .hero { padding-top: 44px; }
       @media (max-width: 767px) { .placement-subnav a { padding: 8px 12px; } }
 
@@ -408,7 +408,7 @@
       /* ═══ TCC PREP+ ═══ */
       .skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: #fff; color: #000; padding: 10px 16px; border-radius: 0 0 10px 0; font-weight: 600; }
       .skip-link:focus { left: 0; }
-      .prep-hero { position: relative; padding: 128px 24px 56px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(5,5,5,0) 62%); }
+      .prep-hero { position: relative; padding: 128px 24px 56px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(0,0,0,0) 62%); }
       @media (min-width: 768px) { .prep-hero { padding: 150px 40px 72px; } }
       .prep-hero-in { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; }
       .prep-hero .grid-bg { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); }

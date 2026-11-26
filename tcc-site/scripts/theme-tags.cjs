@@ -20,7 +20,7 @@ const boot = `<!-- ${BOOT_MARKER}: dark-only, applied before first paint -->
           meta.setAttribute('name', 'theme-color');
           document.head.appendChild(meta);
         }
-        meta.setAttribute('content', '#050505');
+        meta.setAttribute('content', '#000000');
       })();
     </script>`;
 

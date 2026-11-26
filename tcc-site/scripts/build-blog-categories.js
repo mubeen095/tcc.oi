@@ -49,11 +49,11 @@ const FOOTER = slice('<footer class="footer">', '</footer>').replace(/\.\.\//g, 
 
 const CAT_CSS = `
       /* ══════════ CATEGORY ══════════ */
-      .c-hero { position: relative; padding: 128px 24px 52px; overflow: hidden; background: #050505; }
+      .c-hero { position: relative; padding: 128px 24px 52px; overflow: hidden; background: #000000; }
       @media (min-width: 768px) { .c-hero { padding: 154px 40px 64px; } }
       .c-hero-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center 40%; opacity: 0.34; transform: scale(1.03); }
       .c-hero-veil { position: absolute; inset: 0; z-index: 1; background:
-        linear-gradient(180deg, rgba(5,5,5,0.74) 0%, rgba(5,5,5,0.88) 58%, #050505 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.88) 58%, #000000 100%),
         radial-gradient(85% 78% at 18% 18%, rgba(0,87,222,0.30), transparent 62%); }
       .c-hero-grid { position: absolute; inset: 0; z-index: 2; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); }
       .c-hero-inner { position: relative; z-index: 3; max-width: 1400px; margin: 0 auto; }
@@ -87,7 +87,7 @@ const POST_GRID_CSS = `
       @media (min-width: 1180px) { .post-grid { grid-template-columns: repeat(3, 1fr); } }
       .post { display: flex; flex-direction: column; overflow: hidden; }
       .post-media { height: 178px; background-size: cover; background-position: center; position: relative; }
-      .post-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,5,5,0.15) 0%, rgba(5,5,5,0.72) 100%); transition: opacity 0.5s; }
+      .post-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.72) 100%); transition: opacity 0.5s; }
       .post:hover .post-media::after { opacity: 0.7; }
       .post-body { padding: 24px 24px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
       .post-tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
@@ -164,7 +164,7 @@ function render(c) {
     <meta name="description" content="${c.sub.replace(/"/g, '&quot;')}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="author" content="The Coding Company (TCC)" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#000000" />
     <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${c.name} — TCC Blog" />
     <meta property="og:description" content="${c.sub.replace(/"/g, '&quot;')}" />

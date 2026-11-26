@@ -519,7 +519,7 @@ ${list}
 
 export const GRAPH_STYLES = `
       /* ── Interactive roadmap tree ── */
-      .rmg-band { padding: 46px clamp(16px, 5vw, 64px) 40px; background: #050505; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .rmg-band { padding: 46px clamp(16px, 5vw, 64px) 40px; background: #000000; border-bottom: 1px solid rgba(255,255,255,0.08); }
       .rmg-wrap { max-width: 1180px; margin: 0 auto; }
       .rmg-head { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; align-items: end; margin-bottom: 22px; }
       .rmg-eyebrow { font-family:'DM Mono', monospace!important; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.62); margin-bottom: 12px; }
@@ -622,8 +622,8 @@ export const GRAPH_STYLES = `
       .rmg-drawer[hidden] { display: none; }
       .rmg-drawer { position: fixed; inset: 0; z-index: 120; }
       .rmg-drawer-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.62); backdrop-filter: blur(3px); }
-      .rmg-drawer-panel { position: absolute; top: 0; right: 0; height: 100%; width: min(600px, 100%); display: flex; flex-direction: column; background: #050505; border-left: 1px solid rgba(255,255,255,0.12); box-shadow: -24px 0 60px rgba(0,0,0,0.55); overflow-y: auto; }
-      .rmg-drawer-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 24px 24px 18px; border-bottom: 1px solid rgba(255,255,255,0.08); background: #050505; }
+      .rmg-drawer-panel { position: absolute; top: 0; right: 0; height: 100%; width: min(600px, 100%); display: flex; flex-direction: column; background: #000000; border-left: 1px solid rgba(255,255,255,0.12); box-shadow: -24px 0 60px rgba(0,0,0,0.55); overflow-y: auto; }
+      .rmg-drawer-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 24px 24px 18px; border-bottom: 1px solid rgba(255,255,255,0.08); background: #000000; }
       .rmg-drawer-kicker { font-family:'DM Mono', monospace!important; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #2f7bff; margin-bottom: 8px; }
       .rmg-drawer-title { font-family: 'Newsreader', Georgia, serif !important; font-size: clamp(24px, 3.4vw, 32px); font-weight: 400; letter-spacing: -0.01em; line-height: 1.1; }
       .rmg-drawer-phase { margin-top: 8px; font-size: 12.5px; color: rgba(255,255,255,0.62); }

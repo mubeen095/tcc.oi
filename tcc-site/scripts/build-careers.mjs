@@ -688,7 +688,7 @@ function shell({ route, title, desc, h1, kicker, lede, facts = '', crumb = '', b
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${SITE}/tcc-og.png">
-<meta name="theme-color" content="#060606">
+<meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -705,7 +705,7 @@ function shell({ route, title, desc, h1, kicker, lede, facts = '', crumb = '', b
           meta.setAttribute('name', 'theme-color');
           document.head.appendChild(meta);
         }
-        meta.setAttribute('content', '#050505');
+        meta.setAttribute('content', '#000000');
       })();
     </script>
 <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a">

@@ -11,12 +11,12 @@ const globalResetCSS = `      /* ── GLOBAL RESET ── */
       html {
         margin: 0; padding: 0;
         width: 100%; max-width: 100%;
-        background: #050505;
+        background: #000000;
       }
       body {
         margin: 0; padding: 0;
         width: 100%; max-width: 100%;
-        background: #050505;
+        background: #000000;
       }
       #root {
         width: 100%; max-width: 100%;

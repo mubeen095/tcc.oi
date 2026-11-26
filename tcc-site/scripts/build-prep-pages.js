@@ -252,7 +252,7 @@ const PREP_CSS = `
       /* ═══ TCC PREP+ ═══ */
       .skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: #fff; color: #000; padding: 10px 16px; border-radius: 0 0 10px 0; font-weight: 600; }
       .skip-link:focus { left: 0; }
-      .prep-hero { position: relative; padding: 128px 24px 56px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(5,5,5,0) 62%); }
+      .prep-hero { position: relative; padding: 128px 24px 56px; overflow: hidden; background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.14) 0%, rgba(0,0,0,0) 62%); }
       @media (min-width: 768px) { .prep-hero { padding: 150px 40px 72px; } }
       .prep-hero-in { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; }
       .prep-hero .grid-bg { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 75%); }

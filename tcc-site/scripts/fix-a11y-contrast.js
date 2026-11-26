@@ -4,7 +4,7 @@
  * ---------------------------------------------------------------------------
  * Two site-wide accessibility defects reported by Lighthouse/Axe:
  *
- *  1. Sidebar text used rgba(255,255,255,0.4) on #050505 → 3.71:1 contrast,
+ *  1. Sidebar text used rgba(255,255,255,0.4) on #000000 → 3.71:1 contrast,
  *     below the 4.5:1 WCAG AA minimum. Raised to 0.58 (≈5.4:1) for inactive
  *     nav labels and the webinars link.
  *
@@ -57,7 +57,7 @@ for (const file of files) {
   }
 
   /* ── 1c. contrast: small uppercase labels in forms and cards ──
-     rgba(255,255,255,0.3) on #050505 = 2.6:1, rgba(...0.4) = 3.7:1 — both
+     rgba(255,255,255,0.3) on #000000 = 2.6:1, rgba(...0.4) = 3.7:1 — both
      below AA for the 10–13px bold label text these classes set. */
   const labelFixes = [
     ['.card-label { font-family: \'DM Mono\', monospace; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.3);',
@@ -88,8 +88,8 @@ for (const file of files) {
   labels += labelsHere;
 
   /* ── 1d. contrast: certificate template muted tokens ── */
-  const mutedOld = ':root { --bg: #050505; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.5); --muted2: rgba(255,255,255,0.35); --accent: #4d8dff; }';
-  const mutedNew = ':root { --bg: #050505; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.62); --muted2: rgba(255,255,255,0.56); --accent: #4d8dff; }';
+  const mutedOld = ':root { --bg: #000000; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.5); --muted2: rgba(255,255,255,0.35); --accent: #4d8dff; }';
+  const mutedNew = ':root { --bg: #000000; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.62); --muted2: rgba(255,255,255,0.56); --accent: #4d8dff; }';
   if (html.includes(mutedOld)) { html = html.split(mutedOld).join(mutedNew); labels++; }
   /* ── 2. heading order: footer column headings h4 → h3 ── */
   if (html.includes('<div class="footer-col">')) {

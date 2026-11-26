@@ -73,7 +73,7 @@ function shell({ route, title, desc, eyebrow, h1, lede, body, pager, extraLd = '
 <meta property="og:type" content="article">
 <meta property="og:url" content="${canonical}">
 <meta property="og:locale" content="en_IN">
-<meta name="theme-color" content="#060606">
+<meta name="theme-color" content="#000000">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/tcc-favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +90,7 @@ function shell({ route, title, desc, eyebrow, h1, lede, body, pager, extraLd = '
           meta.setAttribute('name', 'theme-color');
           document.head.appendChild(meta);
         }
-        meta.setAttribute('content', '#050505');
+        meta.setAttribute('content', '#000000');
       })();
     </script>
 <link rel="stylesheet" href="/assets/css/tcc-theme.css?v=20261114a">

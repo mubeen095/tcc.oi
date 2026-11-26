@@ -974,7 +974,7 @@
     for (i = 0; i < pts.length; i++) {
       var p = pts[i], cx = X(p[0]), cy = Y(p[1]);
       line += (i ? "L" : "M") + cx.toFixed(1) + " " + cy.toFixed(1) + " ";
-      dts += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="3.5" fill="#050505" stroke="#72efb0" stroke-width="2"/>' +
+      dts += '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="3.5" fill="#000000" stroke="#72efb0" stroke-width="2"/>' +
         '<text x="' + cx.toFixed(1) + '" y="' + Math.max(cy - 10, 12).toFixed(1) + '" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,.85)">' + p[1] + 'L</text>';
       xl += '<text x="' + cx.toFixed(1) + '" y="' + (H - 16) + '" text-anchor="middle" font-size="9.5" fill="rgba(255,255,255,.5)">' + (p[0] >= 12 ? "12+" : p[0] + " yr") + '</text>';
     }

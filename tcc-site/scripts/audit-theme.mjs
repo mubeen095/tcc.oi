@@ -20,7 +20,7 @@
  *
  * Dark mode checks
  *   - <html data-theme="dark">
- *   - dark canvas (#050505) and no light-canvas content
+ *   - dark canvas (#000000) and no light-canvas content
  *   - toggle present, no horizontal overflow
  *
  * Static checks (always)

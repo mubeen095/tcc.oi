@@ -153,7 +153,7 @@ const COLOR_PROPS = new Set([
 ]);
 
 const DARK_BG = new Set([
-  '#000', '#000000', '#050505', '#060606', '#070707', '#070505', '#060707',
+  '#000', '#000000', '#070707', '#070505', '#060707',
   '#0a0a0a', '#0b0b0b', '#0d0d0d', '#0e0e0e', '#101010', '#141414', '#171717',
   '#1a1a1a', '#0b0d12', '#05070c', '#0E0E0E', '#1A1A1C', '#1e1e1e',
 ]);
@@ -236,7 +236,7 @@ function transformToken(token, kind, selector) {
       if (kind === 'bg') return `rgba(0,0,0,${round(clamp(rgba.a * 0.3, 0.02, 0.12))})`;
       return null;
     }
-    // Near-black (e.g. rgba(6,6,6,.86) sticky headers) becomes a light veil.
+    // Near-black (e.g. rgba(0,0,0,.86) sticky headers) becomes a light veil.
     if (rgba.r < 48 && rgba.g < 48 && rgba.b < 48) {
       if (kind === 'bg') return `rgba(247,247,245,${round(Math.max(rgba.a, 0.85))})`;
       if (kind === 'border' || kind === 'stroke') return `rgba(0,0,0,${round(clamp(rgba.a * 1.1 + 0.02, 0.06, 0.55))})`;

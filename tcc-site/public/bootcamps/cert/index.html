@@ -18,7 +18,7 @@
           meta.setAttribute('name', 'theme-color');
           document.head.appendChild(meta);
         }
-        meta.setAttribute('content', '#050505');
+        meta.setAttribute('content', '#000000');
       })();
     </script>
     <title>TCC CERT+ Certification | The Coding Company</title>
@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" />
     <style>
-      :root { --bg: #050505; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.62); --muted2: rgba(255,255,255,0.56); --accent: #4d8dff; }
+      :root { --bg: #000000; --line: rgba(255,255,255,0.09); --muted: rgba(255,255,255,0.62); --muted2: rgba(255,255,255,0.56); --accent: #4d8dff; }
       * { box-sizing: border-box; margin: 0; padding: 0; }
       html { scroll-behavior: smooth; }
       body { background: var(--bg); color: #fff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.6; }
@@ -45,7 +45,7 @@
       .eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted2); }
 
       /* topbar */
-      .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); background: rgba(5,5,5,0.78); border-bottom: 1px solid var(--line); }
+      .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); background: rgba(0,0,0,0.78); border-bottom: 1px solid var(--line); }
       .topbar-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 62px; }
       .brand { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: 20px; letter-spacing: -0.01em; }
       .brand .plus { color: var(--accent); }
@@ -160,7 +160,7 @@
       @media (min-width: 760px) { .cards-2col { grid-template-columns: 1fr 1fr; } }
       .list-col { list-style: none; display: grid; grid-template-columns: 1fr; gap: 12px; }
 
-      .cta-band { margin: 56px 0; padding: 44px 32px; border-radius: 26px; border: 1px solid var(--line); background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.16), rgba(5,5,5,0) 60%), rgba(255,255,255,0.03); text-align: center; }
+      .cta-band { margin: 56px 0; padding: 44px 32px; border-radius: 26px; border: 1px solid var(--line); background: radial-gradient(120% 120% at 50% 0%, rgba(0,100,255,0.16), rgba(0,0,0,0) 60%), rgba(255,255,255,0.03); text-align: center; }
       .cta-band h2 { font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 12px; }
       .cta-band p { color: var(--muted); max-width: 52ch; margin: 0 auto 24px; }
       .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }

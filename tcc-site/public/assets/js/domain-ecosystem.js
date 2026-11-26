@@ -10,7 +10,7 @@
   var STYLE_ID = 'tcc-eco-style';
 
   var CSS = [
-    '.tcc-eco{background:#050505;border-top:1px solid rgba(255,255,255,.1);padding:72px 24px 56px;color:#fff;font-family:Inter,system-ui,-apple-system,sans-serif;width:100%}',
+    '.tcc-eco{background:#000000;border-top:1px solid rgba(255,255,255,.1);padding:72px 24px 56px;color:#fff;font-family:Inter,system-ui,-apple-system,sans-serif;width:100%}',
     '.tcc-eco *{box-sizing:border-box}',
     '.tcc-eco-in{max-width:1120px;margin:0 auto}',
     '.tcc-eco-eyebrow{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:0 0 14px}',

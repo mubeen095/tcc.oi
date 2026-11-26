@@ -624,7 +624,7 @@
 
   // ── styles ───────────────────────────────────────────────────────────────
   var CSS = [
-    '.tpr{background:#050505;border-top:1px solid rgba(255,255,255,.08);padding:64px 24px 56px;color:#fff;font-family:Inter,system-ui,-apple-system,sans-serif!important;width:100%}',
+    '.tpr{background:#000000;border-top:1px solid rgba(255,255,255,.08);padding:64px 24px 56px;color:#fff;font-family:Inter,system-ui,-apple-system,sans-serif!important;width:100%}',
     '.tpr *{box-sizing:border-box}',
     '.tpr-in{max-width:1180px;margin:0 auto}',
     '.tpr-head{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:end;margin-bottom:22px}',
@@ -722,8 +722,8 @@
     '.tpr-drawer[hidden]{display:none}',
     '.tpr-drawer{position:fixed;inset:0;z-index:130}',
     '.tpr-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(3px)}',
-    '.tpr-drawer-panel{position:absolute;top:0;right:0;height:100%;width:min(600px,100%);display:flex;flex-direction:column;background:#050505;border-left:1px solid rgba(255,255,255,.12);box-shadow:-24px 0 60px rgba(0,0,0,.55);overflow-y:auto}',
-    '.tpr-drawer-head{position:sticky;top:0;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:24px 24px 18px;border-bottom:1px solid rgba(255,255,255,.08);background:#050505}',
+    '.tpr-drawer-panel{position:absolute;top:0;right:0;height:100%;width:min(600px,100%);display:flex;flex-direction:column;background:#000000;border-left:1px solid rgba(255,255,255,.12);box-shadow:-24px 0 60px rgba(0,0,0,.55);overflow-y:auto}',
+    '.tpr-drawer-head{position:sticky;top:0;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:24px 24px 18px;border-bottom:1px solid rgba(255,255,255,.08);background:#000000}',
     '.tpr-drawer-kicker{font-family:"DM Mono",monospace!important;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#2f7bff;margin:0 0 8px}',
     '.tpr-drawer-title{font-family:"Instrument Serif",Georgia,serif!important;font-size:clamp(24px,3.4vw,32px);font-weight:400;letter-spacing:-.01em;line-height:1.1;margin:0;color:#fff}',
     '.tpr-drawer-phase{margin:8px 0 0;font-size:12.5px;color:rgba(255,255,255,.62)}',

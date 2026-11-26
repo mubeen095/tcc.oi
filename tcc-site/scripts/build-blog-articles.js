@@ -46,11 +46,11 @@ const NAV = slice('<nav class="bottom-nav">', '</nav>');
 /* ── Article-scoped CSS (appended after the shared blog stylesheet) ── */
 const ARTICLE_CSS = `
       /* ══════════ ARTICLE ══════════ */
-      .a-hero { position: relative; padding: 130px 24px 46px; overflow: hidden; background: #050505; }
+      .a-hero { position: relative; padding: 130px 24px 46px; overflow: hidden; background: #000000; }
       @media (min-width: 768px) { .a-hero { padding: 158px 40px 58px; } }
       .a-hero-bg { position: absolute; inset: 0; z-index: 0; background-size: cover; background-position: center 40%; opacity: 0.38; transform: scale(1.03); }
       .a-hero-veil { position: absolute; inset: 0; z-index: 1; background:
-        linear-gradient(180deg, rgba(5,5,5,0.74) 0%, rgba(5,5,5,0.88) 58%, #050505 100%),
+        linear-gradient(180deg, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.88) 58%, #000000 100%),
         radial-gradient(85% 78% at 18% 18%, rgba(0,87,222,0.30), transparent 62%); }
       .a-hero-grid { position: absolute; inset: 0; z-index: 2; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 0%, transparent 78%); }
       .a-hero-inner { position: relative; z-index: 3; max-width: 900px; margin: 0 auto; }
@@ -120,7 +120,7 @@ const ARTICLE_CSS = `
       .a-faq details[open] summary::after { content: '−'; color: #7fb4ff; }
       .a-faq details p { padding: 0 0 24px; color: rgba(255,255,255,0.62); font-size: 16px; line-height: 1.78; margin: 0; }
 
-      .a-cta { border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(140deg, rgba(0,87,222,0.16), rgba(5,5,5,0.4)); border-radius: 22px; padding: 40px 34px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+      .a-cta { border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(140deg, rgba(0,87,222,0.16), rgba(0,0,0,0.4)); border-radius: 22px; padding: 40px 34px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
       .a-cta .ct-t { font-family: 'Gilroy', 'Inter', system-ui, sans-serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.12; letter-spacing: -0.02em; color: #fff; }
       .a-cta .ct-d { color: rgba(255,255,255,0.58); font-size: 15.5px; line-height: 1.72; }
       .a-cta .ct-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
@@ -228,7 +228,7 @@ function render(a) {
     <meta name="keywords" content="${a.keywords.join(', ')}" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="author" content="The Coding Company (TCC)" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#000000" />
     <link rel="canonical" href="${url}" />
     <meta property="og:title" content="${a.seoTitle}" />
     <meta property="og:description" content="${a.description}" />

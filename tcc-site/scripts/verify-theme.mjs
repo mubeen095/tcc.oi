@@ -74,11 +74,11 @@ function assert(name, cond, detail) {
   const { tab, c } = await open({ system: 'dark' });
   const s = await evalx(c, state);
   assert('first visit follows system dark', s.theme === 'dark', JSON.stringify(s));
-  assert('dark meta colour', s.meta === '#050505', s.meta);
+  assert('dark meta colour', s.meta === '#000000', s.meta);
   // Native controls stay light in both themes to preserve the original dark baseline.
   assert('dark color-scheme keeps native controls light', s.colorScheme === 'light' || s.colorScheme === 'normal', s.colorScheme);
   assert('toggles injected', s.toggles >= 1, String(s.toggles));
-  assert('dark canvas', s.canvas === 'rgb(5, 5, 5)' || s.canvas === 'rgb(6, 6, 6)', s.canvas);
+  assert('dark canvas', s.canvas === 'rgb(0, 0, 0)' || s.canvas === 'rgb(0, 0, 0)', s.canvas);
   c.close();
   await fetch(`${CDP}/json/close/${tab.id}`);
 }

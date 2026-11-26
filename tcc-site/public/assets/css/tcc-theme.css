@@ -10,8 +10,8 @@
 /* ============================================================================
  * tcc-theme.css — TCC theme tokens, light-mode shell, diagrams and toggle.
  *
- * Loaded on every page after the page's own styles. Dark is the default and
- * is byte-for-byte the original palette; light mode is opt-in via
+ * Loaded on every page after the page's own styles. Dark is the default, with
+ * the canvas unified to #000000; light mode is opt-in via
  * <html data-theme="light"> (set by tcc-theme.js before first paint).
  *
  * Content-component overrides for each page family live in the generated
@@ -27,7 +27,7 @@
      dark theme; keeping that here preserves the dark-mode pixel baseline. */
   color-scheme: light;
 
-  --tcc-canvas: #050505;
+  --tcc-canvas: #000000;
   --tcc-surface: #0a0a0a;
   --tcc-surface-2: #101010;
   --tcc-surface-3: #141414;
@@ -346,8 +346,8 @@ html[data-theme="light"] .terminal [style*="color"] {
   color: rgba(255, 255, 255, 0.66) !important;
 }
 
-html[data-theme="light"] [style*="background:#050505"],
-html[data-theme="light"] [style*="background: #050505"],
+html[data-theme="light"] [style*="background:#000000"],
+html[data-theme="light"] [style*="background: #000000"],
 html[data-theme="light"] [style*="background:#000"],
 html[data-theme="light"] [style*="background: #000"],
 html[data-theme="light"] [style*="background:#0a0a0a"],

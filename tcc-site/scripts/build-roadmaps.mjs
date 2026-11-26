@@ -455,7 +455,7 @@ ${ctx.siteFooter}`;
     <link rel="canonical" href="https://thecodingcompany.io${detailHref(item)}" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#000000" />
     <meta property="og:title" content="${esc(item.title)} Roadmap | The Coding Company" />
     <meta property="og:description" content="${esc(item.desc)}" />
     <meta property="og:type" content="article" />
@@ -855,7 +855,7 @@ ${siteFooter}`;
     <link rel="canonical" href="https://thecodingcompany.io/roadmaps/" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#050505" />
+    <meta name="theme-color" content="#000000" />
     <meta property="og:title" content="All Developer Roadmaps | The Coding Company" />
     <meta property="og:description" content="Browse ${total} step-by-step developer roadmaps across roles, skills, and best practices." />
     <meta property="og:type" content="website" />

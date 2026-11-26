@@ -4,8 +4,8 @@
   "description": "Master AI Engineering. Build real-world AI projects. Join an elite community of AI builders.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#050505",
-  "theme_color": "#050505",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "orientation": "portrait-primary",
   "icons": [
     {

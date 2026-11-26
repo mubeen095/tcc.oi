@@ -7,7 +7,7 @@
  * ==========================================================================*/
 
 :root{
-  --v-bg:var(--tcc-canvas,#050505);
+  --v-bg:var(--tcc-canvas,#000000);
   --v-surface:var(--tcc-surface,#0a0a0a);
   --v-surface2:var(--tcc-surface-2,#101010);
   --v-ink:var(--tcc-ink,#fff);

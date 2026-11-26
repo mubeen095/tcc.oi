@@ -29,7 +29,7 @@
       setTimeout(function() {
         if (root.children.length === 0 || root.innerHTML.trim() === '') {
           root.innerHTML =
-            '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;padding:2rem;text-align:center;background:#050505;color:white">' +
+            '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;padding:2rem;text-align:center;background:#000000;color:white">' +
             '<h2 style="font-size:1.5rem;margin-bottom:1rem;font-weight:600">Something went wrong</h2>' +
             '<p style="color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:400px">The app encountered an unexpected error. Please try reloading the page.</p>' +
             '<button onclick="location.reload()" style="padding:0.75rem 2rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:white;cursor:pointer;font-size:0.9rem;backdrop-filter:blur(12px)">Reload Page</button>' +

@@ -6,7 +6,7 @@
  *
  *   1. Dark only. Removes the light/dark boot resolver from every page and
  *      pins <html data-theme="dark">, color-scheme dark and theme-color
- *      #050505. The light-mode CSS stays in place but can never match.
+ *      #000000. The light-mode CSS stays in place but can never match.
  *   2. One typeface. Instrument Serif is retired; every declaration falls
  *      back to Inter (the site's sans) and the Google Fonts request no
  *      longer downloads the serif.
@@ -38,7 +38,7 @@ const BOOT_RE = /<!-- tcc-theme:boot: dark-only, applied before first paint -->
           meta.setAttribute('name', 'theme-color');
           document.head.appendChild(meta);
         }
-        meta.setAttribute('content', '#050505');
+        meta.setAttribute('content', '#000000');
       })();
     </script>`;
 

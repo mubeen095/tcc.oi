@@ -36,7 +36,7 @@ const OVERRIDES = `    <style ${MARK}>
       .text-white\\/40, .text-white\\/45 { color: rgba(255, 255, 255, 0.72) !important; }
       .text-white\\/50, .text-white\\/55 { color: rgba(255, 255, 255, 0.8) !important; }
       [class*="text-[#505050]"], [class*="text-[#696969]"], [class*="text-[#5d5d5d]"] { color: rgba(255, 255, 255, 0.66) !important; }
-      .skip-link:focus { position: fixed; top: 8px; left: 8px; z-index: 100000; background: #fff; color: #050505; padding: 10px 16px; border-radius: 8px; }
+      .skip-link:focus { position: fixed; top: 8px; left: 8px; z-index: 100000; background: #fff; color: #000000; padding: 10px 16px; border-radius: 8px; }
     </style>
 `;
 

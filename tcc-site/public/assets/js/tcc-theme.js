@@ -13,7 +13,7 @@
     root.setAttribute('data-theme', 'dark');
     root.style.colorScheme = 'dark';
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', '#050505');
+    if (meta) meta.setAttribute('content', '#000000');
   }
   apply();
   window.tccTheme = {
