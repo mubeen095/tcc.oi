@@ -19,6 +19,13 @@ const MIN_FILL_MS = 1500;
    exam-lead is deliberately not listed here. */
 const VERIFIED = ['prep-plus-lead'];
 
+function normaliseIndianMobile(value) {
+  const digits = String(value || '').replace(/\D/g, '');
+  if (digits.length === 10 && /^[6-9]\d{9}$/.test(digits)) return '+91' + digits;
+  if (digits.length === 12 && /^91[6-9]\d{9}$/.test(digits)) return '+' + digits;
+  return null;
+}
+
 module.exports = async function (req, res) {
   if (req.method !== 'POST') return json(res, 405, { error: 'Method not allowed' });
   let body;
@@ -72,6 +79,25 @@ module.exports = async function (req, res) {
     if (missing.length) {
       return json(res, 400, { error: `Missing: ${missing.join(', ')}` });
     }
+  }
+
+  if (formType === 'placement-plan') {
+    const whatsapp = normaliseIndianMobile(body.whatsapp);
+    if (!whatsapp) {
+      return json(res, 400, { error: 'Enter a valid 10-digit Indian mobile number.' });
+    }
+    const missing = ['college', 'graduation_year'].filter(
+      (k) => !String(body[k] || '').trim()
+    );
+    if (missing.length) {
+      return json(res, 400, { error: `Missing: ${missing.join(', ')}` });
+    }
+    if (!/^(19|20)\d{2}$/.test(String(body.graduation_year).trim())) {
+      return json(res, 400, { error: 'Enter a 4-digit graduation year.' });
+    }
+    body.whatsapp = whatsapp;
+    body.college = String(body.college).trim();
+    body.graduation_year = String(body.graduation_year).trim();
   }
 
   const email = String(body.email || '').trim().toLowerCase();

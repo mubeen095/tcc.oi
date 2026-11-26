@@ -111,6 +111,11 @@ function mockPhone(value) {
   return null;
 }
 
+function normaliseIndianMobile(value) {
+  const phone = mockPhone(value);
+  return /^\+91[6-9]\d{9}$/.test(phone || '') ? phone : null;
+}
+
 function mockSessionToken(req) {
   const cookie = req.headers.cookie || '';
   const m = cookie.match(/(?:^|;\s*)tcc_session=([^;]+)/);
@@ -217,6 +222,20 @@ async function serveMockApi(req, res, url) {
         (k) => !String(b[k] || '').trim()
       );
       if (missing.length) return mockJson(res, 400, { error: `Missing: ${missing.join(', ')}` });
+    }
+    if (formType === 'placement-plan') {
+      const whatsapp = normaliseIndianMobile(b.whatsapp);
+      if (!whatsapp) return mockJson(res, 400, { error: 'Enter a valid 10-digit Indian mobile number.' });
+      const missing = ['college', 'graduation_year'].filter(
+        (k) => !String(b[k] || '').trim()
+      );
+      if (missing.length) return mockJson(res, 400, { error: `Missing: ${missing.join(', ')}` });
+      if (!/^(19|20)\d{2}$/.test(String(b.graduation_year).trim())) {
+        return mockJson(res, 400, { error: 'Enter a 4-digit graduation year.' });
+      }
+      b.whatsapp = whatsapp;
+      b.college = String(b.college).trim();
+      b.graduation_year = String(b.graduation_year).trim();
     }
     const row = { id: MOCK.nextId++, form_type: formType, email: b.email || null, payload: b, created_at: new Date() };
     MOCK.submissions.push(row);
