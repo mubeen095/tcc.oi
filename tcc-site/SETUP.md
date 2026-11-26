@@ -182,7 +182,7 @@ Every cohort date, deadline and seat count on the site comes from
 {
   "capacity": 50,
   "cohorts": [
-    { "id": "2027-01", "label": "Cohort 01", "start": "2027-01-18",
+    { "id": "2027-01", "label": "Cohort", "start": "2027-01-18",
       "applyBy": "2027-01-11", "decideBy": "2027-01-14",
       "seatsLeft": null, "seatsUpdated": null }
   ]

@@ -150,8 +150,8 @@
 
 | Cohort | Start | Apply By | Decide By | Seats | Status |
 |---|---|---|---|---|---|
-| **Cohort 01** | 2027-01-18 | 2027-01-11 | 2027-01-14 | 50 (capacity) | ✅ Active dates from `data/cohorts.json` |
-| **Cohort 02** | 2027-02-12 | 2027-02-05 | 2027-02-09 | 50 (capacity) | ✅ Active dates from `data/cohorts.json` |
+| **Cohort** | 2027-01-18 | 2027-01-11 | 2027-01-14 | 50 (capacity) | ✅ Active dates from `data/cohorts.json` |
+| **Cohort** | 2027-02-12 | 2027-02-05 | 2027-02-09 | 50 (capacity) | ✅ Active dates from `data/cohorts.json` |
 
 **Source of truth:** `data/cohorts.json` — "Single source of truth for cohort dates. Edit this file, then run `npm run build:seo`."
 

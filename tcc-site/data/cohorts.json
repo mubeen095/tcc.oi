@@ -5,7 +5,7 @@
   "cohorts": [
     {
       "id": "2027-01",
-      "label": "Cohort 01",
+      "label": "Cohort",
       "start": "2027-01-18",
       "applyBy": "2027-01-11",
       "decideBy": "2027-01-14",
@@ -14,7 +14,7 @@
     },
     {
       "id": "2027-02",
-      "label": "Cohort 02",
+      "label": "Cohort",
       "start": "2027-02-12",
       "applyBy": "2027-02-05",
       "decideBy": "2027-02-09",
