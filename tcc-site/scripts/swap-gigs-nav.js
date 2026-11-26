@@ -66,7 +66,7 @@ for (const file of files) {
 
   src = src.replace(FOOTER_RE, () => {
     totals.footer++;
-    return '<a href="/placement#gigs">Gigs</a>';
+    return '<a href="/placement/#gigs">Gigs</a>';
   });
 
   if (src !== before) {

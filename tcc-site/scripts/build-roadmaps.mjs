@@ -493,7 +493,7 @@ ${content}
         <div class="bottom-nav-inner">
           <a href="/" class="bottom-link"><span>Home</span></a>
           <a href="/bootcamps" class="bottom-link"><span>CERT+</span></a>
-          <a href="/placement" class="bottom-link"><span>Placements</span></a>
+          <a href="/placement/" class="bottom-link"><span>Placements</span></a>
           <a href="/100-club" class="bottom-link"><span>Club</span></a>
           <a href="/roadmaps/" class="bottom-link active"><span>Roadmaps</span></a>
         </div>
@@ -893,7 +893,7 @@ ${content}
         <div class="bottom-nav-inner">
           <a href="/" class="bottom-link"><span>Home</span></a>
           <a href="/bootcamps" class="bottom-link"><span>CERT+</span></a>
-          <a href="/placement" class="bottom-link"><span>Placements</span></a>
+          <a href="/placement/" class="bottom-link"><span>Placements</span></a>
           <a href="/100-club" class="bottom-link"><span>Club</span></a>
           <a href="/roadmaps/" class="bottom-link active"><span>Roadmaps</span></a>
         </div>
