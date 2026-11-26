@@ -127,27 +127,6 @@
       }
       @media (max-width: 360px) { .mobile-header { padding: 8px 12px; gap: 8px; } .mobile-brand { font-size: 15px; } .mobile-cta { font-size: 10.5px; padding: 7px 10px; } }
 
-      /* Desktop top bar (matches growthx header: fixed right, 64px, scroll-reveal) */
-      .topbar {
-        display: none;
-        position: fixed; top: 0; right: 0; left: 200px; height: 64px; z-index: 120;
-        align-items: center; justify-content: flex-end;
-        padding: 10px 20px;
-        background: rgba(0,0,0,0.98); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-        border-bottom: 1px solid #1F1F1F;
-        opacity: 0; transform: translateY(-100%);
-        transition: all 0.25s ease-in-out;
-      }
-      @media (min-width: 768px) { .topbar { display: flex; } }
-      .topbar.visible { opacity: 1; transform: translateY(0); }
-      .topbar-cta {
-        font-size: 14px; font-weight: 600; font-family: 'Gilroy', 'Inter', system-ui, sans-serif;
-        background: #0064FF; color: #fff; border: 0; border-radius: 6px;
-        padding: 8px 18px; width: max-content; white-space: nowrap;
-        transition: background 0.2s; cursor: pointer;
-      }
-      .topbar-cta:hover { background: rgb(0,70,178); }
-
       /* ── Collapsible sidebar (growthx: 200px open ⇄ 64px icon rail) ── */
       .sidebar { position: sticky; top: 0; transition: width 0.2s ease-in-out; }
       .sidebar-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 4px 0 8px; margin-bottom: 24px; }
@@ -170,7 +149,6 @@
       body.sidebar-collapsed .btn-login { width: 40px; height: 40px; padding: 0; border-radius: 999px; }
       body.sidebar-collapsed .btn-login .btn-login-label { display: none; }
       body.sidebar-collapsed .btn-login-icon { display: block; }
-      body.sidebar-collapsed .topbar { left: 64px; }
 
       /* Mobile bottom nav (matches TCC nav) */
       .bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; height: 76px; background: var(--tcc-canvas); align-items: stretch; }
@@ -1068,11 +1046,6 @@
         </div>
       </aside>
 
-      <!-- Desktop top bar (growthx header) -->
-      <header class="topbar" id="topbar">
-        <button class="topbar-cta" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
-      </header>
-
       <!-- Scrollable main -->
       <main class="main-scroll" id="main-content" tabindex="-1">
         <!-- Mobile top header -->
@@ -1106,9 +1079,9 @@
           </section>
 
           <!-- OFFICIAL PARTNERS -->
-          <section id="official-partners-section" class="sec sec-pad">
-            <div class="partner-strip" style="margin:0 auto clamp(28px,4vw,44px);max-width:980px">
-              <h2 class="sec-title" style="text-align:center;margin:0 0 34px">Our partners</h2>
+          <section id="official-partners-section" class="sec sec-pad" style="padding-top:24px;padding-bottom:24px">
+            <div class="partner-strip" style="margin:0 auto 12px;max-width:980px">
+              <h2 class="sec-title" style="text-align:center;margin:0 0 20px">Our partners</h2>
               <div class="ps-row">
                 <div class="ps-item reveal" style="transition-delay:.05s">
                   <div class="ps-box"><img class="ps-logo" src="/assets/growthx/logo-openai.webp" alt="OpenAI" style="height:34px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
