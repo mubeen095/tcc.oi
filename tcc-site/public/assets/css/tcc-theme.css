@@ -2099,3 +2099,33 @@ h2 .serif-i {
 }
 
 /* Partner logos: three-across on mobile, even height so wordmarks align */
+
+/* --------------------------------------------------------------------------
+ * Sitewide section rhythm.
+ * Older pages stacked 96px bottom + 96px top = 192px of empty space between
+ * adjacent sections. Normalise the vertical step to 32px on phones and 48px
+ * from 768px up. Sections that set their own inline top or bottom padding keep
+ * that value, so hand-tuned pages (including Our partners) are untouched.
+ * ------------------------------------------------------------------------*/
+:where(.section, .sec, .sec-pad, .band, .final, .rec-sec, .faq-sec, .eco-sec, .rmp-sec, .tpr, .tcc-eco):not([style*="padding-top"]):not([style*="padding-bottom"]) {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+:where(.section, .sec, .sec-pad, .band, .final, .rec-sec, .faq-sec, .eco-sec, .rmp-sec, .tpr, .tcc-eco):not([style*="padding-bottom"]) {
+  padding-bottom: 32px !important;
+}
+:where(.hero, .prep-hero, .a-hero, .c-hero, .rd-hero, .rm-hero, .hero-content):not([style*="padding-bottom"]) {
+  padding-bottom: 32px !important;
+}
+@media (min-width: 768px) {
+  :where(.section, .sec, .sec-pad, .band, .final, .rec-sec, .faq-sec, .eco-sec, .rmp-sec, .tpr, .tcc-eco):not([style*="padding-top"]):not([style*="padding-bottom"]) {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  :where(.section, .sec, .sec-pad, .band, .final, .rec-sec, .faq-sec, .eco-sec, .rmp-sec, .tpr, .tcc-eco):not([style*="padding-bottom"]) {
+    padding-bottom: 48px !important;
+  }
+  :where(.hero, .prep-hero, .a-hero, .c-hero, .rd-hero, .rm-hero, .hero-content):not([style*="padding-bottom"]) {
+    padding-bottom: 48px !important;
+  }
+}
