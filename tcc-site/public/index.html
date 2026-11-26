@@ -373,17 +373,19 @@
       .partner-strip .ps-box { animation: psFloat 5s ease-in-out infinite; }
       .partner-strip .ps-item:nth-child(2) .ps-box { animation-delay: .6s; }
       .partner-strip .ps-item:nth-child(3) .ps-box { animation-delay: 1.2s; }
+      .partner-strip .ps-item:nth-child(4) .ps-box { animation-delay: 1.8s; }
       @media (prefers-reduced-motion: reduce) { .partner-strip .ps-box { animation: none; } }
       .partner-strip .ps-logo-for-light { display: none; }
       html[data-theme="light"] .partner-strip .ps-logo-for-dark { display: none; }
       html[data-theme="light"] .partner-strip .ps-logo-for-light { display: block; }
       html[data-theme="light"] .partner-strip .ps-cap { color: rgba(0,0,0,.6); }
       html[data-theme="light"] .partner-strip .ps-logo[src*="logo-openai"] { filter: brightness(0) !important; opacity: .85; }
+      html[data-theme="light"] .partner-strip .ps-logo[src*="partner-emergent"] { filter: brightness(0) !important; opacity: .85; }
       html[data-theme="light"] .partner-strip .ps-logo[src*="partner-lovable"] { filter: none !important; opacity: .95; }
 
-      /* Partner row: three across at every width, including 320px phones */
+      /* Partner row: four across at every width, including 320px phones */
       .partner-strip .ps-item { min-width: 0; }
-      .ps-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; justify-items: center; gap: clamp(16px, 5vw, 64px); }
+      .ps-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; justify-items: center; gap: clamp(10px, 3vw, 36px); }
       .ps-row .ps-item { width: 100%; }
       @media (max-width: 640px) {
         .ps-row { gap: 6px; }
@@ -1109,19 +1111,23 @@
               <h2 class="sec-title" style="text-align:center;margin:0 0 34px">Our partners</h2>
               <div class="ps-row">
                 <div class="ps-item reveal" style="transition-delay:.05s">
-                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/logo-openai.webp" alt="OpenAI" style="height:48px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
+                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/logo-openai.webp" alt="OpenAI" style="height:34px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
                   <span class="ps-cap">OpenAI &middot; Affiliate Partner</span>
                 </div>
                 <div class="ps-item reveal" style="transition-delay:.18s">
-                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/partner-lovable.png" alt="Lovable" style="height:84px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
+                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/partner-lovable.png" alt="Lovable" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
                   <span class="ps-cap">Lovable &middot; Official Solutions Partner</span>
                 </div>
                 <div class="ps-item reveal" style="transition-delay:.31s">
                   <div class="ps-box">
-                    <img class="ps-logo ps-logo-for-dark" src="/assets/growthx/partner-claude.svg" alt="Claude" style="height:48px;width:auto">
-                    <img class="ps-logo ps-logo-for-light" src="/assets/growthx/partner-claude-dark.svg" alt="Claude" style="height:48px;width:auto">
+                    <img class="ps-logo ps-logo-for-dark" src="/assets/growthx/partner-claude.svg" alt="Claude" style="height:28px;width:auto">
+                    <img class="ps-logo ps-logo-for-light" src="/assets/growthx/partner-claude-dark.svg" alt="Claude" style="height:28px;width:auto">
                   </div>
                   <span class="ps-cap">Claude &middot; Affiliate Partner</span>
+                </div>
+                <div class="ps-item reveal" style="transition-delay:.44s">
+                  <div class="ps-box"><img class="ps-logo" src="/assets/growthx/partner-emergent.svg" alt="Emergent" style="height:28px;width:auto;filter:brightness(0) invert(1);opacity:.95"></div>
+                  <span class="ps-cap">Emergent &middot; Solutions Partner</span>
                 </div>
               </div>
             </div>
