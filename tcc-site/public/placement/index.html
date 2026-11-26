@@ -176,6 +176,22 @@
       .hero-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 34px; }
       @media (min-width: 640px) { .hero-ctas { flex-direction: row; } }
 
+      /* ── CAPTURE FORM ── */
+      .capture-section { padding: clamp(24px, 8vw, 44px) 0; }
+      .capture-card { max-width: 760px; margin: 0 auto; padding: clamp(24px, 4.5vw, 40px); }
+      .form-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 8px; }
+      @media (min-width: 640px) { .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+      .form-grid .field { display: block; min-width: 0; }
+      .form-grid .field span { display: block; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-bottom: 8px; }
+      .form-grid .field input { width: 100%; min-height: 50px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 12px 14px; color: #fff; font-size: 15px; outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+      .form-grid .field input::placeholder { color: rgba(255,255,255,0.28); }
+      .form-grid .field input:focus { border-color: rgba(0,100,255,0.7); box-shadow: 0 0 0 3px rgba(0,87,222,0.18); }
+      .form-grid .field input[aria-invalid="true"] { border-color: rgba(255,95,95,0.75); }
+      .form-grid .field--wide { grid-column: 1 / -1; }
+      .form-actions { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 4px; }
+      @media (min-width: 640px) { .form-actions { flex-direction: row; align-items: center; } }
+      .status { font-size: 13.5px; color: rgba(255,255,255,0.58); min-height: 20px; line-height: 1.5; }
+
       /* ── STATS ── */
       .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
       @media (min-width: 900px) { .stat-grid { grid-template-columns: repeat(4, 1fr); } }
@@ -439,20 +455,25 @@
 
               <a class="hero-form-anchor" id="placement-form-anchor"></a>
 
-              <section class="capture-section" style="padding: clamp(24px,8vw,44px) 0;">
-                <div class="wrap" style="max-width:600px;margin:0 auto;">
-                  <h2 style="font-size:clamp(24px,4vw,32px);margin-bottom:16px">Get your personalized placement plan</h2>
-                  <p style="font-size:15px;color:var(--c-ink2);margin-bottom:24px">Tell us your target role and college and we'll send a custom plan with portfolio gaps, mock interview focus, and company-pattern practice.</p>
-                  <form id="placement-form" novalidate>
-                    <input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important">
-                    <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
-                    <label class="field"><span>WhatsApp number</span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" required placeholder="10-digit Indian mobile"></label>
-                    <label class="field"><span>College</span><input type="text" name="college" autocomplete="organization" required placeholder="Your college"></label>
-                    <label class="field"><span>Graduation year</span><input type="text" name="graduation_year" inputmode="numeric" required placeholder="YYYY"></label>
-                    <label class="field"><span>Target role</span><input type="text" name="role" autocomplete="role" placeholder="e.g. AI/ML Engineer, Full Stack Developer"></label>
-                    <button class="btn" type="submit">Send my plan</button>
-                    <p class="status" id="placement-status" role="status" aria-live="polite"></p>
-                  </form>
+              <section class="capture-section">
+                <div class="container">
+                  <div class="card capture-card">
+                    <div class="eyebrow reveal" style="margin-bottom:12px">Personalized plan</div>
+                    <h2 class="section-title reveal" style="font-size:clamp(26px,3.6vw,38px);margin-bottom:12px">Get your personalized placement plan</h2>
+                    <p class="section-sub reveal" style="margin-bottom:28px">Tell us your target role and college and we'll send a custom plan with portfolio gaps, mock interview focus, and company-pattern practice.</p>
+                    <form id="placement-form" class="form-grid" novalidate>
+                      <input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important">
+                      <label class="field"><span>Target role</span><input type="text" name="role" autocomplete="role" placeholder="e.g. AI/ML Engineer"></label>
+                      <label class="field"><span>Graduation year</span><input type="text" name="graduation_year" inputmode="numeric" required placeholder="YYYY"></label>
+                      <label class="field field--wide"><span>College</span><input type="text" name="college" autocomplete="organization" required placeholder="Your college"></label>
+                      <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
+                      <label class="field"><span>WhatsApp number</span><input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" required placeholder="10-digit Indian mobile"></label>
+                      <div class="form-actions">
+                        <button class="btn" type="submit">Send my plan</button>
+                        <p class="status" id="placement-status" role="status" aria-live="polite"></p>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </section>
             </div>
