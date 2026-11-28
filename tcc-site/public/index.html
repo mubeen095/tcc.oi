@@ -1062,7 +1062,7 @@
 </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="loader" id="loader"><p class="loader-text">Patience—you're about to be impressed.</p></div>
+    <div class="loader" id="loader"><p class="loader-text">Loading thecodingcompany&hellip;</p></div>
 
     <div class="app-shell baseline-root" id="app">
       <!-- Desktop sidebar nav (TCC aside) -->
@@ -1254,8 +1254,8 @@
               <p style="text-align:center;font-size:11px;color:rgba(255,255,255,0.38);margin-top:14px;line-height:1.7">All product names and logos are trademarks of their respective owners. TCC is an independent education company and is not endorsed by them.</p>
             </div>
             <div class="reveal">
-              <h2 class="sec-title">This is not a course you finish.</h2>
-              <p class="sec-sub muted">It&rsquo;s a system you keep using &mdash; for your first job, your next role, and every build after that.</p>
+              <h2 class="sec-title">TCC keeps working after one course.</h2>
+              <p class="sec-sub muted">Use it for your first role, your next role, and every project after that.</p>
             </div>
             <div class="loop-grid">
               <div class="loop-card reveal">
@@ -1319,7 +1319,8 @@
               </div>
             </div>
             <div class="ladder-banner reveal">
-              <div class="ladder-banner-text"><!-- cohort:banner --><span>Cohort starts <strong>18 Jan 2027</strong> &middot; 50 seats &middot; apply by <strong>11 Jan 2027</strong></span><!-- /cohort:banner --></div>
+              <!-- TODO: cohort dates now appear only beside the fee. Remove the `banner` slot from scripts/build-cohorts.mjs when that file is in scope so a rebuild does not re-add a second date line. -->
+              <div class="ladder-banner-text">Live sessions, hands-on builds, and a project you can share.</div>
               <button class="btn-primary" type="button" onclick="window.location.href='/bootcamps'">Explore detailed curriculum</button>
             </div>
           </section>
@@ -1330,7 +1331,7 @@
               <div class="pricing-fade-top"></div>
               <div class="pricing-fade-bot"></div>
               <div class="pricing-content reveal">
-                <h2 class="sec-title">Everything the interview asks for. Nothing it doesn't.</h2>
+                <h2 class="sec-title">A clear plan for learning, building, and interview prep.</h2>
                 <!-- cohort:pricing --><p class="cohort-line center"><span class="cl-dot" aria-hidden="true"></span><span>Cohort &middot; starts <strong>18 Jan 2027</strong> &middot; 50 seats &middot; applications close <strong>11 Jan 2027</strong></span></p><!-- /cohort:pricing -->
                 <div class="pricing-card">
                   <div class="price-panel">
@@ -1370,7 +1371,7 @@
               <div class="nfe-fade-top"></div>
               <div class="nfe-fade-bot"></div>
               <div class="nfe-content reveal">
-                <h2 class="sec-title nfe-title">This is not for everyone. It&rsquo;s for people who are done waiting.</h2>
+                <h2 class="sec-title nfe-title">This is for people ready to build.</h2>
                 <p class="nfe-sub">Every application is read by a human, not a keyword filter. We reply within 2 working days. We optimise for fit, not volume.</p>
                 <button class="btn-white pill-lg" type="button" onclick="window.location.href='/become-a-member'">Become a member</button>
               </div>
@@ -1381,7 +1382,7 @@
           <section class="sec sec-pad" id="tcc-guides">
             <div class="reveal">
               <h2 class="sec-title">Guides &amp; resources</h2>
-              <p class="sec-sub muted">Everything you need to choose a course, get certified and get placed.</p>
+              <p class="sec-sub muted">Guides to help you choose a course, prepare for interviews, and understand certifications.</p>
             </div>
             <div class="guides-grid">
               <a class="guide-card reveal" href="/ai-courses-for/">
@@ -1411,35 +1412,19 @@
           <section class="eco-sec" id="tcc-ecosystem" aria-labelledby="eco-heading">
             <div class="eco-inner">
               <div class="eco-head">
-                <h2 class="eco-title" id="eco-heading">One community. Sixteen ways in.</h2>
-                <p class="eco-sub">AI-native learning, building, certification and placement — inside a global network that stays with you after you get hired.</p>
+                <h2 class="eco-title" id="eco-heading">One community. Eight ways in.</h2>
+                <p class="eco-sub">Learn AI, build projects, prepare for interviews, and keep using the community after you leave.</p>
               </div>
               <div class="eco-grid">
-                <a class="eco-card ec-s7 md-4" href="/bootcamps" aria-label="TCC Learn — live AI bootcamps and role-based certifications">
+                <a class="eco-card ec-s6 md-3" href="/bootcamps" aria-label="TCC Learn and CERT+ — live bootcamps and role-based certifications">
                   <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
                   <div class="eco-body">
-                    <div class="eco-name">TCC Learn</div>
-                    <p class="eco-desc">Live AI bootcamps &amp; role-based certifications</p>
+                    <div class="eco-name">TCC Learn &amp; CERT+</div>
+                    <p class="eco-desc">Live bootcamps and role-based certifications</p>
                   </div>
                   <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
                 </a>
-                <a class="eco-card ec-s5 md-4" href="/bootcamps" aria-label="TCC CERT+ — 262 role-based AI certifications, each in four tiers">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC CERT+</div>
-                    <p class="eco-desc">262 roles, each in four tiers</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s5 md-4" href="/100-club" aria-label="TCC Club — the 100 Club builder community">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC Club</div>
-                    <p class="eco-desc">The 100 Club builder community</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s7 md-3" href="/placement/" aria-label="TCC Career — internships, placements and hiring">
+                <a class="eco-card ec-s6 md-3" href="/placement/" aria-label="TCC Career — internships, placements and hiring">
                   <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
                   <div class="eco-body">
                     <div class="eco-name">TCC Career</div>
@@ -1447,7 +1432,7 @@
                   </div>
                   <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
                 </a>
-                <a class="eco-card ec-s12 md-3" href="/blog" aria-label="TCC Guides — practical AI career, course and placement guides">
+                <a class="eco-card ec-s6 md-3" href="/blog" aria-label="TCC Guides — practical AI career, course and placement guides">
                   <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36z"/></svg></div>
                   <div class="eco-body">
                     <div class="eco-name">TCC Guides</div>
@@ -1455,51 +1440,11 @@
                   </div>
                   <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
                 </a>
-                <a class="eco-card ec-s7 md-3" href="/prep+/companies/" aria-label="Prep+ — interview preparation">
+                <a class="eco-card ec-s6 md-3" href="/prep+/companies/" aria-label="Prep+ — interview preparation">
                   <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
                   <div class="eco-body">
                     <div class="eco-name">Prep+</div>
                     <p class="eco-desc">Interview &amp; placement preparation</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s5 md-3" href="/webinars" aria-label="TCC Webinars — live AI career sessions">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m10 8 5 3-5 3z"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC Webinars</div>
-                    <p class="eco-desc">Live AI career sessions</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s6 md-6" href="/100-club" aria-label="TCC Community — builders, alumni and 100 Club members">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC Community</div>
-                    <p class="eco-desc">Builders, alumni &amp; 100 Club members</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s6 md-4" href="/roadmaps" aria-label="TCC Roadmaps — developer and AI career roadmaps for every role">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6 9 3l6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC Roadmaps</div>
-                    <p class="eco-desc">A step-by-step path for every AI role</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s6 md-4" href="/domains" aria-label="TCC Domains — AI courses for 32 degree fields and industries">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC Domains</div>
-                    <p class="eco-desc">AI courses for 32 fields &amp; industries</p>
-                  </div>
-                  <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
-                </a>
-                <a class="eco-card ec-s12 md-4" href="/gigs" aria-label="TCC Gigs — internships and freelance work matched to your skills">
-                  <div class="eco-icon" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1"/></svg></div>
-                  <div class="eco-body">
-                    <div class="eco-name">TCC Gigs</div>
-                    <p class="eco-desc">Internships &amp; freelance work, matched</p>
                   </div>
                   <div class="eco-hair-t" aria-hidden="true"></div><div class="eco-hair-b" aria-hidden="true"></div>
                 </a>
@@ -1653,7 +1598,7 @@
             </div>
             <div class="faq-item reveal">
               <button class="faq-q" type="button">What if I join and change my mind? What&rsquo;s the refund policy?<span class="plus">+</span></button>
-              <div class="faq-a"><div class="faq-a-inner">We encourage exploring membership details thoroughly before signing up. Refunds within 7 days of enrollment are available per our <a href="/refund-policy">Refund Policy</a>. After 7 days, refunds are assessed on a case-by-case basis up to 30 days.</div></div>
+              <div class="faq-a"><div class="faq-a-inner">A full refund is available within 7 days of purchase if you have not accessed more than 20% of the course content. Requests between 7 and 30 days are considered case by case; no refunds are issued after 30 days. Read the <a href="/refund-policy/">Refund Policy</a>.</div></div>
             </div>
           </section>
 
@@ -1665,7 +1610,7 @@
             <div class="footer-grid">
               <div class="footer-col">
                 <h3>Programs</h3>
-                <a href="/bootcamps">CERT+ certifications</a><a href="/prep+/companies/">Prep+ practice</a><a href="/placement/">Placement programme</a><a href="/100-club">100 Club</a><a href="/gigs">Gigs</a><a href="/domains">Domains</a>
+                <a href="/bootcamps">CERT+</a><a href="/prep+/companies/">Prep+ practice</a><a href="/placement/">Placement programme</a><a href="/100-club">100 Club</a><a href="/gigs">Gigs</a><a href="/domains">Domains</a>
               <a href="/worksim/">WorkSim (pilot)</a></div>
               <div class="footer-col">
                 <h3>Prepare</h3>
@@ -1681,7 +1626,7 @@
                 <a href="/diagnostic/">Placement diagnostic</a>
           <a href="/verify/">Verify our claims</a>
           <a href="/partners/">Partners</a>
-          <a href="/contact">Contact us</a><a href="/login">Login</a><a href="/terms-of-service">Terms of use</a><a href="/privacy-policy">Privacy Policy</a><a href="/refund-policy">Refund Policy</a>
+          <a href="/contact">Contact us</a><a href="/login">Login</a><a href="/terms-of-service">Terms of use</a><a href="/privacy-policy">Privacy Policy</a><a href="/refund-policy/">Refund Policy</a>
               </div>
               <div class="footer-col">
                 <h3>Talk to us</h3>
